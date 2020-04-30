@@ -1,3 +1,2 @@
-github "RiftValleySoftware/RVS_BlueThoth"
+github "https://github.com/RiftValleySoftware/RVS_BlueThoth"
 github "RiftValleySoftware/RVS_PersistentPrefs"
-github "RiftValleySoftware/RVS_Generic_Swift_Toolbox"

@@ -1,8 +1,14 @@
 ![Icon](img/icon.png)
 
-RVS_BlueThoth
+BlueVanClef
 =
 
-This is a Bluetooth SDK.
+This is a "Bluetooth Explorer" app that was written in order to develop a general-purpose Core Bluetooth "Wrapper" SDK, and learn Bluetooth.
 
-[This is the GitHub repo for this project.](https://github.com/RiftValleySoftware/RVS_BlueThoth) It is 100% open-source, MIT-licensed code.
+[This is the GitHub repo for this project.](https://github.com/RiftValleySoftware/BlueVanClef) It is 100% open-source, MIT-licensed code.
+
+Although this is an iOS app, it will be used to develop a cross-[Apple]-platform SDK.
+
+It is destined to become an Apple App-Store app, but that's still a ways off, and Apple needs to greenlight it _(They can sometimes be a bit "squeamish" with developer tools like this)_.
+
+[This is the online documentation for this project](https://riftvalleysoftware.github.io/BlueVanClef)
