@@ -44,9 +44,10 @@ class CGA_AppDelegate: UIResponder, UIApplicationDelegate {
             print("ALERT:\t\(inTitle)\n\t\t\(inMessage)")
         #endif
         DispatchQueue.main.async {  // In case we're called off-thread...
-            if let presentedBy = appDelegateObject.window?.rootViewController {
-                let alertController = UIAlertController(title: inTitle, message: inMessage, preferredStyle: .actionSheet)
-                
+            if  let navController = appDelegateObject.window?.rootViewController as? UINavigationController,
+                let presentedBy = navController.topViewController {
+                // We use an alert for iPads, as action sheets are more complicated than we need for this.
+                let alertController = UIAlertController(title: inTitle, message: inMessage, preferredStyle: .pad == presentedBy.traitCollection.userInterfaceIdiom ? .alert : .actionSheet)
                 let okAction = UIAlertAction(title: "SLUG-OK-BUTTON-TEXT".localizedVariant, style: UIAlertAction.Style.cancel, handler: nil)
                 
                 alertController.addAction(okAction)
