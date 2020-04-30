@@ -180,9 +180,15 @@ extension CGA_CharacteristicViewController: UITableViewDataSource {
         var labelText = ""
         
         if let characteristic = characteristicInstance?[inIndexPath.row] as? CGA_Bluetooth_Descriptor_ClientCharacteristicConfiguration {
-            labelText = "Is \(characteristic.isNotifying ? "" : "Not ")Notifying. Is \(characteristic.isIndicating ? "" : "Not ")Indicating."
+            labelText = "SLUG-ACC-DESCRIPTOR-CLIENTCHAR-NOTIFY-\(characteristic.isNotifying ? "YES" : "NO")".localizedVariant
+            labelText += "SLUG-ACC-DESCRIPTOR-CLIENTCHAR-INDICATE-\(characteristic.isIndicating ? "YES" : "NO")".localizedVariant
         }
         
+        if let characteristic = characteristicInstance?[inIndexPath.row] as? CGA_Bluetooth_Descriptor_Characteristic_Extended_Properties {
+            labelText = "SLUG-ACC-DESCRIPTOR-EXTENDED-RELIABLE-WR-\(characteristic.isReliableWriteEnabled ? "YES" : "NO")".localizedVariant
+            labelText += "SLUG-ACC-DESCRIPTOR-EXTENDED-AUX-WR-\(characteristic.isWritableAuxiliariesEnabled ? "YES" : "NO")".localizedVariant
+        }
+
         tableCell.descriptorValueLabel.text = labelText
         
         // This ensures that we maintain a consistent backround color upon selection.

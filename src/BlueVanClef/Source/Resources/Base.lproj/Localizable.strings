@@ -131,6 +131,16 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 // MARK: - The Descriptor List Screen
 "SLUG-ACC-DESCRIPTOR-TABLE"         =   "This is a list of the descriptors for this Characteristic. Selecting a row will cause that descriptor to refresh its value.";
 
+"SLUG-ACC-DESCRIPTOR-CLIENTCHAR-NOTIFY-NO"                      =   "Is Not Notifying. ";
+"SLUG-ACC-DESCRIPTOR-CLIENTCHAR-NOTIFY-YES"                     =   "Is Notifying. ";
+"SLUG-ACC-DESCRIPTOR-CLIENTCHAR-INDICATE-NO"                    =   "Is Not Indicating.";
+"SLUG-ACC-DESCRIPTOR-CLIENTCHAR-INDICATE-YES"                   =   "Is Indicating.";
+
+"SLUG-ACC-DESCRIPTOR-EXTENDED-RELIABLE-WR-NO"                   =   "Reliable Write is Not Enabled. ";
+"SLUG-ACC-DESCRIPTOR-EXTENDED-RELIABLE-WR-YES"                  =   "Reliable Write is Enabled. ";
+"SLUG-ACC-DESCRIPTOR-EXTENDED-AUX-WR-NO"                        =   "Writable Auxiliaries is Not Enabled.";
+"SLUG-ACC-DESCRIPTOR-EXTENDED-AUX-WR-YES"                       =   "Writable Auxiliaries is Enabled.";
+
 // MARK: - The App Settings Screen
 "SLUG-ACC-CONTINUOUS-UPDATE-BUTTON-ON"              =   "This button will toggle the value of the switch that controls whether or not the app is continuously updating the device list while scanning. The switch is currently on, which means that the names, advertising data and signal strength of the devices in the list are being continuously updated.";
 "SLUG-ACC-CONTINUOUS-UPDATE-BUTTON-OFF"             =   "This button will toggle the value of the switch that controls whether or not the app is continuously updating the device list while scanning. The switch is currently off, which means that the names, advertising data and signal strength of the devices will remain consistent with their state upon discovery.";
