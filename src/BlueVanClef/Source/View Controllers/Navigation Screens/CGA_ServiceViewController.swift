@@ -231,6 +231,7 @@ extension CGA_ServiceViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = serviceInstance?.id.localizedVariant
+        _refreshControl.tintColor = .white
         characteristicsTableView?.refreshControl = _refreshControl
         _refreshControl.addTarget(self, action: #selector(startOver(_:)), for: .valueChanged)
     }

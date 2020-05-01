@@ -191,6 +191,7 @@ extension CGA_PeripheralViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = deviceAdvInfo?.preferredName
+        _refreshControl.tintColor = .white
         serviceTableView?.refreshControl = _refreshControl
         connectingLabel?.text = connectingLabel?.text?.localizedVariant ?? "ERROR"
         servicesLabel?.text = servicesLabel?.text?.localizedVariant ?? "ERROR"

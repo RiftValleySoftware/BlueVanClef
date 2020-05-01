@@ -257,6 +257,7 @@ extension CGA_InitialViewController {
      */
     override func viewDidLoad() {
         super.viewDidLoad()
+        _refreshControl.tintColor = .white
         deviceTableView?.refreshControl = _refreshControl
         _refreshControl.addTarget(self, action: #selector(startOver(_:)), for: .valueChanged)
         CGA_AppDelegate.centralManager = RVS_BlueThoth(delegate: self)

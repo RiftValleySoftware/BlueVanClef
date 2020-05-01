@@ -145,6 +145,7 @@ extension CGA_CharacteristicViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = characteristicInstance?.id.localizedVariant
+        _refreshControl.tintColor = .white
         _refreshControl.addTarget(self, action: #selector(startOver(_:)), for: .valueChanged)
         descriptorsTableView?.refreshControl = _refreshControl
         updateAllDescriptors()

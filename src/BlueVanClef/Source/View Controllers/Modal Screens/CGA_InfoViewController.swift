@@ -37,6 +37,12 @@ class CGA_InfoViewController: CGA_BaseViewController {
     
     /* ################################################################## */
     /**
+     The text view that displays most of the information for this screen.
+     */
+    @IBOutlet weak var mainTextView: UITextView!
+
+    /* ################################################################## */
+    /**
      The label just below the app name label, displaying the version.
      */
     @IBOutlet weak var appVersionLabel: UILabel!
@@ -92,6 +98,7 @@ extension CGA_InfoViewController {
         super.viewDidLoad()
         appNameLabel?.text = Bundle.main.appDisplayName
         appVersionLabel?.text = String(format: "SLUG-VERSION-FORMAT".localizedVariant, Bundle.main.appVersionString, Bundle.main.appVersionBuildString)
+        mainTextView?.text = mainTextView?.text.localizedVariant
         copyrightButton.setTitle(Bundle.main.copyrightString, for: .normal)
         _setUpAccessibility()
     }

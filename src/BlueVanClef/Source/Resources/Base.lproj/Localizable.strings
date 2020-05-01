@@ -167,6 +167,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-ACC-APP-NAME-LABEL-FORMAT"    =   "This is the name of the app. It is \"%@.\"";
 "SLUG-ACC-APP-VERSION-LABEL-FORMAT" =   "This is the current version of the app. It is \"%@.%@.\"";
 "SLUG-ACC-COPYRIGHT-BUTTON"         =   "This button displays the copyright information for the app. If you touch it, it will take you to the Great Rift Valley Software Company Web page in the browser.";
+"SLUG-MAIN-INFO-TEXT"               =   "This app is a very basic Bluetooth Low-Energy (BLE) \"explorer.\"\nWith Blue Van Clef, we can detect advertising BLE devices, and connect to them (if the device allows connection).\nOnce connected, we can then explore the Bluetooth Services, Characteristics, and Descriptors.\nTap on a table row to \"explore\" that Peripheral, Service or Characteristic.\n\nIt is possible to filter for only certain devices or advertised Services.";
 
 /// MARK: - DATA INTERPRETATION
 
