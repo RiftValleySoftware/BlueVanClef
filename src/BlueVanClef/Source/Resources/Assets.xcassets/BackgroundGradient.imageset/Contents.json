@@ -1,18 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "BackgroundGradient.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "light"
-        }
-      ],
-      "filename" : "BackgroundGradient-1.png",
+      "filename" : "BackgroundGradient~universal@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -23,21 +12,12 @@
           "value" : "dark"
         }
       ],
-      "filename" : "BackgroundGradient-Dark.png",
+      "filename" : "BackgroundGradient-Dark~universal@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "light"
-        }
-      ],
+      "filename" : "BackgroundGradient~universal@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -48,20 +28,12 @@
           "value" : "dark"
         }
       ],
+      "filename" : "BackgroundGradient-Dark~universal@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "idiom" : "universal",
-      "scale" : "3x"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "light"
-        }
-      ],
+      "filename" : "BackgroundGradient~universal@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -72,6 +44,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "BackgroundGradient-Dark~universal@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

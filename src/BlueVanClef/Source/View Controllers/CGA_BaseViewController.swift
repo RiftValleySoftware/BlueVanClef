@@ -63,7 +63,7 @@ class CGA_BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // We give a black background for either dark mode, or high-contrast mode.
-        navigationController?.navigationBar.barTintColor = isDarkMode ? .clear : navigationController?.navigationBar.barTintColor
+        navigationController?.navigationBar.barTintColor = isDarkMode ? UIColor(white: 0.125, alpha: 1.0) : navigationController?.navigationBar.barTintColor
         // We reduce the contrast for Dark Mode. High-contrast mode hides the logo completely.
         logoImage?.alpha = (.dark == traitCollection.userInterfaceStyle) ? (UIAccessibility.isDarkerSystemColorsEnabled ? 0 : 0.05) : (logoImage?.alpha ?? 0)
     }
