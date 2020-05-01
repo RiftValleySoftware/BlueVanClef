@@ -65,6 +65,27 @@ extension UIView {
 }
 
 /* ###################################################################################################################################### */
+// MARK: - UIViewController Extension -
+/* ###################################################################################################################################### */
+/**
+ We add a couple of computed properties to see Dark Mode and High-Contrast Mode.
+ */
+extension UIViewController {
+
+    /* ################################################################## */
+    /**
+     Returns true, if we are in Dark Mode.
+     */
+    var isDarkMode: Bool { .dark == traitCollection.userInterfaceStyle }
+    
+    /* ################################################################## */
+    /**
+     Returns true, if we are in High Contrast Mode.
+     */
+    var isHighContrastModeMode: Bool { UIAccessibility.isDarkerSystemColorsEnabled }
+}
+
+/* ###################################################################################################################################### */
 // MARK: - UITableView Extension -
 /* ###################################################################################################################################### */
 /**
