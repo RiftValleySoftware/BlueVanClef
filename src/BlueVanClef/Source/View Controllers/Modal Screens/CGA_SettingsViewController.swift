@@ -220,7 +220,7 @@ extension CGA_SettingsViewController {
      - parameter: ignored (and optional).
      */
     @IBAction func dismissKeyboard(_: Any! = nil) {
-        view.resignAllFirstResponders()
+        resignAllFirstResponders()
     }
     
     /* ################################################################## */

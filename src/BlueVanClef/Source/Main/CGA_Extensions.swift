@@ -22,6 +22,45 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 
 import UIKit
 
+/**
+ These are a number of UIKit-specific extensions that provide accessors and services to the rest of the app.
+ */
+
+/* ###################################################################################################################################### */
+// MARK: - UIViewController Extension -
+/* ###################################################################################################################################### */
+/**
+ We add a couple of computed properties to report Dark Mode and High-Contrast Mode.
+ */
+extension UIViewController {
+
+    /* ################################################################## */
+    /**
+     Returns true, if we are in Dark Mode.
+     */
+    var isDarkMode: Bool { .dark == traitCollection.userInterfaceStyle }
+    
+    /* ################################################################## */
+    /**
+     Returns true, if we are in High Contrast Mode.
+     */
+    var isHighContrastModeMode: Bool { UIAccessibility.isDarkerSystemColorsEnabled }
+
+    /* ################################################################## */
+    /**
+     This returns the first responder, wherever it is in our hierarchy.
+     */
+    var currentFirstResponder: UIResponder? { view.currentFirstResponder }
+
+    /* ################################################################## */
+    /**
+     This puts away any open keyboards.
+     */
+    func resignAllFirstResponders() {
+        view.resignAllFirstResponders()
+    }
+}
+
 /* ###################################################################################################################################### */
 // MARK: - UIView Extension -
 /* ###################################################################################################################################### */
@@ -62,27 +101,6 @@ extension UIView {
             }
         }
     }
-}
-
-/* ###################################################################################################################################### */
-// MARK: - UIViewController Extension -
-/* ###################################################################################################################################### */
-/**
- We add a couple of computed properties to see Dark Mode and High-Contrast Mode.
- */
-extension UIViewController {
-
-    /* ################################################################## */
-    /**
-     Returns true, if we are in Dark Mode.
-     */
-    var isDarkMode: Bool { .dark == traitCollection.userInterfaceStyle }
-    
-    /* ################################################################## */
-    /**
-     Returns true, if we are in High Contrast Mode.
-     */
-    var isHighContrastModeMode: Bool { UIAccessibility.isDarkerSystemColorsEnabled }
 }
 
 /* ###################################################################################################################################### */
