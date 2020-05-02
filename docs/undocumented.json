@@ -1,6 +1,75 @@
 {
   "warnings": [
-
+    {
+      "file": "/Volumes/Development/RiftValley/BlueVanClef/src/BlueVanClef/Source/View Controllers/CGA_BaseViewController.swift",
+      "line": 37,
+      "symbol": "CGA_BaseViewController._darkMode_navbar_color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Development/RiftValley/BlueVanClef/src/BlueVanClef/Source/View Controllers/CGA_BaseViewController.swift",
+      "line": 38,
+      "symbol": "CGA_BaseViewController._darkMode_high_contrast_navbar_color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Development/RiftValley/BlueVanClef/src/BlueVanClef/Source/View Controllers/CGA_BaseViewController.swift",
+      "line": 39,
+      "symbol": "CGA_BaseViewController._lightMode_navbar_color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Development/RiftValley/BlueVanClef/src/BlueVanClef/Source/View Controllers/CGA_BaseViewController.swift",
+      "line": 40,
+      "symbol": "CGA_BaseViewController._lightMode_high_contrast_navbar_color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Development/RiftValley/BlueVanClef/src/BlueVanClef/Source/View Controllers/CGA_BaseViewController.swift",
+      "line": 44,
+      "symbol": "CGA_BaseViewController._darkMode_logo_alpha",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Development/RiftValley/BlueVanClef/src/BlueVanClef/Source/View Controllers/CGA_BaseViewController.swift",
+      "line": 45,
+      "symbol": "CGA_BaseViewController._darkMode_high_contrast_logo_alpha",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Development/RiftValley/BlueVanClef/src/BlueVanClef/Source/View Controllers/CGA_BaseViewController.swift",
+      "line": 46,
+      "symbol": "CGA_BaseViewController._lightMode_logo_alpha",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Development/RiftValley/BlueVanClef/src/BlueVanClef/Source/View Controllers/CGA_BaseViewController.swift",
+      "line": 47,
+      "symbol": "CGA_BaseViewController._lightMode_high_contrast_logo_alpha",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Development/RiftValley/BlueVanClef/src/BlueVanClef/Source/View Controllers/CGA_BaseViewController.swift",
+      "line": 51,
+      "symbol": "CGA_BaseViewController._background_alpha",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Development/RiftValley/BlueVanClef/src/BlueVanClef/Source/View Controllers/CGA_BaseViewController.swift",
+      "line": 52,
+      "symbol": "CGA_BaseViewController._high_contrast_background_alpha",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Volumes/Development/RiftValley/BlueVanClef"
 }

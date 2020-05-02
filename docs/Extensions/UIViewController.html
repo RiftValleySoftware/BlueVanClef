@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CG_TappableButton Class Reference</title>
+    <title>UIViewController Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/CG_TappableButton" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/UIViewController" class="dashAnchor"></a>
 
-    <a title="CG_TappableButton Class Reference"></a>
+    <a title="UIViewController Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html"> Reference</a>
       <img class="carat" src="../img/carat.png" />
-      CG_TappableButton Class Reference
+      UIViewController Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -149,14 +149,14 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>CG_TappableButton</h1>
+            <h1>UIViewController</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CG_TappableButton</span> <span class="p">:</span> <span class="kt">UIButton</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UIViewController</span></code></pre>
 
                 </div>
               </div>
-            <p>This simply allows us to attach a row index to a button, so we know which Characteristic to use.</p>
+            <p>We add a couple of computed properties to report Dark Mode and High-Contrast Mode.</p>
 
           </div>
         </section>
@@ -168,9 +168,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13Blue_Van_Clef17CG_TappableButtonC8rowIndexSivp"></a>
-                    <a name="//apple_ref/swift/Property/rowIndex" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef17CG_TappableButtonC8rowIndexSivp">rowIndex</a>
+                    <a name="/s:So16UIViewControllerC13Blue_Van_ClefE10isDarkModeSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isDarkMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC13Blue_Van_ClefE10isDarkModeSbvp">isDarkMode</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -178,14 +178,95 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>the 0-based row index of the Characteristic table row that corresponds to our Characteristic.</p>
+                        <p>Returns true, if we are in Dark Mode.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rowIndex</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isDarkMode</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC13Blue_Van_ClefE018isHighContrastModeI0Sbvp"></a>
+                    <a name="//apple_ref/swift/Property/isHighContrastModeMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC13Blue_Van_ClefE018isHighContrastModeI0Sbvp">isHighContrastModeMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns true, if we are in High Contrast Mode.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isHighContrastModeMode</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC13Blue_Van_ClefE21currentFirstResponderSo11UIResponderCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/currentFirstResponder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC13Blue_Van_ClefE21currentFirstResponderSo11UIResponderCSgvp">currentFirstResponder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This returns the first responder, wherever it is in our hierarchy.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">currentFirstResponder</span><span class="p">:</span> <span class="kt">UIResponder</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC13Blue_Van_ClefE24resignAllFirstRespondersyyF"></a>
+                    <a name="//apple_ref/swift/Method/resignAllFirstResponders()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC13Blue_Van_ClefE24resignAllFirstRespondersyyF">resignAllFirstResponders()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This puts away any open keyboards.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resignAllFirstResponders</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
