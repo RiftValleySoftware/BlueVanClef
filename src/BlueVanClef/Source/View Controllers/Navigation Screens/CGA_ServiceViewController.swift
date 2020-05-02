@@ -232,6 +232,9 @@ extension CGA_ServiceViewController {
         super.viewDidLoad()
         navigationItem.title = serviceInstance?.id.localizedVariant
         _refreshControl.tintColor = .white
+        if navigationController?.navigationBar.backItem?.title?.isEmpty ?? true {
+            navigationController?.navigationBar.backItem?.title = "SLUG-DEVICE".localizedVariant
+        }
         characteristicsTableView?.refreshControl = _refreshControl
         _refreshControl.addTarget(self, action: #selector(startOver(_:)), for: .valueChanged)
     }

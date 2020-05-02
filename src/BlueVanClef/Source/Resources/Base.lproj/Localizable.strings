@@ -51,6 +51,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 // MARK: - Services screen
 "SLUG-CONNECTING"                   =   "CONNECTING...";
 "SLUG-SERVICES"                     =   "SERVICES";
+"SLUG-DEVICE"                       =   "Device";
 
 // MARK: - Characteristics Screen
 "SLUG-CURRENT-TIME-DATE-FORMAT"     =   "MM/dd/yyyy h:mm:ss.SSS a";
@@ -70,6 +71,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 
 // MARK: - Info screen
 "SLUG-VERSION-FORMAT"               =   "VERSION: %@ (%@)";
+"SLUG-MAIN-INFO-TEXT"               =   "This app is a very basic Bluetooth Low-Energy (BLE) \"explorer.\"\nWe can detect advertising BLE devices (Peripherals), and connect to them (if the device allows connection).\nOnce connected, we can then explore the Bluetooth Services, Characteristics, and Descriptors.\nTap on a table row to \"explore\" that Peripheral, Service or Characteristic.\n\nIt is possible to filter for only certain devices or advertised Services.\n\nAdditionally, we can filter for devices that advertise as connectable, or that advertise a name.";
 
 // MARK: - Settings screen
 "SLUG-IGNORE-DUPES"                 =   "Continuously Update:";
@@ -81,8 +83,8 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-CHARACTERISTIC-FILTERS"       =   "Characteristics:";
 "SLUG-MINIMUM-RSSI-LABEL"           =   "Minimum RSSI:";
 "SLUG-RSSI-LEVEL-FORMAT"            =   "%d dBm";
-"SLUG-MINIMUM-RSSI-LEFT"            =   "-100";
-"SLUG-MINIMUM-RSSI-RIGHT"           =   "0";
+"SLUG-MINIMUM-RSSI-LEFT-FORMAT"     =   "%d";
+"SLUG-MINIMUM-RSSI-RIGHT-FORMAT"    =   "%d";
 
 /// MARK: - ACCESSIBILITY STRINGS
 
@@ -110,7 +112,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-ACC-SERVICES-TABLE-ROW"       =   "This row represents the %@ Service. If you select this row, another screen will appear, with details about this Service.";
 
 // MARK: - The Service Information Screen
-"SLUG-ACC-CHARACTERISTIC-TABLE"                                 =   "This table displays a list of Characteristics that this Service manages. Each Characteristic has a row of flags, denoting whether or not it has read, write, write without response, indicate or notify capabilities. Read and Notify are presented as buttons. If you touch the Read button, the Characteristic will update its value immediately. If you tap the Notify button, the Characteristc's notify state will toggle.";
+"SLUG-ACC-CHARACTERISTIC-TABLE"          =   "This table displays a list of Characteristics that this Service manages. Each Characteristic has a row of flags, denoting whether or not it has read, write, write without response, indicate or notify capabilities. Read and Notify are presented as buttons. If you touch the Read button, the Characteristic will update its value immediately. If you tap the Notify button, the Characteristc's notify state will toggle.";
 "SLUG-ACC-CHARACTERISTIC-ROW"                                   =   "If you select this row, a screen will appear, displaying the Descriptors for this Characteristic.";
 "SLUG-ACC-CHARACTERISTIC-ROW-SLUG-PROPERTIES-READ"              =   "This Characteristic allows read. Touching this button will trigger a single read, and the value below will be updated.";
 "SLUG-ACC-CHARACTERISTIC-ROW-ID-NO-DESCRIPTORS-FORMAT"          =   "This is the ID for the Characteristic. It is \"\(%@).\"";
@@ -167,7 +169,6 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-ACC-APP-NAME-LABEL-FORMAT"    =   "This is the name of the app. It is \"%@.\"";
 "SLUG-ACC-APP-VERSION-LABEL-FORMAT" =   "This is the current version of the app. It is \"%@.%@.\"";
 "SLUG-ACC-COPYRIGHT-BUTTON"         =   "This button displays the copyright information for the app. If you touch it, it will take you to the Great Rift Valley Software Company Web page in the browser.";
-"SLUG-MAIN-INFO-TEXT"               =   "This app is a very basic Bluetooth Low-Energy (BLE) \"explorer.\"\nWith Blue Van Clef, we can detect advertising BLE devices, and connect to them (if the device allows connection).\nOnce connected, we can then explore the Bluetooth Services, Characteristics, and Descriptors.\nTap on a table row to \"explore\" that Peripheral, Service or Characteristic.\n\nIt is possible to filter for only certain devices or advertised Services.";
 
 /// MARK: - DATA INTERPRETATION
 
@@ -476,3 +477,35 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "290E"                              =    "Time Trigger Setting";
 "2906"                              =    "Valid Range";
 "290A"                              =    "Value Trigger Setting";
+
+// MARK: - Characteristic Presentation Format Descriptor Values
+"SLUG-CHAR-PRESENTATION-0"          =   "Reserved For Future Use";
+"SLUG-CHAR-PRESENTATION-1"          =   "Boolean";
+"SLUG-CHAR-PRESENTATION-2"          =   "unsigned 2-bit integer";
+"SLUG-CHAR-PRESENTATION-3"          =   "unsigned 4-bit integer";
+"SLUG-CHAR-PRESENTATION-4"          =   "unsigned 8-bit integer";
+"SLUG-CHAR-PRESENTATION-5"          =   "unsigned 12-bit integer";
+"SLUG-CHAR-PRESENTATION-6"          =   "unsigned 16-bit integer";
+"SLUG-CHAR-PRESENTATION-7"          =   "unsigned 24-bit integer";
+"SLUG-CHAR-PRESENTATION-8"          =   "unsigned 32-bit integer";
+"SLUG-CHAR-PRESENTATION-9"          =   "unsigned 48-bit integer";
+"SLUG-CHAR-PRESENTATION-10"         =   "unsigned 64-bit integer";
+"SLUG-CHAR-PRESENTATION-11"         =   "unsigned 128-bit integer";
+"SLUG-CHAR-PRESENTATION-12"         =   "signed 8-bit integer";
+"SLUG-CHAR-PRESENTATION-13"         =   "signed 12-bit integer";
+"SLUG-CHAR-PRESENTATION-14"         =   "signed 16-bit integer";
+"SLUG-CHAR-PRESENTATION-15"         =   "signed 24-bit integer";
+"SLUG-CHAR-PRESENTATION-16"         =   "signed 32-bit integer";
+"SLUG-CHAR-PRESENTATION-17"         =   "signed 48-bit integer";
+"SLUG-CHAR-PRESENTATION-18"         =   "signed 64-bit integer";
+"SLUG-CHAR-PRESENTATION-19"         =   "signed 128-bit integer";
+"SLUG-CHAR-PRESENTATION-20"         =   "IEEE-754 32-bit floating point";
+"SLUG-CHAR-PRESENTATION-21"         =   "IEEE-754 64-bit floating point";
+"SLUG-CHAR-PRESENTATION-22"         =   "IEEE-11073 16-bit SFLOAT";
+"SLUG-CHAR-PRESENTATION-23"         =   "IEEE-11073 32-bit FLOAT";
+"SLUG-CHAR-PRESENTATION-24"         =   "IEEE-20601 format";
+"SLUG-CHAR-PRESENTATION-25"         =   "UTF-8 string";
+"SLUG-CHAR-PRESENTATION-26"         =   "UTF-16 string";
+"SLUG-CHAR-PRESENTATION-27"         =   "Opaque Structure";
+"SLUG-CHAR-PRESENTATION-255"        =   "ERROR";
+

@@ -189,6 +189,10 @@ extension CGA_CharacteristicViewController: UITableViewDataSource {
             labelText = "SLUG-ACC-DESCRIPTOR-EXTENDED-RELIABLE-WR-\(characteristic.isReliableWriteEnabled ? "YES" : "NO")".localizedVariant
             labelText += "SLUG-ACC-DESCRIPTOR-EXTENDED-AUX-WR-\(characteristic.isWritableAuxiliariesEnabled ? "YES" : "NO")".localizedVariant
         }
+        
+        if let characteristic = characteristicInstance?[inIndexPath.row] as? CGA_Bluetooth_Descriptor_PresentationFormat {
+            labelText = "SLUG-CHAR-PRESENTATION-\(characteristic.stringValue ?? "255")".localizedVariant
+        }
 
         tableCell.descriptorValueLabel.text = labelText
         

@@ -348,11 +348,13 @@ extension CGA_SettingsViewController {
         serviceFilterLabel?.text = serviceFilterLabel?.text?.localizedVariant
         characteristicFilterLabel?.text = characteristicFilterLabel?.text?.localizedVariant
         minimumRSSILevelLabel?.text = minimumRSSILevelLabel?.text?.localizedVariant
-        minimumRSSILevelMinValLabel?.text = minimumRSSILevelMinValLabel?.text?.localizedVariant
-        minimumRSSILevelMaxValLabel?.text = minimumRSSILevelMaxValLabel?.text?.localizedVariant
-        minimumRSSILevelSlider?.value = Float(prefs.minimumRSSILevel)
+        minimumRSSILevelMinValLabel?.text = String(format: minimumRSSILevelMinValLabel?.text?.localizedVariant ?? "%d", Int(minimumRSSILevelSlider.minimumValue))
+        minimumRSSILevelMaxValLabel?.text = String(format: minimumRSSILevelMaxValLabel?.text?.localizedVariant ?? "%d", Int(minimumRSSILevelSlider.maximumValue))
         minimumRSSILevelSlider?.minimumTrackTintColor = .white
         minimumRSSILevelSlider?.maximumTrackTintColor = .darkGray
+        
+        minimumRSSILevelSlider?.value = Float(prefs.minimumRSSILevel)
+        
         updateUI()
     }
     
@@ -408,7 +410,7 @@ extension CGA_SettingsViewController: UITextViewDelegate {
         case characteristicFilterTextView:
             parseCharacteristicTextView()
         default:
-            ()
+            break
         }
     }
 }
