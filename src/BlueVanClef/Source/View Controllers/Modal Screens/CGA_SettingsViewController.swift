@@ -351,6 +351,8 @@ extension CGA_SettingsViewController {
         minimumRSSILevelMinValLabel?.text = minimumRSSILevelMinValLabel?.text?.localizedVariant
         minimumRSSILevelMaxValLabel?.text = minimumRSSILevelMaxValLabel?.text?.localizedVariant
         minimumRSSILevelSlider?.value = Float(prefs.minimumRSSILevel)
+        minimumRSSILevelSlider?.minimumTrackTintColor = .white
+        minimumRSSILevelSlider?.maximumTrackTintColor = .darkGray
         updateUI()
     }
     
