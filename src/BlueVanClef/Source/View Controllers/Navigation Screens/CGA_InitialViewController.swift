@@ -404,6 +404,8 @@ extension CGA_InitialViewController: CGA_ScannerViewController {
             _startScanning()
             deviceTableView?.reloadData()
         }
+        
+        scanningButton?.isEnabled = true
     }
 }
 
