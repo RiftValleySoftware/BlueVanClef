@@ -107,11 +107,10 @@ extension CGA_InfoViewController {
     /**
      This allows us to restart scanning in the main screen, if it was running before we were called.
      */
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        if  let navigationController = presentingViewController as? UINavigationController,
-            0 < navigationController.viewControllers.count,
-            let presenter = navigationController.viewControllers[0] as? CGA_ScannerViewController {
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if  let nav = CGA_AppDelegate.appDelegateObject?.window?.rootViewController as? UINavigationController,
+            let presenter = nav.topViewController as? CGA_InitialViewController {  // We only reset if we were originally scanning before we came here.
             presenter.restartScanningIfNecessary()
         }
     }
