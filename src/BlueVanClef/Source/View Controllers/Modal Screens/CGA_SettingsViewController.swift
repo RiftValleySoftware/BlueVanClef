@@ -373,16 +373,14 @@ extension CGA_SettingsViewController {
      
      - parameter inAnimated: ignored.
      */
-    override func viewWillDisappear(_ inAnimated: Bool) {
-        super.viewWillDisappear(inAnimated)
-        if  let navigationController = presentingViewController as? UINavigationController,
-            0 < navigationController.viewControllers.count,
-            let presenter = navigationController.viewControllers[0] as? CGA_ScannerViewController {
-            CGA_AppDelegate.unlockOrientation()
-            if presenter.wasScanning {  // We only reset if we were originally scanning before we came here.
-                CGA_AppDelegate.centralManager?.startOver() // Because we can move a lot of cheese, we may start over from scratch. That also means unignoring previously ignored Peripherals.
-                presenter.restartScanningIfNecessary()
-            }
+    override func viewDidDisappear(_ inAnimated: Bool) {
+        super.viewDidDisappear(inAnimated)
+        CGA_AppDelegate.unlockOrientation()
+        if  let nav = CGA_AppDelegate.appDelegateObject?.window?.rootViewController as? UINavigationController,
+            let presenter = nav.topViewController as? CGA_InitialViewController,
+            presenter.wasScanning {  // We only reset if we were originally scanning before we came here.
+            CGA_AppDelegate.centralManager?.startOver() // Because we can move a lot of cheese, we may start over from scratch. That also means unignoring previously ignored Peripherals.
+            presenter.restartScanningIfNecessary()
         }
     }
 }

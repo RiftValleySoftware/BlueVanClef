@@ -297,6 +297,7 @@ extension CGA_InitialViewController {
         wasScanning = isScanning
         CGA_AppDelegate.centralManager?.stopScanning()
         navigationController?.navigationBar.isHidden = false
+        scanningButton?.isEnabled = false
     }
     
     /* ################################################################## */
@@ -310,8 +311,9 @@ extension CGA_InitialViewController {
         // We only go further if we are looking at device details.
         guard   let destination = inSegue.destination as? CGA_PeripheralViewController,
                 let senderData = inSender as? RVS_BlueThoth.DiscoveryData else {
-            wasScanning = isScanning
-            CGA_AppDelegate.centralManager?.stopScanning()
+                    wasScanning = isScanning
+                    CGA_AppDelegate.centralManager?.stopScanning()
+                    scanningButton?.isEnabled = false
             return
         }
         
