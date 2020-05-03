@@ -158,7 +158,6 @@
 		D4EA7E48245E1201006D3453 /* RVS_SequenceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RVS_SequenceProtocol.swift; path = "Carthage/Checkouts/RVS_Generic_Swift_Toolbox/src/Collection Tools/RVS_SequenceProtocol.swift"; sourceTree = SOURCE_ROOT; };
 		D4EA7E49245E1201006D3453 /* RVS_String_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RVS_String_Extensions.swift; path = Carthage/Checkouts/RVS_Generic_Swift_Toolbox/src/Extensions/RVS_String_Extensions.swift; sourceTree = SOURCE_ROOT; };
 		D4EA7E88245E124C006D3453 /* Blue Van Clef (Direct).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef (Direct).app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4EA7E89245E124C006D3453 /* Blue Van Clef copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Blue Van Clef copy-Info.plist"; path = "/Volumes/Development/RiftValley/BlueVanClef/Blue Van Clef copy-Info.plist"; sourceTree = "<absolute>"; };
 		D4F666C62434F06200CD4548 /* CGA_InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,9 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				D48D85172430F05500A925ED /* src */,
-				D420C895242FCD5600FCB9E0 /* Products */,
 				D40669C72455169D00A5BA4A /* Frameworks */,
-				D4EA7E89245E124C006D3453 /* Blue Van Clef copy-Info.plist */,
+				D420C895242FCD5600FCB9E0 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,10 +268,114 @@
 		D49F9AAC245314A70061DC2B /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				D4EA7E05245E11AF006D3453 /* RVS_BlueThoth Source (Direct Target Only) */,
 				D4A53AAB24312F2F009647C4 /* RVS_PersistentPrefs.swift */,
+				D4EA7E05245E11AF006D3453 /* RVS_BlueThoth Source (Direct Target Only) */,
 			);
 			name = Carthage;
+			sourceTree = "<group>";
+		};
+		D4A2835C245E617700FA638D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D4A2835E245E61D900FA638D /* Public */,
+				D4A2835D245E61A400FA638D /* Internal */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		D4A2835D245E61A400FA638D /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				D4EA7E1F245E11E2006D3453 /* CGA_Bluetooth_Service_Protocol_Internal.swift */,
+				D4EA7E19245E11E2006D3453 /* CGA_Bluetooth_Characteristic_Protocol_Internal.swift */,
+				D4EA7E14245E11E2006D3453 /* CGA_Bluetooth_Descriptor_Protocol_Internal.swift */,
+			);
+			name = Internal;
+			sourceTree = "<group>";
+		};
+		D4A2835E245E61D900FA638D /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				D4EA7E15245E11E2006D3453 /* CGA_Bluetooth_Protocols.swift */,
+				D4EA7E13245E11E2006D3453 /* CGA_Bluetooth_Service_Protocol.swift */,
+				D4EA7E23245E11E2006D3453 /* CGA_Bluetooth_Characteristic_Protocol.swift */,
+				D4EA7E17245E11E2006D3453 /* CGA_Bluetooth_Descriptor_Protocol.swift */,
+				D4EA7E1A245E11E2006D3453 /* CGA_Array_Extensions.swift */,
+				D4EA7E06245E11E2006D3453 /* CGA_Errors.swift */,
+			);
+			name = Public;
+			sourceTree = "<group>";
+		};
+		D4A2835F245E61EE00FA638D /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				D4EA7E20245E11E2006D3453 /* RVS_BlueThoth_Callbacks.swift */,
+				D4EA7E21245E11E2006D3453 /* RVS_BlueThoth.swift */,
+				D4A28364245E623900FA638D /* Peripherals */,
+				D4A28365245E624500FA638D /* Services */,
+				D4A28361245E620500FA638D /* Characteristics */,
+				D4A28363245E622700FA638D /* Descriptors */,
+			);
+			name = Implementation;
+			sourceTree = "<group>";
+		};
+		D4A28361245E620500FA638D /* Characteristics */ = {
+			isa = PBXGroup;
+			children = (
+				D4EA7E0A245E11E2006D3453 /* CGA_Bluetooth_Characteristic.swift */,
+				D4EA7E10245E11E2006D3453 /* CGA_Bluetooth_Characteristic_BatteryLevel.swift */,
+				D4EA7E1E245E11E2006D3453 /* CGA_Bluetooth_Characteristic_CurrentTime.swift */,
+				D4EA7E0C245E11E2006D3453 /* CGA_Bluetooth_Characteristic_FirmwareRevision.swift */,
+				D4EA7E16245E11E2006D3453 /* CGA_Bluetooth_Characteristic_HardwareRevision.swift */,
+				D4EA7E25245E11E3006D3453 /* CGA_Bluetooth_Characteristic_LocalTimeInformation.swift */,
+				D4EA7E12245E11E2006D3453 /* CGA_Bluetooth_Characteristic_ManufacturerName.swift */,
+				D4EA7E26245E11E3006D3453 /* CGA_Bluetooth_Characteristic_ModelNumber.swift */,
+				D4EA7E11245E11E2006D3453 /* CGA_Bluetooth_Characteristic_SerialNumber.swift */,
+				D4EA7E0F245E11E2006D3453 /* CGA_Bluetooth_Characteristic_SoftwareRevision.swift */,
+				D4EA7E1B245E11E2006D3453 /* CGA_Bluetooth_Characteristic_SystemID.swift */,
+			);
+			name = Characteristics;
+			sourceTree = "<group>";
+		};
+		D4A28362245E621200FA638D /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				D4EA7E48245E1201006D3453 /* RVS_SequenceProtocol.swift */,
+				D4EA7E49245E1201006D3453 /* RVS_String_Extensions.swift */,
+			);
+			name = Carthage;
+			sourceTree = "<group>";
+		};
+		D4A28363245E622700FA638D /* Descriptors */ = {
+			isa = PBXGroup;
+			children = (
+				D4EA7E09245E11E2006D3453 /* CGA_Bluetooth_Descriptor.swift */,
+				D4EA7E0B245E11E2006D3453 /* CGA_Bluetooth_Descriptor_Characteristic_Extended_Properties.swift */,
+				D4EA7E1D245E11E2006D3453 /* CGA_Bluetooth_Descriptor_ClientCharacteristicConfiguration.swift */,
+				D4EA7E18245E11E2006D3453 /* CGA_Bluetooth_Descriptor_PresentationFormat.swift */,
+				D4EA7E24245E11E3006D3453 /* CGA_Bluetooth_Descriptor_UserDescription.swift */,
+			);
+			name = Descriptors;
+			sourceTree = "<group>";
+		};
+		D4A28364245E623900FA638D /* Peripherals */ = {
+			isa = PBXGroup;
+			children = (
+				D4EA7E0E245E11E2006D3453 /* CGA_Bluetooth_Peripheral.swift */,
+				D4EA7E1C245E11E2006D3453 /* CGA_Bluetooth_Peripheral_Callbacks.swift */,
+			);
+			name = Peripherals;
+			sourceTree = "<group>";
+		};
+		D4A28365245E624500FA638D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D4EA7E08245E11E2006D3453 /* CGA_Bluetooth_Service.swift */,
+				D4EA7E22245E11E2006D3453 /* CGA_Bluetooth_Service_Battery.swift */,
+				D4EA7E07245E11E2006D3453 /* CGA_Bluetooth_Service_CurrentTime.swift */,
+				D4EA7E0D245E11E2006D3453 /* CGA_Bluetooth_Service_DeviceInfo.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		D4DE33872459E5300053F163 /* Source */ = {
@@ -289,41 +391,9 @@
 		D4EA7E05245E11AF006D3453 /* RVS_BlueThoth Source (Direct Target Only) */ = {
 			isa = PBXGroup;
 			children = (
-				D4EA7E48245E1201006D3453 /* RVS_SequenceProtocol.swift */,
-				D4EA7E49245E1201006D3453 /* RVS_String_Extensions.swift */,
-				D4EA7E1A245E11E2006D3453 /* CGA_Array_Extensions.swift */,
-				D4EA7E10245E11E2006D3453 /* CGA_Bluetooth_Characteristic_BatteryLevel.swift */,
-				D4EA7E1E245E11E2006D3453 /* CGA_Bluetooth_Characteristic_CurrentTime.swift */,
-				D4EA7E0C245E11E2006D3453 /* CGA_Bluetooth_Characteristic_FirmwareRevision.swift */,
-				D4EA7E16245E11E2006D3453 /* CGA_Bluetooth_Characteristic_HardwareRevision.swift */,
-				D4EA7E25245E11E3006D3453 /* CGA_Bluetooth_Characteristic_LocalTimeInformation.swift */,
-				D4EA7E12245E11E2006D3453 /* CGA_Bluetooth_Characteristic_ManufacturerName.swift */,
-				D4EA7E26245E11E3006D3453 /* CGA_Bluetooth_Characteristic_ModelNumber.swift */,
-				D4EA7E19245E11E2006D3453 /* CGA_Bluetooth_Characteristic_Protocol_Internal.swift */,
-				D4EA7E23245E11E2006D3453 /* CGA_Bluetooth_Characteristic_Protocol.swift */,
-				D4EA7E11245E11E2006D3453 /* CGA_Bluetooth_Characteristic_SerialNumber.swift */,
-				D4EA7E0F245E11E2006D3453 /* CGA_Bluetooth_Characteristic_SoftwareRevision.swift */,
-				D4EA7E1B245E11E2006D3453 /* CGA_Bluetooth_Characteristic_SystemID.swift */,
-				D4EA7E0A245E11E2006D3453 /* CGA_Bluetooth_Characteristic.swift */,
-				D4EA7E0B245E11E2006D3453 /* CGA_Bluetooth_Descriptor_Characteristic_Extended_Properties.swift */,
-				D4EA7E1D245E11E2006D3453 /* CGA_Bluetooth_Descriptor_ClientCharacteristicConfiguration.swift */,
-				D4EA7E18245E11E2006D3453 /* CGA_Bluetooth_Descriptor_PresentationFormat.swift */,
-				D4EA7E14245E11E2006D3453 /* CGA_Bluetooth_Descriptor_Protocol_Internal.swift */,
-				D4EA7E17245E11E2006D3453 /* CGA_Bluetooth_Descriptor_Protocol.swift */,
-				D4EA7E24245E11E3006D3453 /* CGA_Bluetooth_Descriptor_UserDescription.swift */,
-				D4EA7E09245E11E2006D3453 /* CGA_Bluetooth_Descriptor.swift */,
-				D4EA7E1C245E11E2006D3453 /* CGA_Bluetooth_Peripheral_Callbacks.swift */,
-				D4EA7E0E245E11E2006D3453 /* CGA_Bluetooth_Peripheral.swift */,
-				D4EA7E15245E11E2006D3453 /* CGA_Bluetooth_Protocols.swift */,
-				D4EA7E22245E11E2006D3453 /* CGA_Bluetooth_Service_Battery.swift */,
-				D4EA7E07245E11E2006D3453 /* CGA_Bluetooth_Service_CurrentTime.swift */,
-				D4EA7E0D245E11E2006D3453 /* CGA_Bluetooth_Service_DeviceInfo.swift */,
-				D4EA7E1F245E11E2006D3453 /* CGA_Bluetooth_Service_Protocol_Internal.swift */,
-				D4EA7E13245E11E2006D3453 /* CGA_Bluetooth_Service_Protocol.swift */,
-				D4EA7E08245E11E2006D3453 /* CGA_Bluetooth_Service.swift */,
-				D4EA7E06245E11E2006D3453 /* CGA_Errors.swift */,
-				D4EA7E20245E11E2006D3453 /* RVS_BlueThoth_Callbacks.swift */,
-				D4EA7E21245E11E2006D3453 /* RVS_BlueThoth.swift */,
+				D4A2835C245E617700FA638D /* Protocols */,
+				D4A2835F245E61EE00FA638D /* Implementation */,
+				D4A28362245E621200FA638D /* Carthage */,
 			);
 			name = "RVS_BlueThoth Source (Direct Target Only)";
 			sourceTree = "<group>";
@@ -719,7 +789,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1000;
+				CURRENT_PROJECT_VERSION = 2000;
 				DEVELOPMENT_TEAM = P53V4JS928;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -745,7 +815,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1000;
+				CURRENT_PROJECT_VERSION = 2000;
 				DEVELOPMENT_TEAM = P53V4JS928;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -772,7 +842,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1000;
+				CURRENT_PROJECT_VERSION = 2000;
 				DEVELOPMENT_TEAM = P53V4JS928;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -798,7 +868,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1000;
+				CURRENT_PROJECT_VERSION = 2000;
 				DEVELOPMENT_TEAM = P53V4JS928;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
