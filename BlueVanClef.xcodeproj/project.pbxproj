@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D417ED782458950100169F91 /* CGA_BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D417ED772458946500169F91 /* CGA_BaseViewController.swift */; };
 		D436B44D243CC1C6003619D9 /* CGA_ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D436B44C243CC1C6003619D9 /* CGA_ServiceViewController.swift */; };
+		D43B17B7245F6744004C855F /* RVS_BlueThoth_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CD58E7245F650D00172508 /* RVS_BlueThoth_iOS.framework */; };
+		D43B17B8245F6744004C855F /* RVS_BlueThoth_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4CD58E7245F650D00172508 /* RVS_BlueThoth_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D43F05E52436C07B0009EA1B /* CGA_SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43F05E42436C07B0009EA1B /* CGA_SettingsViewController.swift */; };
 		D44491BD244A3357008D447D /* CGA_PersistentPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44491BC244A3357008D447D /* CGA_PersistentPrefs.swift */; };
 		D447B9F0243171AB00F00A7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D447B9E7243171AB00F00A7A /* LaunchScreen.storyboard */; };
@@ -73,12 +75,31 @@
 		D4EA7E80245E124C006D3453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D447B9E9243171AB00F00A7A /* Main.storyboard */; };
 		D4EA7E81245E124C006D3453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D447B9E6243171AB00F00A7A /* Assets.xcassets */; };
 		D4EA7E82245E124C006D3453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D447B9E7243171AB00F00A7A /* LaunchScreen.storyboard */; };
-		D4EA7E8A245E12E2006D3453 /* RVS_BlueThoth_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43AC45D245AF86800DD97AF /* RVS_BlueThoth_iOS.framework */; };
-		D4EA7E8B245E12F4006D3453 /* RVS_BlueThoth_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D43AC45D245AF86800DD97AF /* RVS_BlueThoth_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4F666C72434F06200CD4548 /* CGA_InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F666C62434F06200CD4548 /* CGA_InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D43B17B3245F66E7004C855F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4CD58E1245F650D00172508 /* RVS_BlueThoth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45D2617245F4AC1001906EC;
+			remoteInfo = RVS_BlueThoth_WatchOS;
+		};
+		D43B17B5245F66E7004C855F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4CD58E1245F650D00172508 /* RVS_BlueThoth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45D2647245F4BD7001906EC;
+			remoteInfo = RVS_BlueThoth_TVOS;
+		};
+		D43B17BA245F6752004C855F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4CD58E1245F650D00172508 /* RVS_BlueThoth.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D4B49CDF245511B700932C3D;
+			remoteInfo = RVS_BlueThoth_iOS;
+		};
 		D4CD58E6245F650D00172508 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4CD58E1245F650D00172508 /* RVS_BlueThoth.xcodeproj */;
@@ -96,13 +117,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D40669CC2455169D00A5BA4A /* Embed Frameworks */ = {
+		D43B17B9245F6744004C855F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D4EA7E8B245E12F4006D3453 /* RVS_BlueThoth_iOS.framework in Embed Frameworks */,
+				D43B17B8245F6744004C855F /* RVS_BlueThoth_iOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,7 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4EA7E8A245E12E2006D3453 /* RVS_BlueThoth_iOS.framework in Frameworks */,
+				D43B17B7245F6744004C855F /* RVS_BlueThoth_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,8 +307,8 @@
 		D49F9AAC245314A70061DC2B /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				D4CD58E0245F64EE00172508 /* RVS_BlueThoth Project */,
 				D4A53AAB24312F2F009647C4 /* RVS_PersistentPrefs.swift */,
+				D4CD58E0245F64EE00172508 /* RVS_BlueThoth Project (Framework Target Only) */,
 				D4EA7E05245E11AF006D3453 /* RVS_BlueThoth Source (Direct Target Only) */,
 			);
 			name = Carthage;
@@ -397,12 +418,12 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
-		D4CD58E0245F64EE00172508 /* RVS_BlueThoth Project */ = {
+		D4CD58E0245F64EE00172508 /* RVS_BlueThoth Project (Framework Target Only) */ = {
 			isa = PBXGroup;
 			children = (
 				D4CD58E1245F650D00172508 /* RVS_BlueThoth.xcodeproj */,
 			);
-			name = "RVS_BlueThoth Project";
+			name = "RVS_BlueThoth Project (Framework Target Only)";
 			sourceTree = "<group>";
 		};
 		D4CD58E2245F650D00172508 /* Products */ = {
@@ -410,6 +431,8 @@
 			children = (
 				D4CD58E7245F650D00172508 /* RVS_BlueThoth_iOS.framework */,
 				D4CD58E9245F650D00172508 /* RVS_BlueThoth_MacOS.framework */,
+				D43B17B4245F66E7004C855F /* RVS_BlueThoth_WatchOS.framework */,
+				D43B17B6245F66E7004C855F /* RVS_BlueThoth_TVOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -465,11 +488,12 @@
 				D4B1C67F2430F26800D3AC78 /* Sources */,
 				D4B1C6812430F26800D3AC78 /* Resources */,
 				D4B49CEC245511B700932C3D /* Frameworks */,
-				D40669CC2455169D00A5BA4A /* Embed Frameworks */,
+				D43B17B9245F6744004C855F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D43B17BB245F6752004C855F /* PBXTargetDependency */,
 			);
 			name = "Blue Van Clef (Framework)";
 			productName = ClassicalGas;
@@ -501,9 +525,10 @@
 		D420C88C242FCD5600FCB9E0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CGA;
 				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
-				ORGANIZATIONNAME = "Little Green Viper Software Development LLC";
+				ORGANIZATIONNAME = "The Great Rift Valley Software Company";
 				TargetAttributes = {
 					D4B1C6822430F26800D3AC78 = {
 						CreatedOnToolsVersion = 11.4;
@@ -536,6 +561,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		D43B17B4245F66E7004C855F /* RVS_BlueThoth_WatchOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RVS_BlueThoth_WatchOS.framework;
+			remoteRef = D43B17B3245F66E7004C855F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D43B17B6245F66E7004C855F /* RVS_BlueThoth_TVOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RVS_BlueThoth_TVOS.framework;
+			remoteRef = D43B17B5245F66E7004C855F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		D4CD58E7245F650D00172508 /* RVS_BlueThoth_iOS.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -691,6 +730,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D43B17BB245F6752004C855F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RVS_BlueThoth_iOS;
+			targetProxy = D43B17BA245F6752004C855F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D447B9E7243171AB00F00A7A /* LaunchScreen.storyboard */ = {
