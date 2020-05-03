@@ -78,6 +78,23 @@
 		D4F666C72434F06200CD4548 /* CGA_InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F666C62434F06200CD4548 /* CGA_InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D4CD58E6245F650D00172508 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4CD58E1245F650D00172508 /* RVS_BlueThoth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D4B49CE0245511B700932C3D;
+			remoteInfo = RVS_BlueThoth_iOS;
+		};
+		D4CD58E8245F650D00172508 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4CD58E1245F650D00172508 /* RVS_BlueThoth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D4C2D38B24550ABC00197A0A;
+			remoteInfo = RVS_BlueThoth_MacOS;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		D40669CC2455169D00A5BA4A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -122,6 +139,7 @@
 		D4B1C6832430F26800D3AC78 /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B49CDA2455115600932C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4CAA4262434E877007C72AA /* CGA_PeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_PeripheralViewController.swift; sourceTree = "<group>"; };
+		D4CD58E1245F650D00172508 /* RVS_BlueThoth.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RVS_BlueThoth.xcodeproj; path = Carthage/Checkouts/RVS_BlueThoth/RVS_BlueThoth.xcodeproj; sourceTree = SOURCE_ROOT; };
 		D4EA7E06245E11E2006D3453 /* CGA_Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGA_Errors.swift; path = Carthage/Checkouts/RVS_BlueThoth/src/Source/Protocols/public/CGA_Errors.swift; sourceTree = SOURCE_ROOT; };
 		D4EA7E07245E11E2006D3453 /* CGA_Bluetooth_Service_CurrentTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGA_Bluetooth_Service_CurrentTime.swift; path = Carthage/Checkouts/RVS_BlueThoth/src/Source/Implementation/Services/CGA_Bluetooth_Service_CurrentTime.swift; sourceTree = SOURCE_ROOT; };
 		D4EA7E08245E11E2006D3453 /* CGA_Bluetooth_Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGA_Bluetooth_Service.swift; path = Carthage/Checkouts/RVS_BlueThoth/src/Source/Implementation/Services/CGA_Bluetooth_Service.swift; sourceTree = SOURCE_ROOT; };
@@ -268,6 +286,7 @@
 		D49F9AAC245314A70061DC2B /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
+				D4CD58E0245F64EE00172508 /* RVS_BlueThoth Project */,
 				D4A53AAB24312F2F009647C4 /* RVS_PersistentPrefs.swift */,
 				D4EA7E05245E11AF006D3453 /* RVS_BlueThoth Source (Direct Target Only) */,
 			);
@@ -378,6 +397,23 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		D4CD58E0245F64EE00172508 /* RVS_BlueThoth Project */ = {
+			isa = PBXGroup;
+			children = (
+				D4CD58E1245F650D00172508 /* RVS_BlueThoth.xcodeproj */,
+			);
+			name = "RVS_BlueThoth Project";
+			sourceTree = "<group>";
+		};
+		D4CD58E2245F650D00172508 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4CD58E7245F650D00172508 /* RVS_BlueThoth_iOS.framework */,
+				D4CD58E9245F650D00172508 /* RVS_BlueThoth_MacOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D4DE33872459E5300053F163 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +521,12 @@
 			mainGroup = D420C88B242FCD5600FCB9E0;
 			productRefGroup = D420C895242FCD5600FCB9E0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D4CD58E2245F650D00172508 /* Products */;
+					ProjectRef = D4CD58E1245F650D00172508 /* RVS_BlueThoth.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D4B1C6822430F26800D3AC78 /* Blue Van Clef (Framework) */,
@@ -492,6 +534,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D4CD58E7245F650D00172508 /* RVS_BlueThoth_iOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RVS_BlueThoth_iOS.framework;
+			remoteRef = D4CD58E6245F650D00172508 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D4CD58E9245F650D00172508 /* RVS_BlueThoth_MacOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RVS_BlueThoth_MacOS.framework;
+			remoteRef = D4CD58E8245F650D00172508 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D4B1C6812430F26800D3AC78 /* Resources */ = {
@@ -803,7 +862,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.Blue-Van-Clef";
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
 				PRODUCT_NAME = "Blue Van Clef";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -831,7 +890,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.Blue-Van-Clef";
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
 				PRODUCT_NAME = "Blue Van Clef";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -860,7 +919,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.Blue-Van-Clef";
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -888,7 +947,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.Blue-Van-Clef";
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
