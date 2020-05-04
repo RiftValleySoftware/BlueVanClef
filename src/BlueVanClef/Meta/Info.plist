@@ -24,6 +24,8 @@
 	<true/>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>SLUG-BLUETOOTH-MESSAGE</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>SLUG-BLUETOOTH-MESSAGE</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>SLUG-COPYRIGHT</string>
 	<key>UILaunchStoryboardName</key>
