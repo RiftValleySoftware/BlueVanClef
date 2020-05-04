@@ -19,15 +19,15 @@
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LGVInfoScreenCopyrightSiteURL</key>
-	<string>SLUG-URL</string>
+	<string>https://riftvalleysoftware.com</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>SLUG-BLUETOOTH-MESSAGE</string>
+	<string>The App Needs to Discover and Connect to Bluetooth Devices.</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>SLUG-BLUETOOTH-MESSAGE</string>
+	<string>The App Needs to Discover and Connect to Bluetooth Devices.</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>SLUG-COPYRIGHT</string>
+	<string>©2020 The Great Rift Valley Software Company</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

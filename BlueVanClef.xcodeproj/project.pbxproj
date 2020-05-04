@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D40E0CE024602F7F005B8699 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E0CE324602F7F005B8699 /* Default-568h@2x.png */; };
+		D40E0CE124602F7F005B8699 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E0CE324602F7F005B8699 /* Default-568h@2x.png */; };
 		D417ED782458950100169F91 /* CGA_BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D417ED772458946500169F91 /* CGA_BaseViewController.swift */; };
 		D436B44D243CC1C6003619D9 /* CGA_ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D436B44C243CC1C6003619D9 /* CGA_ServiceViewController.swift */; };
 		D43B17B7245F6744004C855F /* RVS_BlueThoth_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CD58E7245F650D00172508 /* RVS_BlueThoth_iOS.framework */; };
@@ -141,6 +143,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D40E0CDE24602F56005B8699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D40E0CE224602F7F005B8699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = "Base.lproj/Default-568h@2x.png"; sourceTree = "<group>"; };
 		D417ED772458946500169F91 /* CGA_BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_BaseViewController.swift; sourceTree = "<group>"; };
 		D436B44C243CC1C6003619D9 /* CGA_ServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_ServiceViewController.swift; sourceTree = "<group>"; };
 		D43AC45D245AF86800DD97AF /* RVS_BlueThoth_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RVS_BlueThoth_iOS.framework; path = Carthage/Build/iOS/RVS_BlueThoth_iOS.framework; sourceTree = "<group>"; };
@@ -158,7 +162,6 @@
 		D49F9AAF245316F70061DC2B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D4A53AAB24312F2F009647C4 /* RVS_PersistentPrefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RVS_PersistentPrefs.swift; path = ../../Carthage/Checkouts/RVS_PersistentPrefs/RVS_Persistent_Prefs/RVS_PersistentPrefs.swift; sourceTree = "<group>"; };
 		D4B1C6832430F26800D3AC78 /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4B49CDA2455115600932C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4CAA4262434E877007C72AA /* CGA_PeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_PeripheralViewController.swift; sourceTree = "<group>"; };
 		D4CD58E1245F650D00172508 /* RVS_BlueThoth.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RVS_BlueThoth.xcodeproj; path = Carthage/Checkouts/RVS_BlueThoth/RVS_BlueThoth.xcodeproj; sourceTree = SOURCE_ROOT; };
 		D4EA7E06245E11E2006D3453 /* CGA_Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGA_Errors.swift; path = Carthage/Checkouts/RVS_BlueThoth/src/Source/Protocols/public/CGA_Errors.swift; sourceTree = SOURCE_ROOT; };
@@ -248,6 +251,7 @@
 		D447B9E5243171AB00F00A7A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D40E0CE324602F7F005B8699 /* Default-568h@2x.png */,
 				D447B9E6243171AB00F00A7A /* Assets.xcassets */,
 				D447B9E7243171AB00F00A7A /* LaunchScreen.storyboard */,
 				D447B9E9243171AB00F00A7A /* Main.storyboard */,
@@ -299,7 +303,7 @@
 		D48D852C2430F13100A925ED /* Meta */ = {
 			isa = PBXGroup;
 			children = (
-				D4B49CDA2455115600932C3D /* Info.plist */,
+				D40E0CDE24602F56005B8699 /* Info.plist */,
 			);
 			path = Meta;
 			sourceTree = "<group>";
@@ -601,6 +605,7 @@
 				D447B9F1243171AB00F00A7A /* Main.storyboard in Resources */,
 				D4B49D062455137700932C3D /* Assets.xcassets in Resources */,
 				D447B9F0243171AB00F00A7A /* LaunchScreen.storyboard in Resources */,
+				D40E0CE024602F7F005B8699 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +618,7 @@
 				D4EA7E80245E124C006D3453 /* Main.storyboard in Resources */,
 				D4EA7E81245E124C006D3453 /* Assets.xcassets in Resources */,
 				D4EA7E82245E124C006D3453 /* LaunchScreen.storyboard in Resources */,
+				D40E0CE124602F7F005B8699 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,6 +746,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D40E0CE324602F7F005B8699 /* Default-568h@2x.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D40E0CE224602F7F005B8699 /* Base */,
+			);
+			name = "Default-568h@2x.png";
+			sourceTree = "<group>";
+		};
 		D447B9E7243171AB00F00A7A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -896,7 +910,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3001;
+				CURRENT_PROJECT_VERSION = 3002;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -924,7 +938,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3001;
+				CURRENT_PROJECT_VERSION = 3002;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
