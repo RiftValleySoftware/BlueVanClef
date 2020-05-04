@@ -77,7 +77,7 @@ extension UIView {
             return responder.currentFirstResponder
         }
         
-        return self.isFirstResponder ? self : nil
+        return isFirstResponder ? self : nil
     }
 
     /* ################################################################## */
@@ -85,7 +85,7 @@ extension UIView {
      This puts away any open keyboards.
      */
     func resignAllFirstResponders() {
-        if let firstResponder = self.currentFirstResponder {
+        if let firstResponder = currentFirstResponder {
             firstResponder.resignFirstResponder()
         } else {
             subviews.forEach { $0.resignAllFirstResponders() }
