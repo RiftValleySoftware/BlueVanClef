@@ -164,7 +164,7 @@ extension Bundle {
     var copyrightString: String? { object(forInfoDictionaryKey: "NSHumanReadableCopyright") as? String }
 
     // MARK: Specific to this app.
-
+    
     /* ################################################################## */
     /**
      If there is a copyright site URI, it is returned here as a String. It may be nil.
@@ -173,7 +173,19 @@ extension Bundle {
     
     /* ################################################################## */
     /**
+     If there is a help site URI, it is returned here as a String. It may be nil.
+     */
+    var helpURIAsString: String? { object(forInfoDictionaryKey: "InfoScreenHelpSiteURL") as? String }
+    
+    /* ################################################################## */
+    /**
      If there is a copyright site URI, it is returned here as a URL. It may be nil.
      */
     var siteURI: URL? { URL(string: siteURIAsString ?? "") }
+    
+    /* ################################################################## */
+    /**
+     If there is a help site URI, it is returned here as a URL. It may be nil.
+     */
+    var helpURI: URL? { URL(string: helpURIAsString ?? "") }
 }

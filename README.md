@@ -13,7 +13,9 @@ Although this is an iOS app, it will be used to develop a cross-[Apple]-platform
 
 DEPENDENCIES
 -
-This depends upon the [RVS_BlueToth SDK](https://riftvalleysoftware.github.io/RVS_BlueToth)
+This depends upon the [RVS_BlueToth SDK](https://riftvalleysoftware.github.io/RVS_BlueToth).
+
+It also depends upon the [RVS Generic Swift Toolbox](https://github.com/RiftValleySoftware/RVS_Generic_Swift_Toolbox), and the [RVS Peristsent Prefs Utility](https://github.com/RiftValleySoftware/RVS_PersistentPrefs).
 
 USAGE
 -

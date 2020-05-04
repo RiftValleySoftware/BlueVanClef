@@ -71,6 +71,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 
 // MARK: - Info screen
 "SLUG-VERSION-FORMAT"               =   "VERSION: %@ (%@)";
+"SLUG-HELP-BUTTON-TEXT"             =   "Go To the Instruction Page";
 "SLUG-MAIN-INFO-TEXT"               =   "This app is a very basic Bluetooth Low-Energy (BLE) \"explorer.\"\nWe can detect advertising BLE devices (Peripherals), and connect to them (if the device allows connection).\nOnce connected, we can then explore the Bluetooth Services, Characteristics, and Descriptors.\nTap on a table row to \"explore\" that Peripheral, Service or Characteristic.\n\nIt is possible to filter for only certain devices or advertised Services.\n\nAdditionally, we can filter for devices that advertise as connectable, or that advertise a name.";
 
 // MARK: - Settings screen

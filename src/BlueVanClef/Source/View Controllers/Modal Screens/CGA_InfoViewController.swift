@@ -46,12 +46,18 @@ class CGA_InfoViewController: CGA_BaseViewController {
      The label just below the app name label, displaying the version.
      */
     @IBOutlet weak var appVersionLabel: UILabel!
-
+    
     /* ################################################################## */
     /**
      The button at the bottom that will link to the site.
      */
     @IBOutlet weak var copyrightButton: UIButton!
+    
+    /* ################################################################## */
+    /**
+     The button that will link to the instruction page.
+     */
+    @IBOutlet weak var helpButton: UIButton!
 }
 
 /* ###################################################################################################################################### */
@@ -84,6 +90,18 @@ extension CGA_InfoViewController {
         
         UIApplication.shared.open(uri)
     }
+    
+    /* ################################################################## */
+    /**
+     Called when the help button is hit.
+     
+     - parameter: ignored
+     */
+    @IBAction func helpButtonHit(_: Any) {
+        guard let uri = Bundle.main.helpURI else { return }
+        
+        UIApplication.shared.open(uri)
+    }
 }
 
 /* ###################################################################################################################################### */
@@ -100,6 +118,7 @@ extension CGA_InfoViewController {
         appVersionLabel?.text = String(format: "SLUG-VERSION-FORMAT".localizedVariant, Bundle.main.appVersionString, Bundle.main.appVersionBuildString)
         mainTextView?.text = mainTextView?.text.localizedVariant
         copyrightButton.setTitle(Bundle.main.copyrightString, for: .normal)
+        helpButton.setTitle(helpButton.title(for: .normal)?.localizedVariant, for: .normal)
         _setUpAccessibility()
     }
     
