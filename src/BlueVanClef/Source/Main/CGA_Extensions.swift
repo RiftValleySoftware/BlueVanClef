@@ -73,19 +73,11 @@ extension UIView {
      This returns the first responder, wherever it is in our hierarchy.
      */
     var currentFirstResponder: UIResponder? {
-        if self.isFirstResponder {
-            return self
-        } else {
-            var ret: UIResponder?
-            
-            subviews.forEach {
-                if let responder = $0.currentFirstResponder {
-                    ret = responder
-                }
-            }
-            
-            return ret
+        for responder in subviews where nil != responder.currentFirstResponder {
+            return responder.currentFirstResponder
         }
+        
+        return self.isFirstResponder ? self : nil
     }
 
     /* ################################################################## */
@@ -96,9 +88,7 @@ extension UIView {
         if let firstResponder = self.currentFirstResponder {
             firstResponder.resignFirstResponder()
         } else {
-            subviews.forEach {
-                $0.resignAllFirstResponders()
-            }
+            subviews.forEach { $0.resignAllFirstResponders() }
         }
     }
 }
