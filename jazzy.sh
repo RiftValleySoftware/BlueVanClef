@@ -13,7 +13,7 @@ jazzy   --readme ./README.md \
         --min_acl private \
         --output docs \
         --theme fullwidth \
-        --build-tool-arguments -scheme,"BlueVanClef"
+        --build-tool-arguments -scheme,"Blue Van Clef (Framework)"
 cp ./img/* docs/img
 
 cd "${CWD}"
