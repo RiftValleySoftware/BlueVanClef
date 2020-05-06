@@ -87,7 +87,7 @@ class CGA_PersistentPrefs: RVS_PersistentPrefs {
 
         /* ############################################################## */
         /**
-         This will be a CGColor, indicating the color to use for the selected table cells.
+         This is a floating-point number to be used as an alpha component.
          */
         case textColorForUnselectableCells = "kTextColorForUnselectableCells"
 
@@ -99,11 +99,11 @@ class CGA_PersistentPrefs: RVS_PersistentPrefs {
                                         peripheralFilterIDArray.rawValue,
                                         serviceFilterIDArray.rawValue,
                                         characteristicFilterIDArray.rawValue,
-                                        tableSelectionBackgroundColor.rawValue,
-                                        textColorForUnselectableCells.rawValue,
                                         minimumRSSILevel.rawValue,
                                         discoverOnlyConnectableDevices.rawValue,
-                                        allowEmptyNames.rawValue
+                                        allowEmptyNames.rawValue,
+                                        tableSelectionBackgroundColor.rawValue,
+                                        textColorForUnselectableCells.rawValue
                                         ] }
     }
     
@@ -186,8 +186,8 @@ class CGA_PersistentPrefs: RVS_PersistentPrefs {
     
     /* ################################################################## */
     /**
-     This is a CGColor, indicating the color to use for the table cells that can't be clicked.
-     Instead of storing it, we simply return the same color.
+     This is a floating-point number to be used as an alpha component. We use it for the table cells that can't be clicked.
+     Instead of storing it, we simply return the same alpha value.
      */
     var textColorForUnselectableCells: CGFloat { 0.5 }
 

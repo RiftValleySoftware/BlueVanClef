@@ -33,7 +33,6 @@ import UIKit
  We add a couple of computed properties to report Dark Mode and High-Contrast Mode.
  */
 extension UIViewController {
-
     /* ################################################################## */
     /**
      Returns true, if we are in Dark Mode.
@@ -97,7 +96,7 @@ extension UIView {
 // MARK: - UITableView Extension -
 /* ###################################################################################################################################### */
 /**
- This extension adds a method for deselecting all the table rows..
+ This extension adds a method for deselecting all the table rows.
  */
 extension UITableView {
     /* ################################################################## */
