@@ -21,7 +21,8 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 */
 
 import UIKit
-import RVS_BlueThoth_iOS
+//import RVS_BlueThoth_iOS
+import RVS_Persistent_Prefs
 
 /* ###################################################################################################################################### */
 // MARK: - The CGA_DetailViewController_TableRow Class (Denotes One Row of the Table) -
