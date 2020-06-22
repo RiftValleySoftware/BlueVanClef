@@ -34,21 +34,31 @@ class CGA_BaseViewController: UIViewController {
     
     // The NavBar
     // We adjust the NavBar color to fit the mode. Dark, High-Contrast Mode is just black.
+    /// This is the color of the Navigation Bar for Dark Mode
     private let _darkMode_navbar_color: UIColor = UIColor(white: 0.065, alpha: 1.0)
+    /// This is the color of the Navigation Bar for High Contrast Mode (Dark)
     private let _darkMode_high_contrast_navbar_color: UIColor = .black
+    /// This is the color of the Navigation Bar for Light Mode
     private let _lightMode_navbar_color: UIColor = UIColor(red: 0, green: 0.28, blue: 1.0, alpha: 1.0)
+    /// This is the color of the Navigation Bar for High Contrast Mode (Light)
     private let _lightMode_high_contrast_navbar_color: UIColor = UIColor(red: 0, green: 0.08, blue: 0.69, alpha: 1.0)
     
     // The BlueVanClef Logo
     // We reduce the alpha for Dark Mode. Dark, High-contrast Mode hides the logo completely.
+    /// This is the alpha transparency for the central logo in Dark Mode.
     private let _darkMode_logo_alpha: CGFloat = 0.05
+    /// This is the alpha transparency for the central logo in High Contrast Mode (Dark).
     private let _darkMode_high_contrast_logo_alpha: CGFloat = 0
+    /// This is the alpha transparency for the central logo in Light Mode.
     private let _lightMode_logo_alpha: CGFloat = 0.15
+    /// This is the alpha transparency for the central logo in High Contrast Mode (Light).
     private let _lightMode_high_contrast_logo_alpha: CGFloat = 0
     
     // The Background Gradient
     // In High-contrast Mode, we darken the background gradient a bit.
+    /// This is the background gradient alpha transparency in regular contrast mode.
     private let _background_alpha: CGFloat = 1.0
+    /// This is the background gradient alpha transparency in High Contrast mode.
     private let _high_contrast_background_alpha: CGFloat = 0.6
 
     /* ################################################################## */

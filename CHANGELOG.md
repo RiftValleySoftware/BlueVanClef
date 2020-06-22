@@ -1,5 +1,12 @@
 # BlueVanClef Change Log
 
+## 1.1.0.2000
+
+- **June 22, 2020**
+
+- Switched to built-in Carthage, using the RVS_BlueThoth SDK.
+- Fixed some undocumented stuff.
+
 ## 1.0.0.3001
 
 - **May 4, 2020**

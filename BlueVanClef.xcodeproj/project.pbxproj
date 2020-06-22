@@ -314,7 +314,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if command -v carthage; then\n    carthage update\nfi\n";
+			shellScript = "if command -v carthage; then\n    if test ! -e \"${PROJECT_DIR}/Carthage/Build\"; then\n        carthage update\n    fi\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

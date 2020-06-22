@@ -14,7 +14,7 @@
          location = "group:Cartfile">
       </FileRef>
       <FileRef
-         location = "group:jazzy.sh">
+         location = "group:jazzy.command">
       </FileRef>
       <FileRef
          location = "group:LICENSE">
