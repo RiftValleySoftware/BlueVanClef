@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "RVS_Generic_Swift_Toolbox",
+        "repositoryURL": "git@github.com:RiftValleySoftware/RVS_Generic_Swift_Toolbox.git",
+        "state": {
+          "branch": "master",
+          "revision": "547352b3a67a72eefa20b93246cb197942b3653b",
+          "version": null
+        }
+      },
+      {
+        "package": "RVS_Persistent_Prefs",
+        "repositoryURL": "git@github.com:RiftValleySoftware/RVS_PersistentPrefs.git",
+        "state": {
+          "branch": "master",
+          "revision": "2fe277743a2d6e386a8ea65c3e28f16cdad83e8c",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
