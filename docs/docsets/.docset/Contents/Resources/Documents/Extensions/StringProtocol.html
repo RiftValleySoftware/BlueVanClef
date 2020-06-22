@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CGA_PeripheralViewController Class Reference</title>
+    <title>StringProtocol Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/CGA_PeripheralViewController" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/StringProtocol" class="dashAnchor"></a>
 
-    <a title="CGA_PeripheralViewController Class Reference"></a>
+    <a title="StringProtocol Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html"> Reference</a>
       <img class="carat" src="../img/carat.png" />
-      CGA_PeripheralViewController Class Reference
+      StringProtocol Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -152,17 +152,16 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>CGA_PeripheralViewController</h1>
+            <h1>StringProtocol</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CGA_PeripheralViewController</span> <span class="p">:</span> <span class="kt"><a href="../Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_PeripheralViewController</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CGA_UpdatableScreenViewController.html">CGA_UpdatableScreenViewController</a></span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_PeripheralViewController</span><span class="p">:</span> <span class="kt">UITableViewDataSource</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_PeripheralViewController</span><span class="p">:</span> <span class="kt">UITableViewDelegate</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">StringProtocol</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">StringProtocol</span> <span class="k">where</span> <span class="kt">Index</span> <span class="o">==</span> <span class="kt">String</span><span class="o">.</span><span class="kt">Index</span></code></pre>
 
                 </div>
               </div>
-            <p>This controls the Peripheral Information View.</p>
+            <p>These are a variety of cool String extensions that add some great extra cheese on the pizza.
+NOTE: These extensions feature some use of <a href="https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/Common%20Crypto.3cc.html">Apple&rsquo;s built-in CommonCrypto utility</a>.</p>
 
           </div>
         </section>
@@ -174,9 +173,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13Blue_Van_Clef28CGA_PeripheralViewControllerC17_deviceRowReuseID33_0EB09AC3288409EDE1E77E19B13399E5LLSSvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/_deviceRowReuseID" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef28CGA_PeripheralViewControllerC17_deviceRowReuseID33_0EB09AC3288409EDE1E77E19B13399E5LLSSvpZ">_deviceRowReuseID</a>
+                    <a name="/s:Sy13Blue_Van_ClefE16localizedVariantSSvp"></a>
+                    <a name="//apple_ref/swift/Property/localizedVariant" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE16localizedVariantSSvp">localizedVariant</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -184,14 +183,88 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The reuse ID that we use for creating new table cells.</p>
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">localizedVariant</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>the localized string (main bundle) for this string.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sy13Blue_Van_ClefE3md5SSvp"></a>
+                    <a name="//apple_ref/swift/Property/md5" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE3md5SSvp">md5</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This calculates an MD5 checksum of the String, and returns it as an uppercase hex String.</p>
+
+<p>Mostly from <a href="https://www.agnosticdev.com/content/how-use-commoncrypto-apis-swift-5">Matt Eaton&rsquo;s blog entry</a>.</p>
+
+<p>It has direct access to Apple&rsquo;s built-in CommonCrypto library as per <a href="https://stackoverflow.com/a/55639723/879365">this SO question</a></p>
+
+<ul>
+<li><p>Here are a couple of sites that you can use to validate the results of this operation:</p>
+
+<ul>
+<li><a href="https://www.md5hashgenerator.com">MD5 Hash Generator</a></li>
+<li><a href="https://www.miraclesalad.com/webtools/md5.php">Miracle Salad MD5 Hash Generator</a></li>
+</ul></li>
+</ul>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">_deviceRowReuseID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">md5</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>an MD5 hash of the String, as an uppercase hex String.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sy13Blue_Van_ClefE3md5SSvg11CC_MD5_TYPEL_a"></a>
+                    <a name="//apple_ref/swift/Alias/CC_MD5_TYPE" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE3md5SSvg11CC_MD5_TYPEL_a">CC_MD5_TYPE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is a cast for <a href="https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/CC_MD5.3cc.html#//apple_ref/doc/man/3cc/CC_MD5">the MD5 function</a>. The convention attribute just says that it&rsquo;s a &ldquo;raw&rdquo; C function.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">CC_MD5_TYPE</span> <span class="o">=</span> <span class="kd">@convention</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">(</span><span class="kt">UnsafeRawPointer</span><span class="p">,</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="kt">UnsafeMutableRawPointer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UnsafeMutableRawPointer</span></code></pre>
 
                         </div>
                       </div>
@@ -201,9 +274,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13Blue_Van_Clef28CGA_PeripheralViewControllerC21_serviceDetailSegueID33_0EB09AC3288409EDE1E77E19B13399E5LLSSvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/_serviceDetailSegueID" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef28CGA_PeripheralViewControllerC21_serviceDetailSegueID33_0EB09AC3288409EDE1E77E19B13399E5LLSSvpZ">_serviceDetailSegueID</a>
+                    <a name="/s:Sy13Blue_Van_ClefE6sha256SSvp"></a>
+                    <a name="//apple_ref/swift/Property/sha256" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE6sha256SSvp">sha256</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -211,14 +284,58 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ID of the segue that is executed to display Service details.</p>
+                        <p>This calculates a SHA256 checksum of the String, and returns it as an uppercase hex String.</p>
+
+<p>Mostly from <a href="https://www.agnosticdev.com/content/how-use-commoncrypto-apis-swift-5">Matt Eaton&rsquo;s blog entry</a>.</p>
+
+<p>It has direct access to Apple&rsquo;s built-in CommonCrypto library as per <a href="https://stackoverflow.com/a/55639723/879365">this SO question</a></p>
+
+<ul>
+<li><p>Here are a couple of sites that you can use to validate the results of this operation:</p>
+
+<ul>
+<li><a href="https://emn178.github.io/online-tools/sha256.html">SHA256 Online</a></li>
+<li><a href="https://www.freeformatter.com/sha256-generator.html">FreeFormatter SHA256 Generator</a></li>
+</ul></li>
+</ul>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">_serviceDetailSegueID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sha256</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a SHA256 hash of the String, as an uppercase hex String.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sy13Blue_Van_ClefE6sha256SSvg14CC_SHA256_TYPEL_a"></a>
+                    <a name="//apple_ref/swift/Alias/CC_SHA256_TYPE" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE6sha256SSvg14CC_SHA256_TYPEL_a">CC_SHA256_TYPE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is a cast for <a href="https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/CC_SHA.3cc.html#//apple_ref/doc/man/3cc/CC_SHA">the SHA256 function</a>. The convention attribute just says that it&rsquo;s a &ldquo;raw&rdquo; C function.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">CC_SHA256_TYPE</span> <span class="o">=</span> <span class="kd">@convention</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">(</span><span class="kt">UnsafeRawPointer</span><span class="p">,</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="kt">UnsafeMutableRawPointer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UnsafeMutableRawPointer</span></code></pre>
 
                         </div>
                       </div>
@@ -228,9 +345,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13Blue_Van_Clef28CGA_PeripheralViewControllerC15_refreshControl33_0EB09AC3288409EDE1E77E19B13399E5LLSo09UIRefreshI0Cvp"></a>
-                    <a name="//apple_ref/swift/Property/_refreshControl" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef28CGA_PeripheralViewControllerC15_refreshControl33_0EB09AC3288409EDE1E77E19B13399E5LLSo09UIRefreshI0Cvp">_refreshControl</a>
+                    <a name="/s:Sy13Blue_Van_ClefE8hexDump8SaySSGvp"></a>
+                    <a name="//apple_ref/swift/Property/hexDump8" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE8hexDump8SaySSGvp">hexDump8</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -238,14 +355,172 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This implements a &ldquo;pull to refresh.&rdquo;</p>
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">hexDump8</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The String, converted into an Array of uppercase 2-digit hex strings (leading 0s, 1 8-bit character per element). This actually takes the UTF8 value of each character.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sy13Blue_Van_ClefE9hexDump16SaySSGvp"></a>
+                    <a name="//apple_ref/swift/Property/hexDump16" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE9hexDump16SaySSGvp">hexDump16</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">hexDump16</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The String, converted into an Array of uppercase 4-digit hex strings (leading 0s, 1 16-bit character per element). This actually takes the UTF16 value of each character.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sy13Blue_Van_ClefE15firstUppercasedSSvp"></a>
+                    <a name="//apple_ref/swift/Property/firstUppercased" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE15firstUppercasedSSvp">firstUppercased</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This extension lets us uppercase only the first letter of the string (used for weekdays).
+From here: <a href="https://stackoverflow.com/a/28288340/879365">https://stackoverflow.com/a/28288340/879365</a></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="k">let</span> <span class="nv">_refreshControl</span><span class="p">:</span> <span class="kt">UIRefreshControl</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">firstUppercased</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The string, with only the first letter uppercased.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sy13Blue_Van_ClefE16urlEncodedStringSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/urlEncodedString" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE16urlEncodedStringSSSgvp">urlEncodedString</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The following computed property comes from this: <a href="http://stackoverflow.com/a/27736118/879365">http://stackoverflow.com/a/27736118/879365</a></p>
+
+<p>This extension function cleans up a URI string.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">urlEncodedString</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a string, cleaned for URI.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sy13Blue_Van_ClefE16urlDecodedStringSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/urlDecodedString" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE16urlDecodedStringSSSgvp">urlDecodedString</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The opposite of the above</p>
+
+<p>This extension function takes a URI-encoded String, and decodes it into a regular String.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">urlDecodedString</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a string, restored from URI encoding.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sy13Blue_Van_ClefE10binaryOnlySSvp"></a>
+                    <a name="//apple_ref/swift/Property/binaryOnly" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE10binaryOnlySSvp">binaryOnly</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This simply strips out all non-binary characters in the string, leaving only valid binary digits.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">binaryOnly</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -255,9 +530,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13Blue_Van_Clef28CGA_PeripheralViewControllerC13deviceAdvInfo04RVS_A9Thoth_iOS0k1_aL0C13DiscoveryDataCSgvp"></a>
-                    <a name="//apple_ref/swift/Property/deviceAdvInfo" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef28CGA_PeripheralViewControllerC13deviceAdvInfo04RVS_A9Thoth_iOS0k1_aL0C13DiscoveryDataCSgvp">deviceAdvInfo</a>
+                    <a name="/s:Sy13Blue_Van_ClefE9octalOnlySSvp"></a>
+                    <a name="//apple_ref/swift/Property/octalOnly" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE9octalOnlySSvp">octalOnly</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -265,14 +540,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This contains the device discovery data.</p>
+                        <p>This simply strips out all non-octal characters in the string, leaving only valid octal digits.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">deviceAdvInfo</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="o">.</span><span class="kt">DiscoveryData</span><span class="o">!</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">octalOnly</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -282,9 +557,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13Blue_Van_Clef28CGA_PeripheralViewControllerC14deviceInstance04RVS_A9Thoth_iOS0d11_Bluetooth_E0CSgvp"></a>
-                    <a name="//apple_ref/swift/Property/deviceInstance" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef28CGA_PeripheralViewControllerC14deviceInstance04RVS_A9Thoth_iOS0d11_Bluetooth_E0CSgvp">deviceInstance</a>
+                    <a name="/s:Sy13Blue_Van_ClefE11decimalOnlySSvp"></a>
+                    <a name="//apple_ref/swift/Property/decimalOnly" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE11decimalOnlySSvp">decimalOnly</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -292,14 +567,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This contains the device instance, once the connection is successful. It is a weak reference.</p>
+                        <p>This simply strips out all non-decimal characters in the string, leaving only valid decimal digits.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">deviceInstance</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Peripheral</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">decimalOnly</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -309,9 +584,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(py)serviceTableView"></a>
-                    <a name="//apple_ref/swift/Property/serviceTableView" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(py)serviceTableView">serviceTableView</a>
+                    <a name="/s:Sy13Blue_Van_ClefE7hexOnlySSvp"></a>
+                    <a name="//apple_ref/swift/Property/hexOnly" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE7hexOnlySSvp">hexOnly</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -319,15 +594,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This is the table that will list the discovered devices.</p>
+                        <p>This simply strips out all non-hex characters in the string, leaving only valid, uppercased (forced) hex digits.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
-<span class="k">weak</span> <span class="k">var</span> <span class="nv">serviceTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="o">!</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">hexOnly</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -337,9 +611,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(py)busyAnimationActivityIndicatorView"></a>
-                    <a name="//apple_ref/swift/Property/busyAnimationActivityIndicatorView" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(py)busyAnimationActivityIndicatorView">busyAnimationActivityIndicatorView</a>
+                    <a name="/s:Sy13Blue_Van_ClefE8hex2UTF8SSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/hex2UTF8" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE8hex2UTF8SSSgvp">hex2UTF8</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -347,15 +621,52 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This is the &ldquo;Busy&rdquo; animation that is displayed while the device connects.</p>
+                        <p>A fairly blunt-instrument hex digit pair-to-ASCII character converter. It isn&rsquo;t particularly intelligent.</p>
+
+<p>For example: &ldquo;0x30313233&rdquo; or &ldquo;30 31 32 33&rdquo; or &ldquo;#30-31-32-33-H&rdquo; or &ldquo;30The 3132Quick Brown Fox Jumps Over the Lazy Doge33&rdquo; all turn into &ldquo;0123&rdquo;.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
-<span class="k">weak</span> <span class="k">var</span> <span class="nv">busyAnimationActivityIndicatorView</span><span class="p">:</span> <span class="kt">UIActivityIndicatorView</span><span class="o">!</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">hex2UTF8</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The String, assumed to be hex numbers (two characters, 0-F, separated by non-hex characters, or not separated); converted to an ASCII string (no spaces).
+       Nil, if the string failed to yeild a UTF8 value.
+       This requires two characters (0-9a-fA-F), side-by-side for each character. They may or may not be separated. Single characters are ignored.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sy13Blue_Van_ClefE7hex2IntSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/hex2Int" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE7hex2IntSiSgvp">hex2Int</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Another fairly brute-force simple parser.
+This computed property will return an Int, extracted from the String, if the String is a Hex number.
+It will return nil, if the number cannot be extracted.
+For example, &ldquo;20&rdquo; would return 32, &ldquo;F100&rdquo; will return 61696, and &ldquo;3&rdquo; will return 3. &ldquo;G&rdquo; would return nil, but &ldquo;George&rdquo; would return 238 (&ldquo;EE&rdquo;).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">hex2Int</span><span class="p">:</span> <span class="kt">Int</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -365,9 +676,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(py)connectingLabel"></a>
-                    <a name="//apple_ref/swift/Property/connectingLabel" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(py)connectingLabel">connectingLabel</a>
+                    <a name="/s:Sy13Blue_Van_ClefE10uuidFormatSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/uuidFormat" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE10uuidFormatSSSgvp">uuidFormat</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -375,73 +686,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The label that displays the &ldquo;CONNECTING&hellip;&rdquo; message.</p>
+                        <p>This &ldquo;scrubs&rdquo; a String, returning it as a proper UUID format (either 4 hex characters, or a split 32-hex-character String, in 8-4-4-4-12 format.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
-<span class="k">weak</span> <span class="k">var</span> <span class="nv">connectingLabel</span><span class="p">:</span> <span class="kt">UILabel</span><span class="o">!</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">uuidFormat</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(py)deviceInfoTextView"></a>
-                    <a name="//apple_ref/swift/Property/deviceInfoTextView" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(py)deviceInfoTextView">deviceInfoTextView</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The stack view that contains all the device information.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
-<span class="k">weak</span> <span class="k">var</span> <span class="nv">deviceInfoTextView</span><span class="p">:</span> <span class="kt">UITextView</span><span class="o">!</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(py)servicesLabel"></a>
-                    <a name="//apple_ref/swift/Property/servicesLabel" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(py)servicesLabel">servicesLabel</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The label for the Services table.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
-<span class="k">weak</span> <span class="k">var</span> <span class="nv">servicesLabel</span><span class="p">:</span> <span class="kt">UILabel</span><span class="o">!</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A traditional UUID format (may be XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX, or only 4 hex characters), or nil.</p>
                       </div>
                     </section>
                   </div>
@@ -450,11 +708,11 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Private%20Methods"></a>
-                <a name="//apple_ref/swift/Section/Private Methods" class="dashAnchor"></a>
+                <a name="/Available%20where%20%60Index%60%20==%20%60String.Index%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Index` == `String.Index`" class="dashAnchor"></a>
                 <div class="section-name-container">
-                  <a class="section-name-link" href="#/Private%20Methods"></a>
-                  <h3 class="section-name"><p>Private Methods</p>
+                  <a class="section-name-link" href="#/Available%20where%20%60Index%60%20==%20%60String.Index%60"></a>
+                  <h3 class="section-name"><p>Available where <code>Index</code> == <code>String.Index</code></p>
 </h3>
                 </div>
               </div>
@@ -462,9 +720,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13Blue_Van_Clef28CGA_PeripheralViewControllerC19_setUpAccessibility33_0EB09AC3288409EDE1E77E19B13399E5LLyyF"></a>
-                    <a name="//apple_ref/swift/Method/_setUpAccessibility()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef28CGA_PeripheralViewControllerC19_setUpAccessibility33_0EB09AC3288409EDE1E77E19B13399E5LLyyF">_setUpAccessibility()</a>
+                    <a name="/s:Sy13Blue_Van_ClefE5index2of7optionsSS5IndexVSgx_So22NSStringCompareOptionsVtF"></a>
+                    <a name="//apple_ref/swift/Method/index(of:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE5index2of7optionsSS5IndexVSgx_So22NSStringCompareOptionsVtF">index(of:options:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -472,165 +730,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This sets up the accessibility and voiceover strings for the screen.</p>
+                        <p>This allows us to find the first index of a substring.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">_setUpAccessibility</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Callback/Observer%20Methods"></a>
-                <a name="//apple_ref/swift/Section/Callback/Observer Methods" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Callback/Observer%20Methods"></a>
-                  <h3 class="section-name"><p>Callback/Observer Methods</p>
-</h3>
-                </div>
-              </div>
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)startOver:"></a>
-                    <a name="//apple_ref/swift/Method/startOver(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)startOver:">startOver(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This is called by the table&rsquo;s &ldquo;pull to refresh&rdquo; handler.</p>
-
-<p>When this is called, the Peripheral wipes out its Services, and starts over from scratch.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">func</span> <span class="nf">startOver</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/CGA_UpdatableScreenViewController%20Conformance"></a>
-                <a name="//apple_ref/swift/Section/CGA_UpdatableScreenViewController Conformance" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/CGA_UpdatableScreenViewController%20Conformance"></a>
-                  <h3 class="section-name"><p>CGA_UpdatableScreenViewController Conformance</p>
-</h3>
-                </div>
-              </div>
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13Blue_Van_Clef28CGA_PeripheralViewControllerC8updateUIyyF"></a>
-                    <a name="//apple_ref/swift/Method/updateUI()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef28CGA_PeripheralViewControllerC8updateUIyyF">updateUI()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This simply makes sure that the UI matches the state of the device.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updateUI</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Base%20Class%20Override%20Methods"></a>
-                <a name="//apple_ref/swift/Section/Base Class Override Methods" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Base%20Class%20Override%20Methods"></a>
-                  <h3 class="section-name"><p>Base Class Override Methods</p>
-</h3>
-                </div>
-              </div>
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)viewDidLoad"></a>
-                    <a name="//apple_ref/swift/Method/viewDidLoad()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)viewDidLoad">viewDidLoad()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Called after the view data has been loaded.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)viewWillDisappear:"></a>
-                    <a name="//apple_ref/swift/Method/viewWillDisappear(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)viewWillDisappear:">viewWillDisappear(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Called just before the view is to disappear (slide out, usually, or get covered).
-We use this to make sure that any connection timeouts are canceled.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillDisappear</span><span class="p">(</span><span class="n">_</span> <span class="nv">inAnimated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">index</span><span class="p">(</span><span class="n">of</span> <span class="nv">inString</span><span class="p">:</span> <span class="k">Self</span><span class="p">,</span> <span class="n">options</span> <span class="nv">inOptions</span><span class="p">:</span> <span class="kt">String</span><span class="o">.</span><span class="kt">CompareOptions</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="kt">Index</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -641,187 +748,24 @@ We use this to make sure that any connection timeouts are canceled.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>inAnimated</em>
+                                <em>of</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>This is true, if the disappearance is to be animated.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)viewWillAppear:"></a>
-                    <a name="//apple_ref/swift/Method/viewWillAppear(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)viewWillAppear:">viewWillAppear(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Called just before the view is to appear.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">inAnimated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>inAnimated</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>This is true, if the disappearance is to be animated.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)prepareForSegue:sender:"></a>
-                    <a name="//apple_ref/swift/Method/prepare(for:sender:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)prepareForSegue:sender:">prepare(for:sender:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This is called just before we bring in the Service screen.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="k">for</span> <span class="nv">inSegue</span><span class="p">:</span> <span class="kt">UIStoryboardSegue</span><span class="p">,</span> <span class="n">sender</span> <span class="nv">inSender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>for</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The segue being executed.</p>
+                                  <p>The substring we&rsquo;re looking for.</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>sender</em>
+                                <em>options</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The data we want passed into the destination.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/UITableViewDataSource%20Conformance"></a>
-                <a name="//apple_ref/swift/Section/UITableViewDataSource Conformance" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/UITableViewDataSource%20Conformance"></a>
-                  <h3 class="section-name"><p>UITableViewDataSource Conformance</p>
-</h3>
-                </div>
-              </div>
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)tableView:numberOfRowsInSection:"></a>
-                    <a name="//apple_ref/swift/Method/tableView(_:numberOfRowsInSection:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)tableView:numberOfRowsInSection:">tableView(_:numberOfRowsInSection:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This returns the number of available rows, in the given section.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="n">_</span> <span class="nv">inTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">numberOfRowsInSection</span> <span class="nv">inSection</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>inTableView</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The table view that is asking for the row count.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>numberOfRowsInSection</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The 0-based section index being queried.</p>
+                                  <p>The String options for the search.</p>
                                 </div>
                               </td>
                             </tr>
@@ -830,7 +774,7 @@ We use this to make sure that any connection timeouts are canceled.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The number of rows in the given section.</p>
+                        <p>The index of the first occurrence. Nil, if does not occur.</p>
                       </div>
                     </section>
                   </div>
@@ -838,9 +782,9 @@ We use this to make sure that any connection timeouts are canceled.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)tableView:cellForRowAtIndexPath:"></a>
-                    <a name="//apple_ref/swift/Method/tableView(_:cellForRowAt:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)tableView:cellForRowAtIndexPath:">tableView(_:cellForRowAt:)</a>
+                    <a name="/s:Sy13Blue_Van_ClefE8endIndex2of7optionsSS0E0VSgx_So22NSStringCompareOptionsVtF"></a>
+                    <a name="//apple_ref/swift/Method/endIndex(of:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE8endIndex2of7optionsSS0E0VSgx_So22NSStringCompareOptionsVtF">endIndex(of:options:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -848,14 +792,14 @@ We use this to make sure that any connection timeouts are canceled.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This returns a view, with the data for the given row and section.</p>
+                        <p>This allows us to find the last index of a substring.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="n">_</span> <span class="nv">inTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">cellForRowAt</span> <span class="nv">inIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITableViewCell</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">endIndex</span><span class="p">(</span><span class="n">of</span> <span class="nv">inString</span><span class="p">:</span> <span class="k">Self</span><span class="p">,</span> <span class="n">options</span> <span class="nv">inOptions</span><span class="p">:</span> <span class="kt">String</span><span class="o">.</span><span class="kt">CompareOptions</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="kt">Index</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -866,52 +810,43 @@ We use this to make sure that any connection timeouts are canceled.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>inTableView</em>
+                                <em>of</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The table view that is asking for the cell.</p>
+                                  <p>The substring we&rsquo;re looking for.</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>cellForRowAt</em>
+                                <em>options</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The index path (section, row) for the cell.</p>
+                                  <p>The String options for the search.</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The index of the last occurrence. Nil, if does not occur.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/UITableViewDelegate%20Conformance"></a>
-                <a name="//apple_ref/swift/Section/UITableViewDelegate Conformance" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/UITableViewDelegate%20Conformance"></a>
-                  <h3 class="section-name"><p>UITableViewDelegate Conformance</p>
-</h3>
-                </div>
-              </div>
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)tableView:didSelectRowAtIndexPath:"></a>
-                    <a name="//apple_ref/swift/Method/tableView(_:didSelectRowAt:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_PeripheralViewController(im)tableView:didSelectRowAtIndexPath:">tableView(_:didSelectRowAt:)</a>
+                    <a name="/s:Sy13Blue_Van_ClefE7indexes2of7optionsSaySS5IndexVGx_So22NSStringCompareOptionsVtF"></a>
+                    <a name="//apple_ref/swift/Method/indexes(of:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE7indexes2of7optionsSaySS5IndexVGx_So22NSStringCompareOptionsVtF">indexes(of:options:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -919,14 +854,14 @@ We use this to make sure that any connection timeouts are canceled.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called when a row is selected.</p>
+                        <p>This returns an Array of indexes that map all the occurrences of a given substring.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="n">_</span> <span class="nv">inTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">didSelectRowAt</span> <span class="nv">inIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">indexes</span><span class="p">(</span><span class="n">of</span> <span class="nv">inString</span><span class="p">:</span> <span class="k">Self</span><span class="p">,</span> <span class="n">options</span> <span class="nv">inOptions</span><span class="p">:</span> <span class="kt">String</span><span class="o">.</span><span class="kt">CompareOptions</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Index</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -937,29 +872,95 @@ We use this to make sure that any connection timeouts are canceled.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>inTableView</em>
+                                <em>of</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The table view that is asking for the cell.</p>
+                                  <p>The substring we&rsquo;re looking for.</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>didSelectRowAt</em>
+                                <em>options</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The index path (section, row) for the cell.</p>
+                                  <p>The String options for the search.</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>an Array, containing the indexes of each occurrence. Empty Array, if does not occur.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sy13Blue_Van_ClefE6ranges2of7optionsSaySnySS5IndexVGGx_So22NSStringCompareOptionsVtF"></a>
+                    <a name="//apple_ref/swift/Method/ranges(of:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy13Blue_Van_ClefE6ranges2of7optionsSaySnySS5IndexVGGx_So22NSStringCompareOptionsVtF">ranges(of:options:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This returns an Array of Index Ranges that map all the occurrences of a given substring.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">ranges</span><span class="p">(</span><span class="n">of</span> <span class="nv">inString</span><span class="p">:</span> <span class="k">Self</span><span class="p">,</span> <span class="n">options</span> <span class="nv">inOptions</span><span class="p">:</span> <span class="kt">String</span><span class="o">.</span><span class="kt">CompareOptions</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Range</span><span class="o">&lt;</span><span class="kt">Index</span><span class="o">&gt;</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>of</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The substring we&rsquo;re looking for.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The String options for the search.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>an Array, containing the Ranges that map each occurrence. Empty Array, if does not occur.</p>
                       </div>
                     </section>
                   </div>
