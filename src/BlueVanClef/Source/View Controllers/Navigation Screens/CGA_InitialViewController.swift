@@ -21,7 +21,6 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 */
 
 import UIKit
-import RVS_BlueThoth_iOS
 
 /* ###################################################################################################################################### */
 // MARK: - Simple Protocol That Defines A Scan Restart Method and a "Was Scanning" property -
