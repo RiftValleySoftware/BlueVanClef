@@ -1,5 +1,11 @@
 # BlueVanClef Change Log
 
+## 1.1.0.2002
+
+- **June 25, 2020**
+
+- Added the "Non-Exempt Encryption" flag.
+
 ## 1.1.0.2001
 
 - **June 25, 2020**
