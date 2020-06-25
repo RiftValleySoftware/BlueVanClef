@@ -2,21 +2,30 @@
   "object": {
     "pins": [
       {
+        "package": "RVS_BlueThoth",
+        "repositoryURL": "git@github.com:RiftValleySoftware/RVS_BlueThoth.git",
+        "state": {
+          "branch": null,
+          "revision": "182d229ed42959e7ce855b9dcd5e98c8ae4572f6",
+          "version": "1.2.2"
+        }
+      },
+      {
         "package": "RVS_Generic_Swift_Toolbox",
         "repositoryURL": "git@github.com:RiftValleySoftware/RVS_Generic_Swift_Toolbox.git",
         "state": {
-          "branch": "master",
-          "revision": "547352b3a67a72eefa20b93246cb197942b3653b",
-          "version": null
+          "branch": null,
+          "revision": "b7b34ce4a032d1e6a00c549c198b2ef575b14488",
+          "version": "1.2.1"
         }
       },
       {
         "package": "RVS_Persistent_Prefs",
         "repositoryURL": "git@github.com:RiftValleySoftware/RVS_PersistentPrefs.git",
         "state": {
-          "branch": "master",
-          "revision": "2fe277743a2d6e386a8ea65c3e28f16cdad83e8c",
-          "version": null
+          "branch": null,
+          "revision": "bb372f8c3989c0132bcca0805bb89c3407841a5e",
+          "version": "1.1.2"
         }
       }
     ]

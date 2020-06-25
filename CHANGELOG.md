@@ -1,5 +1,11 @@
 # BlueVanClef Change Log
 
+## 1.1.0.2001
+
+- **June 25, 2020**
+
+- Got Swift Package Manager working. The project has been completely switched over to SPM.
+
 ## 1.1.0.2000
 
 - **June 22, 2020**
