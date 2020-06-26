@@ -1,5 +1,11 @@
 # BlueVanClef Change Log
 
+## 1.1.0.3000
+
+- **June 26, 2020**
+
+- Updated the SPM modules to use versions.
+
 ## 1.1.0.2002
 
 - **June 25, 2020**
