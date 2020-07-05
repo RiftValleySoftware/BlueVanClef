@@ -1,5 +1,11 @@
 # BlueVanClef Change Log
 
+## 1.2.0.3000
+
+- **July 5, 2020**
+
+- Updated to the latest dependencies
+
 ## 1.1.0.3000
 
 - **June 26, 2020**
