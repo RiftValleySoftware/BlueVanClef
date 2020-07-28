@@ -53,12 +53,6 @@ class CGA_InfoViewController: CGA_BaseViewController {
      The button at the bottom that will link to the site.
      */
     @IBOutlet weak var copyrightButton: UIButton!
-    
-    /* ################################################################## */
-    /**
-     The button that will link to the instruction page.
-     */
-    @IBOutlet weak var helpButton: UIButton!
 }
 
 /* ###################################################################################################################################### */
@@ -69,7 +63,7 @@ extension CGA_InfoViewController {
     /**
      This sets up the accessibility and voiceover strings for the screen.
      */
-    private func _setUpAccessibility() {
+    func setUpAccessibility() {
         appNameLabel?.accessibilityLabel = String(format: "SLUG-ACC-APP-NAME-LABEL-FORMAT".localizedVariant, Bundle.main.appDisplayName)
         appVersionLabel?.accessibilityLabel = String(format: "SLUG-ACC-APP-VERSION-LABEL-FORMAT".localizedVariant, Bundle.main.appVersionString, Bundle.main.appVersionBuildString)
         copyrightButton?.accessibilityLabel = "SLUG-ACC-COPYRIGHT-BUTTON".localizedVariant
@@ -94,13 +88,13 @@ extension CGA_InfoViewController {
     
     /* ################################################################## */
     /**
-     Called when the help button is hit.
+     The icon button at the top of the screen was hit.
      
-     - parameter: ignored
+     - parameter: ignored.
      */
-    @IBAction func helpButtonHit(_: Any) {
-        guard let uri = Bundle.main.helpURI else { return }
-        
+    @IBAction func logoButtonHit(_: Any) {
+        guard let uri = URL(string: "SLUG-HELP-URI".localizedVariant) else { return }
+
         UIApplication.shared.open(uri)
     }
 }
@@ -119,8 +113,7 @@ extension CGA_InfoViewController {
         appVersionLabel?.text = String(format: "SLUG-VERSION-FORMAT".localizedVariant, Bundle.main.appVersionString, Bundle.main.appVersionBuildString)
         mainTextView?.text = mainTextView?.text.localizedVariant
         copyrightButton.setTitle(Bundle.main.copyrightString, for: .normal)
-        helpButton.setTitle(helpButton.title(for: .normal)?.localizedVariant, for: .normal)
-        _setUpAccessibility()
+        setUpAccessibility()
     }
     
     /* ################################################################## */

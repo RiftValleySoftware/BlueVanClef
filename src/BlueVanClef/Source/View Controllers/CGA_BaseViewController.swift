@@ -21,6 +21,49 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 */
 
 import UIKit
+import RVS_BlueThoth
+
+/* ###################################################################################################################################### */
+// MARK: - Simple Protocol That Defines A UI Updater Method -
+/* ###################################################################################################################################### */
+/**
+ We use this to ensure that all our View Controllers can get a generic "Update Thyself" message.
+ */
+protocol CGA_UpdatableScreenViewController {
+    /* ################################################################## */
+    /**
+     Do whatever is necessary to update the UI.
+     */
+    func updateUI()
+}
+
+/* ###################################################################################################################################### */
+// MARK: - The CGA_ServiceContainer Protocol -
+/* ###################################################################################################################################### */
+/**
+ This protocol allows us to associate a Service instance with any instance we want.
+ */
+protocol CGA_ServiceContainer: CGA_UpdatableScreenViewController {
+    /* ################################################################## */
+    /**
+     The Service that is associated with this instance.
+     */
+    var serviceInstance: CGA_Bluetooth_Service? { get }
+}
+
+/* ###################################################################################################################################### */
+// MARK: - The CGA_WriteableElementContainer Protocol -
+/* ###################################################################################################################################### */
+/**
+ This protocol allows us to associate a Characteristic or Descriptor instance with any instance we want.
+ */
+protocol CGA_WriteableElementContainer: CGA_UpdatableScreenViewController {
+    /* ################################################################## */
+    /**
+     The Characteristic that is associated with this instance.
+     */
+    var writeableElementInstance: CGA_Bluetooth_Writable? { get }
+}
 
 /* ###################################################################################################################################### */
 // MARK: - The Base view controller Class -
@@ -34,31 +77,31 @@ class CGA_BaseViewController: UIViewController {
     
     // The NavBar
     // We adjust the NavBar color to fit the mode. Dark, High-Contrast Mode is just black.
-    /// This is the color of the Navigation Bar for Dark Mode
+    /// The navbar main color (Dark Mode).
     private let _darkMode_navbar_color: UIColor = UIColor(white: 0.065, alpha: 1.0)
-    /// This is the color of the Navigation Bar for High Contrast Mode (Dark)
+    /// The navbar main color (High Contrast Mode and Dark Mode).
     private let _darkMode_high_contrast_navbar_color: UIColor = .black
-    /// This is the color of the Navigation Bar for Light Mode
-    private let _lightMode_navbar_color: UIColor = UIColor(red: 0, green: 0.28, blue: 1.0, alpha: 1.0)
-    /// This is the color of the Navigation Bar for High Contrast Mode (Light)
+    /// The navbar main color (Light Mode).
+    private let _lightMode_navbar_color: UIColor = UIColor(red: 0.1019607843, green: 0.3411764706, blue: 0.9960784314, alpha: 1.0)
+    /// The navbar main color (High Contrast Mode and Light Mode).
     private let _lightMode_high_contrast_navbar_color: UIColor = UIColor(red: 0, green: 0.08, blue: 0.69, alpha: 1.0)
     
     // The BlueVanClef Logo
     // We reduce the alpha for Dark Mode. Dark, High-contrast Mode hides the logo completely.
-    /// This is the alpha transparency for the central logo in Dark Mode.
+    /// The logo transparency (Dark Mode).
     private let _darkMode_logo_alpha: CGFloat = 0.05
-    /// This is the alpha transparency for the central logo in High Contrast Mode (Dark).
+    /// The logo transparency (High Contrast Mode and Dark Mode).
     private let _darkMode_high_contrast_logo_alpha: CGFloat = 0
-    /// This is the alpha transparency for the central logo in Light Mode.
+    /// The logo transparency (Light Mode).
     private let _lightMode_logo_alpha: CGFloat = 0.15
-    /// This is the alpha transparency for the central logo in High Contrast Mode (Light).
+    /// The logo transparency (High Contrast Mode and Light Mode).
     private let _lightMode_high_contrast_logo_alpha: CGFloat = 0
     
     // The Background Gradient
     // In High-contrast Mode, we darken the background gradient a bit.
-    /// This is the background gradient alpha transparency in regular contrast mode.
+    /// The background gradient transparency (Light or Dark Mode).
     private let _background_alpha: CGFloat = 1.0
-    /// This is the background gradient alpha transparency in High Contrast mode.
+    /// The background gradient transparency (High Contrast Mode).
     private let _high_contrast_background_alpha: CGFloat = 0.6
 
     /* ################################################################## */

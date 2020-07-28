@@ -41,21 +41,33 @@ class CGA_CharacteristicViewController_TableRow: UITableViewCell {
      The bottom label displays the Descriptor value (interpreted)
      */
     @IBOutlet weak var descriptorValueLabel: UILabel!
+    
+    /* ################################################################## */
+    /**
+     This button allows interaction with the Descriptor.
+     */
+    @IBOutlet weak var interactionButton: UIButton!
 }
 
 /* ###################################################################################################################################### */
-// MARK: - The initial view controller (table of services) -
+// MARK: - The Characteristic View Controller (table of Descriptors) -
 /* ###################################################################################################################################### */
 /**
  This controls the Characteristic Information View.
  */
-class CGA_CharacteristicViewController: CGA_BaseViewController {
+class CGA_CharacteristicViewController: CGA_BaseViewController, CGA_WriteableElementContainer {
     /* ################################################################## */
     /**
      The reuse ID that we use for creating new table cells.
      */
     private static let _descriptorRowReuseID = "detail-row"
     
+    /* ################################################################## */
+       /**
+        The ID of the segue that is executed to display the Descriptor Interaction Screen.
+        */
+    private static let _interactionDescriptorSegueID = "show-descriptor-write"
+
     /* ################################################################## */
     /**
      This implements a "pull to refresh."
@@ -66,13 +78,27 @@ class CGA_CharacteristicViewController: CGA_BaseViewController {
     /**
      The Characteristic that is associated with this view controller.
      */
-    var characteristicInstance: CGA_Bluetooth_Characteristic!
+    var writeableElementInstance: CGA_Bluetooth_Writable?
     
+    /* ################################################################## */
+    /**
+     The Characteristic that is associated with this view controller, cast from the writable entity.
+     */
+    var myCharacteristicInstance: CGA_Bluetooth_Characteristic? {
+        writeableElementInstance as? CGA_Bluetooth_Characteristic
+    }
+
     /* ################################################################## */
     /**
      This is the table that will list the descriptors.
      */
     @IBOutlet weak var descriptorsTableView: UITableView!
+    
+    /* ################################################################## */
+    /**
+     This button allows interaction with the Characteristic.
+     */
+    @IBOutlet weak var interactionButton: UIButton!
 }
 
 /* ###################################################################################################################################### */
@@ -102,7 +128,7 @@ extension CGA_CharacteristicViewController {
     /**
      This sets up the accessibility and voiceover strings for the screen.
      */
-    private func _setUpAccessibility() {
+    func setUpAccessibility() {
         descriptorsTableView?.accessibilityLabel = "SLUG-ACC-DESCRIPTOR-TABLE".localizedVariant
     }
 }
@@ -116,7 +142,7 @@ extension CGA_CharacteristicViewController {
      This forces a re-read of all descriptors.
      */
     func updateAllDescriptors() {
-        characteristicInstance?.forEach { $0.readValue() }
+        myCharacteristicInstance?.forEach { $0.readValue() }
     }
 }
 
@@ -130,7 +156,7 @@ extension CGA_CharacteristicViewController: CGA_UpdatableScreenViewController {
      */
     func updateUI() {
         descriptorsTableView?.reloadData()
-        _setUpAccessibility()
+        setUpAccessibility()
     }
 }
 
@@ -144,11 +170,30 @@ extension CGA_CharacteristicViewController {
      */
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = characteristicInstance?.id.localizedVariant
+        navigationItem.title = myCharacteristicInstance?.id.localizedVariant
+        interactionButton?.setTitle(interactionButton?.title(for: .normal)?.localizedVariant ?? "ERROR", for: .normal)
+        interactionButton?.isHidden = !(myCharacteristicInstance?.canWrite ?? false)
+        interactionButton?.accessibilityLabel = "SLUG-ACC-DESCRIPTOR-INTERACT-BUTTON".localizedVariant
         _refreshControl.tintColor = .white
         _refreshControl.addTarget(self, action: #selector(startOver(_:)), for: .valueChanged)
         descriptorsTableView?.refreshControl = _refreshControl
         updateAllDescriptors()
+    }
+    
+    /* ################################################################## */
+    /**
+     This is called just before we bring in the Interaction screen.
+     
+     - parameter for: The segue being executed.
+     - parameter sender: The data we want passed into the destination (ignored).
+     */
+    override func prepare(for inSegue: UIStoryboardSegue, sender inSender: Any?) {
+        if let destination = inSegue.destination as? CGA_CharacteristicInteractionViewController {
+            destination.writeableElementInstance = writeableElementInstance
+        } else if   let destination = inSegue.destination as? CGA_DescriptorInteractionViewController,
+                    let descriptor = inSender as? CGA_Bluetooth_Descriptor {
+            destination.writeableElementInstance = descriptor
+        }
     }
 }
 
@@ -164,7 +209,7 @@ extension CGA_CharacteristicViewController: UITableViewDataSource {
      - parameter numberOfRowsInSection: The 0-based section index being queried.
      - returns: The number of rows in the given section.
      */
-    func tableView(_ inTableView: UITableView, numberOfRowsInSection inSection: Int) -> Int { characteristicInstance?.count ?? 0 }
+    func tableView(_ inTableView: UITableView, numberOfRowsInSection inSection: Int) -> Int { myCharacteristicInstance?.count ?? 0 }
     
     /* ################################################################## */
     /**
@@ -176,21 +221,21 @@ extension CGA_CharacteristicViewController: UITableViewDataSource {
     func tableView(_ inTableView: UITableView, cellForRowAt inIndexPath: IndexPath) -> UITableViewCell {
         guard let tableCell = inTableView.dequeueReusableCell(withIdentifier: Self._descriptorRowReuseID, for: inIndexPath) as? CGA_CharacteristicViewController_TableRow
             else { return UITableViewCell() }
-        tableCell.descriptorIDLabel?.text = characteristicInstance?[inIndexPath.row].id.localizedVariant ?? "ERROR"
+        tableCell.descriptorIDLabel?.text = myCharacteristicInstance?[inIndexPath.row].id.localizedVariant ?? "ERROR"
         
         var labelText = ""
         
-        if let characteristic = characteristicInstance?[inIndexPath.row] as? CGA_Bluetooth_Descriptor_ClientCharacteristicConfiguration {
+        if let characteristic = myCharacteristicInstance?[inIndexPath.row] as? CGA_Bluetooth_Descriptor_ClientCharacteristicConfiguration {
             labelText = "SLUG-ACC-DESCRIPTOR-CLIENTCHAR-NOTIFY-\(characteristic.isNotifying ? "YES" : "NO")".localizedVariant
             labelText += "SLUG-ACC-DESCRIPTOR-CLIENTCHAR-INDICATE-\(characteristic.isIndicating ? "YES" : "NO")".localizedVariant
         }
         
-        if let characteristic = characteristicInstance?[inIndexPath.row] as? CGA_Bluetooth_Descriptor_Characteristic_Extended_Properties {
+        if let characteristic = myCharacteristicInstance?[inIndexPath.row] as? CGA_Bluetooth_Descriptor_Characteristic_Extended_Properties {
             labelText = "SLUG-ACC-DESCRIPTOR-EXTENDED-RELIABLE-WR-\(characteristic.isReliableWriteEnabled ? "YES" : "NO")".localizedVariant
             labelText += "SLUG-ACC-DESCRIPTOR-EXTENDED-AUX-WR-\(characteristic.isWritableAuxiliariesEnabled ? "YES" : "NO")".localizedVariant
         }
         
-        if let characteristic = characteristicInstance?[inIndexPath.row] as? CGA_Bluetooth_Descriptor_PresentationFormat {
+        if let characteristic = myCharacteristicInstance?[inIndexPath.row] as? CGA_Bluetooth_Descriptor_PresentationFormat {
             labelText = "SLUG-CHAR-PRESENTATION-\(characteristic.stringValue ?? "255")".localizedVariant
         }
 
@@ -216,7 +261,12 @@ extension CGA_CharacteristicViewController: UITableViewDelegate {
      - parameter didSelectRowAt: The index path (section, row) for the cell.
      */
     func tableView(_ inTableView: UITableView, didSelectRowAt inIndexPath: IndexPath) {
-        characteristicInstance?[inIndexPath.row].readValue()
-        inTableView.deselectRow(at: inIndexPath, animated: false)
+        // We always read the value.
+        myCharacteristicInstance?[inIndexPath.row].readValue()
+        // If we are not the client configuration descriptor, then we can also write.
+        if  !(myCharacteristicInstance?[inIndexPath.row] is CGA_Bluetooth_Descriptor_ClientCharacteristicConfiguration) {
+            performSegue(withIdentifier: Self._interactionDescriptorSegueID, sender: myCharacteristicInstance?[inIndexPath.row])
+            inTableView.deselectRow(at: inIndexPath, animated: false)
+        }
     }
 }

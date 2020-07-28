@@ -1,5 +1,11 @@
 # BlueVanClef Change Log
 
+## 1.3.0.2000
+
+- **July 28, 2020**
+
+- Adds the ability for simple writes to Characteristics and Descriptors.
+
 ## 1.2.0.3000
 
 - **July 5, 2020**

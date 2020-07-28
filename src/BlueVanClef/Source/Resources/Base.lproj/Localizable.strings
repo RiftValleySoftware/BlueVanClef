@@ -35,9 +35,13 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "CGA-ERROR-DESCRIPTOR"              =   "Descriptor Error";
 "CGA-ERROR-INTERNAL"                =   "Internal Error";
 
+"WRITE-RESPONSE"                    =   "The Characteristic Write Was Successful";
+
 // MARK: - Device List screen
 "SLUG-DEVICES"                      =   "Device List";
 "SLUG-DISCOVERED-DEVICES"           =   "DISCOVERED DEVICES";
+"SLUG-NO-DEVICE-NAME"               =   "No Device Name";
+"SLUG-NO-DEVICE-FOUND"              =   "ERROR: No Device Found";
 // Scanning Button
 "SLUG-SCANNING"                     =   "SCANNING";
 "SLUG-NOT-SCANNING"                 =   "NOT SCANNING";
@@ -52,6 +56,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-CONNECTING"                   =   "CONNECTING...";
 "SLUG-SERVICES"                     =   "SERVICES";
 "SLUG-DEVICE"                       =   "Device";
+"SLUG-DISCONNECT"                   =   "DISCONNECT";
 
 // MARK: - Characteristics Screen
 "SLUG-CURRENT-TIME-DATE-FORMAT"     =   "MM/dd/yyyy h:mm:ss.SSS a";
@@ -59,6 +64,8 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-PROPERTIES-READ"              =   " READ ";
 "SLUG-PROPERTIES-NOTIFY-OFF"        =   " NOTIFY ";
 "SLUG-PROPERTIES-NOTIFY-ON"         =   " NOTIFYING ";
+"SLUG-PROPERTIES-INDICATE-OFF"      =   " INDICATE ";
+"SLUG-PROPERTIES-INDICATE-ON"       =   " INDICATING ";
 // Simple Labels
 "SLUG-PROPERTIES-WRITE"             =   " WN ";
 "SLUG-PROPERTIES-WRITE-RESPONSE"    =   " WR ";
@@ -68,15 +75,23 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-PROPERTIES-NOTIFY-ENCRYPT"    =   " NE ";
 "SLUG-PROPERTIES-INDICATE-ENCRYPT"  =   " IE ";
 "SLUG-PROPERTIES-EXTENDED"          =   " EX ";
+"SLUG-INTERACT"                     =   "WRITE";
+
+// MARK: - Interaction Screen
+"SLUG-WRITE"                        =   "WRITE";
+"SLUG-WITH-RESPONSE"                =   "RESPONSE:";
+"SLUG-READ"                         =   "READ";
+"SLUG-SEND"                         =   "SEND";
 
 // MARK: - Info screen
 "SLUG-VERSION-FORMAT"               =   "VERSION: %@ (%@)";
-"SLUG-HELP-BUTTON-TEXT"             =   "Go To the Instruction Page";
-"SLUG-MAIN-INFO-TEXT"               =   "This app is a very basic Bluetooth Low-Energy (BLE) \"explorer.\"\nWe can detect advertising BLE devices (Peripherals), and connect to them (if the device allows connection).\nOnce connected, we can then explore the Bluetooth Services, Characteristics, and Descriptors.\nTap on a table row to \"explore\" that Peripheral, Service or Characteristic.\n\nIt is possible to filter for only certain devices or advertised Services.\n\nAdditionally, we can filter for devices that advertise as connectable, or that advertise a name.";
+"SLUG-MAIN-INFO-TEXT"               =   "This app is a very basic Bluetooth Low-Energy (BLE) \"explorer.\"\nWe can detect advertising BLE devices (Peripherals), and connect to them (if the device allows connection).\nOnce connected, we can then explore the Bluetooth Services, Characteristics and Descriptors for that Peripheral.\nTap on a table row to \"explore\" that Peripheral, Service or Characteristic.";
+"SLUG-HELP-URI"                     =   "https://riftvalleysoftware.com/work/ios-apps/bluevanclef/";
 
 // MARK: - Settings screen
 "SLUG-IGNORE-DUPES"                 =   "Continuously Update:";
 "SLUG-EMPTY-NAME"                   =   "Allow Empty Names:";
+"SLUG-ALWAYS-USE-CRLF"              =   "Always Use CRLF:";
 "SLUG-CONNECTED-ONLY"               =   "Only Connectable:";
 "SLUG-FILTER-HEADER"                =   "Filter UUIDs";
 "SLUG-DEVICE-FILTERS"               =   "Specific Device Identifiers:";
@@ -96,6 +111,8 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-ACC-EDIT-BUTTON-EDIT"         =   "The table of devices can be edited by touching this button. When you edit the table, you can choose certain devices to ignore.";
 "SLUG-ACC-EDIT-BUTTON-DONE"         =   "The table of devices is currently being edited, and you can end that by touching this button. When you edit the table, you can choose certain devices to ignore.";
 "SLUG-ACC-DEVICELIST-TABLE"         =   "This table displays the discovered Bluetooth LE devices. Each row represents one device. You can pull down on the table to reload all the devices. If you reload the table, the order of the devices in the table may change, and all ignored devices will no longer be ignored.";
+"SLUG-ACC-DEVICELIST-TABLE-MAC"     =   "This table displays the discovered Bluetooth LE devices. Each row represents one device.";
+"SLUG-ACC-RELOAD-BUTTON"            =   "Press this button to reload all the devices. If you reload the table, the order of the devices in the table may change, and all ignored devices will no longer be ignored.";
 "SLUG-ACC-DEVICELIST-TABLE-RSSI-FORMAT"             =   "This is the signal strength for this device. It is currently %d decibels.";
 "SLUG-ACC-DEVICELIST-TABLE-NAME-ADVERTISED-FORMAT"  =   "This is the advertised name for this device. It is \"%@.\"";
 "SLUG-ACC-DEVICELIST-TABLE-NAME-SIMPLE-FORMAT"      =   "This is the name for this device. It is \"%@.\"";
@@ -108,6 +125,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-ACC-BACK-BUTTON"              =   "Return to the screen with the details for this Peripheral";
 "SLUG-ACC-DEVICE-NAME-FORMAT"       =   "This screen represents the details for the Peripheral named \"%@.\"";
 "SLUG-ACC-DEVICE-INFO-TEXT-DISPLAY" =   "This displays the advertising information for this peripheral.";
+"SLUG-ACC-DISCONNECT-LABEL"         =   "The device is currently connected. Press this button to disconnect.";
 "SLUG-ACC-CONNECTING-LABEL"         =   "The device is currently being connected. Please wait for the connection to complete.";
 "SLUG-ACC-SERVICES-TABLE"           =   "This table displays a list of available Services for this Peripheral. If you select a row, another screen will appear, containing the details of that Service.";
 "SLUG-ACC-SERVICES-TABLE-ROW"       =   "This row represents the %@ Service. If you select this row, another screen will appear, with details about this Service.";
@@ -130,6 +148,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-ACC-CHARACTERISTIC-ROW-SLUG-PROPERTIES-NOTIFY-OFF"        =   "This Characteristic supports notify, but is not currently notifying. Touching this button will start the Characteristic notifying.";
 "SLUG-ACC-CHARACTERISTIC-ROW-VALUE-NO-DESCRIPTORS-FORMAT"       =   "This is the value for the Characteristic. It is \"\(%@).\"";
 "SLUG-ACC-CHARACTERISTIC-ROW-VALUE-FORMAT"                      =   "This is the value for the Characteristic. It is \"\(%@).\" If you touch this, a screen will appear, displaying the Descriptors for this Characteristic.";
+"SLUG-ACC-CHARACTERISTIC-ROW-INTERACT"                          =   "If you select this row, a screen will appear, allowing you to interact with this Characteristic.";
 
 // MARK: - The Descriptor List Screen
 "SLUG-ACC-DESCRIPTOR-TABLE"         =   "This is a list of the descriptors for this Characteristic. Selecting a row will cause that descriptor to refresh its value.";
@@ -143,8 +162,13 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-ACC-DESCRIPTOR-EXTENDED-RELIABLE-WR-YES"                  =   "Reliable Write is Enabled. ";
 "SLUG-ACC-DESCRIPTOR-EXTENDED-AUX-WR-NO"                        =   "Writable Auxiliaries is Not Enabled.";
 "SLUG-ACC-DESCRIPTOR-EXTENDED-AUX-WR-YES"                       =   "Writable Auxiliaries is Enabled.";
+"SLUG-ACC-DESCRIPTOR-INTERACT-BUTTON"                           =   "If you select this button, a screen will appear, allowing you to interact with this Characteristic.";
 
 // MARK: - The App Settings Screen
+// Mac-only
+"SLUG-ACC-SLIDER-LABEL"                             =   "This is the current value of the Minimum RSSI Slider, in decibels.";
+"SLUG-ACC-SLIDER"                                   =   "This slider will allow you to select a minimum signal strength for discovered devices. It is useful to keep distant devices out of the list. You can adjust it from -100 decibels, to 0 decibels.";
+
 "SLUG-ACC-CONTINUOUS-UPDATE-BUTTON-ON"              =   "This button will toggle the value of the switch that controls whether or not the app is continuously updating the device list while scanning. The switch is currently on, which means that the names, advertising data and signal strength of the devices in the list are being continuously updated.";
 "SLUG-ACC-CONTINUOUS-UPDATE-BUTTON-OFF"             =   "This button will toggle the value of the switch that controls whether or not the app is continuously updating the device list while scanning. The switch is currently off, which means that the names, advertising data and signal strength of the devices will remain consistent with their state upon discovery.";
 "SLUG-ACC-CONTINUOUS-UPDATE-SWITCH-ON"              =   "This switch controls whether or not the app is continuously updating the device list while scanning. It is currently on, which means that the names, advertising data and signal strength of the devices in the list are being continuously updated.";
@@ -161,15 +185,27 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-ACC-CONNECTED-ONLY-BUTTON-OFF"                =   "This button will toggle the value of the switch that controls whether or not the app will only display connectable devices. The switch is currently off, which means that devices will be displayed, regardless of their connectability.";
 "SLUG-ACC-CONNECTED-ONLY-SWITCH-ON"                 =   "This switch controls whether or not the app will only display connectable devices. The switch is currently on, which means that only devices that advertise as being connectable are being displayed in the list.";
 "SLUG-ACC-CONNECTED-ONLY-SWITCH-OFF"                =   "This switch controls whether or not the app will only display connectable devices. The switch is currently off, which means that devices will be displayed, regardless of their connectability.";
-"SLUG-ACC-EMPTY-NAMES-BUTTON-ON"                    =   "This button will toggle the value of the switch that controls whether or not the app will only display devices that advertise or contain names. The switch is currently on, which means that only devices with names are being displayed in the list.";
-"SLUG-ACC-EMPTY-NAMES-BUTTON-OFF"                   =   "This button will toggle the value of the switch that controls whether or not the app will only display devices that advertise or contain names. The switch is currently off, which means that all devices are being displayed in the list.";
-"SLUG-ACC-EMPTY-NAMES-SWITCH-ON"                    =   "This switch controls whether or not the app will only display devices that advertise or contain names. The switch is currently on, which means that only devices with names are being displayed in the list.";
-"SLUG-ACC-EMPTY-NAMES-SWITCH-OFF"                   =   "This switch controls whether or not the app will only display devices that advertise or contain names. The switch is currently off, which means that all devices are being displayed in the list.";
+"SLUG-ACC-EMPTY-NAMES-BUTTON-ON"                    =   "This button will toggle the value of the switch that controls whether or not the app will only display devices that advertise or contain names. The switch is currently on, which means that all devices are being displayed in the list.";
+"SLUG-ACC-EMPTY-NAMES-BUTTON-OFF"                   =   "This button will toggle the value of the switch that controls whether or not the app will only display devices that advertise or contain names. The switch is currently off, which means that only devices with names are being displayed in the list.";
+"SLUG-ACC-EMPTY-NAMES-SWITCH-ON"                    =   "This switch controls whether or not the app will only display devices that advertise or contain names. The switch is currently on, which means that all devices are being displayed in the list.";
+"SLUG-ACC-EMPTY-NAMES-SWITCH-OFF"                   =   "This switch controls whether or not the app will only display devices that advertise or contain names. The switch is currently off, which means that only devices with names are being displayed in the list.";
+"SLUG-ACC-ALWAYS-USE-CRLF-OFF"                      =   "This switch controls whether or not the app will always send endlines (next line, or carriage return) as a Carriage Return/Linefeed pair. The switch is currently off, which means that we will send simple linefeeds.";
+"SLUG-ACC-ALWAYS-USE-CRLF-ON"                       =   "This switch controls whether or not the app will always send endlines (next line, or carriage return) as a Carriage Return/Linefeed pair. The switch is currently on, which means that we will always send carriage return/linefeed pairs.";
 
 // MARK: - The About Screen
 "SLUG-ACC-APP-NAME-LABEL-FORMAT"    =   "This is the name of the app. It is \"%@.\"";
 "SLUG-ACC-APP-VERSION-LABEL-FORMAT" =   "This is the current version of the app. It is \"%@.%@.\"";
 "SLUG-ACC-COPYRIGHT-BUTTON"         =   "This button displays the copyright information for the app. If you touch it, it will take you to the Great Rift Valley Software Company Web page in the browser.";
+
+// MARK: - Interaction Screen
+"SLUG-ACC-WRITE-TEXT"               =   "This Text Field allows you to enter text to be sent to the device.";
+"SLUG-ACC-READ-TEXT"                =   "This Text Field displays text received from the device.";
+"SLUG-ACC-READ-BUTTON"              =   "Read the value of the Characteristic.";
+"SLUG-ACC-NOTIFICATION-BUTTON"      =   "This button controls whether or not the Characteristic is notifying.";
+"SLUG-ACC-WITH-RESPONSE"            =   "Toggles the value of the Response Switch.";
+"SLUG-ACC-WITH-RESPONSE-SWITCH"     =   "If on, then the write will be sent, requiring a response from the device.";
+"SLUG-ACC-SEND-BUTTON-CHAR"         =   "This button sets the Characteristic value to the contents of the text field below.";
+"SLUG-ACC-SEND-BUTTON-DESC"         =   "This button sets the Descriptor value to the contents of the text field below.";
 
 /// MARK: - DATA INTERPRETATION
 

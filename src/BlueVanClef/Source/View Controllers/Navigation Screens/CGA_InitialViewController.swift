@@ -45,20 +45,6 @@ protocol CGA_ScannerViewController {
 }
 
 /* ###################################################################################################################################### */
-// MARK: - Simple Protocol That Defines A UI Updater Method -
-/* ###################################################################################################################################### */
-/**
- We use this to ensure that all our View Controllers can get a generic "Update Thyself" message.
- */
-protocol CGA_UpdatableScreenViewController {
-    /* ################################################################## */
-    /**
-     Do whatever is necessary to update the UI.
-     */
-    func updateUI()
-}
-
-/* ###################################################################################################################################### */
 // MARK: - The CGA_InitialViewController_TableRow Class (Denotes One Row of the Table) -
 /* ###################################################################################################################################### */
 /**
@@ -381,7 +367,7 @@ extension CGA_InitialViewController {
     /**
      This sets up the accessibility and voiceover strings for the screen.
      */
-    private func _setUpAccessibility() {
+    func setUpAccessibility() {
         scanningButton?.accessibilityLabel = ("SLUG-ACC-SCANNING-BUTTON-O" + (isScanning ? "N" : "FF")).localizedVariant
         noBTImage?.accessibilityLabel = "SLUG-ACC-NO-BT-IMAGE".localizedVariant
         editButton?.accessibilityLabel = ("SLUG-ACC-EDIT-BUTTON-" + ((deviceTableView?.isEditing ?? false) ? "DONE" : "EDIT")).localizedVariant
@@ -445,7 +431,7 @@ extension CGA_InitialViewController: CGA_UpdatableScreenViewController {
         scanningButton?.titleLabel?.text = title    // We do this to prevent that "flash" of old text.
         scanningButton?.backgroundColor = color
         
-        _setUpAccessibility()
+        setUpAccessibility()
     }
 }
 
@@ -469,7 +455,7 @@ extension CGA_InitialViewController: CGA_BlueThoth_Delegate {
             mappableLayers.insert(lastError, at: 1)
         }
         
-        CGA_AppDelegate.displayAlert("SLUG-ERROR".localizedVariant, message: mappableLayers.map { $0.localizedVariant }.joined(separator: "\n"))
+        CGA_AppDelegate.displayAlert(header: "SLUG-ERROR".localizedVariant, message: mappableLayers.map { $0.localizedVariant }.joined(separator: "\n"))
     }
     
     /* ################################################################## */
@@ -489,9 +475,13 @@ extension CGA_InitialViewController: CGA_BlueThoth_Delegate {
      - parameter inCentralManager: The manager wrapper view that is calling this.
      */
     func updateFrom(_ inCentralManager: RVS_BlueThoth) {
+        #if DEBUG
+            print("General Update")
+        #endif
         updateUI()
         deviceTableView?.reloadData()
     }
+    
     /* ################################################################## */
     /**
      Called to tell the instance that a Peripheral device has been connected.
@@ -500,6 +490,9 @@ extension CGA_InitialViewController: CGA_BlueThoth_Delegate {
      - parameter didConnectThisDevice: The device instance that was connected.
      */
     func centralManager(_ inCentralManager: RVS_BlueThoth, didConnectThisDevice inDevice: CGA_Bluetooth_Peripheral) {
+        #if DEBUG
+            print("Connected Device")
+        #endif
         _currentDeviceScreen?.updateUI()
     }
     
@@ -512,17 +505,23 @@ extension CGA_InitialViewController: CGA_BlueThoth_Delegate {
      - parameter willDisconnectThisDevice: The device instance that will be removed after this call.
      */
     func centralManager(_ inCentralManager: RVS_BlueThoth, willDisconnectThisDevice inDevice: CGA_Bluetooth_Peripheral) {
+        #if DEBUG
+            print("Disconnecting Device")
+        #endif
         _resetToRoot()
     }
     
     /* ################################################################## */
     /**
-     OPTIONAL: This is called to tell the instance that a Peripheral device has had some change.
+     This is called to tell the instance that a Peripheral device has had some change.
      
      - parameter inCentralManager: The central manager that is calling this.
      - parameter deviceInfoChanged: The device instance that was connected.
      */
     func centralManager(_ inCentralManager: RVS_BlueThoth, deviceInfoChanged inDevice: CGA_Bluetooth_Peripheral) {
+        #if DEBUG
+            print("Peripheral Update")
+        #endif
         if let currentScreen = _currentDeviceScreen as? CGA_InitialViewController {
             currentScreen.deviceTableView.reloadData()
         }
@@ -537,6 +536,9 @@ extension CGA_InitialViewController: CGA_BlueThoth_Delegate {
      - parameter changedService: The Service instance that contained the changed Characteristic.
      */
     func centralManager(_ inCentralManager: RVS_BlueThoth, device inDevice: CGA_Bluetooth_Peripheral, changedService inService: CGA_Bluetooth_Service) {
+        #if DEBUG
+            print("Service Update Received")
+        #endif
         if let currentScreen = _currentDeviceScreen as? CGA_ServiceViewController {
             currentScreen.updateUI()
         }
@@ -552,10 +554,20 @@ extension CGA_InitialViewController: CGA_BlueThoth_Delegate {
      - parameter changedCharacteristic: The Characteristic that was changed.
      */
     func centralManager(_ inCentralManager: RVS_BlueThoth, device inDevice: CGA_Bluetooth_Peripheral, service inService: CGA_Bluetooth_Service, changedCharacteristic inCharacteristic: CGA_Bluetooth_Characteristic) {
-        if let currentScreen = _currentDeviceScreen as? CGA_ServiceViewController {
+        #if DEBUG
+            print("Characteristic Update Received")
+            if  let stringValue = inCharacteristic.stringValue {
+                print("\tString Value: \"\(stringValue)\"")
+            }
+        #endif
+        if  let currentScreen = _currentDeviceScreen as? CGA_ServiceContainer,
+            currentScreen.serviceInstance?.id == inService.id {
             currentScreen.updateUI()
-        } else if let currentScreen = _currentDeviceScreen as? CGA_CharacteristicViewController {
+        } else if   let currentScreen = _currentDeviceScreen as? CGA_WriteableElementContainer,
+                    currentScreen.writeableElementInstance?.id == inCharacteristic.id {
             currentScreen.updateUI()
+        } else {
+            
         }
     }
 
@@ -570,6 +582,37 @@ extension CGA_InitialViewController: CGA_BlueThoth_Delegate {
      - parameter changedDescriptor: The Descriptor that was changed.
      */
     func centralManager(_ inCentralManager: RVS_BlueThoth, device inDevice: CGA_Bluetooth_Peripheral, service inService: CGA_Bluetooth_Service, characteristic inCharacteristic: CGA_Bluetooth_Characteristic, changedDescriptor inDescriptor: CGA_Bluetooth_Descriptor) {
+        #if DEBUG
+            print("Descriptor Update")
+            if  let stringValue = inCharacteristic.stringValue {
+                print("\tCharacteristic String Value: \"\(stringValue)\"")
+            }
+            if  let stringValue = inDescriptor.stringValue {
+                print("\tDescriptor String Value: \"\(stringValue)\"")
+            }
+        #endif
+        if let currentScreen = _currentDeviceScreen as? CGA_CharacteristicViewController {
+            currentScreen.updateUI()
+        }
+    }
+    
+    /* ################################################################## */
+    /**
+     This is called to tell the instance that a Characteristic write with response received its response.
+     
+     - parameter inCentralManager: The central manager that is calling this.
+     - parameter device: The device instance that contained the changed Service.
+     - parameter service: The Service instance that contained the changed Characteristic.
+     - parameter characteristicWriteComplete: The Characteristic that had its write completed.
+     */
+    func centralManager(_ inCentralManager: RVS_BlueThoth, device inPeripheral: CGA_Bluetooth_Peripheral, service inService: CGA_Bluetooth_Service, characteristicWriteComplete inCharacteristic: CGA_Bluetooth_Characteristic) {
+        #if DEBUG
+            print("Characteristic: \(inCharacteristic.id) Wrote Its Value")
+            if  let stringValue = inCharacteristic.stringValue {
+                print("\tCharacteristic String Value: \"\(stringValue)\"")
+            }
+        #endif
+        CGA_AppDelegate.displayAlert(header: "WRITE-RESPONSE".localizedVariant)
         if let currentScreen = _currentDeviceScreen as? CGA_CharacteristicViewController {
             currentScreen.updateUI()
         }
