@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>UIView Extension Reference</title>
+    <title>CGA_WriteableElementContainer Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/UIView" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Protocol/CGA_WriteableElementContainer" class="dashAnchor"></a>
 
-    <a title="UIView Extension Reference"></a>
+    <a title="CGA_WriteableElementContainer Protocol Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html"> Reference</a>
       <img class="carat" src="../img/carat.png" />
-      UIView Extension Reference
+      CGA_WriteableElementContainer Protocol Reference
     </p>
 
     <div class="content-wrapper">
@@ -155,14 +155,14 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>UIView</h1>
+            <h1>CGA_WriteableElementContainer</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UIView</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CGA_WriteableElementContainer</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/CGA_UpdatableScreenViewController.html">CGA_UpdatableScreenViewController</a></span></code></pre>
 
                 </div>
               </div>
-            <p>We add a couple of ways to deal with first responders.</p>
+            <p>This protocol allows us to associate a Characteristic or Descriptor instance with any instance we want.</p>
 
           </div>
         </section>
@@ -174,9 +174,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6UIViewC13Blue_Van_ClefE21currentFirstResponderSo11UIResponderCSgvp"></a>
-                    <a name="//apple_ref/swift/Property/currentFirstResponder" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6UIViewC13Blue_Van_ClefE21currentFirstResponderSo11UIResponderCSgvp">currentFirstResponder</a>
+                    <a name="/s:13Blue_Van_Clef29CGA_WriteableElementContainerP09writeableF8Instance04RVS_A5Thoth0D19_Bluetooth_Writable_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/writeableElementInstance" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29CGA_WriteableElementContainerP09writeableF8Instance04RVS_A5Thoth0D19_Bluetooth_Writable_pSgvp">writeableElementInstance</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -184,41 +184,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This returns the first responder, wherever it is in our hierarchy.</p>
+                        <p>The Characteristic that is associated with this instance.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">currentFirstResponder</span><span class="p">:</span> <span class="kt">UIResponder</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So6UIViewC13Blue_Van_ClefE24resignAllFirstRespondersyyF"></a>
-                    <a name="//apple_ref/swift/Method/resignAllFirstResponders()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6UIViewC13Blue_Van_ClefE24resignAllFirstRespondersyyF">resignAllFirstResponders()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This puts away any open keyboards.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resignAllFirstResponders</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">writeableElementInstance</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Writable</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>

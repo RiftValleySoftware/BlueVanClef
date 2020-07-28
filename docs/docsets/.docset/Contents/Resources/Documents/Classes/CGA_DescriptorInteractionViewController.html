@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CGA_InfoViewController Class Reference</title>
+    <title>CGA_DescriptorInteractionViewController Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/CGA_InfoViewController" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Class/CGA_DescriptorInteractionViewController" class="dashAnchor"></a>
 
-    <a title="CGA_InfoViewController Class Reference"></a>
+    <a title="CGA_DescriptorInteractionViewController Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html"> Reference</a>
       <img class="carat" src="../img/carat.png" />
-      CGA_InfoViewController Class Reference
+      CGA_DescriptorInteractionViewController Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -155,14 +155,16 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>CGA_InfoViewController</h1>
+            <h1>CGA_DescriptorInteractionViewController</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CGA_InfoViewController</span> <span class="p">:</span> <span class="kt"><a href="../Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CGA_DescriptorInteractionViewController</span> <span class="p">:</span> <span class="kt"><a href="../Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/CGA_WriteableElementContainer.html">CGA_WriteableElementContainer</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_DescriptorInteractionViewController</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CGA_UpdatableScreenViewController.html">CGA_UpdatableScreenViewController</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_DescriptorInteractionViewController</span><span class="p">:</span> <span class="kt">UITextViewDelegate</span></code></pre>
 
                 </div>
               </div>
-            <p>This controls the about this app view.</p>
+            <p>This controls the Interaction View.</p>
 
           </div>
         </section>
@@ -174,9 +176,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InfoViewController(py)appNameLabel"></a>
-                    <a name="//apple_ref/swift/Property/appNameLabel" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InfoViewController(py)appNameLabel">appNameLabel</a>
+                    <a name="/s:13Blue_Van_Clef39CGA_DescriptorInteractionViewControllerC5_crlf33_5C04943EDBA04CA0E8D21E07CB74165ALLSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/_crlf" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef39CGA_DescriptorInteractionViewControllerC5_crlf33_5C04943EDBA04CA0E8D21E07CB74165ALLSSvpZ">_crlf</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -184,15 +186,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The label that displays the app name.</p>
+                        <p>This is a carriage return/linefeed pair, which will always be used in place of a simple CR or LF, alone.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
-<span class="k">weak</span> <span class="k">var</span> <span class="nv">appNameLabel</span><span class="p">:</span> <span class="kt">UILabel</span><span class="o">!</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">_crlf</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -202,9 +203,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InfoViewController(py)mainTextView"></a>
-                    <a name="//apple_ref/swift/Property/mainTextView" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InfoViewController(py)mainTextView">mainTextView</a>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(py)writeStackView"></a>
+                    <a name="//apple_ref/swift/Property/writeStackView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(py)writeStackView">writeStackView</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -212,7 +213,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The text view that displays most of the information for this screen.</p>
+                        <p>The horizontal stack view that contains the write items</p>
 
                       </div>
                       <div class="declaration">
@@ -220,7 +221,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
-<span class="k">weak</span> <span class="k">var</span> <span class="nv">mainTextView</span><span class="p">:</span> <span class="kt">UITextView</span><span class="o">!</span></code></pre>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">writeStackView</span><span class="p">:</span> <span class="kt">UIStackView</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -230,9 +231,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InfoViewController(py)appVersionLabel"></a>
-                    <a name="//apple_ref/swift/Property/appVersionLabel" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InfoViewController(py)appVersionLabel">appVersionLabel</a>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(py)writeLabel"></a>
+                    <a name="//apple_ref/swift/Property/writeLabel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(py)writeLabel">writeLabel</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -240,7 +241,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The label just below the app name label, displaying the version.</p>
+                        <p>The label that says &ldquo;WRITE&rdquo;</p>
 
                       </div>
                       <div class="declaration">
@@ -248,7 +249,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
-<span class="k">weak</span> <span class="k">var</span> <span class="nv">appVersionLabel</span><span class="p">:</span> <span class="kt">UILabel</span><span class="o">!</span></code></pre>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">writeLabel</span><span class="p">:</span> <span class="kt">UILabel</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -258,9 +259,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InfoViewController(py)copyrightButton"></a>
-                    <a name="//apple_ref/swift/Property/copyrightButton" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InfoViewController(py)copyrightButton">copyrightButton</a>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(py)writeTextView"></a>
+                    <a name="//apple_ref/swift/Property/writeTextView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(py)writeTextView">writeTextView</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -268,7 +269,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The button at the bottom that will link to the site.</p>
+                        <p>The text view that contains text to be sent.</p>
 
                       </div>
                       <div class="declaration">
@@ -276,7 +277,89 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
-<span class="k">weak</span> <span class="k">var</span> <span class="nv">copyrightButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">writeTextView</span><span class="p">:</span> <span class="kt">UITextView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(py)writeSendButton"></a>
+                    <a name="//apple_ref/swift/Property/writeSendButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(py)writeSendButton">writeSendButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The button that appears when there is text in the text view. Pressing this, sends the data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">writeSendButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef39CGA_DescriptorInteractionViewControllerC24writeableElementInstance04RVS_A5Thoth0D19_Bluetooth_Writable_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/writeableElementInstance" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef39CGA_DescriptorInteractionViewControllerC24writeableElementInstance04RVS_A5Thoth0D19_Bluetooth_Writable_pSgvp">writeableElementInstance</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Descriptor that is associated with this view controller.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">writeableElementInstance</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Writable</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef39CGA_DescriptorInteractionViewControllerC02myE8Instance04RVS_A5Thoth0d11_Bluetooth_E0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/myDescriptorInstance" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef39CGA_DescriptorInteractionViewControllerC02myE8Instance04RVS_A5Thoth0d11_Bluetooth_E0CSgvp">myDescriptorInstance</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Descriptor that is associated with this view controller, cast from the writable entity.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">myDescriptorInstance</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Descriptor</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -299,9 +382,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13Blue_Van_Clef22CGA_InfoViewControllerC18setUpAccessibilityyyF"></a>
+                    <a name="/s:13Blue_Van_Clef39CGA_DescriptorInteractionViewControllerC18setUpAccessibilityyyF"></a>
                     <a name="//apple_ref/swift/Method/setUpAccessibility()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef22CGA_InfoViewControllerC18setUpAccessibilityyyF">setUpAccessibility()</a>
+                    <a class="token" href="#/s:13Blue_Van_Clef39CGA_DescriptorInteractionViewControllerC18setUpAccessibilityyyF">setUpAccessibility()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -327,11 +410,11 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Callback/Observer%20Methods"></a>
-                <a name="//apple_ref/swift/Section/Callback/Observer Methods" class="dashAnchor"></a>
+                <a name="/IBAction%20Handlers"></a>
+                <a name="//apple_ref/swift/Section/IBAction Handlers" class="dashAnchor"></a>
                 <div class="section-name-container">
-                  <a class="section-name-link" href="#/Callback/Observer%20Methods"></a>
-                  <h3 class="section-name"><p>Callback/Observer Methods</p>
+                  <a class="section-name-link" href="#/IBAction%20Handlers"></a>
+                  <h3 class="section-name"><p>IBAction Handlers</p>
 </h3>
                 </div>
               </div>
@@ -339,9 +422,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InfoViewController(im)copyrightButtonHit:"></a>
-                    <a name="//apple_ref/swift/Method/copyrightButtonHit(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InfoViewController(im)copyrightButtonHit:">copyrightButtonHit(_:)</a>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(im)tappedInScreen:"></a>
+                    <a name="//apple_ref/swift/Method/tappedInScreen(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(im)tappedInScreen:">tappedInScreen(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -349,7 +432,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called when the copyright button is hit.</p>
+                        <p>This reacts to a tap in the area outside the keyboard, and puts away the keyboard.</p>
 
                       </div>
                       <div class="declaration">
@@ -357,7 +440,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBAction</span>
-<span class="kd">func</span> <span class="nf">copyrightButtonHit</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+<span class="kd">func</span> <span class="nf">tappedInScreen</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -367,9 +450,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InfoViewController(im)logoButtonHit:"></a>
-                    <a name="//apple_ref/swift/Method/logoButtonHit(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InfoViewController(im)logoButtonHit:">logoButtonHit(_:)</a>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(im)writeSendButtonHit:"></a>
+                    <a name="//apple_ref/swift/Method/writeSendButtonHit(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(im)writeSendButtonHit:">writeSendButtonHit(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -377,15 +460,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The icon button at the top of the screen was hit.</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBAction</span>
-<span class="kd">func</span> <span class="nf">logoButtonHit</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+<span class="kd">func</span> <span class="nf">writeSendButtonHit</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -396,11 +478,11 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Base%20Class%20Override%20Methods"></a>
-                <a name="//apple_ref/swift/Section/Base Class Override Methods" class="dashAnchor"></a>
+                <a name="/Base%20Class%20Override"></a>
+                <a name="//apple_ref/swift/Section/Base Class Override" class="dashAnchor"></a>
                 <div class="section-name-container">
-                  <a class="section-name-link" href="#/Base%20Class%20Override%20Methods"></a>
-                  <h3 class="section-name"><p>Base Class Override Methods</p>
+                  <a class="section-name-link" href="#/Base%20Class%20Override"></a>
+                  <h3 class="section-name"><p>Base Class Override</p>
 </h3>
                 </div>
               </div>
@@ -408,9 +490,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InfoViewController(im)viewDidLoad"></a>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(im)viewDidLoad"></a>
                     <a name="//apple_ref/swift/Method/viewDidLoad()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InfoViewController(im)viewDidLoad">viewDidLoad()</a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(im)viewDidLoad">viewDidLoad()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -418,7 +500,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called after the view data has been loaded.</p>
+                        <p>Called when the view has loaded.</p>
 
                       </div>
                       <div class="declaration">
@@ -432,12 +514,25 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/CGA_UpdatableScreenViewController%20Conformance"></a>
+                <a name="//apple_ref/swift/Section/CGA_UpdatableScreenViewController Conformance" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/CGA_UpdatableScreenViewController%20Conformance"></a>
+                  <h3 class="section-name"><p>CGA_UpdatableScreenViewController Conformance</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InfoViewController(im)viewDidDisappear:"></a>
-                    <a name="//apple_ref/swift/Method/viewDidDisappear(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InfoViewController(im)viewDidDisappear:">viewDidDisappear(_:)</a>
+                    <a name="/s:13Blue_Van_Clef39CGA_DescriptorInteractionViewControllerC8updateUIyyF"></a>
+                    <a name="//apple_ref/swift/Method/updateUI()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef39CGA_DescriptorInteractionViewControllerC8updateUIyyF">updateUI()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -445,16 +540,75 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This allows us to restart scanning in the main screen, if it was running before we were called.</p>
+                        <p>This simply makes sure that the UI matches the state of the Characteristic.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidDisappear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updateUI</span><span class="p">()</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Text%20View%20Delegate"></a>
+                <a name="//apple_ref/swift/Section/Text View Delegate" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Text%20View%20Delegate"></a>
+                  <h3 class="section-name"><p>Text View Delegate</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(im)textViewDidChange:"></a>
+                    <a name="//apple_ref/swift/Method/textViewDidChange(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_DescriptorInteractionViewController(im)textViewDidChange:">textViewDidChange(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when some text or attributes change in the text view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">textViewDidChange</span><span class="p">(</span><span class="n">_</span> <span class="nv">inTextView</span><span class="p">:</span> <span class="kt">UITextView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inTextView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Text View that experienced the change.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
