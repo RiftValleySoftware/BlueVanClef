@@ -187,9 +187,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D4B1C6822430F26800D3AC78 /* Blue Van Clef (Framework) */ = {
+		D4B1C6822430F26800D3AC78 /* Blue Van Clef */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef (Framework)" */;
+			buildConfigurationList = D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef" */;
 			buildPhases = (
 				D4B1C6812430F26800D3AC78 /* Resources */,
 				D4A6A8652430F4430084F102 /* SwiftLint */,
@@ -201,7 +201,7 @@
 			);
 			dependencies = (
 			);
-			name = "Blue Van Clef (Framework)";
+			name = "Blue Van Clef";
 			packageProductDependencies = (
 				D48FD97324B23F260094F4D1 /* RVS-BlueThoth */,
 				D48FD97624B23F430094F4D1 /* RVS-Persistent-Prefs */,
@@ -243,7 +243,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4B1C6822430F26800D3AC78 /* Blue Van Clef (Framework) */,
+				D4B1C6822430F26800D3AC78 /* Blue Van Clef */,
 			);
 		};
 /* End PBXProject section */
@@ -529,7 +529,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef (Framework)" */ = {
+		D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4B1C6952430F26800D3AC78 /* Debug */,
