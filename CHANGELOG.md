@@ -1,5 +1,11 @@
 # BlueVanClef Change Log
 
+## 1.3.0.3000
+
+- **July 30, 2020**
+
+- App Store release.
+
 ## 1.3.0.2000
 
 - **July 28, 2020**
