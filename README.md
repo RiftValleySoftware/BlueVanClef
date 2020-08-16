@@ -15,10 +15,6 @@ This app is a simple read-only "drill-down" application. It allows you to discov
 
 Once connected, you can explore the device's [GATT Services](https://www.bluetooth.com/specifications/gatt/services/), [GATT Characteristics](https://www.bluetooth.com/specifications/gatt/characteristics/), and [GATT Descriptors](https://www.bluetooth.com/specifications/gatt/descriptors/).
 
-READ-ONLY
--
-Version 1.*X* of the app is a "read-only" explorer. It does not allow Charateristics or Descriptors to be modified.
-
 DEPENDENCIES
 -
 This depends upon the [RVS_BlueToth Bluetooth SDK](https://riftvalleysoftware.github.io/RVS_BlueThoth).
