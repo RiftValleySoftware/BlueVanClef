@@ -14,8 +14,9 @@
 		D44491BD244A3357008D447D /* CGA_PersistentPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44491BC244A3357008D447D /* CGA_PersistentPrefs.swift */; };
 		D447B9F0243171AB00F00A7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D447B9E7243171AB00F00A7A /* LaunchScreen.storyboard */; };
 		D447B9F1243171AB00F00A7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D447B9E9243171AB00F00A7A /* Main.storyboard */; };
-		D447B9F2243171AB00F00A7A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D447B9EB243171AB00F00A7A /* Localizable.strings */; };
-		D447B9F3243171AB00F00A7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D447B9ED243171AB00F00A7A /* InfoPlist.strings */; };
+		D45CCF7624E8C4B200392814 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
+		D45CCF7724E8C4B200392814 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
+		D45CCF7824E8C4B200392814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7524E8C4B200392814 /* Assets.xcassets */; };
 		D465B38824D0532F00441AFA /* CGA_CharacteristicInteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D465B38724D0532F00441AFA /* CGA_CharacteristicInteractionViewController.swift */; };
 		D465B38A24D053A800441AFA /* CGA_DescriptorInteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D465B38924D053A800441AFA /* CGA_DescriptorInteractionViewController.swift */; };
 		D47D71E22448DD70004D9923 /* CGA_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47D71E12448DD70004D9923 /* CGA_Extensions.swift */; };
@@ -52,8 +53,9 @@
 		D447B9E6243171AB00F00A7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D447B9E8243171AB00F00A7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D447B9EA243171AB00F00A7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D447B9EC243171AB00F00A7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D447B9EE243171AB00F00A7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D45CCF7224E8C4B200392814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Localizable.strings; sourceTree = "<group>"; };
+		D45CCF7424E8C4B200392814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = InfoPlist.strings; sourceTree = "<group>"; };
+		D45CCF7524E8C4B200392814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D465B38724D0532F00441AFA /* CGA_CharacteristicInteractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_CharacteristicInteractionViewController.swift; sourceTree = "<group>"; };
 		D465B38924D053A800441AFA /* CGA_DescriptorInteractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_DescriptorInteractionViewController.swift; sourceTree = "<group>"; };
 		D47D71E12448DD70004D9923 /* CGA_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_Extensions.swift; sourceTree = "<group>"; };
@@ -101,8 +103,32 @@
 				D447B9E6243171AB00F00A7A /* Assets.xcassets */,
 				D447B9E7243171AB00F00A7A /* LaunchScreen.storyboard */,
 				D447B9E9243171AB00F00A7A /* Main.storyboard */,
-				D447B9EB243171AB00F00A7A /* Localizable.strings */,
-				D447B9ED243171AB00F00A7A /* InfoPlist.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D45CCF6F24E8C43900392814 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D45CCF7924E8C52600392814 /* Resources */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D45CCF7024E8C4B200392814 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				D45CCF7124E8C4B200392814 /* Localizable.strings */,
+				D45CCF7324E8C4B200392814 /* InfoPlist.strings */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		D45CCF7924E8C52600392814 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D45CCF7524E8C4B200392814 /* Assets.xcassets */,
+				D45CCF7024E8C4B200392814 /* Base.lproj */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -127,19 +153,20 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		D47DE23C2452032D00E6CB26 /* BlueVanClef */ = {
+		D47DE23C2452032D00E6CB26 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				D48D852C2430F13100A925ED /* Meta */,
 				D4DE33872459E5300053F163 /* Source */,
 			);
-			path = BlueVanClef;
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		D48D85172430F05500A925ED /* src */ = {
 			isa = PBXGroup;
 			children = (
-				D47DE23C2452032D00E6CB26 /* BlueVanClef */,
+				D45CCF6F24E8C43900392814 /* Shared */,
+				D47DE23C2452032D00E6CB26 /* iOS */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -187,9 +214,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D4B1C6822430F26800D3AC78 /* Blue Van Clef */ = {
+		D4B1C6822430F26800D3AC78 /* Blue Van Clef (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef" */;
+			buildConfigurationList = D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef (iOS)" */;
 			buildPhases = (
 				D4B1C6812430F26800D3AC78 /* Resources */,
 				D4A6A8652430F4430084F102 /* SwiftLint */,
@@ -201,7 +228,7 @@
 			);
 			dependencies = (
 			);
-			name = "Blue Van Clef";
+			name = "Blue Van Clef (iOS)";
 			packageProductDependencies = (
 				D48FD97324B23F260094F4D1 /* RVS-BlueThoth */,
 				D48FD97624B23F430094F4D1 /* RVS-Persistent-Prefs */,
@@ -243,7 +270,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4B1C6822430F26800D3AC78 /* Blue Van Clef */,
+				D4B1C6822430F26800D3AC78 /* Blue Van Clef (iOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -253,11 +280,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D447B9F3243171AB00F00A7A /* InfoPlist.strings in Resources */,
-				D447B9F2243171AB00F00A7A /* Localizable.strings in Resources */,
+				D45CCF7724E8C4B200392814 /* InfoPlist.strings in Resources */,
 				D447B9F1243171AB00F00A7A /* Main.storyboard in Resources */,
+				D45CCF7624E8C4B200392814 /* Localizable.strings in Resources */,
 				D4B49D062455137700932C3D /* Assets.xcassets in Resources */,
 				D447B9F0243171AB00F00A7A /* LaunchScreen.storyboard in Resources */,
+				D45CCF7824E8C4B200392814 /* Assets.xcassets in Resources */,
 				D40E0CE024602F7F005B8699 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,18 +360,18 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		D447B9EB243171AB00F00A7A /* Localizable.strings */ = {
+		D45CCF7124E8C4B200392814 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D447B9EC243171AB00F00A7A /* Base */,
+				D45CCF7224E8C4B200392814 /* Base */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		D447B9ED243171AB00F00A7A /* InfoPlist.strings */ = {
+		D45CCF7324E8C4B200392814 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D447B9EE243171AB00F00A7A /* Base */,
+				D45CCF7424E8C4B200392814 /* Base */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -472,16 +500,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 2000;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "$(SRCROOT)/src/BlueVanClef/Meta/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/src/iOS/Meta/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
 				PRODUCT_NAME = "Blue Van Clef";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -497,16 +525,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 2000;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "$(SRCROOT)/src/BlueVanClef/Meta/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/src/iOS/Meta/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
 				PRODUCT_NAME = "Blue Van Clef";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -529,7 +557,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef" */ = {
+		D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4B1C6952430F26800D3AC78 /* Debug */,
@@ -546,7 +574,7 @@
 			repositoryURL = "git@github.com:RiftValleySoftware/RVS_BlueThoth.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.0;
+				minimumVersion = 1.4.2;
 			};
 		};
 		D48FD97524B23F430094F4D1 /* XCRemoteSwiftPackageReference "RVS_PersistentPrefs" */ = {
@@ -554,7 +582,7 @@
 			repositoryURL = "git@github.com:RiftValleySoftware/RVS_PersistentPrefs.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.0;
+				minimumVersion = 1.2.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

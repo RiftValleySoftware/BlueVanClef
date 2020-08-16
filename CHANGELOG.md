@@ -1,5 +1,12 @@
 # BlueVanClef Change Log
 
+## 1.4.0.2000
+
+- **TBD**
+
+- Refactoring for multiple targets.
+- Updated to latest RVS_BlueThoth, RVS_Peristent_Prefs, and RVS_Generic_Swift_Toolbox versions.
+
 ## 1.3.0.3000
 
 - **July 30, 2020**
