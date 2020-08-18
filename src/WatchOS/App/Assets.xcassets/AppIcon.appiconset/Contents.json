@@ -1,0 +1,92 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "images" : [
+    {
+      "scale" : "2x",
+      "filename" : "icon38mm@2x.png",
+      "size" : "24x24",
+      "role" : "notificationCenter",
+      "subtype" : "38mm",
+      "idiom" : "watch"
+    },
+    {
+      "filename" : "icon42mm@2x.png",
+      "subtype" : "42mm",
+      "scale" : "2x",
+      "role" : "notificationCenter",
+      "idiom" : "watch",
+      "size" : "27.5x27.5"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "watch",
+      "filename" : "icon-settings@2x.png",
+      "scale" : "2x",
+      "role" : "companionSettings"
+    },
+    {
+      "scale" : "3x",
+      "size" : "29x29",
+      "role" : "companionSettings",
+      "filename" : "icon-settings@3x.png",
+      "idiom" : "watch"
+    },
+    {
+      "filename" : "icon-launcher@2x.png",
+      "idiom" : "watch",
+      "subtype" : "38mm",
+      "scale" : "2x",
+      "size" : "40x40",
+      "role" : "appLauncher"
+    },
+    {
+      "scale" : "2x",
+      "role" : "quickLook",
+      "subtype" : "38mm",
+      "filename" : "icon-quicklook38mm@2x.png",
+      "size" : "86x86",
+      "idiom" : "watch"
+    },
+    {
+      "subtype" : "42mm",
+      "size" : "98x98",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "role" : "quickLook",
+      "filename" : "icon-quicklook42mm@2x.png"
+    },
+    {
+      "idiom" : "watch-marketing",
+      "filename" : "watch-marketing.png",
+      "scale" : "1x",
+      "size" : "1024x1024"
+    },
+    {
+      "filename" : "icon40mm@2x.png",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "subtype" : "40mm",
+      "size" : "44x44",
+      "role" : "appLauncher"
+    },
+    {
+      "role" : "appLauncher",
+      "subtype" : "44mm",
+      "scale" : "2x",
+      "filename" : "icon44mm@2x.png",
+      "size" : "50x50",
+      "idiom" : "watch"
+    },
+    {
+      "filename" : "icon-quicklook44mm@2x.png",
+      "subtype" : "44mm",
+      "role" : "quickLook",
+      "size" : "108x108",
+      "scale" : "2x",
+      "idiom" : "watch"
+    }
+  ]
+}

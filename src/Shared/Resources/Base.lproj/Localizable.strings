@@ -58,6 +58,9 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-DEVICE"                       =   "Device";
 "SLUG-DISCONNECT"                   =   "DISCONNECT";
 
+// Watch-Only
+"SLUG-CONNECT"                      =   "CONNECT";
+
 // MARK: - Characteristics Screen
 "SLUG-CURRENT-TIME-DATE-FORMAT"     =   "MM/dd/yyyy h:mm:ss.SSS a";
 // Buttons
@@ -76,6 +79,17 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-PROPERTIES-INDICATE-ENCRYPT"  =   " IE ";
 "SLUG-PROPERTIES-EXTENDED"          =   " EX ";
 "SLUG-INTERACT"                     =   "WRITE";
+// Watch-Only
+"SLUG-WATCH-PROPERTY-READ"          =   "READ";
+"SLUG-WATCH-PROPERTY-NOTIFY"        =   "NOTIFY";
+"SLUG-WATCH-PROPERTY-WRITE"         =   "WRITE";
+"SLUG-WATCH-PROPERTY-WRITE-RESP"    =   "WRITE (R)";
+"SLUG-WATCH-PROPERTY-INDICATE"      =   "INDICATE";
+"SLUG-WATCH-PROPERTY-BROADCAST"     =   "BROADCAST";
+"SLUG-WATCH-PROPERTY-AUTH-SW"       =   "AUTH SIG WR";
+"SLUG-WATCH-PROPERTY-NOTIFY-ENC"    =   "ENC. NOTIFY";
+"SLUG-WATCH-PROPERTY-INDICATE-ENC"  =   "ENC. INDICATE";
+"SLUG-WATCH-PROPERTY-EXTENDED"      =   "EXTENDED";
 
 // MARK: - Interaction Screen
 "SLUG-WRITE"                        =   "WRITE";
@@ -102,6 +116,9 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-MINIMUM-RSSI-LEFT-FORMAT"     =   "%d";
 "SLUG-MINIMUM-RSSI-RIGHT-FORMAT"    =   "%d";
 
+// Watch-Only
+"SLUG-MINIMUM-RSSI-LABEL-WATCH"     =   "Min. RSSI:";
+
 /// MARK: - ACCESSIBILITY STRINGS
 
 // MARK: - The Initial Device List Screen
@@ -120,6 +137,9 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-ACC-DEVICELIST-TABLE-ADVERTISING-DATA"        =   "This is the advertising Data for this device.";
 "SLUG-ACC-SETTINGS-BUTTON"          =   "App Settings. This will bring in a screen that will allow you to specify some settings for the app.";
 "SLUG-ACC-INFO-BUTTON"              =   "About this app. This will bring in a screen that will give basic information about this app.";
+
+// Watch-Only
+"SLUG-ACC-CONNECT-BUTTON"           =   "Pressing this button will connect the device.";
 
 // MARK: - The Peripheral Information Screen
 "SLUG-ACC-BACK-BUTTON"              =   "Return to the screen with the details for this Peripheral";
@@ -150,6 +170,10 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-ACC-CHARACTERISTIC-ROW-VALUE-FORMAT"                      =   "This is the value for the Characteristic. It is \"\(%@).\" If you touch this, a screen will appear, displaying the Descriptors for this Characteristic.";
 "SLUG-ACC-CHARACTERISTIC-ROW-INTERACT"                          =   "If you select this row, a screen will appear, allowing you to interact with this Characteristic.";
 
+// Watch-Only
+"SLUG-ACC-CHARACTERISTIC-TABLE-WATCH"                           =   "This table lists the Characteristics available in this Service. Touch a Characteristic to see its properties and Descriptors.";
+"SLUG-ACC-CHARACTERISTIC-ELEMENTS-TABLE-WATCH"                  =   "This is a list of the properties and descriptors for this Characteristic.";
+
 // MARK: - The Descriptor List Screen
 "SLUG-ACC-DESCRIPTOR-TABLE"         =   "This is a list of the descriptors for this Characteristic. Selecting a row will cause that descriptor to refresh its value.";
 
@@ -163,6 +187,9 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-ACC-DESCRIPTOR-EXTENDED-AUX-WR-NO"                        =   "Writable Auxiliaries is Not Enabled.";
 "SLUG-ACC-DESCRIPTOR-EXTENDED-AUX-WR-YES"                       =   "Writable Auxiliaries is Enabled.";
 "SLUG-ACC-DESCRIPTOR-INTERACT-BUTTON"                           =   "If you select this button, a screen will appear, allowing you to interact with this Characteristic.";
+
+// Watch-Only
+"SLUG-ACC-DESCRIPTOR-VALUE"                                     =   "This is a textual representation of the Descriptor value.";
 
 // MARK: - The App Settings Screen
 // Mac-only
