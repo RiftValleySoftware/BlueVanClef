@@ -505,9 +505,9 @@
 			files = (
 				D4EE292324EC64B00008C0FE /* Interface.storyboard in Resources */,
 				D4EE293324EC64D90008C0FE /* Localizable.strings in Resources */,
+				D4EE293524EC64DD0008C0FE /* InfoPlist.strings in Resources */,
 				D4EE293224EC64D40008C0FE /* Assets.xcassets in Resources */,
 				D4EE292224EC64A70008C0FE /* Assets.xcassets in Resources */,
-				D4EE293524EC64DD0008C0FE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

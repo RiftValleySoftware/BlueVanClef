@@ -28,6 +28,8 @@ import ClockKit
 /* ###################################################################################################################################### */
 /**
  This adds support for the various complications provided by this app.
+ 
+ These complications are about as simple as you can get. They just bring up the app. No state info is displayed.
  */
 class CGA_ComplicationController: NSObject {
 }
@@ -93,18 +95,6 @@ extension CGA_ComplicationController {
                 templateTmp.imageProvider = CLKImageProvider(onePieceImage: templateImage)
                 return templateTmp
             }
-        case .modularLarge:
-            #if DEBUG
-                print("Template requested for modularLarge")
-            #endif
-            if let templateImage = UIImage(named: "Complication/Modular") {
-                let templateTmp = CLKComplicationTemplateModularLargeStandardBody()
-                templateTmp.headerImageProvider = CLKImageProvider(onePieceImage: templateImage)
-                templateTmp.headerTextProvider = CLKSimpleTextProvider(text: Bundle.main.appDisplayName)
-                templateTmp.body1TextProvider = CLKSimpleTextProvider(text: Bundle.main.appDisplayName)
-                templateTmp.body2TextProvider = CLKSimpleTextProvider(text: Bundle.main.appDisplayName)
-                return templateTmp
-            }
         default:
             return _makeUtilitarianTemplateObject(for: inComplication)
         }
@@ -129,6 +119,15 @@ extension CGA_ComplicationController {
         case .utilitarianSmall:
             #if DEBUG
                 print("Template requested for utilitarianSmall")
+            #endif
+            if let templateImage = UIImage(named: "Complication/Utilitarian") {
+                let templateTmp = CLKComplicationTemplateUtilitarianSmallSquare()
+                templateTmp.imageProvider = CLKImageProvider(onePieceImage: templateImage)
+                return templateTmp
+            }
+        case .utilitarianSmallFlat:
+            #if DEBUG
+                print("Template requested for utilitarianSmallFlat")
             #endif
             if let templateImage = UIImage(named: "Complication/Utilitarian") {
                 let templateTmp = CLKComplicationTemplateUtilitarianSmallFlat()
@@ -201,12 +200,10 @@ extension CGA_ComplicationController {
             #if DEBUG
                 print("Template requested for graphicRectangular")
             #endif
-            if let templateImage = UIImage(named: "Complication/Graphic Corner") {
-                let templateTmp = CLKComplicationTemplateGraphicRectangularStandardBody()
-                templateTmp.headerImageProvider = CLKFullColorImageProvider(fullColorImage: templateImage)
-                templateTmp.headerTextProvider = CLKSimpleTextProvider(text: Bundle.main.appDisplayName)
-                templateTmp.body1TextProvider = CLKSimpleTextProvider(text: "")
-                templateTmp.body2TextProvider = CLKSimpleTextProvider(text: "")
+            if let templateImage = UIImage(named: "Complication/Graphic Large Rectangular") {
+                let templateTmp = CLKComplicationTemplateGraphicRectangularLargeImage()
+                templateTmp.imageProvider = CLKFullColorImageProvider(fullColorImage: templateImage)
+                templateTmp.textProvider = CLKSimpleTextProvider(text: Bundle.main.appDisplayName)
                 return templateTmp
             }
         default:
