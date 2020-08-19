@@ -51,6 +51,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 // Advertisement Data Additions
 "SLUG-MAIN-LIST-DATE-FORMAT"        =   "MM/dd/yyyy h:mm:ss.SSS a";
 "SLUG-ID"                           =   "ID";
+"SLUG-RSSI-LEVEL-FORMAT-ADV"        =   "Power: %d dBm";
 
 // MARK: - Services screen
 "SLUG-CONNECTING"                   =   "CONNECTING...";

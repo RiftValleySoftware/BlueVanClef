@@ -422,7 +422,6 @@ extension CGA_WatchOS_ExtensionDelegate: CGA_BlueThoth_Delegate {
         #if DEBUG
             print("Service Update Received")
         #endif
-        inService.forEach { $0.readValue() }
         screenList.topViewController?.updateUI()
     }
     
@@ -442,7 +441,6 @@ extension CGA_WatchOS_ExtensionDelegate: CGA_BlueThoth_Delegate {
                 print("\tString Value: \"\(stringValue)\"")
             }
         #endif
-        inCharacteristic.forEach { $0.readValue() }
         screenList.topViewController?.updateUI()
     }
 
@@ -459,7 +457,6 @@ extension CGA_WatchOS_ExtensionDelegate: CGA_BlueThoth_Delegate {
         #if DEBUG
             print("Characteristic Notification State Changed to \(inCharacteristic.isNotifying ? "ON" : "OFF")")
         #endif
-        inCharacteristic.forEach { $0.readValue() }
         screenList.topViewController?.updateUI()
     }
     

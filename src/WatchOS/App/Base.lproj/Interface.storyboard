@@ -141,7 +141,8 @@
                 <controller identifier="Connected-Device-Screen" backgroundImage="BackgroundGradient" fullBounds="YES" id="s4R-NB-7GP" userLabel="Connected Device Screen" customClass="CGA_WatchOS_DeviceInterfaceController" customModule="Blue_Van_Clef_WatchKit_Extension">
                     <items>
                         <label width="1" alignment="center" verticalAlignment="center" text="SLUG-CONNECTING" textAlignment="center" id="U2K-bl-slL">
-                            <color key="textColor" red="1" green="0.53762090356603132" blue="0.18542095372443623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="textColor" red="1" green="0.97192197729999996" blue="0.33470388369999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="16"/>
                         </label>
                         <table alignment="left" id="CkK-cX-MQ8">
                             <items>

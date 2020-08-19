@@ -72,6 +72,7 @@ extension CGA_WatchOS_DescriptorInterfaceController {
             id = context.id
             super.awake(withContext: inContext)
             descriptorInstance = context
+            descriptorInstance?.readValue()
             setTitle(id.localizedVariant)
             updateUI()
             setAccessibility()
