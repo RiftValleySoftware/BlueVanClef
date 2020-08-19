@@ -53,16 +53,30 @@ extension CGA_ComplicationController {
         
         switch inComplication.family {
         case .circularSmall:
+            #if DEBUG
+                print("Template requested for circularSmall")
+            #endif
             if let templateImage = UIImage(named: "Complication/Circular") {
                 let templateTmp = CLKComplicationTemplateCircularSmallSimpleImage()
                 templateTmp.imageProvider = CLKImageProvider(onePieceImage: templateImage)
                 return templateTmp
+            } else {
+                #if DEBUG
+                    print("Complication/Circular Not Available")
+                #endif
             }
         case .extraLarge:
+            #if DEBUG
+                print("Template requested for extraLarge")
+            #endif
             if let templateImage = UIImage(named: "Complication/Extra Large") {
                 let templateTmp = CLKComplicationTemplateExtraLargeSimpleImage()
                 templateTmp.imageProvider = CLKImageProvider(onePieceImage: templateImage)
                 return templateTmp
+            } else {
+                #if DEBUG
+                    print("Complication/Extra Large Not Available")
+                #endif
             }
         default:
             return _makeModularTemplateObject(for: inComplication)
@@ -93,6 +107,10 @@ extension CGA_ComplicationController {
                 let templateTmp = CLKComplicationTemplateModularSmallSimpleImage()
                 templateTmp.imageProvider = CLKImageProvider(onePieceImage: templateImage)
                 return templateTmp
+            } else {
+                #if DEBUG
+                    print("Complication/Modular Not Available")
+                #endif
             }
         default:
             return _makeUtilitarianTemplateObject(for: inComplication)
@@ -123,6 +141,10 @@ extension CGA_ComplicationController {
                 let templateTmp = CLKComplicationTemplateUtilitarianSmallSquare()
                 templateTmp.imageProvider = CLKImageProvider(onePieceImage: templateImage)
                 return templateTmp
+            } else {
+                #if DEBUG
+                    print("Complication/Utilitarian Not Available (Small)")
+                #endif
             }
         case .utilitarianSmallFlat:
             #if DEBUG
@@ -132,6 +154,10 @@ extension CGA_ComplicationController {
                 let templateTmp = CLKComplicationTemplateUtilitarianSmallFlat()
                 templateTmp.imageProvider = CLKImageProvider(onePieceImage: templateImage)
                 return templateTmp
+            } else {
+                #if DEBUG
+                    print("Complication/Utilitarian Not Available (Small Flat)")
+                #endif
             }
         case .utilitarianLarge:
             #if DEBUG
@@ -141,6 +167,10 @@ extension CGA_ComplicationController {
                 let templateTmp = CLKComplicationTemplateUtilitarianLargeFlat()
                 templateTmp.imageProvider = CLKImageProvider(onePieceImage: templateImage)
                 return templateTmp
+            } else {
+                #if DEBUG
+                    print("Complication/Utilitarian Not Available (Large)")
+                #endif
             }
         default:
             return _makeGraphicTemplateObject(for: inComplication)
@@ -171,6 +201,10 @@ extension CGA_ComplicationController {
                 let templateTmp = CLKComplicationTemplateGraphicCircularImage()
                 templateTmp.imageProvider = CLKFullColorImageProvider(fullColorImage: image)
                 return templateTmp
+            } else {
+                #if DEBUG
+                    print("Complication/Graphic Circular Not Available")
+                #endif
             }
         case .graphicCorner:
             #if DEBUG
@@ -180,6 +214,10 @@ extension CGA_ComplicationController {
                 let templateTmp = CLKComplicationTemplateGraphicCornerCircularImage()
                 templateTmp.imageProvider = CLKFullColorImageProvider(fullColorImage: image)
                 return templateTmp
+            } else {
+                #if DEBUG
+                    print("Complication/Graphic Corner Not Available")
+                #endif
             }
         case .graphicBezel:
             #if DEBUG
@@ -189,6 +227,10 @@ extension CGA_ComplicationController {
                 let circularItem = CLKComplicationTemplateGraphicCornerCircularImage()
                 circularItem.imageProvider = CLKFullColorImageProvider(fullColorImage: image)
                 return circularItem
+            } else {
+                #if DEBUG
+                    print("Complication/Graphic Bezel Not Available")
+                #endif
             }
         case .graphicRectangular:
             #if DEBUG
@@ -199,6 +241,10 @@ extension CGA_ComplicationController {
                 templateTmp.imageProvider = CLKFullColorImageProvider(fullColorImage: templateImage)
                 templateTmp.textProvider = CLKSimpleTextProvider(text: Bundle.main.appDisplayName)
                 return templateTmp
+            } else {
+                #if DEBUG
+                    print("Complication/Graphic Large Rectangular Not Available")
+                #endif
             }
         default:
             #if DEBUG
@@ -219,6 +265,13 @@ extension CGA_ComplicationController {
  This adds support for the various complications provided by this app.
  */
 extension CGA_ComplicationController: CLKComplicationDataSource {
+    func getNextRequestedUpdateDateWithHandler(handler inHandler: (NSDate?) -> Void) {
+        #if DEBUG
+            print("Timeline Next Refresh Requested.")
+        #endif
+        inHandler(NSDate(timeIntervalSinceNow: 1))
+    }
+
     /* ################################################################## */
     /**
      This sets the current timeline entry for the complication.
@@ -234,26 +287,50 @@ extension CGA_ComplicationController: CLKComplicationDataSource {
             switch inComplication.family {
             case .modularLarge:
                 if  let tObject = templateObject as? CLKComplicationTemplateModularLargeStandardBody {
+                    #if DEBUG
+                        print("Modular Large Returned.")
+                    #endif
                     inHandler(CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tObject))
                 } else {
+                    #if DEBUG
+                        print("Modular Large Not Available.")
+                    #endif
                     inHandler(nil)
                 }
             case .utilitarianSmall:
                 if  let tObject = templateObject as? CLKComplicationTemplateUtilitarianSmallFlat {
+                    #if DEBUG
+                        print("Utilitarian Small Flat Returned.")
+                    #endif
                     inHandler(CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tObject))
                 } else {
+                    #if DEBUG
+                        print("Utilitarian Small Flat Not Available.")
+                    #endif
                     inHandler(nil)
                 }
             case .utilitarianLarge:
                 if  let tObject = templateObject as? CLKComplicationTemplateUtilitarianLargeFlat {
+                    #if DEBUG
+                        print("Utilitarian Large Flat Returned.")
+                    #endif
                     inHandler(CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tObject))
                 } else {
+                    #if DEBUG
+                        print("Utilitarian Large Flat Not Available.")
+                    #endif
                     inHandler(nil)
                 }
             case .graphicRectangular:
                 if  let tObject = templateObject as? CLKComplicationTemplateGraphicRectangularStandardBody {
+                    #if DEBUG
+                        print("Graphic Rectangular Standard Returned.")
+                    #endif
                     inHandler(CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tObject))
                 } else {
+                    #if DEBUG
+                        print("Graphic Rectangular Standard Not Available.")
+                    #endif
                     inHandler(nil)
                 }
             default:
@@ -271,7 +348,12 @@ extension CGA_ComplicationController: CLKComplicationDataSource {
      - parameter complication: The complication we're generating this for.
      - parameter withHandler: The inHandler method to be called.
      */
-    func getLocalizableSampleTemplate(for inComplication: CLKComplication, withHandler inHandler: (CLKComplicationTemplate?) -> Void) { getPlaceholderTemplateForComplication(complication: inComplication, withHandler: inHandler) }
+    func getLocalizableSampleTemplate(for inComplication: CLKComplication, withHandler inHandler: @escaping (CLKComplicationTemplate?) -> Void) {
+        #if DEBUG
+            print("Localizable Template Placeholder Requested for: \(String(describing: inComplication))")
+        #endif
+        getPlaceholderTemplateForComplication(complication: inComplication, withHandler: inHandler)
+    }
     
     /* ################################################################## */
     /**
@@ -280,7 +362,7 @@ extension CGA_ComplicationController: CLKComplicationDataSource {
      - parameter complication: The complication we're generating this for.
      - parameter withHandler: The inHandler method to be called.
      */
-    public func getPlaceholderTemplateForComplication(complication inComplication: CLKComplication, withHandler inHandler: (CLKComplicationTemplate?) -> Void) {
+    public func getPlaceholderTemplateForComplication(complication inComplication: CLKComplication, withHandler inHandler: @escaping (CLKComplicationTemplate?) -> Void) {
         #if DEBUG
             print("Placeholder Requested for: \(String(describing: inComplication))")
         #endif
@@ -288,26 +370,50 @@ extension CGA_ComplicationController: CLKComplicationDataSource {
             switch inComplication.family {
             case .modularLarge:
                 if  let tObject = templateObject as? CLKComplicationTemplateModularLargeStandardBody {
+                    #if DEBUG
+                        print("Modular Large Returned (Template).")
+                    #endif
                     inHandler(tObject)
                 } else {
-                    inHandler(nil)
+                    #if DEBUG
+                        print("Modular Large Not Available (Template).")
+                    #endif
+inHandler(nil)
                 }
             case .utilitarianSmall:
                 if  let tObject = templateObject as? CLKComplicationTemplateUtilitarianSmallFlat {
+                    #if DEBUG
+                        print("Utilitarian Small Returned (Template).")
+                    #endif
                     inHandler(tObject)
                 } else {
+                    #if DEBUG
+                        print("Utilitarian Small Not Available (Template).")
+                    #endif
                     inHandler(nil)
                 }
             case .utilitarianLarge:
                 if  let tObject = templateObject as? CLKComplicationTemplateUtilitarianLargeFlat {
+                    #if DEBUG
+                        print("Utilitarian Large Returned (Template).")
+                    #endif
                     inHandler(tObject)
                 } else {
+                    #if DEBUG
+                        print("Utilitarian Large Not Available (Template).")
+                    #endif
                     inHandler(nil)
                 }
             case .graphicRectangular:
                 if  let tObject = templateObject as? CLKComplicationTemplateGraphicRectangularLargeImage {
+                    #if DEBUG
+                        print("Graphic Rectangular Returned (Template).")
+                    #endif
                     inHandler(tObject)
                 } else {
+                    #if DEBUG
+                        print("Graphic Rectangular Not Available (Template).")
+                    #endif
                     inHandler(nil)
                 }
             default:
@@ -325,7 +431,12 @@ extension CGA_ComplicationController: CLKComplicationDataSource {
      - parameter for: The complication we're generating this for.
      - parameter withHandler: The inHandler method to be called.
      */
-    func getSupportedTimeTravelDirections(for inComplication: CLKComplication, withHandler inHandler: @escaping (CLKComplicationTimeTravelDirections) -> Void) { inHandler([]) }
+    func getSupportedTimeTravelDirections(for inComplication: CLKComplication, withHandler inHandler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
+        #if DEBUG
+            print("Supported Timeline Directions Requested for: \(String(describing: inComplication))")
+        #endif
+        inHandler([])
+    }
     
     /* ################################################################## */
     /**
@@ -334,7 +445,12 @@ extension CGA_ComplicationController: CLKComplicationDataSource {
      - parameter for: The complication we're generating this for.
      - parameter withHandler: The inHandler method to be called.
      */
-    func getAlwaysOnTemplate(for inComplication: CLKComplication, withHandler inHandler: @escaping (CLKComplicationTemplate?) -> Void) { getLocalizableSampleTemplate(for: inComplication, withHandler: inHandler) }
+    func getAlwaysOnTemplate(for inComplication: CLKComplication, withHandler inHandler: @escaping (CLKComplicationTemplate?) -> Void) {
+        #if DEBUG
+            print("Always On Template Requested for: \(String(describing: inComplication))")
+        #endif
+        getLocalizableSampleTemplate(for: inComplication, withHandler: inHandler)
+    }
     
     /* ################################################################## */
     /**
@@ -343,7 +459,12 @@ extension CGA_ComplicationController: CLKComplicationDataSource {
      - parameter for: The complication we're generating this for.
      - parameter withHandler: The inHandler method to be called.
      */
-    func getTimelineEndDate(for inComplication: CLKComplication, withHandler inHandler: @escaping (Date?) -> Void) { inHandler(nil) }
+    func getTimelineEndDate(for inComplication: CLKComplication, withHandler inHandler: @escaping (Date?) -> Void) {
+        #if DEBUG
+            print("Timeline End Date Requested for: \(String(describing: inComplication))")
+        #endif
+        inHandler(nil)
+    }
     
     /* ################################################################## */
     /**
@@ -354,7 +475,43 @@ extension CGA_ComplicationController: CLKComplicationDataSource {
      - parameter limit: The number of entries to provide.
      - parameter withHandler: The inHandler method to be called.
      */
-    func getTimelineEntries(for inComplication: CLKComplication, before inDate: Date, limit inLimit: Int, withHandler inHandler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) { inHandler(nil) }
+    func getTimelineEntries(for inComplication: CLKComplication, before inDate: Date, limit inLimit: Int, withHandler inHandler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
+        #if DEBUG
+            print("Timeline Entries Before \(inDate) Requested for: \(String(describing: inComplication))")
+        #endif
+        if let templateObject = _makeTemplateObject(for: inComplication) {
+            switch inComplication.family {
+            case .modularLarge:
+                if  let tObject = templateObject as? CLKComplicationTemplateModularLargeStandardBody {
+                    inHandler([CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tObject)])
+                } else {
+                    inHandler(nil)
+                }
+            case .utilitarianSmall:
+                if  let tObject = templateObject as? CLKComplicationTemplateUtilitarianSmallFlat {
+                    inHandler([CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tObject)])
+                } else {
+                    inHandler(nil)
+                }
+            case .utilitarianLarge:
+                if  let tObject = templateObject as? CLKComplicationTemplateUtilitarianLargeFlat {
+                    inHandler([CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tObject)])
+                } else {
+                    inHandler(nil)
+                }
+            case .graphicRectangular:
+                if  let tObject = templateObject as? CLKComplicationTemplateGraphicRectangularStandardBody {
+                    inHandler([CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tObject)])
+                } else {
+                    inHandler(nil)
+                }
+            default:
+                inHandler([CLKComplicationTimelineEntry(date: Date(), complicationTemplate: templateObject)])
+            }
+        } else {
+            inHandler(nil)
+        }
+    }
     
     /* ################################################################## */
     /**
@@ -365,7 +522,43 @@ extension CGA_ComplicationController: CLKComplicationDataSource {
      - parameter limit: The number of entries to provide.
      - parameter withHandler: The inHandler method to be called.
      */
-    func getTimelineEntries(for inComplication: CLKComplication, after inDate: Date, limit inLimit: Int, withHandler inHandler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) { inHandler(nil) }
+    func getTimelineEntries(for inComplication: CLKComplication, after inDate: Date, limit inLimit: Int, withHandler inHandler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
+        #if DEBUG
+            print("Timeline Entries After \(inDate) Requested for: \(String(describing: inComplication))")
+        #endif
+        if let templateObject = _makeTemplateObject(for: inComplication) {
+            switch inComplication.family {
+            case .modularLarge:
+                if  let tObject = templateObject as? CLKComplicationTemplateModularLargeStandardBody {
+                    inHandler([CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tObject)])
+                } else {
+                    inHandler(nil)
+                }
+            case .utilitarianSmall:
+                if  let tObject = templateObject as? CLKComplicationTemplateUtilitarianSmallFlat {
+                    inHandler([CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tObject)])
+                } else {
+                    inHandler(nil)
+                }
+            case .utilitarianLarge:
+                if  let tObject = templateObject as? CLKComplicationTemplateUtilitarianLargeFlat {
+                    inHandler([CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tObject)])
+                } else {
+                    inHandler(nil)
+                }
+            case .graphicRectangular:
+                if  let tObject = templateObject as? CLKComplicationTemplateGraphicRectangularStandardBody {
+                    inHandler([CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tObject)])
+                } else {
+                    inHandler(nil)
+                }
+            default:
+                inHandler([CLKComplicationTimelineEntry(date: Date(), complicationTemplate: templateObject)])
+            }
+        } else {
+            inHandler(nil)
+        }
+    }
 
     /* ################################################################## */
     /**
@@ -374,5 +567,10 @@ extension CGA_ComplicationController: CLKComplicationDataSource {
      - parameter for: The complication we're generating this for.
      - parameter withHandler: The inHandler method to be called.
      */
-    func getPrivacyBehavior(for inComplication: CLKComplication, withHandler inHandler: @escaping (CLKComplicationPrivacyBehavior) -> Void) { inHandler(.hideOnLockScreen) }
+    func getPrivacyBehavior(for inComplication: CLKComplication, withHandler inHandler: @escaping (CLKComplicationPrivacyBehavior) -> Void) {
+        #if DEBUG
+            print("Timeline Privacy Behavior Requested for: \(String(describing: inComplication))")
+        #endif
+        inHandler(.showOnLockScreen)
+    }
 }
