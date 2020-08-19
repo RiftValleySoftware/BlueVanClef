@@ -29,8 +29,9 @@
                                 <tableRow identifier="CGA_WatchOS_DiscoveryTableController" id="iQh-uO-qJ6" customClass="CGA_WatchOS_DiscoveryTableController" customModule="Blue_Van_Clef_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" layout="overlap" id="EMw-VM-L8B">
                                         <items>
-                                            <label width="1" height="1" alignment="center" textAlignment="center" id="WLQ-Uz-0Ec">
+                                            <label width="1" height="1" alignment="center" textAlignment="center" numberOfLines="0" id="WLQ-Uz-0Ec">
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                             </label>
                                         </items>
                                     </group>
@@ -107,7 +108,9 @@
                                 <segue destination="s4R-NB-7GP" kind="push" identifier="connect-to-device" id="bnF-F7-UZH"/>
                             </connections>
                         </button>
-                        <label width="1" alignment="left" text="Label" numberOfLines="0" id="nyz-mY-M4L"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="left" numberOfLines="0" id="nyz-mY-M4L">
+                            <fontDescription key="font" type="system" pointSize="15"/>
+                        </label>
                     </items>
                     <connections>
                         <outlet property="advertisingInformationLabel" destination="nyz-mY-M4L" id="Bt5-59-2EU"/>

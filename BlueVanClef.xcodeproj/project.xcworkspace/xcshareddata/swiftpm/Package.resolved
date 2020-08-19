@@ -6,8 +6,8 @@
         "repositoryURL": "git@github.com:RiftValleySoftware/RVS_BlueThoth.git",
         "state": {
           "branch": null,
-          "revision": "c2df14c1f7b9741e7b071efb7c0085e26187c36c",
-          "version": "1.4.0"
+          "revision": "e63f676dda96d3fc66a5e9df8ede35577bc345dd",
+          "version": "1.5.0"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "git@github.com:RiftValleySoftware/RVS_PersistentPrefs.git",
         "state": {
           "branch": null,
-          "revision": "95b0980cf933dbb1a8bc9af6462d73213412d40e",
-          "version": "1.2.0"
+          "revision": "d71d6bfaf1791b2e472f8e21e8fbc9428c5303af",
+          "version": "1.2.1"
         }
       }
     ]

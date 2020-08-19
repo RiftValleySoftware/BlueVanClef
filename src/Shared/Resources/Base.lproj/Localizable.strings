@@ -178,19 +178,19 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 // MARK: - The Descriptor List Screen
 "SLUG-ACC-DESCRIPTOR-TABLE"         =   "This is a list of the descriptors for this Characteristic. Selecting a row will cause that descriptor to refresh its value.";
 
-"SLUG-ACC-DESCRIPTOR-CLIENTCHAR-NOTIFY-NO"                      =   "Is Not Notifying. ";
-"SLUG-ACC-DESCRIPTOR-CLIENTCHAR-NOTIFY-YES"                     =   "Is Notifying. ";
-"SLUG-ACC-DESCRIPTOR-CLIENTCHAR-INDICATE-NO"                    =   "Is Not Indicating.";
-"SLUG-ACC-DESCRIPTOR-CLIENTCHAR-INDICATE-YES"                   =   "Is Indicating.";
+"SLUG-ACC-DESCRIPTOR-CLIENTCHAR-NOTIFY-NO"          =   "Is Not Notifying. ";
+"SLUG-ACC-DESCRIPTOR-CLIENTCHAR-NOTIFY-YES"         =   "Is Notifying. ";
+"SLUG-ACC-DESCRIPTOR-CLIENTCHAR-INDICATE-NO"        =   "Is Not Indicating.";
+"SLUG-ACC-DESCRIPTOR-CLIENTCHAR-INDICATE-YES"       =   "Is Indicating.";
 
-"SLUG-ACC-DESCRIPTOR-EXTENDED-RELIABLE-WR-NO"                   =   "Reliable Write is Not Enabled. ";
-"SLUG-ACC-DESCRIPTOR-EXTENDED-RELIABLE-WR-YES"                  =   "Reliable Write is Enabled. ";
-"SLUG-ACC-DESCRIPTOR-EXTENDED-AUX-WR-NO"                        =   "Writable Auxiliaries is Not Enabled.";
-"SLUG-ACC-DESCRIPTOR-EXTENDED-AUX-WR-YES"                       =   "Writable Auxiliaries is Enabled.";
-"SLUG-ACC-DESCRIPTOR-INTERACT-BUTTON"                           =   "If you select this button, a screen will appear, allowing you to interact with this Characteristic.";
+"SLUG-ACC-DESCRIPTOR-EXTENDED-RELIABLE-WR-NO"       =   "Reliable Write is Not Enabled. ";
+"SLUG-ACC-DESCRIPTOR-EXTENDED-RELIABLE-WR-YES"      =   "Reliable Write is Enabled. ";
+"SLUG-ACC-DESCRIPTOR-EXTENDED-AUX-WR-NO"            =   "Writable Auxiliaries is Not Enabled.";
+"SLUG-ACC-DESCRIPTOR-EXTENDED-AUX-WR-YES"           =   "Writable Auxiliaries is Enabled.";
+"SLUG-ACC-DESCRIPTOR-INTERACT-BUTTON"               =   "If you select this button, a screen will appear, allowing you to interact with this Characteristic.";
 
 // Watch-Only
-"SLUG-ACC-DESCRIPTOR-VALUE"                                     =   "This is a textual representation of the Descriptor value.";
+"SLUG-ACC-DESCRIPTOR-VALUE"                         =   "This is a textual representation of the Descriptor value.";
 
 // MARK: - The App Settings Screen
 // Mac-only
@@ -201,14 +201,14 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-ACC-CONTINUOUS-UPDATE-BUTTON-OFF"             =   "This button will toggle the value of the switch that controls whether or not the app is continuously updating the device list while scanning. The switch is currently off, which means that the names, advertising data and signal strength of the devices will remain consistent with their state upon discovery.";
 "SLUG-ACC-CONTINUOUS-UPDATE-SWITCH-ON"              =   "This switch controls whether or not the app is continuously updating the device list while scanning. It is currently on, which means that the names, advertising data and signal strength of the devices in the list are being continuously updated.";
 "SLUG-ACC-CONTINUOUS-UPDATE-SWITCH-OFF"             =   "This switch controls whether or not the app is continuously updating the device list while scanning. It is currently off, which means that the names, advertising data and signal strength of the devices will remain consistent with their state upon discovery.";
-"SLUG-ACC-DEVICE-UUIDS"             =   "This text field allows you to enter unique identifiers for particular devices (one per line). These identifiers must be in the form of 48-hex-digit strings. They can be separated by dashes. If there are valid UUIDs in this text box, then scanning for devices will ignore all devices that do not have the unique UUIDs listed.";
-"SLUG-ACC-SERVICE-UUIDS"            =   "This text field allows you to enter unique identifiers for particular Services (one per line). These identifiers must be in the form of 48-hex-digit strings, or 4-character hex strings (for GATT standard UUIDs). They can be separated by dashes. These UUIDs are applied to advertised Services, so only devices that advertise these Services will be listed.";
-"SLUG-ACC-CHARACTERISTIC-UUIDS"     =   "This text field allows you to enter unique identifiers for particular Characteristics (one per line). These identifiers must be in the form of 48-hex-digit strings, or 4-character hex strings (for GATT standard UUIDs). They can be separated by dashes. These UUIDs are applied to Characteristics in connected devices. If there are any valid UUIDs in the text box, then only Characteristics that have the same UUIDs will be listed.";
-"SLUG-ACC-SLIDER-LABEL-FORMAT"      =   "The slider below this label will allow you to select a minimum signal strength for discovered devices. It is useful to keep distant devices out of the list. You can adjust it from -100 decibels, to 0 decibels. It is currently set to %d decibels.";
-"SLUG-ACC-SLIDER-FORMAT"            =   "This slider will allow you to select a minimum signal strength for discovered devices. It is useful to keep distant devices out of the list. You can adjust it from -100 decibels, to 0 decibels. It is currently set to %d decibels.";
-"SLUG-ACC-SLIDER-MIN-LABEL"         =   "This is the minimum allowable signal strength. It is %d decibels.";
-"SLUG-ACC-SLIDER-MAX-LABEL"         =   "This is the maximum allowable signal strength. It is %d decibels.";
-"SLUG-ACC-SLIDER-VALUE"             =   "%d decibels.";
+"SLUG-ACC-DEVICE-UUIDS"                             =   "This text field allows you to enter unique identifiers for particular devices (one per line). These identifiers must be in the form of 48-hex-digit strings. They can be separated by dashes. If there are valid UUIDs in this text box, then scanning for devices will ignore all devices that do not have the unique UUIDs listed.";
+"SLUG-ACC-SERVICE-UUIDS"                            =   "This text field allows you to enter unique identifiers for particular Services (one per line). These identifiers must be in the form of 48-hex-digit strings, or 4-character hex strings (for GATT standard UUIDs). They can be separated by dashes. These UUIDs are applied to advertised Services, so only devices that advertise these Services will be listed.";
+"SLUG-ACC-CHARACTERISTIC-UUIDS"                     =   "This text field allows you to enter unique identifiers for particular Characteristics (one per line). These identifiers must be in the form of 48-hex-digit strings, or 4-character hex strings (for GATT standard UUIDs). They can be separated by dashes. These UUIDs are applied to Characteristics in connected devices. If there are any valid UUIDs in the text box, then only Characteristics that have the same UUIDs will be listed.";
+"SLUG-ACC-SLIDER-LABEL-FORMAT"                      =   "The slider below this label will allow you to select a minimum signal strength for discovered devices. It is useful to keep distant devices out of the list. You can adjust it from -100 decibels, to 0 decibels. It is currently set to %d decibels.";
+"SLUG-ACC-SLIDER-FORMAT"                            =   "This slider will allow you to select a minimum signal strength for discovered devices. It is useful to keep distant devices out of the list. You can adjust it from -100 decibels, to 0 decibels. It is currently set to %d decibels.";
+"SLUG-ACC-SLIDER-MIN-LABEL"                         =   "This is the minimum allowable signal strength. It is %d decibels.";
+"SLUG-ACC-SLIDER-MAX-LABEL"                         =   "This is the maximum allowable signal strength. It is %d decibels.";
+"SLUG-ACC-SLIDER-VALUE"                             =   "%d decibels.";
 "SLUG-ACC-CONNECTED-ONLY-BUTTON-ON"                 =   "This button will toggle the value of the switch that controls whether or not the app will only display connectable devices. The switch is currently on, which means that only devices that advertise as being connectable are being displayed in the list.";
 "SLUG-ACC-CONNECTED-ONLY-BUTTON-OFF"                =   "This button will toggle the value of the switch that controls whether or not the app will only display connectable devices. The switch is currently off, which means that devices will be displayed, regardless of their connectability.";
 "SLUG-ACC-CONNECTED-ONLY-SWITCH-ON"                 =   "This switch controls whether or not the app will only display connectable devices. The switch is currently on, which means that only devices that advertise as being connectable are being displayed in the list.";
@@ -245,6 +245,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "kCBAdvDataRxPrimaryPHY"            =   "Primary Receive";
 "kCBAdvDataRxSecondaryPHY"          =   "Secondary Receive";
 "kCBAdvDataManufacturerData"        =   "Manufacturer Data";
+"kCBAdvDataServiceUUIDs"            =   "Services";
 
 // MARK: - GATT Service IDs
 "1800"                              =    "Generic Access";

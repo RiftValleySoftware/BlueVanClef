@@ -24,133 +24,6 @@ import WatchKit
 import RVS_BlueThoth
 
 /* ###################################################################################################################################### */
-// MARK: - Preferences Extension -
-/* ###################################################################################################################################### */
-/**
- This extension adds a bit of extra "sauce" to the shared prefs class, in that it adds stuff specific to our platform.
- */
-extension CGA_PersistentPrefs {
-    /* ################################################################## */
-    /**
-     This is the scan criteria object to be used for filtering scans.
-     It is provided in the struct required by the Bluetooth subsystem.
-     */
-    var scanCriteria: RVS_BlueThoth.ScanCriteria! { RVS_BlueThoth.ScanCriteria(peripherals: peripheralFilterIDArray, services: serviceFilterIDArray, characteristics: characteristicFilterIDArray) }
-}
-
-/* ###################################################################################################################################### */
-// MARK: - Bundle Extension -
-/* ###################################################################################################################################### */
-/**
- This extension adds a few simple accessors for some of the more common bundle items.
- */
-extension Bundle {
-    // MARK: General Stuff for common Apple-Supplied Items
-    
-    /* ################################################################## */
-    /**
-     The app name, as a string. It is required, and "ERROR" is returned if it is not present.
-     */
-    var appDisplayName: String { (object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? object(forInfoDictionaryKey: "CFBundleName") as? String) ?? "ERROR" }
-
-    /* ################################################################## */
-    /**
-     The app version, as a string. It is required, and "ERROR" is returned if it is not present.
-     */
-    var appVersionString: String { object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "ERROR" }
-    
-    /* ################################################################## */
-    /**
-     The build version, as a string. It is required, and "ERROR" is returned if it is not present.
-     */
-    var appVersionBuildString: String { object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "ERROR" }
-    
-    /* ################################################################## */
-    /**
-     If there is a copyright string, it is returned here. It may be nil.
-     */
-    var copyrightString: String? { object(forInfoDictionaryKey: "NSHumanReadableCopyright") as? String }
-
-    // MARK: Specific to this app.
-    
-    /* ################################################################## */
-    /**
-     If there is a copyright site URI, it is returned here as a String. It may be nil.
-     */
-    var siteURIAsString: String? { object(forInfoDictionaryKey: "InfoScreenCopyrightSiteURL") as? String }
-    
-    /* ################################################################## */
-    /**
-     If there is a help site URI, it is returned here as a String. It may be nil.
-     */
-    var helpURIAsString: String? { object(forInfoDictionaryKey: "InfoScreenHelpSiteURL") as? String }
-    
-    /* ################################################################## */
-    /**
-     If there is a copyright site URI, it is returned here as a URL. It may be nil.
-     */
-    var siteURI: URL? { URL(string: siteURIAsString ?? "") }
-    
-    /* ################################################################## */
-    /**
-     If there is a help site URI, it is returned here as a URL. It may be nil.
-     */
-    var helpURI: URL? { URL(string: helpURIAsString ?? "") }
-}
-
-/* ###################################################################################################################################### */
-// MARK: - Special Array Extension -
-/* ###################################################################################################################################### */
-/**
- This extension adds a bit of extra "sauce" to the shared prefs class, in that it adds stuff specific to our platform.
- */
-extension Array where Element: CGA_WatchOS_BaseInterfaceController {
-    /* ################################################################## */
-    /**
-     This subscript allows us to use an Array just like a Dictionary.
-     */
-    subscript(_ inIDString: String) -> Element? {
-        get {
-            for element in self where element.id == inIDString {
-                return element
-            }
-            
-            return nil
-        }
-        
-        set {
-            // If we have a valid key, and the value is nil, we delete. Otherwise, we replace the element at that spot.
-            for elem in enumerated() where inIDString == self[elem.offset].id {
-                if let newValue = newValue {
-                    self[elem.offset] = newValue
-                } else {
-                    remove(at: elem.offset)
-                }
-                
-                return
-            }
-            
-            // If we fall through to here, it's a new element, and we simply append it.
-            if let newValue = newValue {
-                append(newValue)
-            }
-        }
-    }
-    
-    /* ################################################################## */
-    /**
-     The main controller will always be the first one.
-     */
-    var mainViewController: CGA_WatchOS_MainInterfaceController? { first as? CGA_WatchOS_MainInterfaceController }
-    
-    /* ################################################################## */
-    /**
-     The top controller will always be the last one (most times, we will just have two controllers in the Array, anyway).
-     */
-    var topViewController: CGA_WatchOS_BaseInterfaceController? { last }
-}
-
-/* ###################################################################################################################################### */
 // MARK: - Main Watch App Extension Delegate -
 /* ###################################################################################################################################### */
 /**
@@ -238,31 +111,33 @@ extension CGA_WatchOS_ExtensionDelegate {
         guard let sortedAdDataKeys = inAdData?.advertisementData.keys.sorted() else { return [] }
         let sortedAdData: [(key: String, value: Any?)] = sortedAdDataKeys.compactMap { (key:$0, value: inAdData?.advertisementData[$0]) }
 
-        let retStr = sortedAdData.reduce("SLUG-ID".localizedVariant + ": \(inID)\n\t" + String(format: "SLUG-RSSI-LEVEL-FORMAT-ADV".localizedVariant, inPower)) { (current, next) in
+        let retStr = sortedAdData.reduce("SLUG-ID".localizedVariant + ": \(inID)\n" + String(format: "SLUG-RSSI-LEVEL-FORMAT-ADV".localizedVariant, inPower)) { (current, next) in
             let key = next.key.localizedVariant
             let value = next.value
             var ret = "\(current)\n"
             
             if let asStringArray = value as? [String] {
-                ret += current + asStringArray.reduce("\t\(key): ") { (current2, next2) in "\(current2)\n\(next2.localizedVariant)" }
+                ret += current + asStringArray.reduce("\(key): ") { (current2, next2) in "\(current2) \(next2.localizedVariant)" }
             } else if let value = value as? String {
-                ret += "\t\(key): \(value.localizedVariant)"
+                ret += "\(key): \(value.localizedVariant)"
             } else if let value = value as? Bool {
-                ret += "\t\(key): \(value ? "true" : "false")"
+                ret += "\(key): \(value ? "true" : "false")"
             } else if let value = value as? Int {
-                ret += "\t\(key): \(value)"
+                ret += "\(key): \(value)"
             } else if let value = value as? Double {
                 if "kCBAdvDataTimestamp" == next.key {  // If it's the timestamp, we can translate that, here.
                     let date = Date(timeIntervalSinceReferenceDate: value)
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "SLUG-MAIN-LIST-DATE-FORMAT".localizedVariant
                     let displayedDate = dateFormatter.string(from: date)
-                    ret += "\t\(key): \(displayedDate)"
+                    ret += "\(key): \(displayedDate)"
                 } else {
-                    ret += "\t\(key): \(value)"
+                    ret += "\(key): \(value)"
                 }
+            } else if let value = value as? NSArray {   // An NSArray can be strung together in one line.
+                ret += "\(key): " + value.reduce("", { (curr, nxt) -> String in (!curr.isEmpty ? ", " : "") + curr + String(describing: nxt).localizedVariant })
             } else {    // Anything else is just a described instance of something or other.
-                ret += "\t\(key): \(String(describing: value))"
+                ret += "\(key): \(String(describing: value))"
             }
             
             return ret

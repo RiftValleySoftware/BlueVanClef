@@ -33,9 +33,10 @@ line_length:
 - 270 # error
 
 cyclomatic_complexity:
-- 9 # warning
-- 10 # error
+- 10 # warning
+- 11 # error
 
 excluded:
 - Pods
 - Carthage
+- src/WatchOS/Extension/CGA_WatchOS_ExtensionDelegate_Extras.swift

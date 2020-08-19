@@ -20,10 +20,14 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>CLKComplicationPrincipalClass</key>
+	<string>CGA_ComplicationController</string>
+	<key>CLKComplicationSupportedFamilies</key>
+	<array/>
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>The App Needs to Discover and Connect to Bluetooth Devices.</string>
+	<string>Discover Bluetooth Devices</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>The App Needs to Discover and Connect to Bluetooth Devices.</string>
+	<string>Discover Bluetooth Devices</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>

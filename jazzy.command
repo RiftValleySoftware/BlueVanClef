@@ -3,17 +3,16 @@ CWD="$(pwd)"
 MY_SCRIPT_PATH=`dirname "${BASH_SOURCE[0]}"`
 cd "${MY_SCRIPT_PATH}"
 
-rm -drf docs/*
-
-echo "Creating Docs for the App"
+echo "Creating Docs for the iOS App\n"
+rm -drf docs/iOS
 
 jazzy   --readme ./README.md \
+        -b -scheme,BlueVanClef-iOS \
         --github_url https://github.com/RiftValleySoftware/BlueVanClef \
-        --title BlueVanClef\ Doumentation \
+        --title "BlueVanClef (iOS) Doumentation" \
         --min_acl private \
-        --output docs \
-        --theme fullwidth \
-        --build-tool-arguments -scheme,"Blue Van Clef"
-cp ./img/* docs/img
+        --output docs/iOS \
+        --theme fullwidth
+cp ./img/* docs/iOS/img
 
 cd "${CWD}"
