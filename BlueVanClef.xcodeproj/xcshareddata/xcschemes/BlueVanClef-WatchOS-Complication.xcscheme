@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1160"
-   version = "1.7">
+   version = "2.0">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "NO"
+            buildForTesting = "YES"
             buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
@@ -17,20 +17,6 @@
                BlueprintIdentifier = "D4EE28DF24EC62CC0008C0FE"
                BuildableName = "Blue Van Clef.app"
                BlueprintName = "Blue Van Clef (WatchOS)"
-               ReferencedContainer = "container:BlueVanClef.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "NO"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D4B1C6822430F26800D3AC78"
-               BuildableName = "Blue Van Clef.app"
-               BlueprintName = "Blue Van Clef (iOS)"
                ReferencedContainer = "container:BlueVanClef.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -54,7 +40,7 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
-      showNonLocalizedStrings = "YES">
+      launchAutomaticallySubstyle = "32">
       <RemoteRunnable
          runnableDebuggingMode = "2"
          BundleIdentifier = "com.apple.Carousel"

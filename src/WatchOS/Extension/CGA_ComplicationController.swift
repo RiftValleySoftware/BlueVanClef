@@ -60,9 +60,8 @@ extension CGA_ComplicationController {
             }
         case .extraLarge:
             if let templateImage = UIImage(named: "Complication/Extra Large") {
-                let templateTmp = CLKComplicationTemplateExtraLargeStackImage()
-                templateTmp.line1ImageProvider = CLKImageProvider(onePieceImage: templateImage)
-                templateTmp.line2TextProvider = CLKRelativeDateTextProvider(date: Date(), style: CLKRelativeDateStyle.natural, units: [.day])
+                let templateTmp = CLKComplicationTemplateExtraLargeSimpleImage()
+                templateTmp.imageProvider = CLKImageProvider(onePieceImage: templateImage)
                 return templateTmp
             }
         default:
@@ -82,7 +81,7 @@ extension CGA_ComplicationController {
      */
     private func _makeModularTemplateObject(for inComplication: CLKComplication) -> CLKComplicationTemplate? {
         #if DEBUG
-            print("Template requested for complication (Part 2): \(String(describing: inComplication.family))")
+            print("Template requested for complication (Part 2): \(String(describing: inComplication))")
         #endif
         
         switch inComplication.family {
@@ -112,7 +111,7 @@ extension CGA_ComplicationController {
      */
     private func _makeUtilitarianTemplateObject(for inComplication: CLKComplication) -> CLKComplicationTemplate? {
         #if DEBUG
-            print("Template requested for complication (Part 3): \(String(describing: inComplication.family))")
+            print("Template requested for complication (Part 3): \(String(describing: inComplication))")
         #endif
         
         switch inComplication.family {
@@ -160,7 +159,7 @@ extension CGA_ComplicationController {
      */
     private func _makeGraphicTemplateObject(for inComplication: CLKComplication) -> CLKComplicationTemplate? {
         #if DEBUG
-            print("Template requested for complication (Part 4): \(String(describing: inComplication.family))")
+            print("Template requested for complication (Part 4): \(String(describing: inComplication))")
         #endif
         
         switch inComplication.family {
@@ -187,7 +186,7 @@ extension CGA_ComplicationController {
                 print("Template requested for graphicBezel")
             #endif
             if let image = UIImage(named: "Complication/Graphic Bezel") {
-                let circularItem = CLKComplicationTemplateGraphicCircularImage()
+                let circularItem = CLKComplicationTemplateGraphicCornerCircularImage()
                 circularItem.imageProvider = CLKFullColorImageProvider(fullColorImage: image)
                 return circularItem
             }
@@ -202,7 +201,11 @@ extension CGA_ComplicationController {
                 return templateTmp
             }
         default:
-            break
+            #if DEBUG
+                print("Giving up for: \(inComplication.family)")
+            #else
+                break
+            #endif
         }
         
         return nil
@@ -225,7 +228,7 @@ extension CGA_ComplicationController: CLKComplicationDataSource {
      */
     func getCurrentTimelineEntry(for inComplication: CLKComplication, withHandler inHandler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         #if DEBUG
-            print("Timeline Entry Requested for: \(inComplication.family)")
+            print("Timeline Entry Requested for: \(String(describing: inComplication))")
         #endif
         if let templateObject = _makeTemplateObject(for: inComplication) {
             switch inComplication.family {
@@ -263,6 +266,15 @@ extension CGA_ComplicationController: CLKComplicationDataSource {
     
     /* ################################################################## */
     /**
+     This sets the supported placeholder for the composer.
+     
+     - parameter complication: The complication we're generating this for.
+     - parameter withHandler: The inHandler method to be called.
+     */
+    func getLocalizableSampleTemplate(for inComplication: CLKComplication, withHandler inHandler: (CLKComplicationTemplate?) -> Void) { getPlaceholderTemplateForComplication(complication: inComplication, withHandler: inHandler) }
+    
+    /* ################################################################## */
+    /**
      This sets the supported placeholder.
      
      - parameter complication: The complication we're generating this for.
@@ -270,7 +282,7 @@ extension CGA_ComplicationController: CLKComplicationDataSource {
      */
     public func getPlaceholderTemplateForComplication(complication inComplication: CLKComplication, withHandler inHandler: (CLKComplicationTemplate?) -> Void) {
         #if DEBUG
-            print("Placeholder Requested for: \(inComplication.family)")
+            print("Placeholder Requested for: \(String(describing: inComplication))")
         #endif
         if let templateObject = _makeTemplateObject(for: inComplication) {
             switch inComplication.family {
@@ -313,18 +325,54 @@ extension CGA_ComplicationController: CLKComplicationDataSource {
      - parameter for: The complication we're generating this for.
      - parameter withHandler: The inHandler method to be called.
      */
-    func getSupportedTimeTravelDirections(for inComplication: CLKComplication, withHandler inHandler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
-        inHandler([])
-    }
+    func getSupportedTimeTravelDirections(for inComplication: CLKComplication, withHandler inHandler: @escaping (CLKComplicationTimeTravelDirections) -> Void) { inHandler([]) }
     
     /* ################################################################## */
     /**
-     This sets the template object for the complication.
+     This sets the template object for the complication when in "always on" mode.
      
      - parameter for: The complication we're generating this for.
      - parameter withHandler: The inHandler method to be called.
      */
-    func getLocalizableSampleTemplate(for inComplication: CLKComplication, withHandler inHandler: @escaping (CLKComplicationTemplate?) -> Void) {
-        inHandler(_makeTemplateObject(for: inComplication))
-    }
+    func getAlwaysOnTemplate(for inComplication: CLKComplication, withHandler inHandler: @escaping (CLKComplicationTemplate?) -> Void) { getLocalizableSampleTemplate(for: inComplication, withHandler: inHandler) }
+    
+    /* ################################################################## */
+    /**
+     Sets the (non-existent) end date for the (non-existent) timeline.
+     
+     - parameter for: The complication we're generating this for.
+     - parameter withHandler: The inHandler method to be called.
+     */
+    func getTimelineEndDate(for inComplication: CLKComplication, withHandler inHandler: @escaping (Date?) -> Void) { inHandler(nil) }
+    
+    /* ################################################################## */
+    /**
+     This is called to populate a set of timeline entries (should never be called).
+     
+     - parameter for: The complication we're generating this for.
+     - parameter before: The date, before which the entries should be provided.
+     - parameter limit: The number of entries to provide.
+     - parameter withHandler: The inHandler method to be called.
+     */
+    func getTimelineEntries(for inComplication: CLKComplication, before inDate: Date, limit inLimit: Int, withHandler inHandler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) { inHandler(nil) }
+    
+    /* ################################################################## */
+    /**
+     This is called to populate a set of timeline entries (should never be called).
+     
+     - parameter for: The complication we're generating this for.
+     - parameter after: The date, after which the entries should be provided.
+     - parameter limit: The number of entries to provide.
+     - parameter withHandler: The inHandler method to be called.
+     */
+    func getTimelineEntries(for inComplication: CLKComplication, after inDate: Date, limit inLimit: Int, withHandler inHandler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) { inHandler(nil) }
+
+    /* ################################################################## */
+    /**
+     This is called to say whether or not to display the complication in lock.
+     
+     - parameter for: The complication we're generating this for.
+     - parameter withHandler: The inHandler method to be called.
+     */
+    func getPrivacyBehavior(for inComplication: CLKComplication, withHandler inHandler: @escaping (CLKComplicationPrivacyBehavior) -> Void) { inHandler(.hideOnLockScreen) }
 }
