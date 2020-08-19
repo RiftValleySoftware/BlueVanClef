@@ -1,4 +1,8 @@
 {
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
   "assets" : [
     {
       "filename" : "Circular.imageset",
@@ -6,14 +10,24 @@
       "role" : "circular"
     },
     {
+      "idiom" : "watch",
+      "filename" : "Modular.imageset",
+      "role" : "modular"
+    },
+    {
+      "role" : "utilitarian",
+      "idiom" : "watch",
+      "filename" : "Utilitarian.imageset"
+    },
+    {
       "filename" : "Extra Large.imageset",
       "idiom" : "watch",
       "role" : "extra-large"
     },
     {
-      "filename" : "Graphic Bezel.imageset",
       "idiom" : "watch",
-      "role" : "graphic-bezel"
+      "role" : "graphic-corner",
+      "filename" : "Graphic Corner.imageset"
     },
     {
       "filename" : "Graphic Circular.imageset",
@@ -21,28 +35,14 @@
       "role" : "graphic-circular"
     },
     {
-      "filename" : "Graphic Corner.imageset",
+      "filename" : "Graphic Bezel.imageset",
       "idiom" : "watch",
-      "role" : "graphic-corner"
+      "role" : "graphic-bezel"
     },
     {
+      "role" : "graphic-large-rectangular",
       "filename" : "Graphic Large Rectangular.imageset",
-      "idiom" : "watch",
-      "role" : "graphic-large-rectangular"
-    },
-    {
-      "filename" : "Modular.imageset",
-      "idiom" : "watch",
-      "role" : "modular"
-    },
-    {
-      "filename" : "Utilitarian.imageset",
-      "idiom" : "watch",
-      "role" : "utilitarian"
+      "idiom" : "watch"
     }
-  ],
-  "info" : {
-    "author" : "xcode",
-    "version" : 1
-  }
+  ]
 }
