@@ -132,7 +132,6 @@ extension CGA_ComplicationController {
             if let templateImage = UIImage(named: "Complication/Utilitarian") {
                 let templateTmp = CLKComplicationTemplateUtilitarianSmallFlat()
                 templateTmp.imageProvider = CLKImageProvider(onePieceImage: templateImage)
-                templateTmp.textProvider = CLKSimpleTextProvider(text: Bundle.main.appDisplayName)
                 return templateTmp
             }
         case .utilitarianLarge:
@@ -142,7 +141,6 @@ extension CGA_ComplicationController {
             if let templateImage = UIImage(named: "Complication/Utilitarian") {
                 let templateTmp = CLKComplicationTemplateUtilitarianLargeFlat()
                 templateTmp.imageProvider = CLKImageProvider(onePieceImage: templateImage)
-                templateTmp.textProvider = CLKSimpleTextProvider(text: Bundle.main.appDisplayName)
                 return templateTmp
             }
         default:
@@ -189,12 +187,9 @@ extension CGA_ComplicationController {
                 print("Template requested for graphicBezel")
             #endif
             if let image = UIImage(named: "Complication/Graphic Bezel") {
-                let templateTmp = CLKComplicationTemplateGraphicBezelCircularText()
                 let circularItem = CLKComplicationTemplateGraphicCircularImage()
                 circularItem.imageProvider = CLKFullColorImageProvider(fullColorImage: image)
-                templateTmp.circularTemplate = circularItem
-                templateTmp.textProvider = CLKSimpleTextProvider(text: Bundle.main.appDisplayName)
-                return templateTmp
+                return circularItem
             }
         case .graphicRectangular:
             #if DEBUG
