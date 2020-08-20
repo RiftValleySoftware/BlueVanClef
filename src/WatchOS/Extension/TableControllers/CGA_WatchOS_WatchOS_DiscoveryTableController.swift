@@ -49,4 +49,10 @@ class CGA_WatchOS_DiscoveryTableController: NSObject {
      This displays the Peripheral name.
      */
     @IBOutlet weak var deviceLabel: WKInterfaceLabel!
+    
+    /* ################################################################## */
+    /**
+     This displays any advertised Services.
+     */
+    @IBOutlet weak var serviceLabel: WKInterfaceLabel!
 }

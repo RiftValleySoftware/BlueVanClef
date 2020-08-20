@@ -346,10 +346,10 @@
 		D4EE291624EC648F0008C0FE /* TableControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D4EE291724EC648F0008C0FE /* CGA_WatchOS_CharacteristicTableController.swift */,
 				D4EE291824EC648F0008C0FE /* CGA_WatchOS_WatchOS_DiscoveryTableController.swift */,
-				D4EE291924EC648F0008C0FE /* CGA_WatchOS_WatchOS_CharacteristicTables.swift */,
 				D4EE291A24EC648F0008C0FE /* CGA_WatchOS_WatchOS_ServiceTableController.swift */,
+				D4EE291924EC648F0008C0FE /* CGA_WatchOS_WatchOS_CharacteristicTables.swift */,
+				D4EE291724EC648F0008C0FE /* CGA_WatchOS_CharacteristicTableController.swift */,
 			);
 			path = TableControllers;
 			sourceTree = "<group>";
