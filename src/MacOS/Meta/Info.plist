@@ -6,8 +6,6 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
-	<key>CFBundleIconFile</key>
-	<string></string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -25,7 +23,9 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>The App Needs to Discover and Connect to Bluetooth Devices.</string>
+	<string>Discover Bluetooth Devices.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Discover Bluetooth Devices.</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2020 The Great Rift Valley Software Company. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>

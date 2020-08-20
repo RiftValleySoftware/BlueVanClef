@@ -29,7 +29,7 @@ import RVS_Generic_Swift_Toolbox
 /**
  The main reason for creating this class was to allow us to interpret settings, and to fix an issue with Interface Builder.
  */
-class RVS_BlueThoth_MacOS_Test_Harness_Base_WindowController: NSWindowController {
+class MacOS_Base_WindowController: NSWindowController {
     /* ################################################################## */
     /**
      This accounts for a bug in Xcode, where the [`restorable`](https://developer.apple.com/documentation/appkit/nswindow/1526255-restorable) flag is ignored. If you set the name here, it will restore.
