@@ -4,8 +4,6 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleDisplayName</key>
-	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,12 +18,17 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>UISupportedInterfaceOrientations</key>
+	<key>LSRequiresIPhoneOS</key>
+	<false/>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>Discover Bluetooth Devices</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>Discover Bluetooth Devices</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>Copyright © 2020 Rift Valley Software, Inc. All rights reserved.</string>
+	<key>UIRequiredDeviceCapabilities</key>
 	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>armv7</string>
 	</array>
-	<key>WKWatchKitApp</key>
-	<true/>
 </dict>
 </plist>
