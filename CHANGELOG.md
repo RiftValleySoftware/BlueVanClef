@@ -1,5 +1,11 @@
 # BlueVanClef Change Log
 
+## 1.4.0.3000
+
+- **August 20, 2020**
+
+- No changes. App Store release for both iOS and Watch apps.
+
 ## 1.4.0.2001
 
 - **August 20, 2020**
