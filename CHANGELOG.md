@@ -1,8 +1,8 @@
 # BlueVanClef Change Log
 
-## 1.4.0.2000
+## 1.4.0.2001
 
-- **TBD**
+- **August 20, 2020**
 
 - Refactoring for multiple targets.
 - Added the Watch App.
