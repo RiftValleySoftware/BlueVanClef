@@ -47,10 +47,6 @@ extension CGA_ComplicationController {
      - returns: a Complication Template object.
      */
     private func _makeTemplateObject(for inComplication: CLKComplication) -> CLKComplicationTemplate? {
-        #if DEBUG
-            print("Template requested for complication (Part 1): \(inComplication.family)")
-        #endif
-        
         switch inComplication.family {
         case .circularSmall:
             if let templateImage = UIImage(named: "Complication/Circular") {
@@ -59,9 +55,6 @@ extension CGA_ComplicationController {
                 return templateTmp
             }
         case .extraLarge:
-            #if DEBUG
-                print("Template requested for extraLarge")
-            #endif
             if let templateImage = UIImage(named: "Complication/ExtraLarge") {
                 let templateTmp = CLKComplicationTemplateExtraLargeSimpleImage()
                 templateTmp.imageProvider = CLKImageProvider(onePieceImage: templateImage)
@@ -83,10 +76,6 @@ extension CGA_ComplicationController {
      - returns: a Complication Template object.
      */
     private func _makeModularTemplateObject(for inComplication: CLKComplication) -> CLKComplicationTemplate? {
-        #if DEBUG
-            print("Template requested for complication (Part 2): \(String(describing: inComplication))")
-        #endif
-        
         switch inComplication.family {
         case .modularSmall:
             if let templateImage = UIImage(named: "Complication/Modular") {
@@ -110,10 +99,6 @@ extension CGA_ComplicationController {
      - returns: a Complication Template object.
      */
     private func _makeUtilitarianTemplateObject(for inComplication: CLKComplication) -> CLKComplicationTemplate? {
-        #if DEBUG
-            print("Template requested for complication (Part 3): \(String(describing: inComplication))")
-        #endif
-        
         switch inComplication.family {
         case .utilitarianSmall:
             if let templateImage = UIImage(named: "Complication/Utilitarian") {
@@ -131,7 +116,7 @@ extension CGA_ComplicationController {
             if let templateImage = UIImage(named: "Complication/Utilitarian") {
                 let templateTmp = CLKComplicationTemplateUtilitarianLargeFlat()
                 templateTmp.imageProvider = CLKImageProvider(onePieceImage: templateImage)
-                templateTmp.textProvider = CLKTextProvider(format: "")
+                templateTmp.textProvider = CLKTextProvider(format: "SLUG-APP-NAME".localizedVariant)
                 return templateTmp
             }
         default:
@@ -163,17 +148,11 @@ extension CGA_ComplicationController {
                 templateTmp.imageProvider = CLKFullColorImageProvider(fullColorImage: image)
                 return templateTmp
             }
-        case .graphicBezel:
-            if let image = UIImage(named: "Complication/GraphicBezel") {
-                let circularItem = CLKComplicationTemplateGraphicCornerCircularImage()
-                circularItem.imageProvider = CLKFullColorImageProvider(fullColorImage: image)
-                return circularItem
-            }
         case .graphicRectangular:
             if let templateImage = UIImage(named: "Complication/GraphicLargeRectangular") {
                 let templateTmp = CLKComplicationTemplateGraphicRectangularLargeImage()
                 templateTmp.imageProvider = CLKFullColorImageProvider(fullColorImage: templateImage)
-                templateTmp.textProvider = CLKSimpleTextProvider(text: Bundle.main.appDisplayName)
+                templateTmp.textProvider = CLKSimpleTextProvider(text: "SLUG-APP-NAME".localizedVariant)
                 return templateTmp
             }
         default:
