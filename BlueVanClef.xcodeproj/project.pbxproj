@@ -30,6 +30,23 @@
 		D49A703424EDE4040019D286 /* WatchAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291E24EC648F0008C0FE /* WatchAssets.xcassets */; };
 		D4B1C69F2430F32900D3AC78 /* CGA_AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48D85182430F05500A925ED /* CGA_AppDelegate.swift */; };
 		D4B1C6A02430F32900D3AC78 /* CGA_InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48D851C2430F05500A925ED /* CGA_InitialViewController.swift */; };
+		D4B42FD024EF1DA800BDF1E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B42FBE24EF1DA800BDF1E9 /* Main.storyboard */; };
+		D4B42FD124EF1DA800BDF1E9 /* MacOS-Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B42FC024EF1DA800BDF1E9 /* MacOS-Assets.xcassets */; };
+		D4B42FD224EF1DA800BDF1E9 /* MacOS_PeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B42FC224EF1DA800BDF1E9 /* MacOS_PeripheralViewController.swift */; };
+		D4B42FD324EF1DA800BDF1E9 /* MacOS_DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B42FC324EF1DA800BDF1E9 /* MacOS_DiscoveryViewController.swift */; };
+		D4B42FD424EF1DA800BDF1E9 /* MacOS_CharacteristicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B42FC424EF1DA800BDF1E9 /* MacOS_CharacteristicViewController.swift */; };
+		D4B42FD524EF1DA800BDF1E9 /* MacOS_SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B42FC524EF1DA800BDF1E9 /* MacOS_SplitViewController.swift */; };
+		D4B42FD624EF1DA800BDF1E9 /* MacOS_PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B42FC624EF1DA800BDF1E9 /* MacOS_PreferencesViewController.swift */; };
+		D4B42FD724EF1DA800BDF1E9 /* MacOS_AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B42FC724EF1DA800BDF1E9 /* MacOS_AboutViewController.swift */; };
+		D4B42FD824EF1DA800BDF1E9 /* MacOS_Base_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B42FC824EF1DA800BDF1E9 /* MacOS_Base_ViewController.swift */; };
+		D4B42FD924EF1DA800BDF1E9 /* MacOS_AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B42FCA24EF1DA800BDF1E9 /* MacOS_AppDelegate.swift */; };
+		D4B42FDA24EF1DA800BDF1E9 /* MacOS_Base_WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B42FCC24EF1DA800BDF1E9 /* MacOS_Base_WindowController.swift */; };
+		D4B42FDC24EF1E7E00BDF1E9 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7524E8C4B200392814 /* SharedAssets.xcassets */; };
+		D4B42FDD24EF1E8400BDF1E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
+		D4B42FDE24EF1E8400BDF1E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
+		D4B42FDF24EF1E8D00BDF1E9 /* CGA_PersistentPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44491BC244A3357008D447D /* CGA_PersistentPrefs.swift */; };
+		D4B42FE124EF1F8200BDF1E9 /* RVS-BlueThoth in Frameworks */ = {isa = PBXBuildFile; productRef = D4B42FE024EF1F8200BDF1E9 /* RVS-BlueThoth */; };
+		D4B42FE324EF1F8200BDF1E9 /* RVS-Persistent-Prefs in Frameworks */ = {isa = PBXBuildFile; productRef = D4B42FE224EF1F8200BDF1E9 /* RVS-Persistent-Prefs */; };
 		D4B49D062455137700932C3D /* IOSAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D447B9E6243171AB00F00A7A /* IOSAssets.xcassets */; };
 		D4BF7D2524EE04F0000470EC /* Blue Van Clef.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D4EE28E024EC62CC0008C0FE /* Blue Van Clef.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4CAA4272434E878007C72AA /* CGA_PeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CAA4262434E877007C72AA /* CGA_PeripheralViewController.swift */; };
@@ -125,6 +142,20 @@
 		D48D85182430F05500A925ED /* CGA_AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_AppDelegate.swift; sourceTree = "<group>"; };
 		D48D851C2430F05500A925ED /* CGA_InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_InitialViewController.swift; sourceTree = "<group>"; };
 		D4B1C6832430F26800D3AC78 /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4B42FAB24EF1D6800BDF1E9 /* Blue Van Clef (MacOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef (MacOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4B42FBF24EF1DA800BDF1E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4B42FC024EF1DA800BDF1E9 /* MacOS-Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "MacOS-Assets.xcassets"; sourceTree = "<group>"; };
+		D4B42FC224EF1DA800BDF1E9 /* MacOS_PeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacOS_PeripheralViewController.swift; sourceTree = "<group>"; };
+		D4B42FC324EF1DA800BDF1E9 /* MacOS_DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacOS_DiscoveryViewController.swift; sourceTree = "<group>"; };
+		D4B42FC424EF1DA800BDF1E9 /* MacOS_CharacteristicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacOS_CharacteristicViewController.swift; sourceTree = "<group>"; };
+		D4B42FC524EF1DA800BDF1E9 /* MacOS_SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacOS_SplitViewController.swift; sourceTree = "<group>"; };
+		D4B42FC624EF1DA800BDF1E9 /* MacOS_PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacOS_PreferencesViewController.swift; sourceTree = "<group>"; };
+		D4B42FC724EF1DA800BDF1E9 /* MacOS_AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacOS_AboutViewController.swift; sourceTree = "<group>"; };
+		D4B42FC824EF1DA800BDF1E9 /* MacOS_Base_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacOS_Base_ViewController.swift; sourceTree = "<group>"; };
+		D4B42FCA24EF1DA800BDF1E9 /* MacOS_AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacOS_AppDelegate.swift; sourceTree = "<group>"; };
+		D4B42FCC24EF1DA800BDF1E9 /* MacOS_Base_WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacOS_Base_WindowController.swift; sourceTree = "<group>"; };
+		D4B42FCE24EF1DA800BDF1E9 /* MacOS.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MacOS.entitlements; sourceTree = "<group>"; };
+		D4B42FCF24EF1DA800BDF1E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4BF7CEE24EE0366000470EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4BF7CF824EE04B8000470EC /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CAA4262434E877007C72AA /* CGA_PeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_PeripheralViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +184,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D4B42FA824EF1D6800BDF1E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B42FE324EF1F8200BDF1E9 /* RVS-Persistent-Prefs in Frameworks */,
+				D4B42FE124EF1F8200BDF1E9 /* RVS-BlueThoth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4DCD21624A0255F00115176 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,6 +230,7 @@
 				D4EE28E024EC62CC0008C0FE /* Blue Van Clef.app */,
 				D4EE28EF24EC62CD0008C0FE /* Blue Van Clef WatchKit Extension.appex */,
 				D4BF7CF824EE04B8000470EC /* Blue Van Clef.app */,
+				D4B42FAB24EF1D6800BDF1E9 /* Blue Van Clef (MacOS).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				D45CCF6F24E8C43900392814 /* Shared */,
+				D4B42FBB24EF1DA800BDF1E9 /* MacOS */,
 				D47DE23C2452032D00E6CB26 /* iOS */,
 				D4EE290824EC648F0008C0FE /* WatchOS */,
 			);
@@ -274,6 +316,74 @@
 			isa = PBXGroup;
 			children = (
 				D40E0CDE24602F56005B8699 /* Info.plist */,
+			);
+			path = Meta;
+			sourceTree = "<group>";
+		};
+		D4B42FBB24EF1DA800BDF1E9 /* MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				D4B42FBC24EF1DA800BDF1E9 /* Source */,
+				D4B42FCD24EF1DA800BDF1E9 /* Meta */,
+			);
+			path = MacOS;
+			sourceTree = "<group>";
+		};
+		D4B42FBC24EF1DA800BDF1E9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D4B42FBD24EF1DA800BDF1E9 /* Resources */,
+				D4B42FC124EF1DA800BDF1E9 /* View Controllers */,
+				D4B42FC924EF1DA800BDF1E9 /* Main */,
+				D4B42FCB24EF1DA800BDF1E9 /* Window Controllers */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D4B42FBD24EF1DA800BDF1E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D4B42FBE24EF1DA800BDF1E9 /* Main.storyboard */,
+				D4B42FC024EF1DA800BDF1E9 /* MacOS-Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D4B42FC124EF1DA800BDF1E9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4B42FC224EF1DA800BDF1E9 /* MacOS_PeripheralViewController.swift */,
+				D4B42FC324EF1DA800BDF1E9 /* MacOS_DiscoveryViewController.swift */,
+				D4B42FC424EF1DA800BDF1E9 /* MacOS_CharacteristicViewController.swift */,
+				D4B42FC524EF1DA800BDF1E9 /* MacOS_SplitViewController.swift */,
+				D4B42FC624EF1DA800BDF1E9 /* MacOS_PreferencesViewController.swift */,
+				D4B42FC724EF1DA800BDF1E9 /* MacOS_AboutViewController.swift */,
+				D4B42FC824EF1DA800BDF1E9 /* MacOS_Base_ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D4B42FC924EF1DA800BDF1E9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D4B42FCA24EF1DA800BDF1E9 /* MacOS_AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D4B42FCB24EF1DA800BDF1E9 /* Window Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4B42FCC24EF1DA800BDF1E9 /* MacOS_Base_WindowController.swift */,
+			);
+			path = "Window Controllers";
+			sourceTree = "<group>";
+		};
+		D4B42FCD24EF1DA800BDF1E9 /* Meta */ = {
+			isa = PBXGroup;
+			children = (
+				D4B42FCE24EF1DA800BDF1E9 /* MacOS.entitlements */,
+				D4B42FCF24EF1DA800BDF1E9 /* Info.plist */,
 			);
 			path = Meta;
 			sourceTree = "<group>";
@@ -427,6 +537,27 @@
 			productReference = D4B1C6832430F26800D3AC78 /* Blue Van Clef.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D4B42FAA24EF1D6800BDF1E9 /* Blue Van Clef (MacOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4B42FBA24EF1D6900BDF1E9 /* Build configuration list for PBXNativeTarget "Blue Van Clef (MacOS)" */;
+			buildPhases = (
+				D4B42FA724EF1D6800BDF1E9 /* Sources */,
+				D4B42FA824EF1D6800BDF1E9 /* Frameworks */,
+				D4B42FA924EF1D6800BDF1E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Blue Van Clef (MacOS)";
+			packageProductDependencies = (
+				D4B42FE024EF1F8200BDF1E9 /* RVS-BlueThoth */,
+				D4B42FE224EF1F8200BDF1E9 /* RVS-Persistent-Prefs */,
+			);
+			productName = "Blue Van Clef (MacOS)";
+			productReference = D4B42FAB24EF1D6800BDF1E9 /* Blue Van Clef (MacOS).app */;
+			productType = "com.apple.product-type.application";
+		};
 		D4BF7CF724EE04B8000470EC /* Blue Van Clef (Watch iOS Wrapper) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4BF7D2024EE04BA000470EC /* Build configuration list for PBXNativeTarget "Blue Van Clef (Watch iOS Wrapper)" */;
@@ -496,6 +627,9 @@
 					D4B1C6822430F26800D3AC78 = {
 						CreatedOnToolsVersion = 11.4;
 					};
+					D4B42FAA24EF1D6800BDF1E9 = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					D4BF7CF724EE04B8000470EC = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -524,6 +658,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				D4B42FAA24EF1D6800BDF1E9 /* Blue Van Clef (MacOS) */,
 				D4B1C6822430F26800D3AC78 /* Blue Van Clef (iOS) */,
 				D4BF7CF724EE04B8000470EC /* Blue Van Clef (Watch iOS Wrapper) */,
 				D4EE28DF24EC62CC0008C0FE /* Blue Van Clef (WatchOS) */,
@@ -544,6 +679,18 @@
 				D45CCF7824E8C4B200392814 /* SharedAssets.xcassets in Resources */,
 				D447B9F0243171AB00F00A7A /* LaunchScreen.storyboard in Resources */,
 				D40E0CE024602F7F005B8699 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4B42FA924EF1D6800BDF1E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B42FDC24EF1E7E00BDF1E9 /* SharedAssets.xcassets in Resources */,
+				D4B42FDD24EF1E8400BDF1E9 /* Localizable.strings in Resources */,
+				D4B42FD124EF1DA800BDF1E9 /* MacOS-Assets.xcassets in Resources */,
+				D4B42FD024EF1DA800BDF1E9 /* Main.storyboard in Resources */,
+				D4B42FDE24EF1E8400BDF1E9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +779,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4B42FA724EF1D6800BDF1E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B42FD924EF1DA800BDF1E9 /* MacOS_AppDelegate.swift in Sources */,
+				D4B42FD424EF1DA800BDF1E9 /* MacOS_CharacteristicViewController.swift in Sources */,
+				D4B42FDA24EF1DA800BDF1E9 /* MacOS_Base_WindowController.swift in Sources */,
+				D4B42FD224EF1DA800BDF1E9 /* MacOS_PeripheralViewController.swift in Sources */,
+				D4B42FD624EF1DA800BDF1E9 /* MacOS_PreferencesViewController.swift in Sources */,
+				D4B42FD324EF1DA800BDF1E9 /* MacOS_DiscoveryViewController.swift in Sources */,
+				D4B42FD724EF1DA800BDF1E9 /* MacOS_AboutViewController.swift in Sources */,
+				D4B42FD524EF1DA800BDF1E9 /* MacOS_SplitViewController.swift in Sources */,
+				D4B42FD824EF1DA800BDF1E9 /* MacOS_Base_ViewController.swift in Sources */,
+				D4B42FDF24EF1E8D00BDF1E9 /* CGA_PersistentPrefs.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4EE28EB24EC62CD0008C0FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -710,6 +874,14 @@
 				D45CCF7424E8C4B200392814 /* Base */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D4B42FBE24EF1DA800BDF1E9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4B42FBF24EF1DA800BDF1E9 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		D4EE291F24EC648F0008C0FE /* Interface.storyboard */ = {
@@ -889,6 +1061,52 @@
 			};
 			name = Release;
 		};
+		D4B42FB824EF1D6900BDF1E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = src/MacOS/Meta/MacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2000;
+				DEVELOPMENT_TEAM = KSAUGZFWP2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = src/MacOS/Meta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.4.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.BlueVanClef-MacOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D4B42FB924EF1D6900BDF1E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = src/MacOS/Meta/MacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2000;
+				DEVELOPMENT_TEAM = KSAUGZFWP2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = src/MacOS/Meta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.4.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.BlueVanClef-MacOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		D4BF7D2124EE04BA000470EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1031,6 +1249,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		D4B42FBA24EF1D6900BDF1E9 /* Build configuration list for PBXNativeTarget "Blue Van Clef (MacOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4B42FB824EF1D6900BDF1E9 /* Debug */,
+				D4B42FB924EF1D6900BDF1E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D4BF7D2024EE04BA000470EC /* Build configuration list for PBXNativeTarget "Blue Van Clef (Watch iOS Wrapper)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1086,6 +1313,16 @@
 			productName = "RVS-BlueThoth";
 		};
 		D48FD97624B23F430094F4D1 /* RVS-Persistent-Prefs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D48FD97524B23F430094F4D1 /* XCRemoteSwiftPackageReference "RVS_PersistentPrefs" */;
+			productName = "RVS-Persistent-Prefs";
+		};
+		D4B42FE024EF1F8200BDF1E9 /* RVS-BlueThoth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D48FD97224B23F260094F4D1 /* XCRemoteSwiftPackageReference "RVS_BlueThoth" */;
+			productName = "RVS-BlueThoth";
+		};
+		D4B42FE224EF1F8200BDF1E9 /* RVS-Persistent-Prefs */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D48FD97524B23F430094F4D1 /* XCRemoteSwiftPackageReference "RVS_PersistentPrefs" */;
 			productName = "RVS-Persistent-Prefs";
