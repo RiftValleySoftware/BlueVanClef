@@ -932,7 +932,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.4.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Watch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -956,7 +956,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.4.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Watch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -978,7 +978,7 @@
 				IBSC_MODULE = Blue_Van_Clef_WatchKit_Extension;
 				INFOPLIST_FILE = src/WatchOS/App/Info.plist;
 				MARKETING_VERSION = 1.4.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Watch.watchkitapp;
 				PRODUCT_NAME = "Blue Van Clef";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -999,7 +999,7 @@
 				IBSC_MODULE = Blue_Van_Clef_WatchKit_Extension;
 				INFOPLIST_FILE = src/WatchOS/App/Info.plist;
 				MARKETING_VERSION = 1.4.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Watch.watchkitapp;
 				PRODUCT_NAME = "Blue Van Clef";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1066,7 +1066,7 @@
 			repositoryURL = "git@github.com:RiftValleySoftware/RVS_BlueThoth.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.0;
+				minimumVersion = 1.5.1;
 			};
 		};
 		D48FD97524B23F430094F4D1 /* XCRemoteSwiftPackageReference "RVS_PersistentPrefs" */ = {

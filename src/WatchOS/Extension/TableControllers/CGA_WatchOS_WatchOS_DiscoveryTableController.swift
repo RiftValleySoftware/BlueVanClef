@@ -41,6 +41,15 @@ class CGA_WatchOS_DiscoveryTableController: NSObject {
             }
             
             deviceLabel?.setText(name)
+            
+            if let services = deviceDiscoveryData.advertisementData.advertisedServiceUUIDS {
+                let servicesText = services.map { $0.localizedVariant }.joined(separator: ", ")
+                serviceLabel?.setText(servicesText)
+                print("Services: \(servicesText)")
+                serviceLabel?.setHidden(false)
+            } else {
+                serviceLabel?.setHidden(true)
+            }
         }
     }
     
