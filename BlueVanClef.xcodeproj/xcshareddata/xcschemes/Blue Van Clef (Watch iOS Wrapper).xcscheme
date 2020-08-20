@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D4BF7CF724EE04B8000470EC"
-               BuildableName = "Blue Van Clef (Watch iOS Wrapper).app"
+               BuildableName = "Blue Van Clef.app"
                BlueprintName = "Blue Van Clef (Watch iOS Wrapper)"
                ReferencedContainer = "container:BlueVanClef.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4BF7CF724EE04B8000470EC"
-            BuildableName = "Blue Van Clef (Watch iOS Wrapper).app"
+            BuildableName = "Blue Van Clef.app"
             BlueprintName = "Blue Van Clef (Watch iOS Wrapper)"
             ReferencedContainer = "container:BlueVanClef.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4BF7CF724EE04B8000470EC"
-            BuildableName = "Blue Van Clef (Watch iOS Wrapper).app"
+            BuildableName = "Blue Van Clef.app"
             BlueprintName = "Blue Van Clef (Watch iOS Wrapper)"
             ReferencedContainer = "container:BlueVanClef.xcodeproj">
          </BuildableReference>
