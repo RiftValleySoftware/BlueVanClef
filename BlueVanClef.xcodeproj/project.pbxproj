@@ -18,19 +18,24 @@
 		D447B9F1243171AB00F00A7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D447B9E9243171AB00F00A7A /* Main.storyboard */; };
 		D45CCF7624E8C4B200392814 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
 		D45CCF7724E8C4B200392814 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
-		D45CCF7824E8C4B200392814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7524E8C4B200392814 /* Assets.xcassets */; };
+		D45CCF7824E8C4B200392814 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7524E8C4B200392814 /* SharedAssets.xcassets */; };
 		D465B38824D0532F00441AFA /* CGA_CharacteristicInteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D465B38724D0532F00441AFA /* CGA_CharacteristicInteractionViewController.swift */; };
 		D465B38A24D053A800441AFA /* CGA_DescriptorInteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D465B38924D053A800441AFA /* CGA_DescriptorInteractionViewController.swift */; };
 		D47D71E22448DD70004D9923 /* CGA_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47D71E12448DD70004D9923 /* CGA_Extensions.swift */; };
 		D480CE2E243CEFE20074CFE4 /* CGA_CharacteristicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480CE2D243CEFE20074CFE4 /* CGA_CharacteristicViewController.swift */; };
 		D48FD97424B23F260094F4D1 /* RVS-BlueThoth in Frameworks */ = {isa = PBXBuildFile; productRef = D48FD97324B23F260094F4D1 /* RVS-BlueThoth */; };
 		D48FD97724B23F430094F4D1 /* RVS-Persistent-Prefs in Frameworks */ = {isa = PBXBuildFile; productRef = D48FD97624B23F430094F4D1 /* RVS-Persistent-Prefs */; };
+		D49A703224EDE2CF0019D286 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
+		D49A703324EDE2CF0019D286 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
+		D49A703424EDE4040019D286 /* WatchAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291E24EC648F0008C0FE /* WatchAssets.xcassets */; };
 		D4B1C69F2430F32900D3AC78 /* CGA_AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48D85182430F05500A925ED /* CGA_AppDelegate.swift */; };
 		D4B1C6A02430F32900D3AC78 /* CGA_InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48D851C2430F05500A925ED /* CGA_InitialViewController.swift */; };
-		D4B49D062455137700932C3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D447B9E6243171AB00F00A7A /* Assets.xcassets */; };
+		D4B49D062455137700932C3D /* IOSAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D447B9E6243171AB00F00A7A /* IOSAssets.xcassets */; };
 		D4CAA4272434E878007C72AA /* CGA_PeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CAA4262434E877007C72AA /* CGA_PeripheralViewController.swift */; };
+		D4DDEDBA24EDDE61006B5B8F /* WatchAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291E24EC648F0008C0FE /* WatchAssets.xcassets */; };
+		D4EDB96524EDEC78001172B5 /* Complications.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EDB96424EDEC78001172B5 /* Complications.xcassets */; };
+		D4EDB96624EDEC78001172B5 /* Complications.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EDB96424EDEC78001172B5 /* Complications.xcassets */; };
 		D4EE28F024EC62CD0008C0FE /* Blue Van Clef WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4EE28EF24EC62CD0008C0FE /* Blue Van Clef WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D4EE292224EC64A70008C0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291E24EC648F0008C0FE /* Assets.xcassets */; };
 		D4EE292324EC64B00008C0FE /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291F24EC648F0008C0FE /* Interface.storyboard */; };
 		D4EE292424EC64C50008C0FE /* CGA_WatchOS_BaseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE290B24EC648F0008C0FE /* CGA_WatchOS_BaseInterfaceController.swift */; };
 		D4EE292524EC64C50008C0FE /* CGA_WatchOS_CharacteristicInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE290D24EC648F0008C0FE /* CGA_WatchOS_CharacteristicInterfaceController.swift */; };
@@ -46,10 +51,8 @@
 		D4EE292F24EC64C50008C0FE /* CGA_WatchOS_WatchOS_CharacteristicTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE291924EC648F0008C0FE /* CGA_WatchOS_WatchOS_CharacteristicTables.swift */; };
 		D4EE293024EC64C50008C0FE /* CGA_WatchOS_WatchOS_ServiceTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE291A24EC648F0008C0FE /* CGA_WatchOS_WatchOS_ServiceTableController.swift */; };
 		D4EE293124EC64C50008C0FE /* CGA_WatchOS_ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE291C24EC648F0008C0FE /* CGA_WatchOS_ExtensionDelegate.swift */; };
-		D4EE293224EC64D40008C0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7524E8C4B200392814 /* Assets.xcassets */; };
-		D4EE293324EC64D90008C0FE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
+		D4EE293224EC64D40008C0FE /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7524E8C4B200392814 /* SharedAssets.xcassets */; };
 		D4EE293424EC64D90008C0FE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
-		D4EE293524EC64DD0008C0FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
 		D4EE293624EC64DD0008C0FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
 		D4EE293B24EC668F0008C0FE /* RVS-BlueThoth in Frameworks */ = {isa = PBXBuildFile; productRef = D4EE293A24EC668F0008C0FE /* RVS-BlueThoth */; };
 		D4EE293D24EC668F0008C0FE /* RVS-Persistent-Prefs in Frameworks */ = {isa = PBXBuildFile; productRef = D4EE293C24EC668F0008C0FE /* RVS-Persistent-Prefs */; };
@@ -90,12 +93,12 @@
 		D436B44C243CC1C6003619D9 /* CGA_ServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_ServiceViewController.swift; sourceTree = "<group>"; };
 		D43F05E42436C07B0009EA1B /* CGA_SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_SettingsViewController.swift; sourceTree = "<group>"; };
 		D44491BC244A3357008D447D /* CGA_PersistentPrefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_PersistentPrefs.swift; sourceTree = "<group>"; };
-		D447B9E6243171AB00F00A7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D447B9E6243171AB00F00A7A /* IOSAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = IOSAssets.xcassets; sourceTree = "<group>"; };
 		D447B9E8243171AB00F00A7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D447B9EA243171AB00F00A7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D45CCF7224E8C4B200392814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Localizable.strings; sourceTree = "<group>"; };
 		D45CCF7424E8C4B200392814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = InfoPlist.strings; sourceTree = "<group>"; };
-		D45CCF7524E8C4B200392814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D45CCF7524E8C4B200392814 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SharedAssets.xcassets; sourceTree = "<group>"; };
 		D465B38724D0532F00441AFA /* CGA_CharacteristicInteractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_CharacteristicInteractionViewController.swift; sourceTree = "<group>"; };
 		D465B38924D053A800441AFA /* CGA_DescriptorInteractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_DescriptorInteractionViewController.swift; sourceTree = "<group>"; };
 		D47D71E12448DD70004D9923 /* CGA_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_Extensions.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 		D48D851C2430F05500A925ED /* CGA_InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_InitialViewController.swift; sourceTree = "<group>"; };
 		D4B1C6832430F26800D3AC78 /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CAA4262434E877007C72AA /* CGA_PeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_PeripheralViewController.swift; sourceTree = "<group>"; };
+		D4EDB96424EDEC78001172B5 /* Complications.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Complications.xcassets; sourceTree = "<group>"; };
 		D4EE28E024EC62CC0008C0FE /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EE28EF24EC62CD0008C0FE /* Blue Van Clef WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Blue Van Clef WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EE290B24EC648F0008C0FE /* CGA_WatchOS_BaseInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_WatchOS_BaseInterfaceController.swift; sourceTree = "<group>"; };
@@ -121,7 +125,7 @@
 		D4EE291A24EC648F0008C0FE /* CGA_WatchOS_WatchOS_ServiceTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_WatchOS_WatchOS_ServiceTableController.swift; sourceTree = "<group>"; };
 		D4EE291B24EC648F0008C0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4EE291C24EC648F0008C0FE /* CGA_WatchOS_ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_WatchOS_ExtensionDelegate.swift; sourceTree = "<group>"; };
-		D4EE291E24EC648F0008C0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4EE291E24EC648F0008C0FE /* WatchAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WatchAssets.xcassets; sourceTree = "<group>"; };
 		D4EE292024EC648F0008C0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		D4EE292124EC648F0008C0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4F666C62434F06200CD4548 /* CGA_InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_InfoViewController.swift; sourceTree = "<group>"; };
@@ -172,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				D40E0CE324602F7F005B8699 /* Default-568h@2x.png */,
-				D447B9E6243171AB00F00A7A /* Assets.xcassets */,
+				D447B9E6243171AB00F00A7A /* IOSAssets.xcassets */,
 				D447B9E7243171AB00F00A7A /* LaunchScreen.storyboard */,
 				D447B9E9243171AB00F00A7A /* Main.storyboard */,
 			);
@@ -200,7 +204,7 @@
 		D45CCF7924E8C52600392814 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D45CCF7524E8C4B200392814 /* Assets.xcassets */,
+				D45CCF7524E8C4B200392814 /* SharedAssets.xcassets */,
 				D45CCF7024E8C4B200392814 /* Base.lproj */,
 			);
 			path = Resources;
@@ -330,7 +334,8 @@
 		D4EE291D24EC648F0008C0FE /* App */ = {
 			isa = PBXGroup;
 			children = (
-				D4EE291E24EC648F0008C0FE /* Assets.xcassets */,
+				D4EE291E24EC648F0008C0FE /* WatchAssets.xcassets */,
+				D4EDB96424EDEC78001172B5 /* Complications.xcassets */,
 				D4EE291F24EC648F0008C0FE /* Interface.storyboard */,
 				D4EE292124EC648F0008C0FE /* Info.plist */,
 			);
@@ -489,12 +494,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D45CCF7724E8C4B200392814 /* InfoPlist.strings in Resources */,
 				D447B9F1243171AB00F00A7A /* Main.storyboard in Resources */,
+				D45CCF7724E8C4B200392814 /* InfoPlist.strings in Resources */,
 				D45CCF7624E8C4B200392814 /* Localizable.strings in Resources */,
-				D4B49D062455137700932C3D /* Assets.xcassets in Resources */,
+				D4B49D062455137700932C3D /* IOSAssets.xcassets in Resources */,
+				D45CCF7824E8C4B200392814 /* SharedAssets.xcassets in Resources */,
 				D447B9F0243171AB00F00A7A /* LaunchScreen.storyboard in Resources */,
-				D45CCF7824E8C4B200392814 /* Assets.xcassets in Resources */,
 				D40E0CE024602F7F005B8699 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,11 +508,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4EE293224EC64D40008C0FE /* SharedAssets.xcassets in Resources */,
+				D4DDEDBA24EDDE61006B5B8F /* WatchAssets.xcassets in Resources */,
+				D4EDB96524EDEC78001172B5 /* Complications.xcassets in Resources */,
+				D49A703224EDE2CF0019D286 /* Localizable.strings in Resources */,
 				D4EE292324EC64B00008C0FE /* Interface.storyboard in Resources */,
-				D4EE293324EC64D90008C0FE /* Localizable.strings in Resources */,
-				D4EE293524EC64DD0008C0FE /* InfoPlist.strings in Resources */,
-				D4EE293224EC64D40008C0FE /* Assets.xcassets in Resources */,
-				D4EE292224EC64A70008C0FE /* Assets.xcassets in Resources */,
+				D49A703324EDE2CF0019D286 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +522,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4EE293424EC64D90008C0FE /* Localizable.strings in Resources */,
+				D49A703424EDE4040019D286 /* WatchAssets.xcassets in Resources */,
+				D4EDB96624EDEC78001172B5 /* Complications.xcassets in Resources */,
 				D4EE293624EC64DD0008C0FE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
