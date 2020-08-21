@@ -24,19 +24,59 @@ import Cocoa
 import RVS_BlueThoth
 
 /* ###################################################################################################################################### */
+// MARK: - Special iOS-Style Scroller -
+/* ###################################################################################################################################### */
+/**
+ This overrides the draw(_:) method, to ensure that only the "knob" gets drawn.
+ */
+class MacOS_TransparentScroller: NSScroller {
+    /* ################################################################## */
+    /**
+     */
+    override func draw(_ dirtyRect: NSRect) {
+        drawKnob()
+    }
+}
+
+/* ###################################################################################################################################### */
+// MARK: - Button With Attached Discovery Data -
+/* ###################################################################################################################################### */
+/**
+ */
+class MacOS_Clicker: NSButton {
+    var discoveryInfo: RVS_BlueThoth.DiscoveryData?
+}
+
+/* ###################################################################################################################################### */
 // MARK: - The Device Discovery Screen View Controller -
 /* ###################################################################################################################################### */
 /**
  This is the permanent Device Discovery Screen. It is the leftmost screen, and contains a table that is updated as the discovery scanning goes on.
  */
 class MacOS_DiscoveryViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_SplitView_ViewController {
+    /* ################################################################## */
+    /**
+     The font size for the header of each device.
+     */
     let headerRowFontSize = 15
+
+    /* ################################################################## */
+    /**
+     The padding around that header (above and below)
+     */
     let headerPadding = 2
     
+    /* ################################################################## */
+    /**
+     This is the font size for the information about each discovery (below the header).
+     */
     let infoRowFontSize = 12
-    let infoPadding = 2
     
-    let infoRowIndent = 20
+    /* ################################################################## */
+    /**
+     The padding around that text (above and below)
+     */
+    let infoPadding = 2
     
     /* ################################################################## */
     /**
@@ -91,9 +131,18 @@ class MacOS_DiscoveryViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_Split
      */
     @IBOutlet weak var reloadButton: NSButton!
 
+    /* ################################################################## */
+    /**
+     This is the stack view that we populate with the discovery data.
+     */
     @IBOutlet weak var stackView: NSStackView!
     
+    /* ################################################################## */
+    /**
+     This is the scroller that contains that stack view.
+     */
     @IBOutlet weak var scrollView: NSScrollView!
+    
     /* ################################################################## */
     /**
      The currently selected device (nil, if no device selected).
@@ -242,7 +291,7 @@ extension MacOS_DiscoveryViewController {
      - returns: A String, with the device name, or text explaining the error.
      */
     private func _stagedDeviceName(_ inDeviceIndex: Int) -> String {
-        guard let device = centralManager?.stagedBLEPeripherals[inDeviceIndex] else { return "SLUG-NO-DEVICE-FOUND".localizedVariant }
+        let device = sortedPeripherals[inDeviceIndex]
         
         return  !device.preferredName.isEmpty ? device.preferredName :
                 !device.localName.isEmpty ? device.localName :
@@ -298,26 +347,35 @@ extension MacOS_DiscoveryViewController {
         return retStr
     }
 
+    /* ################################################################## */
+    /**
+     */
     private func _createTableRowViewFor(_ inRow: Int) {
-        guard   let peripheralDiscoveryInfo = centralManager?.stagedBLEPeripherals[inRow],
-                let stackView = stackView else { return }
-
+        guard let stackView = stackView else { return }
+        
+        let peripheralDiscoveryInfo = sortedPeripherals[inRow]
         let discoveryText = _createAdvertimentStringsFor(peripheralDiscoveryInfo.advertisementData, id: peripheralDiscoveryInfo.identifier, power: peripheralDiscoveryInfo.rssi)
         
         guard !discoveryText.isEmpty else { return }
+        
+        var labelFrame = stackView.bounds
+        labelFrame.size.height = CGFloat(headerRowFontSize + (headerPadding * 2))
+        
+        let deviceNameButton = MacOS_Clicker(frame: labelFrame)
+        deviceNameButton.setButtonType(.momentaryPushIn)
+        deviceNameButton.bezelStyle = .rounded
+        deviceNameButton.title = _stagedDeviceName(inRow)
 
-        let deviceNameLabel = NSTextField(labelWithString: _stagedDeviceName(inRow))
-        deviceNameLabel.font = NSFont.boldSystemFont(ofSize: CGFloat(headerRowFontSize))
-        deviceNameLabel.allowsDefaultTighteningForTruncation = true
-        deviceNameLabel.backgroundColor = .white
-        deviceNameLabel.textColor = .blue
-        deviceNameLabel.drawsBackground = true
-        deviceNameLabel.maximumNumberOfLines = 1
-        deviceNameLabel.alignment = .center
-        deviceNameLabel.frame = stackView.bounds
-        deviceNameLabel.frame.size.height = CGFloat(headerRowFontSize + (headerPadding * 2))
+        if (centralManager?.isScanning ?? true) || (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) {
+            deviceNameButton.isEnabled = false
+        } else {
+            deviceNameButton.isEnabled = true
+            deviceNameButton.discoveryInfo = peripheralDiscoveryInfo
+            deviceNameButton.target = self
+            deviceNameButton.action = #selector(rowTapped(_:))
+        }
 
-        stackView.addArrangedSubview(deviceNameLabel)
+        stackView.addArrangedSubview(deviceNameButton)
 
         let deviceInfoLabel = NSTextField(labelWithString: discoveryText.joined(separator: "\n"))
         deviceInfoLabel.font = NSFont.systemFont(ofSize: CGFloat(infoRowFontSize))
@@ -327,15 +385,29 @@ extension MacOS_DiscoveryViewController {
         deviceInfoLabel.frame = stackView.bounds
         deviceInfoLabel.frame.size.height = CGFloat(discoveryText.count * (infoRowFontSize + (infoPadding * 2)))
         
+        if (centralManager?.isScanning ?? true) || (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) {
+            deviceInfoLabel.isEnabled = selectedDevice?.identifier == peripheralDiscoveryInfo.identifier
+            deviceInfoLabel.textColor = (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) ? .blue : NSColor.white.withAlphaComponent(0.5)
+            if selectedDevice?.identifier == peripheralDiscoveryInfo.identifier {
+                deviceInfoLabel.backgroundColor = .white
+                deviceInfoLabel.drawsBackground = true
+            }
+        } else {
+            deviceInfoLabel.isEnabled = true
+        }
+        
         stackView.addArrangedSubview(deviceInfoLabel)
     }
     
+    /* ################################################################## */
+    /**
+     */
     private func _reloadStackView() {
         guard   let stackView = stackView else { return }
         
         stackView.subviews.forEach { $0.removeFromSuperview()}
         
-        for index in 0..<(centralManager?.stagedBLEPeripherals.count ?? 0) {
+        for index in 0..<sortedPeripherals.count {
             _createTableRowViewFor(index)
         }
     }
@@ -430,6 +502,20 @@ extension MacOS_DiscoveryViewController {
         centralManager?.startOver()
         updateUI()
     }
+    
+    /* ################################################################## */
+    /**
+     */
+    @IBAction func rowTapped(_ inButton: MacOS_Clicker) {
+        if  let discoveryInfo = inButton.discoveryInfo,
+            !discoveryInfo.identifier.isEmpty,
+            (nil == selectedDevice) || (selectedDevice?.identifier != discoveryInfo.identifier) {
+            mainSplitView?.collapseSplit()
+            selectedDevice = discoveryInfo
+            _reloadStackView()
+            discoveryInfo.connect()
+        }
+    }
 }
 
 /* ###################################################################################################################################### */
@@ -444,7 +530,7 @@ extension MacOS_DiscoveryViewController: MacOS_ControllerList_Protocol {
         scanningModeSegmentedSwitch?.isHidden = !(centralManager?.isBTAvailable ?? false)
         scrollView?.isHidden = !(centralManager?.isBTAvailable ?? false)
         noBTImage?.isHidden = !(scrollView?.isHidden ?? true)
-        reloadButton?.isHidden = (0 == (centralManager?.stagedBLEPeripherals.count ?? 0))
+        reloadButton?.isHidden = sortedPeripherals.isEmpty
         scanningModeSegmentedSwitch?.setSelected(true, forSegment: (centralManager?.isScanning ?? false) ? ScanningModeSwitchValues.scanning.rawValue : ScanningModeSwitchValues.notScanning.rawValue)
         setUpAccessibility()
         _reloadStackView()

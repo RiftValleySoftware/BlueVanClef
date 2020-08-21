@@ -791,7 +791,7 @@
                                     <subviews>
                                         <view translatesAutoresizingMaskIntoConstraints="NO" id="rf1-mS-siA">
                                             <subviews>
-                                                <stackView distribution="fillProportionally" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" verticalClippingResistancePriority="250" verticalCompressionResistancePriority="1000" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wr0-6X-nDB"/>
+                                                <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" verticalClippingResistancePriority="250" verticalCompressionResistancePriority="1000" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wr0-6X-nDB"/>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="wr0-6X-nDB" firstAttribute="leading" secondItem="rf1-mS-siA" secondAttribute="leading" id="1eC-Pr-nfc"/>
@@ -809,11 +809,11 @@
                                     </constraints>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="kF3-mX-mXl">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="kF3-mX-mXl" customClass="MacOS_TransparentScroller" customModule="Blue_Van_Clef__MacOS_" customModuleProvider="target">
                                     <rect key="frame" x="-100" y="-100" width="395" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="flh-LF-Kbw">
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="flh-LF-Kbw" customClass="MacOS_TransparentScroller" customModule="Blue_Van_Clef__MacOS_" customModuleProvider="target">
                                     <rect key="frame" x="395" y="0.0" width="15" height="320"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
