@@ -232,10 +232,8 @@ extension MacOS_AppDelegate: CGA_BlueThoth_Delegate {
         #if DEBUG
             print("Central instance: \(String(describing: inCentralInstance)) reporting an update.")
         #endif
-        if !screenList.isEmpty,
-            let discoveryViewController = screenList[0] as? MacOS_DiscoveryViewController {
-            discoveryViewController.buildTableMap()
-        }
+        
+        updateScreen(Self.deviceScreenID)
     }
     
     /* ################################################################## */
@@ -289,7 +287,6 @@ extension MacOS_AppDelegate: CGA_BlueThoth_Delegate {
         if !screenList.isEmpty,
             let discoveryViewController = screenList[0] as? MacOS_DiscoveryViewController {
             discoveryViewController.mainSplitView?.collapseSplit()
-            discoveryViewController.buildTableMap()
             updateScreen(Self.deviceScreenID)
         }
     }

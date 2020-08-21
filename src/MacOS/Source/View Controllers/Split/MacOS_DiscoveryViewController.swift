@@ -30,6 +30,14 @@ import RVS_BlueThoth
  This is the permanent Device Discovery Screen. It is the leftmost screen, and contains a table that is updated as the discovery scanning goes on.
  */
 class MacOS_DiscoveryViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_SplitView_ViewController {
+    let headerRowFontSize = 20
+    let headerPadding = 4
+    
+    let infoRowFontSize = 16
+    let infoPadding = 4
+    
+    let infoRowIndent = 20
+    
     /* ################################################################## */
     /**
      This enum has the scanning on/off states, expressed as 0-based Int.
@@ -75,14 +83,8 @@ class MacOS_DiscoveryViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_Split
     /**
      This contains the Peripheral List table.
      */
-    @IBOutlet weak var tableContainerScrollView: NSScrollView!
+    @IBOutlet weak var deviceListContainerScrollView: NSScrollView!
 
-    /* ################################################################## */
-    /**
-     This is the Peripheral List table.
-     */
-    @IBOutlet weak var deviceTable: NSTableView!
-    
     /* ################################################################## */
     /**
      This is the image that is shown if Bluetooth is not available.
@@ -94,6 +96,18 @@ class MacOS_DiscoveryViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_Split
      This is the "Start Over From Scratch" button.
      */
     @IBOutlet weak var reloadButton: NSButton!
+    
+    /* ################################################################## */
+    /**
+     The clip view for the scrollable table.
+     */
+    var deviceListClipView: NSView? { deviceListContainerScrollView?.contentView }
+    
+    /* ################################################################## */
+    /**
+     The actual view that contains the content we'll be displaying.
+     */
+    var deviceListScrolledView: NSView? { deviceListContainerScrollView?.documentView }
 
     /* ################################################################## */
     /**
@@ -254,21 +268,6 @@ extension MacOS_DiscoveryViewController {
     /**
      This creates an Array of String, containing the advertisement data from the indexed device.
      
-     - parameter inIndex: The 0-based index of the device to fetch.
-     - returns: An Array of String, with the advertisement data in "key: value" form.
-     */
-    private func _createAdvertimentStringsFor(_ inIndex: Int) -> [String] {
-        let peripherals = sortedPeripherals
-
-        guard (0..<peripherals.count).contains( inIndex ) else { return [] }
-        
-        return _createAdvertimentStringsFor(peripherals[inIndex].advertisementData, id: peripherals[inIndex].identifier, power: peripherals[inIndex].rssi)
-    }
-    
-    /* ################################################################## */
-    /**
-     This creates an Array of String, containing the advertisement data from the indexed device.
-     
      - parameter inAdData: The advertisement data.
      - parameter id: The ID string.
      - parameter power: The RSSI level.
@@ -312,6 +311,86 @@ extension MacOS_DiscoveryViewController {
         }.split(separator: "\n").map { String($0) }
         
         return retStr
+    }
+    
+    /* ################################################################## */
+    /**
+     This allows us to easily add a new subview to a view, and keep it tied to the one above.
+     
+     - parameter inSubView: The view we are adding.
+     - parameter to: The view we are embedding it in.
+     - parameter under: The bottom constraint of the view just above this one.
+     - parameter indentedBy: OPTIONAL (Default is 0). The left indent, in display units.
+     - returns: The bottom anchor of the embedded view (to be used as "under" in the next iteration).
+     */
+    @discardableResult
+    private func _addContainedSubView(_ inSubView: NSView, to inToView: NSView, under inUnderAnchor: NSLayoutYAxisAnchor? = nil, indentedBy inIndent: CGFloat = 0) -> NSLayoutYAxisAnchor {
+        inToView.addSubview(inSubView)
+        
+        inSubView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let underAnchor = nil != inUnderAnchor ? inUnderAnchor! : inToView.topAnchor
+        
+        inSubView.topAnchor.constraint(equalTo: underAnchor, constant: 0).isActive = true
+        inSubView.leadingAnchor.constraint(equalTo: inToView.leadingAnchor, constant: inIndent).isActive = true
+        inSubView.trailingAnchor.constraint(equalTo: inToView.trailingAnchor, constant: 0).isActive = true
+        
+        return inSubView.bottomAnchor
+    }
+
+    private func _createTableRowViewFor(_ inRow: Int) -> NSView? {
+        guard   let peripheralDiscoveryInfo = centralManager?.stagedBLEPeripherals[inRow] else { return nil }
+
+        let discoveryText = _createAdvertimentStringsFor(peripheralDiscoveryInfo.advertisementData, id: peripheralDiscoveryInfo.identifier, power: peripheralDiscoveryInfo.rssi)
+        
+        guard !discoveryText.isEmpty else { return nil }
+        
+        let deviceNameLabel = NSTextField(labelWithString: _stagedDeviceName(inRow))
+        deviceNameLabel.font = NSFont.boldSystemFont(ofSize: CGFloat(headerRowFontSize))
+        deviceNameLabel.allowsDefaultTighteningForTruncation = true
+        deviceNameLabel.backgroundColor = .white
+        deviceNameLabel.textColor = .blue
+        deviceNameLabel.drawsBackground = true
+        deviceNameLabel.maximumNumberOfLines = 1
+        deviceNameLabel.alignment = .center
+        
+        deviceNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        deviceNameLabel.heightAnchor.constraint(equalToConstant: CGFloat(headerRowFontSize + (headerPadding * 2))).isActive = true
+
+        let deviceInfoLabel = NSTextField(labelWithString: discoveryText.joined(separator: "\n"))
+        deviceInfoLabel.font = NSFont.systemFont(ofSize: CGFloat(infoRowFontSize))
+        deviceInfoLabel.allowsDefaultTighteningForTruncation = true
+        deviceInfoLabel.textColor = .white
+        deviceInfoLabel.maximumNumberOfLines = discoveryText.count
+        deviceInfoLabel.heightAnchor.constraint(equalToConstant: CGFloat(discoveryText.count * (infoRowFontSize + (infoPadding * 2)))).isActive = true
+
+        let ret = NSView()
+        ret.translatesAutoresizingMaskIntoConstraints = false
+
+        let lastAnchor = _addContainedSubView(deviceInfoLabel, to: ret, under: _addContainedSubView(deviceNameLabel, to: ret))
+        lastAnchor.constraint(equalTo: ret.bottomAnchor, constant: 0).isActive = true
+
+        return ret
+    }
+    
+    private func _reloadStackView() {
+        guard let deviceListScrolledView = deviceListScrolledView else { return }
+        
+        deviceListScrolledView.subviews.forEach { $0.removeFromSuperview()}
+        let scrollTarget = NSView()
+        
+        scrollTarget.translatesAutoresizingMaskIntoConstraints = false
+        
+        var lastAnchor = scrollTarget.topAnchor
+
+        for index in 0..<(centralManager?.stagedBLEPeripherals.count ?? 0) {
+            if let rowView = _createTableRowViewFor(index) {
+                lastAnchor = _addContainedSubView(rowView, to: scrollTarget, under: lastAnchor)
+            }
+        }
+        
+        lastAnchor.constraint(equalTo: scrollTarget.bottomAnchor, constant: 0).isActive = true
+        deviceListScrolledView.addSubview(scrollTarget)
     }
 }
 
@@ -360,8 +439,8 @@ extension MacOS_DiscoveryViewController {
         scanningModeSegmentedSwitch?.setAccessibilityLabel(("SLUG-ACC-SCANNING-BUTTON-O" + ((ScanningModeSwitchValues.notScanning.rawValue == scanningModeSegmentedSwitch?.selectedSegment) ? "FF" : "N").localizedVariant))
         scanningModeSegmentedSwitch?.toolTip = ("SLUG-ACC-SCANNING-BUTTON-O" + ((ScanningModeSwitchValues.notScanning.rawValue == scanningModeSegmentedSwitch?.selectedSegment) ? "FF" : "N")).localizedVariant
         
-        tableContainerScrollView?.setAccessibilityLabel("SLUG-ACC-DEVICELIST-TABLE-MAC".localizedVariant)
-        tableContainerScrollView?.toolTip = "SLUG-ACC-DEVICELIST-TABLE-MAC".localizedVariant
+        deviceListContainerScrollView?.setAccessibilityLabel("SLUG-ACC-DEVICELIST-TABLE-MAC".localizedVariant)
+        deviceListContainerScrollView?.toolTip = "SLUG-ACC-DEVICELIST-TABLE-MAC".localizedVariant
     }
 }
 
@@ -377,7 +456,6 @@ extension MacOS_DiscoveryViewController {
      */
     @IBAction func scanningChanged(_ inSwitch: NSSegmentedControl) {
         mainSplitView?.collapseSplit()
-        deviceTable?.deselectAll(nil)
         selectedDevice = nil
 
         if ScanningModeSwitchValues.notScanning.rawValue == inSwitch.selectedSegment {
@@ -387,8 +465,6 @@ extension MacOS_DiscoveryViewController {
             centralManager?.minimumRSSILevelIndBm = prefs.minimumRSSILevel
             centralManager?.discoverOnlyConnectablePeripherals = prefs.discoverOnlyConnectableDevices
             centralManager?.allowEmptyNames = prefs.allowEmptyNames
-            _tableMap = []
-            deviceTable?.reloadData()
             centralManager?.startScanning(duplicateFilteringIsOn: prefs.continuouslyUpdatePeripherals)
         }
         
@@ -403,7 +479,6 @@ extension MacOS_DiscoveryViewController {
      */
     @IBAction func reloadButtonHit(_: NSButton) {
         mainSplitView?.collapseSplit()
-        deviceTable?.deselectAll(nil)
         selectedDevice = nil
         centralManager?.startOver()
         updateUI()
@@ -420,112 +495,11 @@ extension MacOS_DiscoveryViewController: MacOS_ControllerList_Protocol {
      */
     func updateUI() {
         scanningModeSegmentedSwitch?.isHidden = !(centralManager?.isBTAvailable ?? false)
-        tableContainerScrollView?.isHidden = !(centralManager?.isBTAvailable ?? false)
-        noBTImage?.isHidden = !(tableContainerScrollView?.isHidden ?? true)
+        deviceListContainerScrollView?.isHidden = !(centralManager?.isBTAvailable ?? false)
+        noBTImage?.isHidden = !(deviceListContainerScrollView?.isHidden ?? true)
         reloadButton?.isHidden = (0 == (centralManager?.stagedBLEPeripherals.count ?? 0))
         scanningModeSegmentedSwitch?.setSelected(true, forSegment: (centralManager?.isScanning ?? false) ? ScanningModeSwitchValues.scanning.rawValue : ScanningModeSwitchValues.notScanning.rawValue)
-        deviceTable?.isEnabled = !(centralManager?.isScanning ?? true)
         setUpAccessibility()
-        
-        if nil == selectedDevice {
-            deviceTable?.deselectAll(nil)
-        }
-        
-        deviceTable?.reloadData()
-    }
-    
-    /* ################################################################## */
-    /**
-     This builds a "map" of the device data, so we can build a table from it.
-     */
-    func buildTableMap() {
-        _tableMap = []
-        
-        let peripherals = sortedPeripherals
-        
-        for index in 0..<peripherals.count {
-            let id = peripherals[index].identifier
-            let power = peripherals[index].rssi
-            let strings = _createAdvertimentStringsFor(peripherals[index].advertisementData, id: id, power: power)
-            _tableMap.append((id: id, contents: strings))
-        }
-        
-        updateUI()
-    }
-}
-
-/* ################################################################################################################################## */
-// MARK: - NSTableViewDelegate/DataSource Methods
-/* ################################################################################################################################## */
-extension MacOS_DiscoveryViewController: NSTableViewDelegate, NSTableViewDataSource {
-    /* ################################################################## */
-    /**
-     Called to supply the number of rows in the table.
-     
-     - parameters:
-        - inTableView: The table instance.
-     
-     - returns: A 1-based Int, with 0 being no rows.
-     */
-    func numberOfRows(in inTableView: NSTableView) -> Int { _completeTableMapRowCount }
-
-    /* ################################################################## */
-    /**
-     This is called to supply the string display for one row that corresponds to a device.
-     
-     - parameters:
-        - inTableView: The table instance.
-        - objectValueFor: Container object for the column that holds the row.
-        - row: 0-based Int, with the index of the row, within the column.
-     
-     - returns: A String, with the device name.
-     */
-    func tableView(_ inTableView: NSTableView, objectValueFor inTableColumn: NSTableColumn?, row inRow: Int) -> Any? { _getIndexedTableMapRow(inRow).value }
-    
-    /* ################################################################## */
-    /**
-     Called to indicate whether or not the row is a group header (indicated by no value).
-     
-     - parameters:
-        - inTableView: The table instance.
-        - isGroupRow: The 0-based Int index of the row.
-     
-     - returns: True, if this is a group header row.
-     */
-    func tableView(_ inTableView: NSTableView, isGroupRow inRow: Int) -> Bool { _getIndexedTableMapRow(inRow).isHeader }
-
-    /* ################################################################## */
-    /**
-     This is called when a row is selected. We match the device to the row, set that in the semaphore, and approve the selection.
-     
-     - parameters:
-        - inTableView: The table instance.
-        - shouldSelectRow: 0-based Int, with the index of the row, within the column.
-     
-     - returns: False (always).
-     */
-    func tableView(_ inTableView: NSTableView, shouldSelectRow inRow: Int) -> Bool {
-        deviceTable?.deselectAll(nil)
-        if  !(centralManager?.isScanning ?? true),
-            let peripheral = _getIndexedDevice(inRow),
-            peripheral.canConnect,
-            selectedDevice?.identifier != peripheral.identifier {
-            #if DEBUG
-                print("Row \(inRow) was selected.")
-            #endif
-            selectedDevice = peripheral
-            if let selectedRange = _getAllRowIndexesForGroupContainingThisRowIndex(inRow) {
-                deviceTable?.selectRowIndexes(IndexSet(integersIn: selectedRange), byExtendingSelection: true)
-                if  let newController = storyboard?.instantiateController(withIdentifier: MacOS_PeripheralViewController.storyboardID) as? MacOS_PeripheralViewController {
-                    #if DEBUG
-                        print("Connecting to another Peripheral.")
-                    #endif
-                    newController.peripheralInstance = peripheral
-                    mainSplitView?.setPeripheralViewController(newController)
-                }
-            }
-        }
-        
-        return false
+        _reloadStackView()
     }
 }
