@@ -23,9 +23,9 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>Discover Bluetooth Devices.</string>
+	<string>The app needs to discover and connect to Bluetooth devices.</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>Discover Bluetooth Devices.</string>
+	<string>The app needs to discover and connect to Bluetooth devices.</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2020 The Great Rift Valley Software Company. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>

@@ -21,8 +21,8 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 */
 
 /* [Details here](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW20) */
-"NSBluetoothAlwaysUsageDescription"     =   "Discover Bluetooth Devices";
-"NSBluetoothPeripheralUsageDescription" =   "Discover Bluetooth Devices";
+"NSBluetoothAlwaysUsageDescription"     =   "The app needs to discover and connect to Bluetooth devices.";
+"NSBluetoothPeripheralUsageDescription" =   "The app needs to discover and connect to Bluetooth devices.";
 "NSHumanReadableCopyright"              =   "©2020 The Great Rift Valley Software Company";
 "InfoScreenCopyrightSiteURL"            =   "https://riftvalleysoftware.com/";
 "InfoScreenHelpSiteURL"                 =   "https://riftvalleysoftware.com/";

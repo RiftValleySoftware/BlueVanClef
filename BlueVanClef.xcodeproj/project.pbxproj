@@ -53,7 +53,7 @@
 		D4DDEDBA24EDDE61006B5B8F /* WatchAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291E24EC648F0008C0FE /* WatchAssets.xcassets */; };
 		D4EDB96524EDEC78001172B5 /* Complications.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EDB96424EDEC78001172B5 /* Complications.xcassets */; };
 		D4EDB96624EDEC78001172B5 /* Complications.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EDB96424EDEC78001172B5 /* Complications.xcassets */; };
-		D4EE28F024EC62CD0008C0FE /* Blue Van Clef (WatchOS Extension).appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4EE28EF24EC62CD0008C0FE /* Blue Van Clef (WatchOS Extension).appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D4EE28F024EC62CD0008C0FE /* Blue Van Clef Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4EE28EF24EC62CD0008C0FE /* Blue Van Clef Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4EE292324EC64B00008C0FE /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291F24EC648F0008C0FE /* Interface.storyboard */; };
 		D4EE292424EC64C50008C0FE /* CGA_WatchOS_BaseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE290B24EC648F0008C0FE /* CGA_WatchOS_BaseInterfaceController.swift */; };
 		D4EE292524EC64C50008C0FE /* CGA_WatchOS_CharacteristicInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE290D24EC648F0008C0FE /* CGA_WatchOS_CharacteristicInterfaceController.swift */; };
@@ -113,7 +113,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D4EE28F024EC62CD0008C0FE /* Blue Van Clef (WatchOS Extension).appex in Embed App Extensions */,
+				D4EE28F024EC62CD0008C0FE /* Blue Van Clef Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,7 +161,7 @@
 		D4CAA4262434E877007C72AA /* CGA_PeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_PeripheralViewController.swift; sourceTree = "<group>"; };
 		D4EDB96424EDEC78001172B5 /* Complications.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Complications.xcassets; sourceTree = "<group>"; };
 		D4EE28E024EC62CC0008C0FE /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4EE28EF24EC62CD0008C0FE /* Blue Van Clef (WatchOS Extension).appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Blue Van Clef (WatchOS Extension).appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4EE28EF24EC62CD0008C0FE /* Blue Van Clef Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Blue Van Clef Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EE290B24EC648F0008C0FE /* CGA_WatchOS_BaseInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_WatchOS_BaseInterfaceController.swift; sourceTree = "<group>"; };
 		D4EE290D24EC648F0008C0FE /* CGA_WatchOS_CharacteristicInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_WatchOS_CharacteristicInterfaceController.swift; sourceTree = "<group>"; };
 		D4EE290E24EC648F0008C0FE /* CGA_WatchOS_MainInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_WatchOS_MainInterfaceController.swift; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 			children = (
 				D4B1C6832430F26800D3AC78 /* Blue Van Clef.app */,
 				D4EE28E024EC62CC0008C0FE /* Blue Van Clef.app */,
-				D4EE28EF24EC62CD0008C0FE /* Blue Van Clef (WatchOS Extension).appex */,
+				D4EE28EF24EC62CD0008C0FE /* Blue Van Clef Extension.appex */,
 				D4BF7CF824EE04B8000470EC /* Blue Van Clef.app */,
 				D4B42FAB24EF1D6800BDF1E9 /* Blue Van Clef (MacOS).app */,
 			);
@@ -627,7 +627,7 @@
 				D4EE293C24EC668F0008C0FE /* RVS-Persistent-Prefs */,
 			);
 			productName = "Blue Van Clef WatchKit Extension";
-			productReference = D4EE28EF24EC62CD0008C0FE /* Blue Van Clef (WatchOS Extension).appex */;
+			productReference = D4EE28EF24EC62CD0008C0FE /* Blue Van Clef Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
@@ -1051,7 +1051,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 3001;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/src/iOS/Meta/Info.plist";
@@ -1076,7 +1076,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 3001;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/src/iOS/Meta/Info.plist";
@@ -1146,7 +1146,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 3001;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				INFOPLIST_FILE = src/WatchOS/Info.plist;
 				MARKETING_VERSION = 1.4.0;
@@ -1160,7 +1160,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 3001;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				INFOPLIST_FILE = src/WatchOS/Info.plist;
 				MARKETING_VERSION = 1.4.0;
@@ -1176,7 +1176,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 3001;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				INFOPLIST_FILE = src/WatchOS/Extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1186,7 +1186,7 @@
 				);
 				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Watch.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "Blue Van Clef Extension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1200,7 +1200,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 3001;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				INFOPLIST_FILE = src/WatchOS/Extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1210,7 +1210,7 @@
 				);
 				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Watch.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "Blue Van Clef Extension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1226,7 +1226,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 3001;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				IBSC_MODULE = Blue_Van_Clef_WatchKit_Extension;
 				INFOPLIST_FILE = src/WatchOS/App/Info.plist;
@@ -1247,7 +1247,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 3001;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				IBSC_MODULE = Blue_Van_Clef_WatchKit_Extension;
 				INFOPLIST_FILE = src/WatchOS/App/Info.plist;
