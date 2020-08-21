@@ -82,7 +82,7 @@ extension MacOS_SplitViewController {
         if let discoveryViewController = discoveryScreenSplitViewItem?.viewController as? MacOS_DiscoveryViewController {
             discoveryViewController.selectedDevice = nil
             discoveryScreenSplitViewItem.minimumThickness = MacOS_DiscoveryViewController.screenThickness
-//            discoveryScreenSplitViewItem.maximumThickness = MacOS_DiscoveryViewController.screenThickness
+            discoveryScreenSplitViewItem.maximumThickness = MacOS_DiscoveryViewController.screenThickness
         }
         
         peripheralSplitViewItem = nil

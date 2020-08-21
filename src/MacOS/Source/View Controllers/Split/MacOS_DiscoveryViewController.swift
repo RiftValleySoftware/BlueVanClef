@@ -30,11 +30,11 @@ import RVS_BlueThoth
  This is the permanent Device Discovery Screen. It is the leftmost screen, and contains a table that is updated as the discovery scanning goes on.
  */
 class MacOS_DiscoveryViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_SplitView_ViewController {
-    let headerRowFontSize = 20
-    let headerPadding = 4
+    let headerRowFontSize = 15
+    let headerPadding = 2
     
-    let infoRowFontSize = 16
-    let infoPadding = 4
+    let infoRowFontSize = 12
+    let infoPadding = 2
     
     let infoRowIndent = 20
     
@@ -59,7 +59,7 @@ class MacOS_DiscoveryViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_Split
     /**
      This is the width of the discovery section, which is fixed.
      */
-    static let screenThickness: CGFloat = 360
+    static let screenThickness: CGFloat = 480
 
     /* ################################################################## */
     /**
@@ -78,12 +78,6 @@ class MacOS_DiscoveryViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_Split
      This is a segmented switch that reflects the state of the scanning.
      */
     @IBOutlet weak var scanningModeSegmentedSwitch: NSSegmentedControl!
-    
-    /* ################################################################## */
-    /**
-     This contains the Peripheral List table.
-     */
-    @IBOutlet weak var deviceListContainerScrollView: NSScrollView!
 
     /* ################################################################## */
     /**
@@ -96,19 +90,10 @@ class MacOS_DiscoveryViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_Split
      This is the "Start Over From Scratch" button.
      */
     @IBOutlet weak var reloadButton: NSButton!
-    
-    /* ################################################################## */
-    /**
-     The clip view for the scrollable table.
-     */
-    var deviceListClipView: NSView? { deviceListContainerScrollView?.contentView }
-    
-    /* ################################################################## */
-    /**
-     The actual view that contains the content we'll be displaying.
-     */
-    var deviceListScrolledView: NSView? { deviceListContainerScrollView?.documentView }
 
+    @IBOutlet weak var stackView: NSStackView!
+    
+    @IBOutlet weak var scrollView: NSScrollView!
     /* ################################################################## */
     /**
      The currently selected device (nil, if no device selected).
@@ -312,39 +297,15 @@ extension MacOS_DiscoveryViewController {
         
         return retStr
     }
-    
-    /* ################################################################## */
-    /**
-     This allows us to easily add a new subview to a view, and keep it tied to the one above.
-     
-     - parameter inSubView: The view we are adding.
-     - parameter to: The view we are embedding it in.
-     - parameter under: The bottom constraint of the view just above this one.
-     - parameter indentedBy: OPTIONAL (Default is 0). The left indent, in display units.
-     - returns: The bottom anchor of the embedded view (to be used as "under" in the next iteration).
-     */
-    @discardableResult
-    private func _addContainedSubView(_ inSubView: NSView, to inToView: NSView, under inUnderAnchor: NSLayoutYAxisAnchor? = nil, indentedBy inIndent: CGFloat = 0) -> NSLayoutYAxisAnchor {
-        inToView.addSubview(inSubView)
-        
-        inSubView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let underAnchor = nil != inUnderAnchor ? inUnderAnchor! : inToView.topAnchor
-        
-        inSubView.topAnchor.constraint(equalTo: underAnchor, constant: 0).isActive = true
-        inSubView.leadingAnchor.constraint(equalTo: inToView.leadingAnchor, constant: inIndent).isActive = true
-        inSubView.trailingAnchor.constraint(equalTo: inToView.trailingAnchor, constant: 0).isActive = true
-        
-        return inSubView.bottomAnchor
-    }
 
-    private func _createTableRowViewFor(_ inRow: Int) -> NSView? {
-        guard   let peripheralDiscoveryInfo = centralManager?.stagedBLEPeripherals[inRow] else { return nil }
+    private func _createTableRowViewFor(_ inRow: Int) {
+        guard   let peripheralDiscoveryInfo = centralManager?.stagedBLEPeripherals[inRow],
+                let stackView = stackView else { return }
 
         let discoveryText = _createAdvertimentStringsFor(peripheralDiscoveryInfo.advertisementData, id: peripheralDiscoveryInfo.identifier, power: peripheralDiscoveryInfo.rssi)
         
-        guard !discoveryText.isEmpty else { return nil }
-        
+        guard !discoveryText.isEmpty else { return }
+
         let deviceNameLabel = NSTextField(labelWithString: _stagedDeviceName(inRow))
         deviceNameLabel.font = NSFont.boldSystemFont(ofSize: CGFloat(headerRowFontSize))
         deviceNameLabel.allowsDefaultTighteningForTruncation = true
@@ -353,44 +314,30 @@ extension MacOS_DiscoveryViewController {
         deviceNameLabel.drawsBackground = true
         deviceNameLabel.maximumNumberOfLines = 1
         deviceNameLabel.alignment = .center
-        
-        deviceNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        deviceNameLabel.heightAnchor.constraint(equalToConstant: CGFloat(headerRowFontSize + (headerPadding * 2))).isActive = true
+        deviceNameLabel.frame = stackView.bounds
+        deviceNameLabel.frame.size.height = CGFloat(headerRowFontSize + (headerPadding * 2))
+
+        stackView.addArrangedSubview(deviceNameLabel)
 
         let deviceInfoLabel = NSTextField(labelWithString: discoveryText.joined(separator: "\n"))
         deviceInfoLabel.font = NSFont.systemFont(ofSize: CGFloat(infoRowFontSize))
         deviceInfoLabel.allowsDefaultTighteningForTruncation = true
         deviceInfoLabel.textColor = .white
         deviceInfoLabel.maximumNumberOfLines = discoveryText.count
-        deviceInfoLabel.heightAnchor.constraint(equalToConstant: CGFloat(discoveryText.count * (infoRowFontSize + (infoPadding * 2)))).isActive = true
-
-        let ret = NSView()
-        ret.translatesAutoresizingMaskIntoConstraints = false
-
-        let lastAnchor = _addContainedSubView(deviceInfoLabel, to: ret, under: _addContainedSubView(deviceNameLabel, to: ret))
-        lastAnchor.constraint(equalTo: ret.bottomAnchor, constant: 0).isActive = true
-
-        return ret
+        deviceInfoLabel.frame = stackView.bounds
+        deviceInfoLabel.frame.size.height = CGFloat(discoveryText.count * (infoRowFontSize + (infoPadding * 2)))
+        
+        stackView.addArrangedSubview(deviceInfoLabel)
     }
     
     private func _reloadStackView() {
-        guard let deviceListScrolledView = deviceListScrolledView else { return }
+        guard   let stackView = stackView else { return }
         
-        deviceListScrolledView.subviews.forEach { $0.removeFromSuperview()}
-        let scrollTarget = NSView()
+        stackView.subviews.forEach { $0.removeFromSuperview()}
         
-        scrollTarget.translatesAutoresizingMaskIntoConstraints = false
-        
-        var lastAnchor = scrollTarget.topAnchor
-
         for index in 0..<(centralManager?.stagedBLEPeripherals.count ?? 0) {
-            if let rowView = _createTableRowViewFor(index) {
-                lastAnchor = _addContainedSubView(rowView, to: scrollTarget, under: lastAnchor)
-            }
+            _createTableRowViewFor(index)
         }
-        
-        lastAnchor.constraint(equalTo: scrollTarget.bottomAnchor, constant: 0).isActive = true
-        deviceListScrolledView.addSubview(scrollTarget)
     }
 }
 
@@ -439,8 +386,8 @@ extension MacOS_DiscoveryViewController {
         scanningModeSegmentedSwitch?.setAccessibilityLabel(("SLUG-ACC-SCANNING-BUTTON-O" + ((ScanningModeSwitchValues.notScanning.rawValue == scanningModeSegmentedSwitch?.selectedSegment) ? "FF" : "N").localizedVariant))
         scanningModeSegmentedSwitch?.toolTip = ("SLUG-ACC-SCANNING-BUTTON-O" + ((ScanningModeSwitchValues.notScanning.rawValue == scanningModeSegmentedSwitch?.selectedSegment) ? "FF" : "N")).localizedVariant
         
-        deviceListContainerScrollView?.setAccessibilityLabel("SLUG-ACC-DEVICELIST-TABLE-MAC".localizedVariant)
-        deviceListContainerScrollView?.toolTip = "SLUG-ACC-DEVICELIST-TABLE-MAC".localizedVariant
+        stackView?.setAccessibilityLabel("SLUG-ACC-DEVICELIST-TABLE-MAC".localizedVariant)
+        stackView?.toolTip = "SLUG-ACC-DEVICELIST-TABLE-MAC".localizedVariant
     }
 }
 
@@ -495,8 +442,8 @@ extension MacOS_DiscoveryViewController: MacOS_ControllerList_Protocol {
      */
     func updateUI() {
         scanningModeSegmentedSwitch?.isHidden = !(centralManager?.isBTAvailable ?? false)
-        deviceListContainerScrollView?.isHidden = !(centralManager?.isBTAvailable ?? false)
-        noBTImage?.isHidden = !(deviceListContainerScrollView?.isHidden ?? true)
+        scrollView?.isHidden = !(centralManager?.isBTAvailable ?? false)
+        noBTImage?.isHidden = !(scrollView?.isHidden ?? true)
         reloadButton?.isHidden = (0 == (centralManager?.stagedBLEPeripherals.count ?? 0))
         scanningModeSegmentedSwitch?.setSelected(true, forSegment: (centralManager?.isScanning ?? false) ? ScanningModeSwitchValues.scanning.rawValue : ScanningModeSwitchValues.notScanning.rawValue)
         setUpAccessibility()
