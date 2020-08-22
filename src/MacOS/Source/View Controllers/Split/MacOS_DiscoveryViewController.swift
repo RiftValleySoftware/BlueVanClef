@@ -359,6 +359,7 @@ extension MacOS_DiscoveryViewController {
         } else {
             centralManager?.scanCriteria = prefs.scanCriteria
             centralManager?.minimumRSSILevelIndBm = prefs.minimumRSSILevel
+            centralManager?.duplicateFilteringIsOn = !prefs.continuouslyUpdatePeripherals
             centralManager?.discoverOnlyConnectablePeripherals = prefs.discoverOnlyConnectableDevices
             centralManager?.allowEmptyNames = prefs.allowEmptyNames
             centralManager?.startScanning(duplicateFilteringIsOn: prefs.continuouslyUpdatePeripherals)
