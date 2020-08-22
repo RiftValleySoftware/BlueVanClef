@@ -254,7 +254,8 @@ extension MacOS_DiscoveryViewController {
             let connectButton = MacOS_Clicker()
             connectButton.setButtonType(.momentaryPushIn)
             connectButton.bezelStyle = .inline
-            connectButton.title = ("SLUG-" + (peripheralDiscoveryInfo.isConnected ? "DIS" : "") + "CONNECT").localizedVariant
+            connectButton.title = ("SLUG-" + (peripheralDiscoveryInfo.isConnected ? "DIS" : "") + "CONNECT" + (!peripheralDiscoveryInfo.isConnected && (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) ? "ING" : "")).localizedVariant
+            connectButton.isEnabled = peripheralDiscoveryInfo.isConnected || (selectedDevice?.identifier != peripheralDiscoveryInfo.identifier)
             connectButton.contentTintColor = .blue
             connectButton.bezelColor = .white
             connectButton.discoveryInfo = peripheralDiscoveryInfo
@@ -355,7 +356,7 @@ extension MacOS_DiscoveryViewController {
     @IBAction func scanningChanged(_ inSwitch: NSSegmentedControl) {
         mainSplitView?.collapseSplit()
         selectedDevice = nil
-
+        
         if ScanningModeSwitchValues.notScanning.rawValue == inSwitch.selectedSegment {
             centralManager?.stopScanning()
         } else {
@@ -390,15 +391,17 @@ extension MacOS_DiscoveryViewController {
         if  !(centralManager?.isScanning ?? true),
             let discoveryInfo = inButton.discoveryInfo {
             let wasConnected = discoveryInfo.isConnected
-            discoveryInfo.disconnect()
+            centralManager?.stagedBLEPeripherals.forEach { $0.disconnect() }
+            centralManager?.sequence_contents.forEach { $0.disconnect() }
             mainSplitView?.collapseSplit()
-            selectedDevice = discoveryInfo
             _reloadStackView()
             if  !wasConnected,
                 let newController = storyboard?.instantiateController(withIdentifier: MacOS_PeripheralViewController.storyboardID) as? MacOS_PeripheralViewController {
+                selectedDevice = discoveryInfo
                 newController.peripheralInstance = discoveryInfo
                 mainSplitView?.setPeripheralViewController(newController)
             }
+            _reloadStackView()
         }
     }
 }
