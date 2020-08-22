@@ -1003,7 +1003,11 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="systemBold" size="16"/>
                                             <connections>
-                                                <binding destination="CBu-yz-Vwg" name="value" keyPath="prefs.discoverOnlyConnectableDevices" id="haQ-ai-KOo"/>
+                                                <binding destination="CBu-yz-Vwg" name="value" keyPath="prefs.discoverOnlyConnectableDevices" id="xoe-AD-psd">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">NSIsNotNil</string>
+                                                    </dictionary>
+                                                </binding>
                                             </connections>
                                         </buttonCell>
                                         <color key="contentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

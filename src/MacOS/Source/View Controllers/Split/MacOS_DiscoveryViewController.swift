@@ -162,144 +162,6 @@ class MacOS_DiscoveryViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_Split
 extension MacOS_DiscoveryViewController {
     /* ################################################################## */
     /**
-     This is a complete count of all advertisement data rows, and headers.
-     */
-    private var _completeTableMapRowCount: Int { _tableMap.reduce(0) { (current, next) -> Int in current + 1 + next.contents.count } }
-    
-    /* ################################################################## */
-    /**
-     Access the table keys as a simple String Array
-     */
-    private var _tableKeys: [String] { _tableMap.map { String($0.id) } }
-    
-    /* ################################################################## */
-    /**
-     Return a list of advertisement data for the table at the given key.
-     
-     - parameter inKey: The device ID (the key).
-     - returns: An Array of String, for the given key.
-     */
-    private func _infoForKey(_ inKey: String) -> [String] {
-        for item in _tableMap where item.id == inKey {
-            return item.contents
-        }
-        
-        return []
-    }
-    
-    /* ################################################################## */
-    /**
-     - parameter inDeviceID: The key for the device in our table.
-     - returns: Index, in the main table Array, for this device. Can be nil.
-     */
-    private func _indexOfThisDevice(_ inDeviceID: String) -> Int? { _tableKeys.firstIndex(where: { $0 == inDeviceID }) }
-    
-    /* ################################################################## */
-    /**
-     - parameter inDeviceID: The key for the device in our table.
-     - returns: The number of advertisement strings for the given device.
-     */
-    private func _numberOfStringsForThisDevice(_ inDeviceID: String) -> Int { _infoForKey(inDeviceID).count }
-
-    /* ################################################################## */
-    /**
-     This returns the Peripheral wrapper instance, associated with a particular table index.
-
-     - parameter inIndex: The 0-based row index.
-     - returns: The discovery data struct for the indexed device.
-     */
-    private func _getIndexedDevice(_ inIndex: Int) -> RVS_BlueThoth.DiscoveryData? {
-        var index: Int = 0
-        
-        for key in _tableKeys {
-            guard let device = centralManager?.stagedBLEPeripherals[key] else { return nil }
-            
-            if index == inIndex {
-                return device
-            } else {
-                let advertisingData = _infoForKey(key)
-                for _ in 0..<advertisingData.count {
-                    if index == inIndex {
-                        return device
-                    }
-                    index += 1
-                }
-            }
-            
-            index += 1
-        }
-        
-        return nil
-    }
-    
-    /* ################################################################## */
-    /**
-     This returns the row string, along with whether or not it is a header, for the indexed row.
-     
-     - parameter inIndex: The 0-based row index.
-     - returns: a tuple, containing the string value, and a boolean flag, indicating whether or not it is a header.
-     */
-    private func _getIndexedTableMapRow(_ inIndex: Int) -> (value: String, isHeader: Bool) {
-        var index: Int = 0
-        
-        for key in _tableKeys {
-            guard let device = centralManager?.stagedBLEPeripherals[key] else { return (value: "", isHeader: false) }
-            
-            if index == inIndex {
-                return (value: device.preferredName.isEmpty ? device.localName.isEmpty ? device.name.isEmpty ? "SLUG-NO-DEVICE-NAME".localizedVariant : device.name : device.localName : device.preferredName, isHeader: true)
-            } else {
-                for advData in _infoForKey(key) {
-                    index += 1
-                    if index == inIndex {
-                        return (value: advData, isHeader: false)
-                    }
-                }
-            }
-            
-            index += 1
-        }
-        
-        return (value: "", isHeader: false)
-    }
-    
-    /* ################################################################## */
-    /**
-     This returns a range, with the row indexes of all the rows belonging to the device that contains the given row.
-     
-     - parameter inIndex: The 0-based index of the selected row.
-     - returns: An Int Range, containing all the indexes involved in the selected device.
-     */
-    private func _getAllRowIndexesForGroupContainingThisRowIndex(_ inIndex: Int) -> Range<Int>? {
-        var totalIndex = 0
-
-        for group in _tableMap {
-            let range = (totalIndex..<totalIndex + group.contents.count + 1)
-            if range.contains(inIndex) {
-                return range
-            }
-            totalIndex = range.upperBound
-        }
-        
-        return nil
-    }
-    
-    /* ################################################################## */
-    /**
-     Returns a string, with the name of a staged (discovered, but not connected) device.
-     
-     - parameter inDeviceIndex: The 0-based index of the device, in the staged Array.
-     - returns: A String, with the device name, or text explaining the error.
-     */
-    private func _stagedDeviceName(_ inDeviceIndex: Int) -> String {
-        let device = sortedPeripherals[inDeviceIndex]
-        
-        return  !device.preferredName.isEmpty ? device.preferredName :
-                !device.localName.isEmpty ? device.localName :
-                !device.name.isEmpty ? device.name : "SLUG-NO-DEVICE-NAME".localizedVariant
-    }
-    
-    /* ################################################################## */
-    /**
      This creates an Array of String, containing the advertisement data from the indexed device.
      
      - parameter inAdData: The advertisement data.
@@ -351,6 +213,21 @@ extension MacOS_DiscoveryViewController {
     /**
      */
     private func _createTableRowViewFor(_ inRow: Int) {
+        /* ################################################################## */
+        /**
+         Returns a string, with the name of a staged (discovered, but not connected) device.
+         
+         - parameter inDeviceIndex: The 0-based index of the device, in the staged Array.
+         - returns: A String, with the device name, or text explaining the error.
+         */
+        func _stagedDeviceName(_ inDeviceIndex: Int) -> String {
+            let device = sortedPeripherals[inDeviceIndex]
+            
+            return  !device.preferredName.isEmpty ? device.preferredName :
+                    !device.localName.isEmpty ? device.localName :
+                    !device.name.isEmpty ? device.name : "SLUG-NO-DEVICE-NAME".localizedVariant
+        }
+        
         guard let stackView = stackView else { return }
         
         let peripheralDiscoveryInfo = sortedPeripherals[inRow]
@@ -366,7 +243,7 @@ extension MacOS_DiscoveryViewController {
         deviceNameButton.bezelStyle = .rounded
         deviceNameButton.title = _stagedDeviceName(inRow)
 
-        if (centralManager?.isScanning ?? true) || (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) {
+        if (centralManager?.isScanning ?? true) || (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) || !peripheralDiscoveryInfo.canConnect {
             deviceNameButton.isEnabled = false
         } else {
             deviceNameButton.isEnabled = true
@@ -385,7 +262,7 @@ extension MacOS_DiscoveryViewController {
         deviceInfoLabel.frame = stackView.bounds
         deviceInfoLabel.frame.size.height = CGFloat(discoveryText.count * (infoRowFontSize + (infoPadding * 2)))
         
-        if (centralManager?.isScanning ?? true) || (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) {
+        if (centralManager?.isScanning ?? true) || (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) || !peripheralDiscoveryInfo.canConnect {
             deviceInfoLabel.isEnabled = selectedDevice?.identifier == peripheralDiscoveryInfo.identifier
             deviceInfoLabel.textColor = (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) ? .blue : NSColor.white.withAlphaComponent(0.5)
             if selectedDevice?.identifier == peripheralDiscoveryInfo.identifier {
@@ -403,7 +280,7 @@ extension MacOS_DiscoveryViewController {
     /**
      */
     private func _reloadStackView() {
-        guard   let stackView = stackView else { return }
+        guard let stackView = stackView else { return }
         
         stackView.subviews.forEach { $0.removeFromSuperview()}
         
@@ -507,13 +384,18 @@ extension MacOS_DiscoveryViewController {
     /**
      */
     @IBAction func rowTapped(_ inButton: MacOS_Clicker) {
-        if  let discoveryInfo = inButton.discoveryInfo,
+        if  !(centralManager?.isScanning ?? true),
+            let discoveryInfo = inButton.discoveryInfo,
             !discoveryInfo.identifier.isEmpty,
+            discoveryInfo.canConnect,
             (nil == selectedDevice) || (selectedDevice?.identifier != discoveryInfo.identifier) {
             mainSplitView?.collapseSplit()
             selectedDevice = discoveryInfo
             _reloadStackView()
-            discoveryInfo.connect()
+            if  let newController = storyboard?.instantiateController(withIdentifier: MacOS_PeripheralViewController.storyboardID) as? MacOS_PeripheralViewController {
+                newController.peripheralInstance = discoveryInfo
+                mainSplitView?.setPeripheralViewController(newController)
+            }
         }
     }
 }
@@ -527,9 +409,9 @@ extension MacOS_DiscoveryViewController: MacOS_ControllerList_Protocol {
      This forces the UI elements to be updated.
      */
     func updateUI() {
-        scanningModeSegmentedSwitch?.isHidden = !(centralManager?.isBTAvailable ?? false)
-        scrollView?.isHidden = !(centralManager?.isBTAvailable ?? false)
-        noBTImage?.isHidden = !(scrollView?.isHidden ?? true)
+        noBTImage?.isHidden = centralManager?.isBTAvailable ?? true
+        scanningModeSegmentedSwitch?.isHidden = !(noBTImage?.isHidden ?? false)
+        scrollView?.isHidden = !(noBTImage?.isHidden ?? false)
         reloadButton?.isHidden = sortedPeripherals.isEmpty
         scanningModeSegmentedSwitch?.setSelected(true, forSegment: (centralManager?.isScanning ?? false) ? ScanningModeSwitchValues.scanning.rawValue : ScanningModeSwitchValues.notScanning.rawValue)
         setUpAccessibility()
