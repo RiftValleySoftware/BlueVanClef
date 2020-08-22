@@ -254,7 +254,13 @@ extension MacOS_DiscoveryViewController {
             let connectButton = MacOS_Clicker()
             connectButton.setButtonType(.momentaryPushIn)
             connectButton.bezelStyle = .inline
-            connectButton.title = ("SLUG-" + (peripheralDiscoveryInfo.isConnected ? "DIS" : "") + "CONNECT" + (!peripheralDiscoveryInfo.isConnected && (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) ? "ING" : "")).localizedVariant
+            
+            var title = "SLUG-"
+            title += (peripheralDiscoveryInfo.isConnected && (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier)) ? "DIS" : ""
+            title += "CONNECT"
+            title += (!peripheralDiscoveryInfo.isConnected && (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier)) ? "ING" : ""
+            
+            connectButton.title = title.localizedVariant
             connectButton.isEnabled = peripheralDiscoveryInfo.isConnected || (selectedDevice?.identifier != peripheralDiscoveryInfo.identifier)
             connectButton.contentTintColor = .blue
             connectButton.bezelColor = .white
@@ -390,11 +396,11 @@ extension MacOS_DiscoveryViewController {
     @IBAction func connectButtonHit(_ inButton: MacOS_Clicker) {
         if  !(centralManager?.isScanning ?? true),
             let discoveryInfo = inButton.discoveryInfo {
-            let wasConnected = discoveryInfo.isConnected
-            centralManager?.stagedBLEPeripherals.forEach { $0.disconnect() }
-            centralManager?.sequence_contents.forEach { $0.disconnect() }
-            mainSplitView?.collapseSplit()
+            let wasConnected = discoveryInfo.identifier == selectedDevice?.identifier
+            discoveryInfo.disconnect()
+            selectedDevice = nil
             _reloadStackView()
+            MacOS_AppDelegate.appDelegateObject.collapseSplit()
             if  !wasConnected,
                 let newController = storyboard?.instantiateController(withIdentifier: MacOS_PeripheralViewController.storyboardID) as? MacOS_PeripheralViewController {
                 selectedDevice = discoveryInfo
