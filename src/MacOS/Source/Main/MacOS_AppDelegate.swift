@@ -113,9 +113,21 @@ class MacOS_AppDelegate: NSObject, NSApplicationDelegate {
 
     /* ################################################################## */
     /**
+     This is the menu item for the main app menu. It allows us to customize the text.
+     */
+    @IBOutlet weak var appNameMenuTitle: NSMenuItem!
+    
+    /* ################################################################## */
+    /**
      This is the menu item for the about item. It allows us to customize the text.
      */
     @IBOutlet weak var aboutMenuItem: NSMenuItem!
+
+    /* ################################################################## */
+    /**
+     This is the menu item for the quit item. It allows us to customize the text.
+     */
+    @IBOutlet weak var quitMenuItem: NSMenuItem!
     
     /* ################################################################## */
     /**
@@ -147,7 +159,9 @@ extension MacOS_AppDelegate {
      - parameter: ignored.
      */
     func applicationDidFinishLaunching(_: Notification) {
+        appNameMenuTitle?.title = (appNameMenuTitle?.title ?? "ERROR").localizedVariant
         aboutMenuItem?.title = (aboutMenuItem?.title ?? "ERROR").localizedVariant
+        quitMenuItem?.title = (quitMenuItem?.title ?? "ERROR").localizedVariant
         centralManager = RVS_BlueThoth(delegate: self)
     }
 }

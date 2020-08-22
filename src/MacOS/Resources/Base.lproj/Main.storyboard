@@ -11,9 +11,8 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="MacOS" id="1Xt-HY-uBw">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="MacOS" systemMenu="apple" id="uQy-DD-JDr">
+                            <menuItem title="SLUG-APP-NAME" id="1Xt-HY-uBw">
+                                <menu key="submenu" title="SLUG-APP-NAME" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
                                         <menuItem title="SLUG-ABOUT-MENU" id="5kV-Vb-QxS">
                                             <connections>
@@ -51,7 +50,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit MacOS" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="SLUG-QUIT-APP-NAME" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -681,6 +680,9 @@
                 <customObject id="Voe-Tx-rLC" customClass="MacOS_AppDelegate" customModule="Blue_Van_Clef__MacOS_" customModuleProvider="target">
                     <connections>
                         <outlet property="aboutMenuItem" destination="5kV-Vb-QxS" id="hGZ-7c-0uS"/>
+                        <outlet property="appNameMenuTitle" destination="1Xt-HY-uBw" id="yzD-0s-nLq"/>
+                        <outlet property="quitMenuItem" destination="4sb-4s-VLi" id="xL7-9s-reh"/>
+                        <outlet property="quitMenuTitle" destination="4sb-4s-VLi" id="bhZ-Sb-6Zs"/>
                     </connections>
                 </customObject>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -963,7 +965,7 @@
         <scene sceneID="kjr-EF-bVD">
             <objects>
                 <viewController title="SLUG-PREFERENCES" showSeguePresentationStyle="single" id="CBu-yz-Vwg" userLabel="Preferences Screen" customClass="MacOS_PreferencesViewController" customModule="Blue_Van_Clef__MacOS_" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="6nf-9I-pQU">
+                    <view key="view" id="6nf-9I-pQU">
                         <rect key="frame" x="0.0" y="0.0" width="699" height="498"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1364,7 +1366,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="440" height="230"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" id="FUm-0T-CYy">
+                                        <tableView appearanceType="darkAqua" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" id="FUm-0T-CYy">
                                             <rect key="frame" x="0.0" y="0.0" width="440" height="230"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -1393,11 +1395,11 @@
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="6xJ-Px-Isb">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="6xJ-Px-Isb" customClass="MacOS_TransparentScroller" customModule="Blue_Van_Clef__MacOS_" customModuleProvider="target">
                                     <rect key="frame" x="-100" y="-100" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="7CH-hr-be5">
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="7CH-hr-be5" customClass="MacOS_TransparentScroller" customModule="Blue_Van_Clef__MacOS_" customModuleProvider="target">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -1484,11 +1486,11 @@
                                             </button>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4Mr-x8-EbQ">
                                                 <rect key="frame" x="87" y="-2" width="85" height="28"/>
-                                                <buttonCell key="cell" type="check" title="SLUG-NOTIFY-BUTTON" bezelStyle="regularSquare" imagePosition="left" inset="2" id="KRe-YQ-cxA">
+                                                <buttonCell key="cell" type="check" title="SLUG-NOTIFY-BUTTON" bezelStyle="regularSquare" imagePosition="left" borderStyle="border" inset="2" id="KRe-YQ-cxA">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="systemBold" size="15"/>
                                                 </buttonCell>
-                                                <color key="contentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="contentTintColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 <connections>
                                                     <action selector="notifyButtonChanged:" target="Csf-nd-wgb" id="SU2-h5-XU5"/>
                                                 </connections>
@@ -1497,7 +1499,7 @@
                                                 <rect key="frame" x="176" y="0.0" width="84" height="24"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="SLUG-INDICATE-LABEL" id="AAb-03-OiY">
                                                     <font key="font" metaFont="systemBold" size="16"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
@@ -1505,7 +1507,7 @@
                                                 <rect key="frame" x="264" y="0.0" width="85" height="24"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="SLUG-EX-LABEL" id="7ar-SO-WwM">
                                                     <font key="font" metaFont="systemBold" size="16"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
@@ -1541,7 +1543,7 @@
                                                 </constraints>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="SLUG-VALUE-LABEL" id="mwA-hH-MG8">
                                                     <font key="font" metaFont="systemBold" size="20"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
@@ -1581,23 +1583,12 @@
                                         </constraints>
                                         <textFieldCell key="cell" lineBreakMode="charWrapping" id="ufr-ng-tdO">
                                             <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GmL-0W-tEV">
-                                        <rect key="frame" x="-2" y="345" width="351" height="23"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="23" id="1ca-4n-hrJ"/>
-                                        </constraints>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="SLUG-WRITE-TEXT-FIELD-LABEL" id="pB2-89-m2W">
-                                            <font key="font" metaFont="systemBold" size="20"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <scrollView borderType="line" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kg9-2A-Bs8">
-                                        <rect key="frame" x="0.0" y="237" width="347" height="100"/>
+                                    <scrollView appearanceType="darkAqua" borderType="line" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kg9-2A-Bs8">
+                                        <rect key="frame" x="0.0" y="268" width="347" height="100"/>
                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="J9X-Qj-h3u">
                                             <rect key="frame" x="1" y="1" width="345" height="98"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1605,26 +1596,38 @@
                                                 <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="vng-ok-T4g">
                                                     <rect key="frame" x="0.0" y="0.0" width="345" height="98"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" white="1" alpha="0.1522902397" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="minSize" width="345" height="98"/>
                                                     <size key="maxSize" width="1774" height="10000000"/>
                                                     <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 </textView>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="0.1522902397" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </clipView>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="ipu-8y-rD6"/>
                                         </constraints>
-                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="8Qt-JZ-gta">
+                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="8Qt-JZ-gta" customClass="MacOS_TransparentScroller" customModule="Blue_Van_Clef__MacOS_" customModuleProvider="target">
                                             <rect key="frame" x="-100" y="-100" width="225" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
-                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="zzZ-W2-fmc">
+                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="zzZ-W2-fmc" customClass="MacOS_TransparentScroller" customModule="Blue_Van_Clef__MacOS_" customModuleProvider="target">
                                             <rect key="frame" x="1759" y="0.0" width="15" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GmL-0W-tEV">
+                                        <rect key="frame" x="-2" y="237" width="351" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="1ca-4n-hrJ"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="SLUG-WRITE-TEXT-FIELD-LABEL" id="pB2-89-m2W">
+                                            <font key="font" metaFont="systemBold" size="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                     <stackView distribution="fillEqually" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGJ-SK-oLc">
                                         <rect key="frame" x="0.0" y="208" width="347" height="21"/>
                                         <subviews>
