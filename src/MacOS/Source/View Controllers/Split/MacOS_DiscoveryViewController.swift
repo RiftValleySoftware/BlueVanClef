@@ -27,8 +27,13 @@ import RVS_BlueThoth
 // MARK: - Button With Attached Discovery Data -
 /* ###################################################################################################################################### */
 /**
+ This is a subclass of the standard button class, allowing us to attach a device discovery record.
  */
 class MacOS_Clicker: NSButton {
+    /* ################################################################## */
+    /**
+     This is how we associate a device with a connect/disconnect button.
+     */
     var discoveryInfo: RVS_BlueThoth.DiscoveryData?
 }
 
@@ -196,6 +201,9 @@ extension MacOS_DiscoveryViewController {
 
     /* ################################################################## */
     /**
+     This creates a single device row for the given index (in the sorted staged peripherals list).
+     
+     - parameter inRow: The 0-based index of the staged Discovery Info.
      */
     private func _createTableRowViewFor(_ inRow: Int) {
         /* ################################################################## */
@@ -220,6 +228,7 @@ extension MacOS_DiscoveryViewController {
         
         guard !discoveryText.isEmpty else { return }
         
+        // The first item is the name of the device, in a label.
         let deviceNameLabel = NSTextField(labelWithString: _stagedDeviceName(inRow))
         deviceNameLabel.font = NSFont.boldSystemFont(ofSize: CGFloat(headerRowFontSize))
         deviceNameLabel.allowsDefaultTighteningForTruncation = true
@@ -234,8 +243,8 @@ extension MacOS_DiscoveryViewController {
         deviceNameLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 0).isActive = true
         deviceNameLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: 0).isActive = true
 
-        if  !(centralManager?.isScanning ?? true),
-            peripheralDiscoveryInfo.canConnect {
+        // We display a connect/disconnect button, if we can connect.
+        if peripheralDiscoveryInfo.canConnect {
             let connectButton = MacOS_Clicker()
             connectButton.setButtonType(.momentaryPushIn)
             connectButton.bezelStyle = .inline
@@ -252,22 +261,25 @@ extension MacOS_DiscoveryViewController {
             connectButton.discoveryInfo = peripheralDiscoveryInfo
             connectButton.target = self
             connectButton.action = #selector(connectButtonHit(_:))
+            
             stackView.addArrangedSubview(connectButton)
             connectButton.translatesAutoresizingMaskIntoConstraints = false
             connectButton.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 0).isActive = true
             connectButton.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: 0).isActive = true
         }
 
+        // And lastly, we have an extended label, with the parsed and rendered discovery information.
         let deviceInfoLabel = NSTextField(labelWithString: discoveryText.joined(separator: "\n"))
         deviceInfoLabel.font = NSFont.systemFont(ofSize: CGFloat(infoRowFontSize))
         deviceInfoLabel.allowsDefaultTighteningForTruncation = true
         deviceInfoLabel.textColor = (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) ? .blue : .white
+        deviceInfoLabel.maximumNumberOfLines = 0
+        
+        // If we are the Chosen One, then we must wear white.
         if selectedDevice?.identifier == peripheralDiscoveryInfo.identifier {
             deviceInfoLabel.backgroundColor = .white
             deviceInfoLabel.drawsBackground = true
         }
-        
-        deviceInfoLabel.maximumNumberOfLines = 0
         
         stackView.addArrangedSubview(deviceInfoLabel)
         deviceInfoLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -277,6 +289,7 @@ extension MacOS_DiscoveryViewController {
     
     /* ################################################################## */
     /**
+     This wipes and reloads the deive list stack view.
      */
     private func _reloadStackView() {
         guard let stackView = stackView else { return }
@@ -350,8 +363,8 @@ extension MacOS_DiscoveryViewController {
      - parameter inSwitch: The switch object.
      */
     @IBAction func scanningChanged(_ inSwitch: NSSegmentedControl) {
-        mainSplitView?.collapseSplit()
         selectedDevice = nil
+        mainSplitView?.collapseSplit()
         
         if ScanningModeSwitchValues.notScanning.rawValue == inSwitch.selectedSegment {
             centralManager?.stopScanning()
@@ -363,8 +376,6 @@ extension MacOS_DiscoveryViewController {
             centralManager?.allowEmptyNames = prefs.allowEmptyNames
             centralManager?.startScanning(duplicateFilteringIsOn: prefs.continuouslyUpdatePeripherals)
         }
-        
-        updateUI()
     }
 
     /* ################################################################## */
@@ -374,30 +385,29 @@ extension MacOS_DiscoveryViewController {
      - parameter: ignored
      */
     @IBAction func reloadButtonHit(_: NSButton) {
-        mainSplitView?.collapseSplit()
         selectedDevice = nil
+        mainSplitView?.collapseSplit()
         centralManager?.startOver()
-        updateUI()
     }
     
     /* ################################################################## */
     /**
+     Called when the Connect/Disconnect button is hit.
+     
+     - parameter inButton: The button, cast to our special class that associates a device.
      */
     @IBAction func connectButtonHit(_ inButton: MacOS_Clicker) {
-        if  !(centralManager?.isScanning ?? true),
-            let discoveryInfo = inButton.discoveryInfo {
-            let wasConnected = discoveryInfo.identifier == selectedDevice?.identifier
+        if  let discoveryInfo = inButton.discoveryInfo {
+            let wasSelected = discoveryInfo.identifier == selectedDevice?.identifier
             discoveryInfo.disconnect()
             selectedDevice = nil
-            _reloadStackView()
-            MacOS_AppDelegate.appDelegateObject.collapseSplit()
-            if  !wasConnected,
+            mainSplitView?.collapseSplit()
+            if  !wasSelected,
                 let newController = storyboard?.instantiateController(withIdentifier: MacOS_PeripheralViewController.storyboardID) as? MacOS_PeripheralViewController {
                 selectedDevice = discoveryInfo
                 newController.peripheralInstance = discoveryInfo
                 mainSplitView?.setPeripheralViewController(newController)
             }
-            _reloadStackView()
         }
     }
 }
@@ -415,7 +425,11 @@ extension MacOS_DiscoveryViewController: MacOS_ControllerList_Protocol {
         scanningModeSegmentedSwitch?.isHidden = !(noBTImage?.isHidden ?? false)
         scrollView?.isHidden = !(noBTImage?.isHidden ?? false)
         reloadButton?.isHidden = sortedPeripherals.isEmpty
-        scanningModeSegmentedSwitch?.setSelected(true, forSegment: (centralManager?.isScanning ?? false) ? ScanningModeSwitchValues.scanning.rawValue : ScanningModeSwitchValues.notScanning.rawValue)
+        
+        if !(centralManager?.isScanning ?? false) {
+            scanningModeSegmentedSwitch?.selectedSegment = ScanningModeSwitchValues.notScanning.rawValue
+        }
+        
         setUpAccessibility()
         _reloadStackView()
     }

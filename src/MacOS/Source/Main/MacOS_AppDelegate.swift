@@ -244,8 +244,9 @@ extension MacOS_AppDelegate: CGA_BlueThoth_Delegate {
      - parameter from: The Central instance that experienced the error.
      */
     func handleError(_ inError: CGA_Errors, from inCentralInstance: RVS_BlueThoth) {
-        Self.displayAlert(header: "SLUG-ERROR".localizedVariant, message: String(describing: inError.layeredDescription))
+        inCentralInstance.stopScanning()
         collapseSplit()
+        Self.displayAlert(header: "SLUG-ERROR".localizedVariant, message: String(describing: inError.layeredDescription))
     }
     
     /* ################################################################## */
