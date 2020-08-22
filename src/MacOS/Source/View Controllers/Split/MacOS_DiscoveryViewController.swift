@@ -276,7 +276,12 @@ extension MacOS_DiscoveryViewController {
         let deviceInfoLabel = NSTextField(labelWithString: discoveryText.joined(separator: "\n"))
         deviceInfoLabel.font = NSFont.systemFont(ofSize: CGFloat(infoRowFontSize))
         deviceInfoLabel.allowsDefaultTighteningForTruncation = true
-        deviceInfoLabel.textColor = .white
+        deviceInfoLabel.textColor = (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) ? .blue : .white
+        if selectedDevice?.identifier == peripheralDiscoveryInfo.identifier {
+            deviceInfoLabel.backgroundColor = .white
+            deviceInfoLabel.drawsBackground = true
+        }
+        
         deviceInfoLabel.maximumNumberOfLines = 0
         
         stackView.addArrangedSubview(deviceInfoLabel)
