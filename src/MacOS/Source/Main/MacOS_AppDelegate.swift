@@ -200,8 +200,20 @@ extension MacOS_AppDelegate {
      - parameter inScreenID: A String, with the unique ID of the screen.
      */
     func updateScreen(_ inScreenID: String) {
-        for screen in self.screenList where inScreenID == screen.key {
+        for screen in screenList where inScreenID == screen.key {
             screen.updateUI()
+        }
+    }
+    
+    /* ################################################################## */
+    /**
+     This closes any open screens, and disconnects any connected Peripherals.
+     */
+    func collapseSplit() {
+        for screen in screenList where Self.deviceScreenID == screen.key {
+            if let screen = screen as? MacOS_DiscoveryViewController {
+                screen.mainSplitView.collapseSplit()
+            }
         }
     }
 }
@@ -219,6 +231,7 @@ extension MacOS_AppDelegate: CGA_BlueThoth_Delegate {
      */
     func handleError(_ inError: CGA_Errors, from inCentralInstance: RVS_BlueThoth) {
         Self.displayAlert(header: "SLUG-ERROR".localizedVariant, message: String(describing: inError.layeredDescription))
+        collapseSplit()
     }
     
     /* ################################################################## */
