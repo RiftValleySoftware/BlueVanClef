@@ -963,37 +963,21 @@
         <scene sceneID="kjr-EF-bVD">
             <objects>
                 <viewController title="SLUG-PREFERENCES" showSeguePresentationStyle="single" id="CBu-yz-Vwg" userLabel="Preferences Screen" customClass="MacOS_PreferencesViewController" customModule="Blue_Van_Clef__MacOS_" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="6nf-9I-pQU">
-                        <rect key="frame" x="0.0" y="0.0" width="699" height="533"/>
+                    <view key="view" misplaced="YES" id="6nf-9I-pQU">
+                        <rect key="frame" x="0.0" y="0.0" width="699" height="498"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="tcx-Cq-9iu" userLabel="Background Gradient Image View">
-                                <rect key="frame" x="0.0" y="0.0" width="699" height="533"/>
+                                <rect key="frame" x="0.0" y="0.0" width="699" height="498"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="topLeft" imageScaling="axesIndependently" image="BackgroundGradient" id="5uW-61-H9T"/>
                             </imageView>
                             <imageView horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" alphaValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="bhN-dy-Nzt" userLabel="BlueThoth Logo Image View">
-                                <rect key="frame" x="172" y="107" width="356" height="319"/>
+                                <rect key="frame" x="172" y="100" width="356" height="298"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="BluetoothClef" id="Ccb-bi-kdb"/>
                             </imageView>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VgG-dX-lwB">
-                                <rect key="frame" x="20" y="20" width="659" height="493"/>
+                                <rect key="frame" x="20" y="20" width="659" height="458"/>
                                 <subviews>
-                                    <button verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="xN5-cM-y5g">
-                                        <rect key="frame" x="-2" y="464" width="663" height="31"/>
-                                        <buttonCell key="cell" type="check" title="SLUG-IGNORE-DUPES" bezelStyle="regularSquare" imagePosition="right" alignment="right" state="on" borderStyle="border" inset="2" id="70Q-YH-bLx">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="systemBold" size="16"/>
-                                        </buttonCell>
-                                        <color key="contentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <action selector="updateUI:" target="CBu-yz-Vwg" id="hSH-MF-Lkh"/>
-                                            <binding destination="CBu-yz-Vwg" name="value" keyPath="prefs.continuouslyUpdatePeripherals" id="5i9-np-acI">
-                                                <dictionary key="options">
-                                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                                </dictionary>
-                                            </binding>
-                                        </connections>
-                                    </button>
                                     <button verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="xmJ-pV-SgO">
                                         <rect key="frame" x="-2" y="429" width="663" height="31"/>
                                         <buttonCell key="cell" type="check" title="SLUG-CONNECTED-ONLY" bezelStyle="regularSquare" imagePosition="right" alignment="right" state="on" borderStyle="border" inset="2" id="IPE-SG-bJo">
@@ -1238,14 +1222,12 @@
                                     <constraint firstItem="hUU-Zc-Q1f" firstAttribute="leading" secondItem="VgG-dX-lwB" secondAttribute="leading" id="R8Y-Ef-d36"/>
                                     <constraint firstItem="jJm-EQ-vyk" firstAttribute="leading" secondItem="VgG-dX-lwB" secondAttribute="leading" id="Yi9-QB-Mad"/>
                                     <constraint firstItem="PQf-uw-6zX" firstAttribute="leading" secondItem="VgG-dX-lwB" secondAttribute="leading" id="YwI-n3-bGS"/>
-                                    <constraint firstAttribute="trailing" secondItem="xN5-cM-y5g" secondAttribute="trailing" id="ail-oh-0se"/>
                                     <constraint firstItem="VO1-GE-3O0" firstAttribute="leading" secondItem="VgG-dX-lwB" secondAttribute="leading" id="bDp-w8-cp7"/>
                                     <constraint firstAttribute="trailing" secondItem="uP3-hN-TaA" secondAttribute="trailing" id="ckj-WS-Acf"/>
                                     <constraint firstAttribute="trailing" secondItem="AFc-Lc-ebR" secondAttribute="trailing" id="fKF-3g-s1Q"/>
                                     <constraint firstAttribute="trailing" secondItem="98c-2c-eBL" secondAttribute="trailing" id="kH6-du-E3v"/>
                                     <constraint firstItem="Wp4-yG-5Og" firstAttribute="leading" secondItem="VgG-dX-lwB" secondAttribute="leading" id="nZb-Vs-jw0"/>
                                     <constraint firstItem="3Ie-KS-kWh" firstAttribute="leading" secondItem="VgG-dX-lwB" secondAttribute="leading" id="s8n-t0-T60"/>
-                                    <constraint firstItem="xN5-cM-y5g" firstAttribute="leading" secondItem="VgG-dX-lwB" secondAttribute="leading" id="uiN-d7-SY8"/>
                                 </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
@@ -1261,10 +1243,8 @@
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
-                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
@@ -1304,7 +1284,6 @@
                         <outlet property="deviceFilterTextView" destination="aVA-8t-kY8" id="SKe-XH-MGr"/>
                         <outlet property="deviceFiltersLabel" destination="Nib-WA-dw0" id="pUm-4D-NNL"/>
                         <outlet property="filterUUIDsLabel" destination="gZj-KC-rFG" id="OYz-o1-lzB"/>
-                        <outlet property="ignoreDupesCheckbox" destination="xN5-cM-y5g" id="Rka-at-Xnl"/>
                         <outlet property="maximumRSSIFixedLabel" destination="Wce-qs-mrl" id="sBX-L9-62Y"/>
                         <outlet property="minimumRSSIFixedLabel" destination="HaJ-mo-h24" id="nnF-k6-QxB"/>
                         <outlet property="minimumRSSILabel" destination="CWz-7w-jCz" id="X8i-Tx-FGC"/>
@@ -1379,28 +1358,14 @@
                                 <rect key="frame" x="96" y="54" width="288" height="162"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="BluetoothClef" id="V1W-3S-jNC"/>
                             </imageView>
-                            <button hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Lyu-3q-kRA">
-                                <rect key="frame" x="158" y="222" width="165" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" placeholder="YES" id="Fg0-Cs-88y"/>
-                                </constraints>
-                                <buttonCell key="cell" type="push" title="SLUG-DISCONNECT" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OUX-a6-vbC">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="disconnectThisPeripheral:" target="VCc-zN-6TJ" id="qqV-gn-rPr"/>
-                                </connections>
-                            </button>
-                            <scrollView hidden="YES" fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDr-Aj-TUi">
-                                <rect key="frame" x="20" y="19" width="440" height="197"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <scrollView hidden="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDr-Aj-TUi">
+                                <rect key="frame" x="20" y="20" width="440" height="230"/>
                                 <clipView key="contentView" drawsBackground="NO" id="uJA-N4-jo4">
-                                    <rect key="frame" x="0.0" y="0.0" width="440" height="197"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="440" height="230"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" id="FUm-0T-CYy">
-                                            <rect key="frame" x="0.0" y="0.0" width="440" height="197"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="440" height="230"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1456,24 +1421,23 @@
                             </progressIndicator>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Lyu-3q-kRA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y77-qu-InE" secondAttribute="leading" constant="20" id="2E0-Td-D85"/>
+                            <constraint firstItem="RDr-Aj-TUi" firstAttribute="leading" secondItem="y77-qu-InE" secondAttribute="leading" constant="20" id="8aT-Da-rKd"/>
                             <constraint firstItem="172-ox-J2S" firstAttribute="centerX" secondItem="y77-qu-InE" secondAttribute="centerX" id="9Lt-8m-LlX"/>
                             <constraint firstItem="172-ox-J2S" firstAttribute="height" relation="lessThanOrEqual" secondItem="heA-dk-G5p" secondAttribute="height" multiplier="0.6" id="H6Z-Zh-7jM"/>
+                            <constraint firstItem="RDr-Aj-TUi" firstAttribute="top" secondItem="y77-qu-InE" secondAttribute="top" constant="20" id="IMS-gK-TTU"/>
                             <constraint firstItem="heA-dk-G5p" firstAttribute="leading" secondItem="y77-qu-InE" secondAttribute="leading" id="QaM-j0-uLf"/>
                             <constraint firstItem="7hm-rD-EpR" firstAttribute="centerY" secondItem="y77-qu-InE" secondAttribute="centerY" id="UMc-wV-zwg"/>
+                            <constraint firstAttribute="trailing" secondItem="RDr-Aj-TUi" secondAttribute="trailing" constant="20" id="Vsh-mc-AY2"/>
                             <constraint firstItem="172-ox-J2S" firstAttribute="centerY" secondItem="y77-qu-InE" secondAttribute="centerY" id="eNo-E1-iZP"/>
+                            <constraint firstAttribute="bottom" secondItem="RDr-Aj-TUi" secondAttribute="bottom" constant="20" id="ftS-Ni-ITx"/>
                             <constraint firstItem="7hm-rD-EpR" firstAttribute="centerX" secondItem="y77-qu-InE" secondAttribute="centerX" id="hbo-1N-Wks"/>
-                            <constraint firstItem="Lyu-3q-kRA" firstAttribute="centerX" secondItem="y77-qu-InE" secondAttribute="centerX" id="kq4-Jf-YTg"/>
                             <constraint firstAttribute="trailing" secondItem="heA-dk-G5p" secondAttribute="trailing" id="oUo-x5-7hK"/>
-                            <constraint firstItem="Lyu-3q-kRA" firstAttribute="top" secondItem="y77-qu-InE" secondAttribute="top" constant="20" id="rjz-wb-w7n"/>
                             <constraint firstAttribute="bottom" secondItem="heA-dk-G5p" secondAttribute="bottom" id="rte-OQ-Thh"/>
                             <constraint firstItem="heA-dk-G5p" firstAttribute="top" secondItem="y77-qu-InE" secondAttribute="top" id="ugj-Vb-4bu"/>
                             <constraint firstItem="172-ox-J2S" firstAttribute="width" relation="lessThanOrEqual" secondItem="heA-dk-G5p" secondAttribute="width" multiplier="0.6" id="vqr-0o-zWN"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lyu-3q-kRA" secondAttribute="trailing" constant="20" id="yIu-qj-aAR"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="disconnectButton" destination="Lyu-3q-kRA" id="mPX-Ks-C1z"/>
                         <outlet property="loadingSpinner" destination="7hm-rD-EpR" id="KWu-Bj-8Lh"/>
                         <outlet property="serviceTableContainerView" destination="RDr-Aj-TUi" id="T8m-ch-0eX"/>
                         <outlet property="serviceTableView" destination="FUm-0T-CYy" id="ato-py-4Y1"/>

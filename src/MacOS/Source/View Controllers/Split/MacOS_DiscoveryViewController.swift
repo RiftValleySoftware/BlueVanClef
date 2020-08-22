@@ -235,45 +235,47 @@ extension MacOS_DiscoveryViewController {
         
         guard !discoveryText.isEmpty else { return }
         
-        var labelFrame = stackView.bounds
-        labelFrame.size.height = CGFloat(headerRowFontSize + (headerPadding * 2))
+        let deviceNameLabel = NSTextField(labelWithString: _stagedDeviceName(inRow))
+        deviceNameLabel.font = NSFont.boldSystemFont(ofSize: CGFloat(headerRowFontSize))
+        deviceNameLabel.allowsDefaultTighteningForTruncation = true
+        deviceNameLabel.textColor = .blue
+        deviceNameLabel.alignment = .center
+        deviceNameLabel.backgroundColor = .white
+        deviceNameLabel.drawsBackground = true
+        deviceNameLabel.maximumNumberOfLines = 0
         
-        let deviceNameButton = MacOS_Clicker(frame: labelFrame)
-        deviceNameButton.setButtonType(.momentaryPushIn)
-        deviceNameButton.bezelStyle = .rounded
-        deviceNameButton.title = _stagedDeviceName(inRow)
+        stackView.addArrangedSubview(deviceNameLabel)
+        deviceNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        deviceNameLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 0).isActive = true
+        deviceNameLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: 0).isActive = true
 
-        if (centralManager?.isScanning ?? true) || (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) || !peripheralDiscoveryInfo.canConnect {
-            deviceNameButton.isEnabled = false
-        } else {
-            deviceNameButton.isEnabled = true
-            deviceNameButton.discoveryInfo = peripheralDiscoveryInfo
-            deviceNameButton.target = self
-            deviceNameButton.action = #selector(rowTapped(_:))
+        if  !(centralManager?.isScanning ?? true),
+            peripheralDiscoveryInfo.canConnect {
+            let connectButton = MacOS_Clicker()
+            connectButton.setButtonType(.momentaryPushIn)
+            connectButton.bezelStyle = .inline
+            connectButton.title = ("SLUG-" + (peripheralDiscoveryInfo.isConnected ? "DIS" : "") + "CONNECT").localizedVariant
+            connectButton.contentTintColor = .blue
+            connectButton.bezelColor = .white
+            connectButton.discoveryInfo = peripheralDiscoveryInfo
+            connectButton.target = self
+            connectButton.action = #selector(connectButtonHit(_:))
+            stackView.addArrangedSubview(connectButton)
+            connectButton.translatesAutoresizingMaskIntoConstraints = false
+            connectButton.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 0).isActive = true
+            connectButton.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: 0).isActive = true
         }
-
-        stackView.addArrangedSubview(deviceNameButton)
 
         let deviceInfoLabel = NSTextField(labelWithString: discoveryText.joined(separator: "\n"))
         deviceInfoLabel.font = NSFont.systemFont(ofSize: CGFloat(infoRowFontSize))
         deviceInfoLabel.allowsDefaultTighteningForTruncation = true
         deviceInfoLabel.textColor = .white
-        deviceInfoLabel.maximumNumberOfLines = discoveryText.count
-        deviceInfoLabel.frame = stackView.bounds
-        deviceInfoLabel.frame.size.height = CGFloat(discoveryText.count * (infoRowFontSize + (infoPadding * 2)))
-        
-        if (centralManager?.isScanning ?? true) || (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) || !peripheralDiscoveryInfo.canConnect {
-            deviceInfoLabel.isEnabled = selectedDevice?.identifier == peripheralDiscoveryInfo.identifier
-            deviceInfoLabel.textColor = (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) ? .blue : NSColor.white.withAlphaComponent(0.5)
-            if selectedDevice?.identifier == peripheralDiscoveryInfo.identifier {
-                deviceInfoLabel.backgroundColor = .white
-                deviceInfoLabel.drawsBackground = true
-            }
-        } else {
-            deviceInfoLabel.isEnabled = true
-        }
+        deviceInfoLabel.maximumNumberOfLines = 0
         
         stackView.addArrangedSubview(deviceInfoLabel)
+        deviceInfoLabel.translatesAutoresizingMaskIntoConstraints = false
+        deviceInfoLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 0).isActive = true
+        deviceInfoLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: 0).isActive = true
     }
     
     /* ################################################################## */
@@ -384,16 +386,16 @@ extension MacOS_DiscoveryViewController {
     /* ################################################################## */
     /**
      */
-    @IBAction func rowTapped(_ inButton: MacOS_Clicker) {
+    @IBAction func connectButtonHit(_ inButton: MacOS_Clicker) {
         if  !(centralManager?.isScanning ?? true),
-            let discoveryInfo = inButton.discoveryInfo,
-            !discoveryInfo.identifier.isEmpty,
-            discoveryInfo.canConnect,
-            (nil == selectedDevice) || (selectedDevice?.identifier != discoveryInfo.identifier) {
+            let discoveryInfo = inButton.discoveryInfo {
+            let wasConnected = discoveryInfo.isConnected
+            discoveryInfo.disconnect()
             mainSplitView?.collapseSplit()
             selectedDevice = discoveryInfo
             _reloadStackView()
-            if  let newController = storyboard?.instantiateController(withIdentifier: MacOS_PeripheralViewController.storyboardID) as? MacOS_PeripheralViewController {
+            if  !wasConnected,
+                let newController = storyboard?.instantiateController(withIdentifier: MacOS_PeripheralViewController.storyboardID) as? MacOS_PeripheralViewController {
                 newController.peripheralInstance = discoveryInfo
                 mainSplitView?.setPeripheralViewController(newController)
             }

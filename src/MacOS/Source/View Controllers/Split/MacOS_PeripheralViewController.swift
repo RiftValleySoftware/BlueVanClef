@@ -81,11 +81,6 @@ class MacOS_PeripheralViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_Spli
      This is the spinner that is displayed while the device is being connected.
      */
     @IBOutlet weak var loadingSpinner: NSProgressIndicator!
-    
-    /* ################################################################## */
-    /**
-     */
-    @IBOutlet weak var disconnectButton: NSButton!
 }
 
 /* ###################################################################################################################################### */
@@ -201,7 +196,6 @@ extension MacOS_PeripheralViewController {
      */
     override func viewDidLoad() {
         super.viewDidLoad()
-        disconnectButton?.title = (disconnectButton?.title ?? "").localizedVariant
         setUpAccessibility()
     }
     
@@ -241,9 +235,6 @@ extension MacOS_PeripheralViewController {
     override func setUpAccessibility() {
         loadingSpinner?.setAccessibilityLabel("SLUG-ACC-CONNECTING-LABEL".localizedVariant)
         loadingSpinner?.toolTip = "SLUG-ACC-CONNECTING-LABEL".localizedVariant
-        
-        disconnectButton?.setAccessibilityLabel("SLUG-ACC-DISCONNECT-LABEL".localizedVariant)
-        disconnectButton?.toolTip = "SLUG-ACC-DISCONNECT-LABEL".localizedVariant
     }
 }
 
@@ -264,19 +255,16 @@ extension MacOS_PeripheralViewController: MacOS_ControllerList_Protocol {
     func updateUI() {
         guard let device = peripheralInstance else {
             stopLoadingAnimation()
-            disconnectButton?.isHidden = true
             serviceTableContainerView?.isHidden = true
             return
         }
         
         if device.isConnected {
             stopLoadingAnimation()
-            disconnectButton?.isHidden = false
             serviceTableContainerView?.isHidden = false
             _buildTableMap()
         } else {
             serviceTableContainerView?.isHidden = true
-            disconnectButton?.isHidden = true
             startLoadingAnimation()
             _tableMap = [:]
         }
