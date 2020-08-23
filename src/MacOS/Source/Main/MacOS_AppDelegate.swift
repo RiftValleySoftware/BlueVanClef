@@ -377,7 +377,11 @@ extension MacOS_AppDelegate: CGA_BlueThoth_Delegate {
      */
     func centralManager(_ inCentralManager: RVS_BlueThoth, device inPeripheral: CGA_Bluetooth_Peripheral, service inService: CGA_Bluetooth_Service, characteristicWriteComplete inCharacteristic: CGA_Bluetooth_Characteristic) {
         inCharacteristic.forEach { $0.readValue() }
-        Self.displayAlert(header: "WRITE-RESPONSE".localizedVariant)
+        for screen in screenList where inCharacteristic.id == screen.key {
+            if let screen = screen as? MacOS_CharacteristicViewController {
+                screen.confirmWriteResponse()
+            }
+        }
     }
     
     /* ################################################################## */

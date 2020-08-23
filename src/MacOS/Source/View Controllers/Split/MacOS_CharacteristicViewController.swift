@@ -140,6 +140,12 @@ class MacOS_CharacteristicViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_
     
     /* ################################################################## */
     /**
+     This label is displayed to indicate a successful write.
+     */
+    @IBOutlet weak var writeConfirmationLabel: NSTextField!
+    
+    /* ################################################################## */
+    /**
      This allows you to wipe the value, and start over.
      */
     @IBOutlet weak var refreshButton: NSButton!
@@ -321,6 +327,7 @@ extension MacOS_CharacteristicViewController {
      */
     func setWriteItemsVisibility() {
         if characteristicInstance?.canWrite ?? false {
+            writeConfirmationLabel?.isHidden = true
             writeTextFieldLabelContainer?.isHidden = false
             writeTextViewContainer?.isHidden = false
             sendButtonContainer?.isHidden = false
@@ -342,6 +349,14 @@ extension MacOS_CharacteristicViewController {
             sendButtonContainer?.isHidden = true
         }
     }
+    
+    /* ################################################################## */
+    /**
+     Called to display the write confirmation.
+     */
+    func confirmWriteResponse() {
+        writeConfirmationLabel?.isHidden = false
+    }
 }
 
 /* ###################################################################################################################################### */
@@ -362,6 +377,7 @@ extension MacOS_CharacteristicViewController {
         sendResponseButtonText?.title = (sendResponseButtonText?.title ?? "ERROR").localizedVariant
         valueTextFieldLabel?.stringValue = (valueTextFieldLabel?.stringValue ?? "ERROR").localizedVariant
         writeTextFieldLabel?.stringValue = (writeTextFieldLabel?.stringValue ?? "ERROR").localizedVariant
+        writeConfirmationLabel?.stringValue = (writeConfirmationLabel?.stringValue ?? "ERROR").localizedVariant
         notifyButton?.state = (characteristicInstance?.isNotifying ?? false) ? .on : .off
 
         setUpAccessibility()
