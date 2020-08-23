@@ -9,7 +9,7 @@
         <!--SLUG-DEVICES-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="SLUG-DEVICES" backgroundImage="BackgroundGradient" id="AgC-eL-Hgc" customClass="CGA_WatchOS_MainInterfaceController" customModule="Blue_Van_Clef_WatchKit_Extension">
+                <controller title="SLUG-DEVICES" backgroundImage="BackgroundGradient" id="AgC-eL-Hgc" customClass="CGA_WatchOS_MainInterfaceController" customModule="Blue_Van_Clef_Extension">
                     <items>
                         <imageView width="100" height="100" alignment="center" verticalAlignment="center" image="NoBT" id="3SO-EZ-3zF"/>
                         <button width="30" height="30" alignment="right" verticalAlignment="bottom" alpha="0.5" backgroundImage="ellipsis.circle.fill" catalog="system" id="Ol8-Ij-rQ6">
@@ -61,7 +61,7 @@
         <!--WatchOS Prefs Interface Controller-->
         <scene sceneID="gJy-fj-2qq">
             <objects>
-                <controller id="Im9-Lv-tgM" customClass="CGA_WatchOS_PrefsInterfaceController" customModule="Blue_Van_Clef_WatchKit_Extension">
+                <controller id="Im9-Lv-tgM" customClass="CGA_WatchOS_PrefsInterfaceController" customModule="Blue_Van_Clef_Extension">
                     <items>
                         <switch width="1" alignment="left" title="SLUG-CONNECTED-ONLY" id="Wga-Gi-NdI">
                             <connections>
@@ -105,7 +105,7 @@
         <!--Device-Screen-->
         <scene sceneID="UxI-nT-USb">
             <objects>
-                <controller identifier="Device-Screen" backgroundImage="BackgroundGradient" id="Nkb-53-HMU" customClass="CGA_WatchOS_DiscoveryInterfaceController" customModule="Blue_Van_Clef_WatchKit_Extension">
+                <controller identifier="Device-Screen" backgroundImage="BackgroundGradient" id="Nkb-53-HMU" customClass="CGA_WatchOS_DiscoveryInterfaceController" customModule="Blue_Van_Clef_Extension">
                     <items>
                         <button width="1" alignment="left" title="SLUG-CONNECT" id="vn1-qE-crI">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,7 +128,7 @@
         <!--About Screen-->
         <scene sceneID="vAR-EX-D6M">
             <objects>
-                <controller title="About Screen" backgroundImage="BackgroundGradient" id="ILa-BV-QCa" customClass="CGA_WatchOS_AboutInterfaceController" customModule="Blue_Van_Clef_WatchKit_Extension">
+                <controller title="About Screen" backgroundImage="BackgroundGradient" id="ILa-BV-QCa" customClass="CGA_WatchOS_AboutInterfaceController" customModule="Blue_Van_Clef_Extension">
                     <items>
                         <label width="1" alignment="left" text="Label" textAlignment="center" id="1z7-nY-756">
                             <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
@@ -146,7 +146,7 @@
         <!--Connected Device Screen-->
         <scene sceneID="oNp-XT-HEc">
             <objects>
-                <controller identifier="Connected-Device-Screen" backgroundImage="BackgroundGradient" fullBounds="YES" id="s4R-NB-7GP" userLabel="Connected Device Screen" customClass="CGA_WatchOS_DeviceInterfaceController" customModule="Blue_Van_Clef_WatchKit_Extension">
+                <controller identifier="Connected-Device-Screen" backgroundImage="BackgroundGradient" fullBounds="YES" id="s4R-NB-7GP" userLabel="Connected Device Screen" customClass="CGA_WatchOS_DeviceInterfaceController" customModule="Blue_Van_Clef_Extension">
                     <items>
                         <label width="1" alignment="center" verticalAlignment="center" text="SLUG-CONNECTING" textAlignment="center" id="U2K-bl-slL">
                             <color key="textColor" red="1" green="0.97192197729999996" blue="0.33470388369999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -154,7 +154,7 @@
                         </label>
                         <table alignment="left" id="CkK-cX-MQ8">
                             <items>
-                                <tableRow identifier="CGA_WatchOS_ServiceTableController" id="cKw-Qg-Wuf" customClass="CGA_WatchOS_ServiceTableController" customModule="Blue_Van_Clef_WatchKit_Extension">
+                                <tableRow identifier="CGA_WatchOS_ServiceTableController" id="cKw-Qg-Wuf" customClass="CGA_WatchOS_ServiceTableController" customModule="Blue_Van_Clef_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="Eyv-F3-qdV">
                                         <items>
                                             <label width="1" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="5mQ-8P-6nh"/>
@@ -179,11 +179,11 @@
         <!--Service Details Screen-->
         <scene sceneID="vpn-a4-0An">
             <objects>
-                <controller identifier="Service-Details-Screen" title="Service Details Screen" backgroundImage="BackgroundGradient" id="k70-7h-bDn" customClass="CGA_WatchOS_ServiceInterfaceController" customModule="Blue_Van_Clef_WatchKit_Extension">
+                <controller identifier="Service-Details-Screen" title="Service Details Screen" backgroundImage="BackgroundGradient" id="k70-7h-bDn" customClass="CGA_WatchOS_ServiceInterfaceController" customModule="Blue_Van_Clef_Extension">
                     <items>
                         <table alignment="left" id="CHh-nW-qEK">
                             <items>
-                                <tableRow identifier="CGA_WatchOS_CharacteristicTableController" id="0iq-yk-Sko" customClass="CGA_WatchOS_CharacteristicTableController" customModule="Blue_Van_Clef_WatchKit_Extension">
+                                <tableRow identifier="CGA_WatchOS_CharacteristicTableController" id="0iq-yk-Sko" customClass="CGA_WatchOS_CharacteristicTableController" customModule="Blue_Van_Clef_Extension">
                                     <group key="rootItem" width="1" alignment="left" layout="overlap" id="ufC-T4-6aR">
                                         <items>
                                             <label width="1" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="mHI-Vu-nz5"/>
@@ -207,11 +207,11 @@
         <!--Characteristic Details-->
         <scene sceneID="t9r-v2-sQl">
             <objects>
-                <controller identifier="CGA_WatchOS_CharacteristicViewController" title="Characteristic Details" backgroundImage="BackgroundGradient" id="3lU-Hc-S5H" customClass="CGA_WatchOS_CharacteristicInterfaceController" customModule="Blue_Van_Clef_WatchKit_Extension">
+                <controller identifier="CGA_WatchOS_CharacteristicViewController" title="Characteristic Details" backgroundImage="BackgroundGradient" id="3lU-Hc-S5H" customClass="CGA_WatchOS_CharacteristicInterfaceController" customModule="Blue_Van_Clef_Extension">
                     <items>
                         <table alignment="left" id="zZ9-G4-weG">
                             <items>
-                                <tableRow identifier="LabelOnly" selectable="NO" id="0ct-mk-fyk" customClass="CGA_WatchOS_CharacteristicTables_Label" customModule="Blue_Van_Clef_WatchKit_Extension">
+                                <tableRow identifier="LabelOnly" selectable="NO" id="0ct-mk-fyk" customClass="CGA_WatchOS_CharacteristicTables_Label" customModule="Blue_Van_Clef_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="CxD-bx-5Ot">
                                         <items>
                                             <label width="1" alignment="left" text="Label" textAlignment="center" id="BvJ-sL-jeZ"/>
@@ -221,7 +221,7 @@
                                         <outlet property="labelObject" destination="BvJ-sL-jeZ" id="tK3-fz-r9v"/>
                                     </connections>
                                 </tableRow>
-                                <tableRow identifier="ButtonOnly" selectable="NO" id="Zrs-dS-xlm" customClass="CGA_WatchOS_CharacteristicTables_Button" customModule="Blue_Van_Clef_WatchKit_Extension">
+                                <tableRow identifier="ButtonOnly" selectable="NO" id="Zrs-dS-xlm" customClass="CGA_WatchOS_CharacteristicTables_Button" customModule="Blue_Van_Clef_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="geK-4t-rbY">
                                         <items>
                                             <button width="1" alignment="left" title="Button" id="sZX-Ee-GLd">
@@ -236,7 +236,7 @@
                                         <outlet property="buttonObject" destination="sZX-Ee-GLd" id="cDG-cS-ian"/>
                                     </connections>
                                 </tableRow>
-                                <tableRow identifier="SwitchOnly" selectable="NO" id="kbW-TP-zZk" customClass="CGA_WatchOS_CharacteristicTables_Switch" customModule="Blue_Van_Clef_WatchKit_Extension">
+                                <tableRow identifier="SwitchOnly" selectable="NO" id="kbW-TP-zZk" customClass="CGA_WatchOS_CharacteristicTables_Switch" customModule="Blue_Van_Clef_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="BKE-ic-7wj">
                                         <items>
                                             <switch width="1" alignment="left" value="YES" title="Switch" id="ge4-6W-uCY">
@@ -251,7 +251,7 @@
                                         <outlet property="switchObject" destination="ge4-6W-uCY" id="cVB-ps-gcB"/>
                                     </connections>
                                 </tableRow>
-                                <tableRow identifier="DescriptorButton" id="BWJ-Xo-eS9" userLabel="DescriptorButton" customClass="CGA_WatchOS_CharacteristicTables_DescriptorButton" customModule="Blue_Van_Clef_WatchKit_Extension">
+                                <tableRow identifier="DescriptorButton" id="BWJ-Xo-eS9" userLabel="DescriptorButton" customClass="CGA_WatchOS_CharacteristicTables_DescriptorButton" customModule="Blue_Van_Clef_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="lxQ-lC-XGp">
                                         <items>
                                             <label width="1" alignment="left" text="Label" textAlignment="center" numberOfLines="0" id="DzX-J3-VQq"/>
@@ -276,7 +276,7 @@
         <!--Descriptor Details-->
         <scene sceneID="4ne-FE-W7j">
             <objects>
-                <controller title="Descriptor Details" backgroundImage="BackgroundGradient" id="i0c-vz-KLP" customClass="CGA_WatchOS_DescriptorInterfaceController" customModule="Blue_Van_Clef_WatchKit_Extension">
+                <controller title="Descriptor Details" backgroundImage="BackgroundGradient" id="i0c-vz-KLP" customClass="CGA_WatchOS_DescriptorInterfaceController" customModule="Blue_Van_Clef_Extension">
                     <items>
                         <label width="1" alignment="left" text="Label" numberOfLines="0" id="yJ7-7J-Vem"/>
                     </items>

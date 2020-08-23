@@ -25,9 +25,9 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+	<key>WKCompanionAppBundleIdentifier</key>
+	<string>com.riftvalleysoftware.BlueVanClef</string>
 	<key>WKWatchKitApp</key>
 	<true/>
-    <key>WKCompanionAppBundleIdentifier</key>
-    <string>com.riftvalleysoftware.BlueVanClef</string>
 </dict>
 </plist>
