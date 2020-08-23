@@ -117,29 +117,29 @@ extension CGA_WatchOS_ExtensionDelegate {
             var ret = "\(current)\n"
             
             if let asStringArray = value as? [String] {
-                ret += current + asStringArray.reduce("\(key): ") { (current2, next2) in "\(current2) \(next2.localizedVariant)" }
+                ret += current + asStringArray.reduce("\t\(key): ") { (current2, next2) in "\(current2)\n\(next2.localizedVariant)" }
             } else if let value = value as? String {
-                ret += "\(key): \(value.localizedVariant)"
+                ret += "\t\(key): \(value.localizedVariant)"
             } else if let value = value as? Bool {
-                ret += "\(key): \(value ? "true" : "false")"
+                ret += "\t\(key): \(value ? "true" : "false")"
             } else if let value = value as? Int {
-                ret += "\(key): \(value)"
+                ret += "\t\(key): \(value)"
             } else if let value = value as? Double {
                 if "kCBAdvDataTimestamp" == next.key {  // If it's the timestamp, we can translate that, here.
                     let date = Date(timeIntervalSinceReferenceDate: value)
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "SLUG-MAIN-LIST-DATE-FORMAT".localizedVariant
                     let displayedDate = dateFormatter.string(from: date)
-                    ret += "\(key): \(displayedDate)"
+                    ret += "\t\(key): \(displayedDate)"
                 } else {
-                    ret += "\(key): \(value)"
+                    ret += "\t\(key): \(value)"
                 }
             } else if let value = value as? NSArray {   // An NSArray can be strung together in one line.
-                ret += "\(key): " + value.reduce("", { (curr, nxt) -> String in (!curr.isEmpty ? ", " : "") + curr + String(describing: nxt).localizedVariant })
+                ret += "\t\(key): " + value.reduce("", { (curr, nxt) -> String in (!curr.isEmpty ? ", " : "") + curr + String(describing: nxt).localizedVariant })
             } else {    // Anything else is just a described instance of something or other.
-                ret += "\(key): \(String(describing: value))"
+                ret += "\t\(key): \(String(describing: value).replacingOccurrences(of: "\n", with: " "))"
             }
-            
+
             return ret
         }.split(separator: "\n").map { String($0) }
         

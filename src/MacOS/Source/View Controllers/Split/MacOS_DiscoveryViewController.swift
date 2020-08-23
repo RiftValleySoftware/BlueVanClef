@@ -46,6 +46,12 @@ class MacOS_Clicker: NSButton {
 class MacOS_DiscoveryViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_SplitView_ViewController {
     /* ################################################################## */
     /**
+     The font size for the Connect/Disconnect of each device.
+     */
+    static let buttonFontSize = 20
+
+    /* ################################################################## */
+    /**
      The font size for the header of each device.
      */
     let headerRowFontSize = 15
@@ -231,11 +237,12 @@ extension MacOS_DiscoveryViewController {
         deviceNameLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 0).isActive = true
         deviceNameLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: 0).isActive = true
 
-        // We display a connect/disconnect button, if we can connect.
-        if peripheralDiscoveryInfo.canConnect {
+        // We display a connect/disconnect button, if we can connect, and are not scanning.
+        if  peripheralDiscoveryInfo.canConnect,
+            !(centralManager?.isScanning ?? true) {
             let connectButton = MacOS_Clicker()
-            connectButton.setButtonType(.momentaryPushIn)
-            connectButton.bezelStyle = .inline
+            connectButton.bezelStyle = .texturedRounded
+            
             var title = "SLUG-"
             if selectedDevice?.identifier == peripheralDiscoveryInfo.identifier {
                 title += ((peripheralDiscoveryInfo.isConnected ? "DIS" : "") + "CONNECT" + (peripheralDiscoveryInfo.isConnected ? "" : "ING"))
@@ -245,9 +252,8 @@ extension MacOS_DiscoveryViewController {
                 connectButton.isEnabled = true
             }
             
+            connectButton.font = .boldSystemFont(ofSize: CGFloat(Self.buttonFontSize))
             connectButton.title = title.localizedVariant
-            connectButton.contentTintColor = .blue
-            connectButton.bezelColor = .white
             connectButton.discoveryInfo = peripheralDiscoveryInfo
             connectButton.target = self
             connectButton.action = #selector(connectButtonHit(_:))
