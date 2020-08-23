@@ -81,15 +81,9 @@ class MacOS_DiscoveryViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_Split
     
     /* ################################################################## */
     /**
-     This is the container for one device in our table.
+     This is the minimum width of the discovery section.
      */
-    typealias TableRow = (id: String, contents: [String])
-    
-    /* ################################################################## */
-    /**
-     This is the width of the discovery section, which is fixed.
-     */
-    static let screenThickness: CGFloat = 480
+    static let screenThickness: CGFloat = 340
 
     /* ################################################################## */
     /**
@@ -99,10 +93,10 @@ class MacOS_DiscoveryViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_Split
     
     /* ################################################################## */
     /**
-     This will map the discovered devices for display in the table. The key is the ID of the Peripheral. The value is all the rows it will display.
+     The currently selected device (nil, if no device selected).
      */
-    private var _tableMap: [TableRow] = []
-    
+    var selectedDevice: RVS_BlueThoth.DiscoveryData?
+
     /* ################################################################## */
     /**
      This is a segmented switch that reflects the state of the scanning.
@@ -132,12 +126,6 @@ class MacOS_DiscoveryViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_Split
      This is the scroller that contains that stack view.
      */
     @IBOutlet weak var scrollView: NSScrollView!
-    
-    /* ################################################################## */
-    /**
-     The currently selected device (nil, if no device selected).
-     */
-    var selectedDevice: RVS_BlueThoth.DiscoveryData?
     
     /* ################################################################## */
     /**
