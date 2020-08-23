@@ -249,12 +249,15 @@ extension MacOS_DiscoveryViewController {
             connectButton.setButtonType(.momentaryPushIn)
             connectButton.bezelStyle = .inline
             var title = "SLUG-"
-            title += (peripheralDiscoveryInfo.isConnected && (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier)) ? "DIS" : ""
-            title += "CONNECT"
-            title += (!peripheralDiscoveryInfo.isConnected && (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier)) ? "ING" : ""
+            if selectedDevice?.identifier == peripheralDiscoveryInfo.identifier {
+                title += ((peripheralDiscoveryInfo.isConnected ? "DIS" : "") + "CONNECT" + (peripheralDiscoveryInfo.isConnected ? "" : "ING"))
+                connectButton.isEnabled = peripheralDiscoveryInfo.isConnected
+            } else {
+                title += "CONNECT"
+                connectButton.isEnabled = true
+            }
             
             connectButton.title = title.localizedVariant
-            connectButton.isEnabled = peripheralDiscoveryInfo.isConnected || (selectedDevice?.identifier != peripheralDiscoveryInfo.identifier)
             connectButton.contentTintColor = .blue
             connectButton.bezelColor = .white
             connectButton.discoveryInfo = peripheralDiscoveryInfo
@@ -363,10 +366,9 @@ extension MacOS_DiscoveryViewController {
      - parameter inSwitch: The switch object.
      */
     @IBAction func scanningChanged(_ inSwitch: NSSegmentedControl) {
-        selectedDevice = nil
-        mainSplitView?.collapseSplit()
-        
         if ScanningModeSwitchValues.notScanning.rawValue == inSwitch.selectedSegment {
+            selectedDevice = nil
+            mainSplitView?.collapseSplit()
             centralManager?.stopScanning()
         } else {
             centralManager?.scanCriteria = prefs.scanCriteria
@@ -424,13 +426,9 @@ extension MacOS_DiscoveryViewController: MacOS_ControllerList_Protocol {
     func updateUI() {
         noBTImage?.isHidden = centralManager?.isBTAvailable ?? true
         scanningModeSegmentedSwitch?.isHidden = !(noBTImage?.isHidden ?? false)
+        scanningModeSegmentedSwitch?.selectedSegment = (!(centralManager?.isScanning ?? false) ? ScanningModeSwitchValues.notScanning : ScanningModeSwitchValues.scanning).rawValue
         scrollView?.isHidden = !(noBTImage?.isHidden ?? false)
         reloadButton?.isHidden = sortedPeripherals.isEmpty
-        
-        if !(centralManager?.isScanning ?? false) {
-            scanningModeSegmentedSwitch?.selectedSegment = ScanningModeSwitchValues.notScanning.rawValue
-        }
-        
         setUpAccessibility()
         _reloadStackView()
     }
