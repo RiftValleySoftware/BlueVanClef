@@ -155,6 +155,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-ACC-DEVICELIST-TABLE"         =   "This table displays the discovered Bluetooth LE devices. Each row represents one device. You can pull down on the table to reload all the devices. If you reload the table, the order of the devices in the table may change, and all ignored devices will no longer be ignored.";
 "SLUG-ACC-DEVICELIST-TABLE-MAC"     =   "This table displays the discovered Bluetooth LE devices. Each row represents one device.";
 "SLUG-ACC-RELOAD-BUTTON"            =   "Press this button to reload all the devices. If you reload the table, the order of the devices in the table may change, and all ignored devices will no longer be ignored.";
+"SLUG-ACC-RELOAD-BUTTON-MAC"        =   "Press this button to reload all the devices. If you reload the table, the order of the devices in the table may change.";
 "SLUG-ACC-DEVICELIST-TABLE-RSSI-FORMAT"             =   "This is the signal strength for this device. It is currently %d decibels.";
 "SLUG-ACC-DEVICELIST-TABLE-NAME-ADVERTISED-FORMAT"  =   "This is the advertised name for this device. It is \"%@.\"";
 "SLUG-ACC-DEVICELIST-TABLE-NAME-SIMPLE-FORMAT"      =   "This is the name for this device. It is \"%@.\"";
@@ -268,7 +269,9 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "kCBAdvDataRxPrimaryPHY"            =   "Primary Receive";
 "kCBAdvDataRxSecondaryPHY"          =   "Secondary Receive";
 "kCBAdvDataManufacturerData"        =   "Manufacturer Data";
+"kCBAdvDataAppleMfgData"            =   "Apple-Specific Data";
 "kCBAdvDataServiceUUIDs"            =   "Services";
+"kCBAdvDataChannel"                 =   "Advertising Data Channel";
 
 // MARK: - GATT Service IDs
 "1800"                              =    "Generic Access";

@@ -201,6 +201,7 @@ extension MacOS_CharacteristicViewController {
      - parameter inButton: used as a flag. If nil, then we are sending with response.
      */
     @IBAction func sendButtonHit(_ inButton: Any! = nil) {
+        writeConfirmationLabel?.isHidden = true
         if var textToSend = writeTextView?.string {
             // See if we are to send CRLF as line endings.
             if prefs.alwaysUseCRLF {
@@ -233,6 +234,7 @@ extension MacOS_CharacteristicViewController {
      */
     @IBAction func refreshButtonHit(_: Any) {
         characteristicInstance?.clearConcatenate(newValue: true)
+        writeConfirmationLabel?.isHidden = true
         updateUI()
     }
 }
@@ -327,7 +329,6 @@ extension MacOS_CharacteristicViewController {
      */
     func setWriteItemsVisibility() {
         if characteristicInstance?.canWrite ?? false {
-            writeConfirmationLabel?.isHidden = true
             writeTextFieldLabelContainer?.isHidden = false
             writeTextViewContainer?.isHidden = false
             sendButtonContainer?.isHidden = false

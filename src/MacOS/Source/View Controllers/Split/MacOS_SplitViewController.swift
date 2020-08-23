@@ -58,6 +58,7 @@ extension MacOS_SplitViewController {
      */
     override func viewDidLoad() {
         super.viewDidLoad()
+        minimumThicknessForInlineSidebars = MacOS_DiscoveryViewController.screenThickness
         collapseSplit()
     }
 }
@@ -81,7 +82,11 @@ extension MacOS_SplitViewController {
         
         if let discoveryViewController = discoveryScreenSplitViewItem?.viewController as? MacOS_DiscoveryViewController {
             discoveryScreenSplitViewItem.minimumThickness = MacOS_DiscoveryViewController.screenThickness
-            discoveryScreenSplitViewItem.maximumThickness = MacOS_DiscoveryViewController.screenThickness
+            discoveryScreenSplitViewItem.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
+            
+            let size = discoveryViewController.view.frame.size
+            view.window?.setContentSize(size)
+
             if nil != peripheralSplitViewItem {
                 discoveryViewController.selectedDevice = nil
                 discoveryViewController.updateUI()

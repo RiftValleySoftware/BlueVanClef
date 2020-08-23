@@ -695,7 +695,7 @@
             <objects>
                 <splitViewController id="GZl-iU-0n7" userLabel="Main Split View Controller" customClass="MacOS_SplitViewController" customModule="Blue_Van_Clef__MacOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
-                        <splitViewItem holdingPriority="255" behavior="contentList" id="BnQ-jM-Dan" userLabel="Discovery Screen"/>
+                        <splitViewItem holdingPriority="260" behavior="sidebar" id="BnQ-jM-Dan" userLabel="Discovery Screen"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rhv-4S-Wdd">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>

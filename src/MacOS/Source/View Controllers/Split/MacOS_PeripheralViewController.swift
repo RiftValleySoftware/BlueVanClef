@@ -233,8 +233,11 @@ extension MacOS_PeripheralViewController {
      Sets up the various accessibility labels.
      */
     override func setUpAccessibility() {
-        loadingSpinner?.setAccessibilityLabel("SLUG-ACC-CONNECTING-LABEL".localizedVariant)
         loadingSpinner?.toolTip = "SLUG-ACC-CONNECTING-LABEL".localizedVariant
+        serviceTableView?.toolTip = "SLUG-ACC-SERVICES-TABLE".localizedVariant
+        
+        loadingSpinner?.setAccessibilityLabel(loadingSpinner?.toolTip)
+        serviceTableView?.setAccessibilityLabel(serviceTableView?.toolTip)
     }
 }
 
@@ -334,9 +337,6 @@ extension MacOS_PeripheralViewController: NSTableViewDelegate, NSTableViewDataSo
                     index += 1
                     if  index == inRow,
                         let entity = centralManager?.findEntityByUUIDString(characteristic) as? CGA_Bluetooth_Characteristic {
-                        #if DEBUG
-                            print("Selecting Row \(inRow), Which is for Characteristic \(entity.id)")
-                        #endif
                         _selectedCharacteristic = entity
                         return true
                     }

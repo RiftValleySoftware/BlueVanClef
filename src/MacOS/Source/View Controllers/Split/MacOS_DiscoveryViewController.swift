@@ -188,9 +188,9 @@ extension MacOS_DiscoveryViewController {
                     ret += "\t\(key): \(value)"
                 }
             } else if let value = value as? NSArray {   // An NSArray can be strung together in one line.
-                ret += "\(key): " + value.reduce("", { (curr, nxt) -> String in (!curr.isEmpty ? ", " : "") + curr + String(describing: nxt).localizedVariant })
+                ret += "\t\(key): " + value.reduce("", { (curr, nxt) -> String in (!curr.isEmpty ? ", " : "") + curr + String(describing: nxt).localizedVariant })
             } else {    // Anything else is just a described instance of something or other.
-                ret += "\(key): \(String(describing: value))"
+                ret += "\t\(key): \(String(describing: value).replacingOccurrences(of: "\n", with: " "))"
             }
 
             return ret
@@ -276,6 +276,7 @@ extension MacOS_DiscoveryViewController {
         deviceInfoLabel.allowsDefaultTighteningForTruncation = true
         deviceInfoLabel.textColor = .white
         deviceInfoLabel.maximumNumberOfLines = 0
+        deviceInfoLabel.isSelectable = !(centralManager?.isScanning ?? true)
         
         // If we are the Chosen One, then we must wear white.
         if selectedDevice?.identifier == peripheralDiscoveryInfo.identifier {
@@ -286,8 +287,10 @@ extension MacOS_DiscoveryViewController {
         
         stackView.addArrangedSubview(deviceInfoLabel)
         deviceInfoLabel.translatesAutoresizingMaskIntoConstraints = false
-        deviceInfoLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 0).isActive = true
-        deviceInfoLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: 0).isActive = true
+        deviceInfoLabel.leadingAnchor.constraint(greaterThanOrEqualTo: stackView.leadingAnchor, constant: 0).isActive = true
+        deviceInfoLabel.trailingAnchor.constraint(greaterThanOrEqualTo: stackView.trailingAnchor, constant: 0).isActive = true
+        deviceInfoLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        deviceInfoLabel.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
     }
     
     /* ################################################################## */
@@ -345,13 +348,13 @@ extension MacOS_DiscoveryViewController {
      Sets up the various accessibility labels.
      */
     override func setUpAccessibility() {
-        reloadButton?.setAccessibilityLabel("SLUG-ACC-RELOAD-BUTTON".localizedVariant)
-        reloadButton?.toolTip = "SLUG-ACC-RELOAD-BUTTON".localizedVariant
-        scanningModeSegmentedSwitch?.setAccessibilityLabel(("SLUG-ACC-SCANNING-BUTTON-O" + ((ScanningModeSwitchValues.notScanning.rawValue == scanningModeSegmentedSwitch?.selectedSegment) ? "FF" : "N").localizedVariant))
+        reloadButton?.toolTip = "SLUG-ACC-RELOAD-BUTTON-MAC".localizedVariant
         scanningModeSegmentedSwitch?.toolTip = ("SLUG-ACC-SCANNING-BUTTON-O" + ((ScanningModeSwitchValues.notScanning.rawValue == scanningModeSegmentedSwitch?.selectedSegment) ? "FF" : "N")).localizedVariant
-        
-        stackView?.setAccessibilityLabel("SLUG-ACC-DEVICELIST-TABLE-MAC".localizedVariant)
         stackView?.toolTip = "SLUG-ACC-DEVICELIST-TABLE-MAC".localizedVariant
+
+        reloadButton?.setAccessibilityLabel(reloadButton?.toolTip)
+        scanningModeSegmentedSwitch?.setAccessibilityLabel(scanningModeSegmentedSwitch?.toolTip)
+        stackView?.setAccessibilityLabel(stackView?.toolTip)
     }
 }
 
