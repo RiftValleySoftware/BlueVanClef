@@ -1,5 +1,15 @@
 # BlueVanClef Change Log
 
+## 1.4.2.2000
+
+- **TBD**
+
+## 1.4.1.3000
+
+- **August 23, 2020**
+
+- Removed the standalone Watch app (there seems to be a problem with the app store), and now embed it directly into the iOS app.
+
 ## 1.4.0.3000
 
 - **August 20, 2020**
