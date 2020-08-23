@@ -248,7 +248,6 @@ extension MacOS_DiscoveryViewController {
             let connectButton = MacOS_Clicker()
             connectButton.setButtonType(.momentaryPushIn)
             connectButton.bezelStyle = .inline
-            
             var title = "SLUG-"
             title += (peripheralDiscoveryInfo.isConnected && (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier)) ? "DIS" : ""
             title += "CONNECT"
@@ -272,11 +271,12 @@ extension MacOS_DiscoveryViewController {
         let deviceInfoLabel = NSTextField(labelWithString: discoveryText.joined(separator: "\n"))
         deviceInfoLabel.font = NSFont.systemFont(ofSize: CGFloat(infoRowFontSize))
         deviceInfoLabel.allowsDefaultTighteningForTruncation = true
-        deviceInfoLabel.textColor = (selectedDevice?.identifier == peripheralDiscoveryInfo.identifier) ? .blue : .white
+        deviceInfoLabel.textColor = .white
         deviceInfoLabel.maximumNumberOfLines = 0
         
         // If we are the Chosen One, then we must wear white.
         if selectedDevice?.identifier == peripheralDiscoveryInfo.identifier {
+            deviceInfoLabel.textColor = .blue
             deviceInfoLabel.backgroundColor = .white
             deviceInfoLabel.drawsBackground = true
         }
@@ -405,6 +405,7 @@ extension MacOS_DiscoveryViewController {
             if  !wasSelected,
                 let newController = storyboard?.instantiateController(withIdentifier: MacOS_PeripheralViewController.storyboardID) as? MacOS_PeripheralViewController {
                 selectedDevice = discoveryInfo
+                _reloadStackView()
                 newController.peripheralInstance = discoveryInfo
                 mainSplitView?.setPeripheralViewController(newController)
             }

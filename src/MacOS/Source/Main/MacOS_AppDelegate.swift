@@ -198,7 +198,13 @@ extension MacOS_AppDelegate {
             alert.messageText = inHeader.localizedVariant
             alert.informativeText = inMessage.localizedVariant
             alert.addButton(withTitle: "SLUG-OK-BUTTON-TEXT".localizedVariant)
-            alert.runModal()
+            if  !appDelegateObject.screenList.isEmpty,
+                let screenController = appDelegateObject.screenList[0] as? NSViewController,
+                let window = screenController.view.window {
+                alert.beginSheetModal(for: window, completionHandler: nil)
+            } else {
+                alert.runModal()
+            }
         }
     }
 }
@@ -247,6 +253,7 @@ extension MacOS_AppDelegate: CGA_BlueThoth_Delegate {
         inCentralInstance.stopScanning()
         collapseSplit()
         Self.displayAlert(header: "SLUG-ERROR".localizedVariant, message: String(describing: inError.layeredDescription))
+        updateScreen(Self.deviceScreenID)
     }
     
     /* ################################################################## */
