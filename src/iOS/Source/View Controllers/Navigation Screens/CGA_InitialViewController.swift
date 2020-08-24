@@ -529,6 +529,24 @@ extension CGA_InitialViewController: CGA_BlueThoth_Delegate {
 
     /* ################################################################## */
     /**
+     Called to tell the instance that a Characteristic changed its notification state.
+     
+     - parameter inCentralManager: The central manager that is calling this.
+     - parameter device: The device instance that contained the changed Service.
+     - parameter changedService: The Service instance that contained the changed Characteristic.
+     - parameter changedCharacteristicNotificationState: The Characteristic that was changed.
+     */
+    func centralManager(_ inCentralManager: RVS_BlueThoth, device inDevice: CGA_Bluetooth_Peripheral, service inService: CGA_Bluetooth_Service, changedCharacteristicNotificationState inCharacteristic: CGA_Bluetooth_Characteristic) {
+        #if DEBUG
+            print("Notification Update Received")
+        #endif
+        if let currentScreen = _currentDeviceScreen as? CGA_ServiceViewController {
+            currentScreen.updateUI()
+        }
+    }
+    
+    /* ################################################################## */
+    /**
      Called to tell the instance that a Service changed.
      
      - parameter inCentralManager: The central manager that is calling this.
