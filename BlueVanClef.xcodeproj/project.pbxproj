@@ -1129,7 +1129,7 @@
 				CODE_SIGN_ENTITLEMENTS = src/MacOS/Meta/MacOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2000;
+				CURRENT_PROJECT_VERSION = 3000;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = src/MacOS/Meta/Info.plist;
@@ -1138,7 +1138,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.4.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -1152,7 +1152,7 @@
 				CODE_SIGN_ENTITLEMENTS = src/MacOS/Meta/MacOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2000;
+				CURRENT_PROJECT_VERSION = 3000;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = src/MacOS/Meta/Info.plist;
@@ -1161,7 +1161,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.4.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;

@@ -32,12 +32,6 @@ import RVS_Persistent_Prefs
 class MacOS_PreferencesViewController: MacOS_Base_ViewController {
     /* ################################################################## */
     /**
-     The checkbox that allows us to continuously update while scanning.
-     */
-    @IBOutlet weak var ignoreDupesCheckbox: NSButton!
-    
-    /* ################################################################## */
-    /**
      The checkbox that allows scanning to include Peripherals with no names.
      */
     @IBOutlet weak var allowEmptyNamesCheckbox: NSButton!
@@ -155,8 +149,6 @@ extension MacOS_PreferencesViewController {
         super.viewDidLoad()
         title = title?.localizedVariant
         centralManager?.stopScanning()
-        centralManager?.startOver()
-        ignoreDupesCheckbox?.title = ignoreDupesCheckbox?.title.localizedVariant ?? "ERROR"
         allowEmptyNamesCheckbox?.title = allowEmptyNamesCheckbox?.title.localizedVariant ?? "ERROR"
         onlyConnectableCheckbox?.title = onlyConnectableCheckbox?.title.localizedVariant ?? "ERROR"
         alwaysUseCRLFCheckbox?.title = alwaysUseCRLFCheckbox?.title.localizedVariant ?? "ERROR"
@@ -176,13 +168,19 @@ extension MacOS_PreferencesViewController {
     
     /* ################################################################## */
     /**
+     Called when the view is about to go away.
+     */
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        centralManager?.startOver()
+        MacOS_AppDelegate.appDelegateObject.collapseSplit()
+    }
+    
+    /* ################################################################## */
+    /**
      Sets up all the accessibility items.
      */
     override func setUpAccessibility() {
-        let ignoreDupesString = "SLUG-ACC-CONTINUOUS-UPDATE-SWITCH-O" + (prefs.continuouslyUpdatePeripherals ? "N" : "FF")
-        ignoreDupesCheckbox?.setAccessibilityLabel(ignoreDupesString.localizedVariant)
-        ignoreDupesCheckbox?.toolTip = ignoreDupesString.localizedVariant
-        
         let emptyNamesString = "SLUG-ACC-EMPTY-NAMES-SWITCH-O" + (prefs.allowEmptyNames ? "N" : "FF")
         allowEmptyNamesCheckbox?.setAccessibilityLabel(emptyNamesString.localizedVariant)
         allowEmptyNamesCheckbox?.toolTip = emptyNamesString.localizedVariant
