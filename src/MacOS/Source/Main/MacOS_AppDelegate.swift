@@ -113,6 +113,12 @@ class MacOS_AppDelegate: NSObject, NSApplicationDelegate {
 
     /* ################################################################## */
     /**
+     This is the length of our timeout, in seconds.
+     */
+    static let timeoutInSeconds: TimeInterval = 7.0
+
+    /* ################################################################## */
+    /**
      This is the menu item for the main app menu. It allows us to customize the text.
      */
     @IBOutlet weak var appNameMenuTitle: NSMenuItem!
@@ -163,6 +169,7 @@ extension MacOS_AppDelegate {
         aboutMenuItem?.title = (aboutMenuItem?.title ?? "ERROR").localizedVariant
         quitMenuItem?.title = (quitMenuItem?.title ?? "ERROR").localizedVariant
         centralManager = RVS_BlueThoth(delegate: self)
+        centralManager?.timeoutInSeconds = Self.timeoutInSeconds
     }
 }
 

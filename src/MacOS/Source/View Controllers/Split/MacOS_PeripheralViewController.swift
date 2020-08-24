@@ -234,7 +234,7 @@ extension MacOS_PeripheralViewController {
      */
     override func setUpAccessibility() {
         loadingSpinner?.toolTip = "SLUG-ACC-CONNECTING-LABEL".localizedVariant
-        serviceTableView?.toolTip = "SLUG-ACC-SERVICES-TABLE".localizedVariant
+        serviceTableView?.toolTip = "SLUG-ACC-SERVICES-TABLE-MAC".localizedVariant
         
         loadingSpinner?.setAccessibilityLabel(loadingSpinner?.toolTip)
         serviceTableView?.setAccessibilityLabel(serviceTableView?.toolTip)

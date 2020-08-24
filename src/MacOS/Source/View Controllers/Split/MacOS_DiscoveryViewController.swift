@@ -262,6 +262,9 @@ extension MacOS_DiscoveryViewController {
             connectButton.translatesAutoresizingMaskIntoConstraints = false
             connectButton.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 0).isActive = true
             connectButton.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: 0).isActive = true
+
+            connectButton.toolTip = (peripheralDiscoveryInfo.isConnected ? "SLUG-ACC-DISCONNECT-BUTTON" : "SLUG-ACC-CONNECT-BUTTON").localizedVariant
+            connectButton.setAccessibilityLabel(connectButton.toolTip)
         }
 
         // And lastly, we have an extended label, with the parsed and rendered discovery information.
@@ -344,11 +347,11 @@ extension MacOS_DiscoveryViewController {
     override func setUpAccessibility() {
         reloadButton?.toolTip = "SLUG-ACC-RELOAD-BUTTON-MAC".localizedVariant
         scanningModeSegmentedSwitch?.toolTip = ("SLUG-ACC-SCANNING-BUTTON-O" + ((ScanningModeSwitchValues.notScanning.rawValue == scanningModeSegmentedSwitch?.selectedSegment) ? "FF" : "N")).localizedVariant
-        stackView?.toolTip = "SLUG-ACC-DEVICELIST-TABLE-MAC".localizedVariant
+        scrollView?.toolTip = "SLUG-ACC-DEVICELIST-TABLE-MAC".localizedVariant
 
         reloadButton?.setAccessibilityLabel(reloadButton?.toolTip)
         scanningModeSegmentedSwitch?.setAccessibilityLabel(scanningModeSegmentedSwitch?.toolTip)
-        stackView?.setAccessibilityLabel(stackView?.toolTip)
+        scrollView?.setAccessibilityLabel(stackView?.toolTip)
     }
 }
 
@@ -424,7 +427,7 @@ extension MacOS_DiscoveryViewController: MacOS_ControllerList_Protocol {
         noBTImage?.isHidden = centralManager?.isBTAvailable ?? true
         scanningModeSegmentedSwitch?.isHidden = !(noBTImage?.isHidden ?? false)
         scanningModeSegmentedSwitch?.selectedSegment = (!(centralManager?.isScanning ?? false) ? ScanningModeSwitchValues.notScanning : ScanningModeSwitchValues.scanning).rawValue
-        scrollView?.isHidden = !(noBTImage?.isHidden ?? false)
+        scrollView?.isHidden = !(noBTImage?.isHidden ?? false) || (centralManager?.stagedBLEPeripherals.isEmpty ?? true)
         reloadButton?.isHidden = sortedPeripherals.isEmpty
         setUpAccessibility()
         _reloadStackView()

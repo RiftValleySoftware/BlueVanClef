@@ -785,7 +785,7 @@
                                     <action selector="reloadButtonHit:" target="XfG-lQ-9wD" id="KuU-pa-ngM"/>
                                 </connections>
                             </button>
-                            <scrollView appearanceType="darkAqua" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfQ-94-NZp">
+                            <scrollView hidden="YES" appearanceType="darkAqua" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfQ-94-NZp">
                                 <rect key="frame" x="20" y="20" width="300" height="201"/>
                                 <clipView key="contentView" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aew-Yh-lga">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="201"/>
@@ -848,7 +848,7 @@
                         <outlet property="noBTImage" destination="0zk-kz-c6E" id="Drd-je-vMv"/>
                         <outlet property="reloadButton" destination="wKp-wx-vzh" id="fRZ-aN-B1n"/>
                         <outlet property="scanningModeSegmentedSwitch" destination="7cJ-a2-jYV" id="IvR-bK-awr"/>
-                        <outlet property="scrollView" destination="EfQ-94-NZp" id="DtY-5b-nna"/>
+                        <outlet property="scrollView" destination="EfQ-94-NZp" id="qOl-YX-yJz"/>
                         <outlet property="stackView" destination="wr0-6X-nDB" id="OrQ-eo-3zZ"/>
                     </connections>
                 </viewController>
@@ -1738,9 +1738,9 @@
                         <outlet property="readButton" destination="hm6-0r-PBT" id="y5j-z7-xJR"/>
                         <outlet property="readHeaderStackView" destination="sEy-wM-h5y" id="Hwo-Zv-h3K"/>
                         <outlet property="refreshButton" destination="xDy-H5-sGR" id="Atr-D9-x30"/>
+                        <outlet property="sendButton" destination="jdo-Wf-BbC" id="432-Lk-60P"/>
                         <outlet property="sendButtonContainer" destination="AGJ-SK-oLc" id="554-Uh-f6z"/>
-                        <outlet property="sendButtonText" destination="qTB-GB-arT" id="dBP-4w-5oK"/>
-                        <outlet property="sendResponseButtonText" destination="oJQ-az-fUF" id="wWf-VY-2oG"/>
+                        <outlet property="sendResponseButton" destination="zaq-b4-R3k" id="6Ls-Kj-6pR"/>
                         <outlet property="valueTextFieldLabel" destination="mwA-hH-MG8" id="FZ8-Ws-VVN"/>
                         <outlet property="valueTextView" destination="ufr-ng-tdO" id="soP-S5-43K"/>
                         <outlet property="valueTextViewContainer" destination="hFr-FW-McK" id="Mws-dV-hnM"/>

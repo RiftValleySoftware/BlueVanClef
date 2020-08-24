@@ -130,25 +130,19 @@ class MacOS_CharacteristicViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_
     /**
      This is the send (no response) button text.
      */
-    @IBOutlet weak var sendButtonText: NSButtonCell!
+    @IBOutlet weak var sendButton: NSButton!
         
     /* ################################################################## */
     /**
      This is the send (with response) button text.
      */
-    @IBOutlet weak var sendResponseButtonText: NSButtonCell!
+    @IBOutlet weak var sendResponseButton: NSButton!
     
     /* ################################################################## */
     /**
      This label is displayed to indicate a successful write.
      */
     @IBOutlet weak var writeConfirmationLabel: NSTextField!
-    
-    /* ################################################################## */
-    /**
-     This allows you to wipe the value, and start over.
-     */
-    @IBOutlet weak var refreshButton: NSButton!
     
     /* ################################################################## */
     /**
@@ -227,16 +221,6 @@ extension MacOS_CharacteristicViewController {
     @IBAction func sendButtonResponseHit(_: Any) {
         sendButtonHit()
     }
-
-    /* ################################################################## */
-    /**
-     - parameter: ignored.
-     */
-    @IBAction func refreshButtonHit(_: Any) {
-        characteristicInstance?.clearConcatenate(newValue: true)
-        writeConfirmationLabel?.isHidden = true
-        updateUI()
-    }
 }
 
 /* ###################################################################################################################################### */
@@ -313,12 +297,10 @@ extension MacOS_CharacteristicViewController {
      */
     func setReadItemsVisibility() {
         if (characteristicInstance?.canNotify ?? false) || (characteristicInstance?.canRead ?? false) {
-            refreshButton?.isHidden = (valueTextView?.title ?? "").isEmpty
             readHeaderStackView?.isHidden = false
             valueTextView?.title = characteristicInstance?.stringValue ?? ""
         } else {
             readHeaderStackView?.isHidden = true
-            refreshButton?.isHidden = true
             valueTextViewContainer?.isHidden = true
         }
     }
@@ -334,15 +316,15 @@ extension MacOS_CharacteristicViewController {
             sendButtonContainer?.isHidden = false
             
             if characteristicInstance?.canWriteWithResponse ?? false {
-                sendResponseButtonText?.controlView?.isHidden = false
+                sendResponseButton?.isHidden = false
             } else {
-                sendResponseButtonText?.controlView?.isHidden = true
+                sendResponseButton?.isHidden = true
             }
             
             if characteristicInstance?.canWriteWithoutResponse ?? false {
-                sendButtonText?.controlView?.isHidden = false
+                sendButton?.isHidden = false
             } else {
-                sendButtonText?.controlView?.isHidden = true
+                sendButton?.isHidden = true
             }
         } else {
             writeTextFieldLabelContainer?.isHidden = true
@@ -374,8 +356,8 @@ extension MacOS_CharacteristicViewController {
         notifyButton?.title = (notifyButton?.title ?? "ERROR").localizedVariant
         indicateLabel?.stringValue = (indicateLabel?.stringValue ?? "ERROR").localizedVariant
         extendedLabel?.stringValue = (extendedLabel?.stringValue ?? "ERROR").localizedVariant
-        sendButtonText?.title = (sendButtonText?.title ?? "ERROR").localizedVariant
-        sendResponseButtonText?.title = (sendResponseButtonText?.title ?? "ERROR").localizedVariant
+        sendButton?.title = (sendButton?.title ?? "ERROR").localizedVariant
+        sendResponseButton?.title = (sendResponseButton?.title ?? "ERROR").localizedVariant
         valueTextFieldLabel?.stringValue = (valueTextFieldLabel?.stringValue ?? "ERROR").localizedVariant
         writeTextFieldLabel?.stringValue = (writeTextFieldLabel?.stringValue ?? "ERROR").localizedVariant
         writeConfirmationLabel?.stringValue = (writeConfirmationLabel?.stringValue ?? "ERROR").localizedVariant
@@ -412,18 +394,24 @@ extension MacOS_CharacteristicViewController {
     override func setUpAccessibility() {
         readButton?.setAccessibilityTitle("SLUG-ACC-CHARACTERISTIC-ROW-SLUG-PROPERTIES-READ".localizedVariant)
         readButton?.toolTip = readButton?.accessibilityTitle()
+        
         indicateLabel?.setAccessibilityTitle("SLUG-ACC-CHARACTERISTIC-ROW-SLUG-PROPERTIES-INDICATE".localizedVariant)
         indicateLabel?.toolTip = indicateLabel?.accessibilityTitle()
+        
         extendedLabel?.setAccessibilityTitle("SLUG-ACC-CHARACTERISTIC-ROW-SLUG-PROPERTIES-EXTENDED".localizedVariant)
         extendedLabel?.toolTip = extendedLabel?.accessibilityTitle()
-        sendButtonText?.setAccessibilityTitle("SLUG-ACC-SEND-BUTTON".localizedVariant)
-        sendResponseButtonText?.setAccessibilityTitle("SLUG-ACC-SEND-BUTTON-RESPONSE".localizedVariant)
-        valueTextFieldLabel?.setAccessibilityTitle("SLUG-ACC-VALUE".localizedVariant)
-        writeTextFieldLabel?.setAccessibilityTitle("SLUG-ACC-WRITE-VALUE".localizedVariant)
-        refreshButton?.setAccessibilityTitle("SLUG-ACC-REFRESH".localizedVariant)
-        refreshButton?.toolTip = refreshButton?.accessibilityTitle()
+        
+        sendButton?.setAccessibilityTitle("SLUG-ACC-SEND-BUTTON".localizedVariant)
+        sendButton?.toolTip = sendButton?.accessibilityTitle()
+
+        sendResponseButton?.setAccessibilityTitle("SLUG-ACC-SEND-BUTTON-RESPONSE".localizedVariant)
+        sendResponseButton?.toolTip = sendResponseButton?.accessibilityTitle()
+
         notifyButton?.setAccessibilityTitle(("SLUG-ACC-CHARACTERISTIC-ROW-SLUG-PROPERTIES-NOTIFY-O" + ((characteristicInstance?.isNotifying ?? false) ? "N" : "FF")).localizedVariant)
         notifyButton?.toolTip = notifyButton?.accessibilityTitle()
+
+        valueTextFieldLabel?.setAccessibilityTitle("SLUG-ACC-VALUE".localizedVariant)
+        writeTextFieldLabel?.setAccessibilityTitle("SLUG-ACC-WRITE-VALUE".localizedVariant)
     }
 }
 
