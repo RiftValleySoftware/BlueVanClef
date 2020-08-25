@@ -145,6 +145,15 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 // Mac-Only
 "SLUG-PREFERENCES"                  =   "Preferences";
 
+// TV-Only
+"SLUG-CONTINUOUS-ON"                =   "Continuously Update";
+"SLUG-CONTINUOUS-OFF"               =   "Update Once";
+"SLUG-CONNECTABLE-ON"               =   "Only Connectable Devices";
+"SLUG-CONNECTABLE-OFF"              =   "All Devices";
+"SLUG-EMPTY-NAMES-ON"               =   "Allow Empty Names";
+"SLUG-EMPTY-NAMES-OFF"              =   "Named Devices Only";
+"SLUG-MINIMUM-RSSI-LABEL-DBM"       =   "Minimum RSSI (dBm):";
+
 /// MARK: - ACCESSIBILITY STRINGS
 
 // MARK: - The Initial Device List Screen

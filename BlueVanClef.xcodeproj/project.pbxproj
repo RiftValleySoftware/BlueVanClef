@@ -212,12 +212,6 @@
 		D430E17D24ED4D4A004512FC /* CGA_ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_ComplicationController.swift; sourceTree = "<group>"; };
 		D430E18124ED53F1004512FC /* CGA_WatchOS_ExtensionDelegate_Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_WatchOS_ExtensionDelegate_Extras.swift; sourceTree = "<group>"; };
 		D431519924F536A30031050E /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D431519B24F536A30031050E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D431519D24F536A30031050E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D43151A024F536A30031050E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D43151A224F536A40031050E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D43151A524F536A40031050E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D43151A724F536A40031050E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D43151AD24F536CE0031050E /* TVOS-Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "TVOS-Assets.xcassets"; sourceTree = "<group>"; };
 		D43151AF24F536CE0031050E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D43151B124F536CE0031050E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -343,7 +337,6 @@
 			isa = PBXGroup;
 			children = (
 				D48D85172430F05500A925ED /* src */,
-				D431519A24F536A30031050E /* Blue Van Clef for TV */,
 				D420C895242FCD5600FCB9E0 /* Products */,
 				D4EE293724EC66740008C0FE /* Frameworks */,
 			);
@@ -362,19 +355,6 @@
 				D431519924F536A30031050E /* Blue Van Clef.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D431519A24F536A30031050E /* Blue Van Clef for TV */ = {
-			isa = PBXGroup;
-			children = (
-				D431519B24F536A30031050E /* AppDelegate.swift */,
-				D431519D24F536A30031050E /* ViewController.swift */,
-				D431519F24F536A30031050E /* Main.storyboard */,
-				D43151A224F536A40031050E /* Assets.xcassets */,
-				D43151A424F536A40031050E /* LaunchScreen.storyboard */,
-				D43151A724F536A40031050E /* Info.plist */,
-			);
-			path = "Blue Van Clef for TV";
 			sourceTree = "<group>";
 		};
 		D43151AB24F536CE0031050E /* TVOS */ = {
@@ -1278,22 +1258,6 @@
 				D40E0CE224602F7F005B8699 /* Base */,
 			);
 			name = "Default-568h@2x.png";
-			sourceTree = "<group>";
-		};
-		D431519F24F536A30031050E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D43151A024F536A30031050E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D43151A424F536A40031050E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D43151A524F536A40031050E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		D43151AE24F536CE0031050E /* LaunchScreen.storyboard */ = {
