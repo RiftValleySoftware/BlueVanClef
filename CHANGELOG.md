@@ -1,14 +1,20 @@
 # BlueVanClef Change Log
 
-## 1.4.2.2000
+## 1.4.3
 
 - **TBD**
 
 - Improved Jazzy docs.
 
-## 1.4.1.3000
+## 1.4.2.3000
 
-- **August 23, 2020**
+- **August 24, 2020**
+
+- App Store release of MacOS app.
+
+## 1.4.1.3006
+
+- **August 24, 2020**
 
 - Removed the standalone Watch app (there seems to be a problem with the app store), and now embed it directly into the iOS app.
 

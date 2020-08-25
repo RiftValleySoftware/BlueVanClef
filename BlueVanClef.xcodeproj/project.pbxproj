@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		D40E0CE024602F7F005B8699 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E0CE324602F7F005B8699 /* Default-568h@2x.png */; };
 		D417ED782458950100169F91 /* CGA_BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D417ED772458946500169F91 /* CGA_BaseViewController.swift */; };
+		D4272D6924F516EA00265D5C /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7524E8C4B200392814 /* SharedAssets.xcassets */; };
+		D4272D6A24F516EA00265D5C /* WatchAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291E24EC648F0008C0FE /* WatchAssets.xcassets */; };
+		D4272D6B24F516EA00265D5C /* Complications.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EDB96424EDEC78001172B5 /* Complications.xcassets */; };
+		D4272D6C24F516EA00265D5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
+		D4272D6D24F516EA00265D5C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291F24EC648F0008C0FE /* Interface.storyboard */; };
+		D4272D6E24F516EA00265D5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
 		D430E17E24ED4D4A004512FC /* CGA_ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D430E17D24ED4D4A004512FC /* CGA_ComplicationController.swift */; };
 		D430E18224ED53F1004512FC /* CGA_WatchOS_ExtensionDelegate_Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = D430E18124ED53F1004512FC /* CGA_WatchOS_ExtensionDelegate_Extras.swift */; };
 		D436B44D243CC1C6003619D9 /* CGA_ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D436B44C243CC1C6003619D9 /* CGA_ServiceViewController.swift */; };
@@ -19,10 +25,35 @@
 		D45CCF7624E8C4B200392814 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
 		D45CCF7724E8C4B200392814 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
 		D45CCF7824E8C4B200392814 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7524E8C4B200392814 /* SharedAssets.xcassets */; };
+		D45FEA4D24F5159400DDCECF /* CGA_WatchOS_DiscoveryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE290F24EC648F0008C0FE /* CGA_WatchOS_DiscoveryInterfaceController.swift */; };
+		D45FEA4E24F5159400DDCECF /* CGA_WatchOS_MainInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE290E24EC648F0008C0FE /* CGA_WatchOS_MainInterfaceController.swift */; };
+		D45FEA4F24F5159400DDCECF /* CGA_WatchOS_PrefsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE291524EC648F0008C0FE /* CGA_WatchOS_PrefsInterfaceController.swift */; };
+		D45FEA5024F5159400DDCECF /* CGA_WatchOS_WatchOS_CharacteristicTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE291924EC648F0008C0FE /* CGA_WatchOS_WatchOS_CharacteristicTables.swift */; };
+		D45FEA5124F5159400DDCECF /* CGA_PersistentPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44491BC244A3357008D447D /* CGA_PersistentPrefs.swift */; };
+		D45FEA5224F5159400DDCECF /* CGA_WatchOS_CharacteristicInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE290D24EC648F0008C0FE /* CGA_WatchOS_CharacteristicInterfaceController.swift */; };
+		D45FEA5324F5159400DDCECF /* CGA_ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D430E17D24ED4D4A004512FC /* CGA_ComplicationController.swift */; };
+		D45FEA5424F5159400DDCECF /* CGA_WatchOS_WatchOS_ServiceTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE291A24EC648F0008C0FE /* CGA_WatchOS_WatchOS_ServiceTableController.swift */; };
+		D45FEA5524F5159400DDCECF /* CGA_WatchOS_BaseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE290B24EC648F0008C0FE /* CGA_WatchOS_BaseInterfaceController.swift */; };
+		D45FEA5624F5159400DDCECF /* CGA_WatchOS_WatchOS_DiscoveryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE291824EC648F0008C0FE /* CGA_WatchOS_WatchOS_DiscoveryTableController.swift */; };
+		D45FEA5724F5159400DDCECF /* CGA_WatchOS_CharacteristicTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE291724EC648F0008C0FE /* CGA_WatchOS_CharacteristicTableController.swift */; };
+		D45FEA5824F5159400DDCECF /* CGA_WatchOS_DescriptorInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE291124EC648F0008C0FE /* CGA_WatchOS_DescriptorInterfaceController.swift */; };
+		D45FEA5924F5159400DDCECF /* CGA_WatchOS_ServiceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE291024EC648F0008C0FE /* CGA_WatchOS_ServiceInterfaceController.swift */; };
+		D45FEA5A24F5159400DDCECF /* CGA_WatchOS_ExtensionDelegate_Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = D430E18124ED53F1004512FC /* CGA_WatchOS_ExtensionDelegate_Extras.swift */; };
+		D45FEA5B24F5159400DDCECF /* CGA_WatchOS_DeviceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE291224EC648F0008C0FE /* CGA_WatchOS_DeviceInterfaceController.swift */; };
+		D45FEA5C24F5159400DDCECF /* CGA_WatchOS_ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE291C24EC648F0008C0FE /* CGA_WatchOS_ExtensionDelegate.swift */; };
+		D45FEA5D24F5159400DDCECF /* CGA_WatchOS_AboutInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE291424EC648F0008C0FE /* CGA_WatchOS_AboutInterfaceController.swift */; };
+		D45FEA5F24F5159400DDCECF /* RVS-Persistent-Prefs in Frameworks */ = {isa = PBXBuildFile; productRef = D45FEA4924F5159400DDCECF /* RVS-Persistent-Prefs */; };
+		D45FEA6024F5159400DDCECF /* RVS-BlueThoth in Frameworks */ = {isa = PBXBuildFile; productRef = D45FEA4724F5159400DDCECF /* RVS-BlueThoth */; };
+		D45FEA6224F5159400DDCECF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
+		D45FEA6324F5159400DDCECF /* WatchAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291E24EC648F0008C0FE /* WatchAssets.xcassets */; };
+		D45FEA6424F5159400DDCECF /* Complications.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EDB96424EDEC78001172B5 /* Complications.xcassets */; };
+		D45FEA6524F5159400DDCECF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
 		D465B38824D0532F00441AFA /* CGA_CharacteristicInteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D465B38724D0532F00441AFA /* CGA_CharacteristicInteractionViewController.swift */; };
 		D465B38A24D053A800441AFA /* CGA_DescriptorInteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D465B38924D053A800441AFA /* CGA_DescriptorInteractionViewController.swift */; };
 		D47D71E22448DD70004D9923 /* CGA_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47D71E12448DD70004D9923 /* CGA_Extensions.swift */; };
 		D480CE2E243CEFE20074CFE4 /* CGA_CharacteristicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480CE2D243CEFE20074CFE4 /* CGA_CharacteristicViewController.swift */; };
+		D48CB5D324F517720079BB0C /* Blue Van Clef (Standalone WatchOS).app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D4272D7424F516EA00265D5C /* Blue Van Clef (Standalone WatchOS).app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D48CB5D424F517850079BB0C /* Blue Van Clef (Standalone WatchOS Extension).appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D45FEA6924F5159400DDCECF /* Blue Van Clef (Standalone WatchOS Extension).appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D48FD97424B23F260094F4D1 /* RVS-BlueThoth in Frameworks */ = {isa = PBXBuildFile; productRef = D48FD97324B23F260094F4D1 /* RVS-BlueThoth */; };
 		D48FD97724B23F430094F4D1 /* RVS-Persistent-Prefs in Frameworks */ = {isa = PBXBuildFile; productRef = D48FD97624B23F430094F4D1 /* RVS-Persistent-Prefs */; };
 		D49A703224EDE2CF0019D286 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
@@ -48,7 +79,6 @@
 		D4B42FE124EF1F8200BDF1E9 /* RVS-BlueThoth in Frameworks */ = {isa = PBXBuildFile; productRef = D4B42FE024EF1F8200BDF1E9 /* RVS-BlueThoth */; };
 		D4B42FE324EF1F8200BDF1E9 /* RVS-Persistent-Prefs in Frameworks */ = {isa = PBXBuildFile; productRef = D4B42FE224EF1F8200BDF1E9 /* RVS-Persistent-Prefs */; };
 		D4B49D062455137700932C3D /* IOSAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D447B9E6243171AB00F00A7A /* IOSAssets.xcassets */; };
-		D4BF7D2524EE04F0000470EC /* Blue Van Clef.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D4EE28E024EC62CC0008C0FE /* Blue Van Clef.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4CAA4272434E878007C72AA /* CGA_PeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CAA4262434E877007C72AA /* CGA_PeripheralViewController.swift */; };
 		D4CC00E624F292E8003FAE01 /* Blue Van Clef.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D4EE28E024EC62CC0008C0FE /* Blue Van Clef.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4DDEDBA24EDDE61006B5B8F /* WatchAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291E24EC648F0008C0FE /* WatchAssets.xcassets */; };
@@ -80,12 +110,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D4BF7D2324EE04E1000470EC /* PBXContainerItemProxy */ = {
+		D48CB5D124F517640079BB0C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D420C88C242FCD5600FCB9E0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D4EE28DF24EC62CC0008C0FE;
-			remoteInfo = "Blue Van Clef (WatchOS)";
+			remoteGlobalIDString = D4272D6524F516EA00265D5C;
+			remoteInfo = "Blue Van Clef (Standalone WatchOS)";
+		};
+		D48CB5D524F517850079BB0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D420C88C242FCD5600FCB9E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D45FEA4624F5159400DDCECF;
+			remoteInfo = "Blue Van Clef (Standalone WatchOS Extension)";
 		};
 		D4CC00E724F292E8003FAE01 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -104,13 +141,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D4272D6F24F516EA00265D5C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D48CB5D424F517850079BB0C /* Blue Van Clef (Standalone WatchOS Extension).appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4BF7D1F24EE04BA000470EC /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				D4BF7D2524EE04F0000470EC /* Blue Van Clef.app in Embed Watch Content */,
+				D48CB5D324F517720079BB0C /* Blue Van Clef (Standalone WatchOS).app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +191,8 @@
 		D40E0CDE24602F56005B8699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D40E0CE224602F7F005B8699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = "Base.lproj/Default-568h@2x.png"; sourceTree = "<group>"; };
 		D417ED772458946500169F91 /* CGA_BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_BaseViewController.swift; sourceTree = "<group>"; };
+		D4272D7424F516EA00265D5C /* Blue Van Clef (Standalone WatchOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef (Standalone WatchOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4272D7524F516EA00265D5C /* Blue Van Clef (WatchOS) copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Blue Van Clef (WatchOS) copy-Info.plist"; path = "/Volumes/Development/RiftValley/BlueVanClef/Blue Van Clef (WatchOS) copy-Info.plist"; sourceTree = "<absolute>"; };
 		D430E17D24ED4D4A004512FC /* CGA_ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_ComplicationController.swift; sourceTree = "<group>"; };
 		D430E18124ED53F1004512FC /* CGA_WatchOS_ExtensionDelegate_Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_WatchOS_ExtensionDelegate_Extras.swift; sourceTree = "<group>"; };
 		D436B44C243CC1C6003619D9 /* CGA_ServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_ServiceViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +204,9 @@
 		D45CCF7224E8C4B200392814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Localizable.strings; sourceTree = "<group>"; };
 		D45CCF7424E8C4B200392814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = InfoPlist.strings; sourceTree = "<group>"; };
 		D45CCF7524E8C4B200392814 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SharedAssets.xcassets; sourceTree = "<group>"; };
+		D45FEA6924F5159400DDCECF /* Blue Van Clef (Standalone WatchOS Extension).appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Blue Van Clef (Standalone WatchOS Extension).appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D45FEA6A24F5159400DDCECF /* Blue Van Clef (WatchOS Extension) copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Blue Van Clef (WatchOS Extension) copy-Info.plist"; path = "/Volumes/Development/RiftValley/BlueVanClef/Blue Van Clef (WatchOS Extension) copy-Info.plist"; sourceTree = "<absolute>"; };
+		D45FEA6C24F5165600DDCECF /* Standalone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Standalone-Info.plist"; sourceTree = "<group>"; };
 		D465B38724D0532F00441AFA /* CGA_CharacteristicInteractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_CharacteristicInteractionViewController.swift; sourceTree = "<group>"; };
 		D465B38924D053A800441AFA /* CGA_DescriptorInteractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_DescriptorInteractionViewController.swift; sourceTree = "<group>"; };
 		D47D71E12448DD70004D9923 /* CGA_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_Extensions.swift; sourceTree = "<group>"; };
@@ -161,7 +214,7 @@
 		D48D85182430F05500A925ED /* CGA_AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_AppDelegate.swift; sourceTree = "<group>"; };
 		D48D851C2430F05500A925ED /* CGA_InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_InitialViewController.swift; sourceTree = "<group>"; };
 		D4B1C6832430F26800D3AC78 /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4B42FAB24EF1D6800BDF1E9 /* Blue Van Clef (MacOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef (MacOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4B42FAB24EF1D6800BDF1E9 /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B42FBF24EF1DA800BDF1E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4B42FC024EF1DA800BDF1E9 /* MacOS-Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "MacOS-Assets.xcassets"; sourceTree = "<group>"; };
 		D4B42FC224EF1DA800BDF1E9 /* MacOS_PeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacOS_PeripheralViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +256,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D45FEA5E24F5159400DDCECF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D45FEA5F24F5159400DDCECF /* RVS-Persistent-Prefs in Frameworks */,
+				D45FEA6024F5159400DDCECF /* RVS-BlueThoth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4B42FA824EF1D6800BDF1E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +301,8 @@
 				D48D85172430F05500A925ED /* src */,
 				D420C895242FCD5600FCB9E0 /* Products */,
 				D4EE293724EC66740008C0FE /* Frameworks */,
+				D45FEA6A24F5159400DDCECF /* Blue Van Clef (WatchOS Extension) copy-Info.plist */,
+				D4272D7524F516EA00265D5C /* Blue Van Clef (WatchOS) copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -249,7 +313,9 @@
 				D4EE28E024EC62CC0008C0FE /* Blue Van Clef.app */,
 				D4EE28EF24EC62CD0008C0FE /* Blue Van Clef Extension.appex */,
 				D4BF7CF824EE04B8000470EC /* Blue Van Clef.app */,
-				D4B42FAB24EF1D6800BDF1E9 /* Blue Van Clef (MacOS).app */,
+				D4B42FAB24EF1D6800BDF1E9 /* Blue Van Clef.app */,
+				D45FEA6924F5159400DDCECF /* Blue Van Clef (Standalone WatchOS Extension).appex */,
+				D4272D7424F516EA00265D5C /* Blue Van Clef (Standalone WatchOS).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -433,6 +499,7 @@
 				D4EE291624EC648F0008C0FE /* TableControllers */,
 				D4EE290A24EC648F0008C0FE /* InterfaceControllers */,
 				D4EE291B24EC648F0008C0FE /* Info.plist */,
+				D45FEA6C24F5165600DDCECF /* Standalone-Info.plist */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -550,6 +617,45 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D4272D6524F516EA00265D5C /* Blue Van Clef (Standalone WatchOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4272D7124F516EA00265D5C /* Build configuration list for PBXNativeTarget "Blue Van Clef (Standalone WatchOS)" */;
+			buildPhases = (
+				D4272D6824F516EA00265D5C /* Resources */,
+				D4272D6F24F516EA00265D5C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D48CB5D624F517850079BB0C /* PBXTargetDependency */,
+			);
+			name = "Blue Van Clef (Standalone WatchOS)";
+			productName = "Blue Van Clef WatchKit App";
+			productReference = D4272D7424F516EA00265D5C /* Blue Van Clef (Standalone WatchOS).app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D45FEA4624F5159400DDCECF /* Blue Van Clef (Standalone WatchOS Extension) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D45FEA6624F5159400DDCECF /* Build configuration list for PBXNativeTarget "Blue Van Clef (Standalone WatchOS Extension)" */;
+			buildPhases = (
+				D45FEA4B24F5159400DDCECF /* SwiftLint */,
+				D45FEA4C24F5159400DDCECF /* Sources */,
+				D45FEA5E24F5159400DDCECF /* Frameworks */,
+				D45FEA6124F5159400DDCECF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Blue Van Clef (Standalone WatchOS Extension)";
+			packageProductDependencies = (
+				D45FEA4724F5159400DDCECF /* RVS-BlueThoth */,
+				D45FEA4924F5159400DDCECF /* RVS-Persistent-Prefs */,
+			);
+			productName = "Blue Van Clef WatchKit Extension";
+			productReference = D45FEA6924F5159400DDCECF /* Blue Van Clef (Standalone WatchOS Extension).appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		D4B1C6822430F26800D3AC78 /* Blue Van Clef (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef (iOS)" */;
@@ -574,9 +680,9 @@
 			productReference = D4B1C6832430F26800D3AC78 /* Blue Van Clef.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D4B42FAA24EF1D6800BDF1E9 /* Blue Van Clef (MacOS) */ = {
+		D4B42FAA24EF1D6800BDF1E9 /* Blue Van Clef */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4B42FBA24EF1D6900BDF1E9 /* Build configuration list for PBXNativeTarget "Blue Van Clef (MacOS)" */;
+			buildConfigurationList = D4B42FBA24EF1D6900BDF1E9 /* Build configuration list for PBXNativeTarget "Blue Van Clef" */;
 			buildPhases = (
 				D4F1A99224EF244700571110 /* SwiftLint */,
 				D4B42FA724EF1D6800BDF1E9 /* Sources */,
@@ -587,13 +693,13 @@
 			);
 			dependencies = (
 			);
-			name = "Blue Van Clef (MacOS)";
+			name = "Blue Van Clef";
 			packageProductDependencies = (
 				D4B42FE024EF1F8200BDF1E9 /* RVS-BlueThoth */,
 				D4B42FE224EF1F8200BDF1E9 /* RVS-Persistent-Prefs */,
 			);
 			productName = "Blue Van Clef (MacOS)";
-			productReference = D4B42FAB24EF1D6800BDF1E9 /* Blue Van Clef (MacOS).app */;
+			productReference = D4B42FAB24EF1D6800BDF1E9 /* Blue Van Clef.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D4BF7CF724EE04B8000470EC /* Blue Van Clef (Watch iOS Wrapper) */ = {
@@ -605,7 +711,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				D4BF7D2424EE04E1000470EC /* PBXTargetDependency */,
+				D48CB5D224F517640079BB0C /* PBXTargetDependency */,
 			);
 			name = "Blue Van Clef (Watch iOS Wrapper)";
 			productName = "Blue Van Clef";
@@ -696,16 +802,42 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4B42FAA24EF1D6800BDF1E9 /* Blue Van Clef (MacOS) */,
+				D4B42FAA24EF1D6800BDF1E9 /* Blue Van Clef */,
 				D4B1C6822430F26800D3AC78 /* Blue Van Clef (iOS) */,
 				D4EE28DF24EC62CC0008C0FE /* Blue Van Clef (WatchOS) */,
 				D4EE28EE24EC62CD0008C0FE /* Blue Van Clef (WatchOS Extension) */,
 				D4BF7CF724EE04B8000470EC /* Blue Van Clef (Watch iOS Wrapper) */,
+				D4272D6524F516EA00265D5C /* Blue Van Clef (Standalone WatchOS) */,
+				D45FEA4624F5159400DDCECF /* Blue Van Clef (Standalone WatchOS Extension) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D4272D6824F516EA00265D5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4272D6924F516EA00265D5C /* SharedAssets.xcassets in Resources */,
+				D4272D6A24F516EA00265D5C /* WatchAssets.xcassets in Resources */,
+				D4272D6B24F516EA00265D5C /* Complications.xcassets in Resources */,
+				D4272D6C24F516EA00265D5C /* Localizable.strings in Resources */,
+				D4272D6D24F516EA00265D5C /* Interface.storyboard in Resources */,
+				D4272D6E24F516EA00265D5C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D45FEA6124F5159400DDCECF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D45FEA6224F5159400DDCECF /* Localizable.strings in Resources */,
+				D45FEA6324F5159400DDCECF /* WatchAssets.xcassets in Resources */,
+				D45FEA6424F5159400DDCECF /* Complications.xcassets in Resources */,
+				D45FEA6524F5159400DDCECF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4B1C6812430F26800D3AC78 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -777,6 +909,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if test -f \"${PROJECT_DIR}/Project-Meta/SwiftLint/swiftlint\"; then\n    \"${PROJECT_DIR}/Project-Meta/SwiftLint/swiftlint\"\nfi\n";
 		};
+		D45FEA4B24F5159400DDCECF /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -f \"${PROJECT_DIR}/Project-Meta/SwiftLint/swiftlint\"; then\n    \"${PROJECT_DIR}/Project-Meta/SwiftLint/swiftlint\"\nfi\n";
+		};
 		D4A6A8652430F4430084F102 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -816,6 +966,30 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D45FEA4C24F5159400DDCECF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D45FEA4D24F5159400DDCECF /* CGA_WatchOS_DiscoveryInterfaceController.swift in Sources */,
+				D45FEA4E24F5159400DDCECF /* CGA_WatchOS_MainInterfaceController.swift in Sources */,
+				D45FEA4F24F5159400DDCECF /* CGA_WatchOS_PrefsInterfaceController.swift in Sources */,
+				D45FEA5024F5159400DDCECF /* CGA_WatchOS_WatchOS_CharacteristicTables.swift in Sources */,
+				D45FEA5124F5159400DDCECF /* CGA_PersistentPrefs.swift in Sources */,
+				D45FEA5224F5159400DDCECF /* CGA_WatchOS_CharacteristicInterfaceController.swift in Sources */,
+				D45FEA5324F5159400DDCECF /* CGA_ComplicationController.swift in Sources */,
+				D45FEA5424F5159400DDCECF /* CGA_WatchOS_WatchOS_ServiceTableController.swift in Sources */,
+				D45FEA5524F5159400DDCECF /* CGA_WatchOS_BaseInterfaceController.swift in Sources */,
+				D45FEA5624F5159400DDCECF /* CGA_WatchOS_WatchOS_DiscoveryTableController.swift in Sources */,
+				D45FEA5724F5159400DDCECF /* CGA_WatchOS_CharacteristicTableController.swift in Sources */,
+				D45FEA5824F5159400DDCECF /* CGA_WatchOS_DescriptorInterfaceController.swift in Sources */,
+				D45FEA5924F5159400DDCECF /* CGA_WatchOS_ServiceInterfaceController.swift in Sources */,
+				D45FEA5A24F5159400DDCECF /* CGA_WatchOS_ExtensionDelegate_Extras.swift in Sources */,
+				D45FEA5B24F5159400DDCECF /* CGA_WatchOS_DeviceInterfaceController.swift in Sources */,
+				D45FEA5C24F5159400DDCECF /* CGA_WatchOS_ExtensionDelegate.swift in Sources */,
+				D45FEA5D24F5159400DDCECF /* CGA_WatchOS_AboutInterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4B1C67F2430F26800D3AC78 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -879,10 +1053,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D4BF7D2424EE04E1000470EC /* PBXTargetDependency */ = {
+		D48CB5D224F517640079BB0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D4EE28DF24EC62CC0008C0FE /* Blue Van Clef (WatchOS) */;
-			targetProxy = D4BF7D2324EE04E1000470EC /* PBXContainerItemProxy */;
+			target = D4272D6524F516EA00265D5C /* Blue Van Clef (Standalone WatchOS) */;
+			targetProxy = D48CB5D124F517640079BB0C /* PBXContainerItemProxy */;
+		};
+		D48CB5D624F517850079BB0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D45FEA4624F5159400DDCECF /* Blue Van Clef (Standalone WatchOS Extension) */;
+			targetProxy = D48CB5D524F517850079BB0C /* PBXContainerItemProxy */;
 		};
 		D4CC00E824F292E8003FAE01 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1071,6 +1250,98 @@
 			};
 			name = Release;
 		};
+		D4272D7224F516EA00265D5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3000;
+				DEVELOPMENT_TEAM = KSAUGZFWP2;
+				IBSC_MODULE = Blue_Van_Clef_WatchKit_Extension;
+				INFOPLIST_FILE = "src/WatchOS/App/Standalone-Info.plist";
+				MARKETING_VERSION = 1.4.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		D4272D7324F516EA00265D5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3000;
+				DEVELOPMENT_TEAM = KSAUGZFWP2;
+				IBSC_MODULE = Blue_Van_Clef_WatchKit_Extension;
+				INFOPLIST_FILE = "src/WatchOS/App/Standalone-Info.plist";
+				MARKETING_VERSION = 1.4.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		D45FEA6724F5159400DDCECF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3000;
+				DEVELOPMENT_TEAM = KSAUGZFWP2;
+				INFOPLIST_FILE = "src/WatchOS/Extension/Standalone-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.4.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		D45FEA6824F5159400DDCECF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3000;
+				DEVELOPMENT_TEAM = KSAUGZFWP2;
+				INFOPLIST_FILE = "src/WatchOS/Extension/Standalone-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.4.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
 		D4B1C6952430F26800D3AC78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1086,7 +1357,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
 				PRODUCT_NAME = "Blue Van Clef";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1111,7 +1382,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
 				PRODUCT_NAME = "Blue Van Clef";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1137,7 +1408,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1160,7 +1431,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1175,7 +1446,7 @@
 				CURRENT_PROJECT_VERSION = 3000;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				INFOPLIST_FILE = src/WatchOS/Info.plist;
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
 				PRODUCT_NAME = "Blue Van Clef";
 				SWIFT_VERSION = 5.0;
@@ -1189,7 +1460,7 @@
 				CURRENT_PROJECT_VERSION = 3000;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				INFOPLIST_FILE = src/WatchOS/Info.plist;
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
 				PRODUCT_NAME = "Blue Van Clef";
 				SWIFT_VERSION = 5.0;
@@ -1210,7 +1481,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "Blue Van Clef Extension";
 				SDKROOT = watchos;
@@ -1234,7 +1505,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "Blue Van Clef Extension";
 				SDKROOT = watchos;
@@ -1256,7 +1527,7 @@
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				IBSC_MODULE = Blue_Van_Clef_WatchKit_Extension;
 				INFOPLIST_FILE = src/WatchOS/App/Info.plist;
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp;
 				PRODUCT_NAME = "Blue Van Clef";
 				SDKROOT = watchos;
@@ -1277,7 +1548,7 @@
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				IBSC_MODULE = Blue_Van_Clef_WatchKit_Extension;
 				INFOPLIST_FILE = src/WatchOS/App/Info.plist;
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp;
 				PRODUCT_NAME = "Blue Van Clef";
 				SDKROOT = watchos;
@@ -1301,6 +1572,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		D4272D7124F516EA00265D5C /* Build configuration list for PBXNativeTarget "Blue Van Clef (Standalone WatchOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4272D7224F516EA00265D5C /* Debug */,
+				D4272D7324F516EA00265D5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D45FEA6624F5159400DDCECF /* Build configuration list for PBXNativeTarget "Blue Van Clef (Standalone WatchOS Extension)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D45FEA6724F5159400DDCECF /* Debug */,
+				D45FEA6824F5159400DDCECF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1310,7 +1599,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4B42FBA24EF1D6900BDF1E9 /* Build configuration list for PBXNativeTarget "Blue Van Clef (MacOS)" */ = {
+		D4B42FBA24EF1D6900BDF1E9 /* Build configuration list for PBXNativeTarget "Blue Van Clef" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4B42FB824EF1D6900BDF1E9 /* Debug */,
@@ -1349,6 +1638,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D45FEA4824F5159400DDCECF /* XCRemoteSwiftPackageReference "RVS_BlueThoth" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:RiftValleySoftware/RVS_BlueThoth.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.2;
+			};
+		};
+		D45FEA4A24F5159400DDCECF /* XCRemoteSwiftPackageReference "RVS_PersistentPrefs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:RiftValleySoftware/RVS_PersistentPrefs.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
 		D48FD97224B23F260094F4D1 /* XCRemoteSwiftPackageReference "RVS_BlueThoth" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:RiftValleySoftware/RVS_BlueThoth.git";
@@ -1368,6 +1673,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D45FEA4724F5159400DDCECF /* RVS-BlueThoth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D45FEA4824F5159400DDCECF /* XCRemoteSwiftPackageReference "RVS_BlueThoth" */;
+			productName = "RVS-BlueThoth";
+		};
+		D45FEA4924F5159400DDCECF /* RVS-Persistent-Prefs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D45FEA4A24F5159400DDCECF /* XCRemoteSwiftPackageReference "RVS_PersistentPrefs" */;
+			productName = "RVS-Persistent-Prefs";
+		};
 		D48FD97324B23F260094F4D1 /* RVS-BlueThoth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D48FD97224B23F260094F4D1 /* XCRemoteSwiftPackageReference "RVS_BlueThoth" */;

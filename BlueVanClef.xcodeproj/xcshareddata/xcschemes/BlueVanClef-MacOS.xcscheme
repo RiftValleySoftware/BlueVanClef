@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D4B42FAA24EF1D6800BDF1E9"
-               BuildableName = "Blue Van Clef (MacOS).app"
-               BlueprintName = "Blue Van Clef (MacOS)"
+               BuildableName = "Blue Van Clef.app"
+               BlueprintName = "Blue Van Clef"
                ReferencedContainer = "container:BlueVanClef.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4B42FAA24EF1D6800BDF1E9"
-            BuildableName = "Blue Van Clef (MacOS).app"
-            BlueprintName = "Blue Van Clef (MacOS)"
+            BuildableName = "Blue Van Clef.app"
+            BlueprintName = "Blue Van Clef"
             ReferencedContainer = "container:BlueVanClef.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4B42FAA24EF1D6800BDF1E9"
-            BuildableName = "Blue Van Clef (MacOS).app"
-            BlueprintName = "Blue Van Clef (MacOS)"
+            BuildableName = "Blue Van Clef.app"
+            BlueprintName = "Blue Van Clef"
             ReferencedContainer = "container:BlueVanClef.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
