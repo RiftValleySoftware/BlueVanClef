@@ -4,6 +4,8 @@
 
 - **TBD**
 
+- Improved Jazzy docs.
+
 ## 1.4.1.3000
 
 - **August 23, 2020**

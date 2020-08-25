@@ -235,7 +235,13 @@ extension MacOS_PreferencesViewController {
 // MARK: - NSTextViewDelegate Conformance -
 /* ###################################################################################################################################### */
 extension MacOS_PreferencesViewController: NSTextViewDelegate {
-    func textDidChange(_ notification: Notification) {
+    /* ################################################################## */
+    /**
+     Called when text in one of the text items changes.
+     
+     - parameter: ignored
+     */
+    func textDidChange(_: Notification) {
         prefs.peripheralFilterIDArray = deviceFilterTextView.string.split(separator: "\n").compactMap { $0.uuidFormat }
         prefs.serviceFilterIDArray = serviceFiltersTextView.string.split(separator: "\n").compactMap { $0.uuidFormat }
         prefs.characteristicFilterIDArray = characteristicsFiltersTextView.string.split(separator: "\n").compactMap { $0.uuidFormat }

@@ -232,6 +232,15 @@ extension MacOS_CharacteristicViewController {
      This sets up the Descriptor list (if any).
      */
     func setUpDescriptors() {
+        /* ############################################################## */
+        /**
+         Creates a label to display a Characteristic.
+         
+         - parameter inText: The text to use for the label.
+         - parameter isHeader: True, if this will be a header label.
+         
+         - returns: A label view.
+         */
         func createLabel(_ inText: String, isHeader: Bool = false) -> NSView {
             let ret = NSTextField()
             ret.textColor = .white
