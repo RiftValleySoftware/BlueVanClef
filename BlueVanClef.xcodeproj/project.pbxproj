@@ -58,6 +58,8 @@
 		D45FEA6524F5159400DDCECF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
 		D465B38824D0532F00441AFA /* CGA_CharacteristicInteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D465B38724D0532F00441AFA /* CGA_CharacteristicInteractionViewController.swift */; };
 		D465B38A24D053A800441AFA /* CGA_DescriptorInteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D465B38924D053A800441AFA /* CGA_DescriptorInteractionViewController.swift */; };
+		D4774D4224F54E13008EC89E /* CGA_BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4774D4124F54E13008EC89E /* CGA_BaseViewController.swift */; };
+		D4774D4324F54F20008EC89E /* CGA_BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4774D4124F54E13008EC89E /* CGA_BaseViewController.swift */; };
 		D47D71E22448DD70004D9923 /* CGA_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47D71E12448DD70004D9923 /* CGA_Extensions.swift */; };
 		D480CE2E243CEFE20074CFE4 /* CGA_CharacteristicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480CE2D243CEFE20074CFE4 /* CGA_CharacteristicViewController.swift */; };
 		D48CB5D324F517720079BB0C /* Blue Van Clef (Standalone WatchOS).app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D4272D7424F516EA00265D5C /* Blue Van Clef (Standalone WatchOS).app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -97,8 +99,6 @@
 		D4CC681524F53A07004EECA4 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7524E8C4B200392814 /* SharedAssets.xcassets */; };
 		D4CC681624F53A0C004EECA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
 		D4CC681724F53A0C004EECA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
-		D4CC681C24F53AA6004EECA4 /* CGA_BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC681B24F53AA6004EECA4 /* CGA_BaseViewController.swift */; };
-		D4CC681D24F53AA6004EECA4 /* CGA_BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC681B24F53AA6004EECA4 /* CGA_BaseViewController.swift */; };
 		D4DDEDBA24EDDE61006B5B8F /* WatchAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291E24EC648F0008C0FE /* WatchAssets.xcassets */; };
 		D4EDB96524EDEC78001172B5 /* Complications.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EDB96424EDEC78001172B5 /* Complications.xcassets */; };
 		D4EDB96624EDEC78001172B5 /* Complications.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EDB96424EDEC78001172B5 /* Complications.xcassets */; };
@@ -237,6 +237,7 @@
 		D45FEA6C24F5165600DDCECF /* Standalone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Standalone-Info.plist"; sourceTree = "<group>"; };
 		D465B38724D0532F00441AFA /* CGA_CharacteristicInteractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_CharacteristicInteractionViewController.swift; sourceTree = "<group>"; };
 		D465B38924D053A800441AFA /* CGA_DescriptorInteractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_DescriptorInteractionViewController.swift; sourceTree = "<group>"; };
+		D4774D4124F54E13008EC89E /* CGA_BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_BaseViewController.swift; sourceTree = "<group>"; };
 		D47D71E12448DD70004D9923 /* CGA_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_Extensions.swift; sourceTree = "<group>"; };
 		D480CE2D243CEFE20074CFE4 /* CGA_CharacteristicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_CharacteristicViewController.swift; sourceTree = "<group>"; };
 		D48D85182430F05500A925ED /* CGA_AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_AppDelegate.swift; sourceTree = "<group>"; };
@@ -259,7 +260,6 @@
 		D4BF7CEE24EE0366000470EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4BF7CF824EE04B8000470EC /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CAA4262434E877007C72AA /* CGA_PeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_PeripheralViewController.swift; sourceTree = "<group>"; };
-		D4CC681B24F53AA6004EECA4 /* CGA_BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_BaseViewController.swift; sourceTree = "<group>"; };
 		D4EDB96424EDEC78001172B5 /* Complications.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Complications.xcassets; sourceTree = "<group>"; };
 		D4EE28E024EC62CC0008C0FE /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EE28EF24EC62CD0008C0FE /* Blue Van Clef Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Blue Van Clef Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -470,6 +470,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D4774D4724F54FCD008EC89E /* iOS-TVOS */ = {
+			isa = PBXGroup;
+			children = (
+				D4774D4124F54E13008EC89E /* CGA_BaseViewController.swift */,
+			);
+			path = "iOS-TVOS";
+			sourceTree = "<group>";
+		};
+		D4774D4824F54FDA008EC89E /* All-Targets */ = {
+			isa = PBXGroup;
+			children = (
+				D44491BC244A3357008D447D /* CGA_PersistentPrefs.swift */,
+			);
+			path = "All-Targets";
+			sourceTree = "<group>";
+		};
 		D47A34CF24316F2A000483DF /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -582,14 +598,6 @@
 			path = Meta;
 			sourceTree = "<group>";
 		};
-		D4CC681E24F53B8B004EECA4 /* iOS-TVOS */ = {
-			isa = PBXGroup;
-			children = (
-				D4CC681B24F53AA6004EECA4 /* CGA_BaseViewController.swift */,
-			);
-			path = "iOS-TVOS";
-			sourceTree = "<group>";
-		};
 		D4DE33872459E5300053F163 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -688,8 +696,8 @@
 		D4EE293E24EC66EB0008C0FE /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D44491BC244A3357008D447D /* CGA_PersistentPrefs.swift */,
-				D4CC681E24F53B8B004EECA4 /* iOS-TVOS */,
+				D4774D4824F54FDA008EC89E /* All-Targets */,
+				D4774D4724F54FCD008EC89E /* iOS-TVOS */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -1138,7 +1146,7 @@
 				D43151C424F536FD0031050E /* CGA_ConnectedViewController.swift in Sources */,
 				D43151C624F536FD0031050E /* CGA_CharacteristicViewController.swift in Sources */,
 				D4CC681424F53A01004EECA4 /* CGA_PersistentPrefs.swift in Sources */,
-				D4CC681D24F53AA6004EECA4 /* CGA_BaseViewController.swift in Sources */,
+				D4774D4224F54E13008EC89E /* CGA_BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1177,7 +1185,7 @@
 				D4B1C6A02430F32900D3AC78 /* CGA_InitialViewController.swift in Sources */,
 				D4CAA4272434E878007C72AA /* CGA_PeripheralViewController.swift in Sources */,
 				D480CE2E243CEFE20074CFE4 /* CGA_CharacteristicViewController.swift in Sources */,
-				D4CC681C24F53AA6004EECA4 /* CGA_BaseViewController.swift in Sources */,
+				D4774D4324F54F20008EC89E /* CGA_BaseViewController.swift in Sources */,
 				D465B38A24D053A800441AFA /* CGA_DescriptorInteractionViewController.swift in Sources */,
 				D47D71E22448DD70004D9923 /* CGA_Extensions.swift in Sources */,
 				D465B38824D0532F00441AFA /* CGA_CharacteristicInteractionViewController.swift in Sources */,

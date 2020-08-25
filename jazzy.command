@@ -27,6 +27,18 @@ jazzy   --readme ./README.md \
        --theme fullwidth
 cp ./img/* docs/MacOS/img
 
+echo "Creating Docs for the TVOS App\n"
+rm -drf docs/TVOS
+
+jazzy   --readme ./README.md \
+       -b -scheme,BlueVanClef-TVOS \
+       --github_url https://github.com/RiftValleySoftware/BlueVanClef \
+       --title "BlueVanClef (TVOS) Doumentation" \
+       --min_acl private \
+       --output docs/TVOS \
+       --theme fullwidth
+cp ./img/* docs/TVOS/img
+
 # echo "Creating Docs for the WatchOS App\n"
 # rm -drf docs/WatchOS
 # 

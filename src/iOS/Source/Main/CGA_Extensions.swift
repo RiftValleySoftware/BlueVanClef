@@ -35,18 +35,6 @@ import UIKit
 extension UIViewController {
     /* ################################################################## */
     /**
-     Returns true, if we are in Dark Mode.
-     */
-    var isDarkMode: Bool { .dark == traitCollection.userInterfaceStyle }
-    
-    /* ################################################################## */
-    /**
-     Returns true, if we are in High Contrast Mode.
-     */
-    var isHighContrastModeMode: Bool { UIAccessibility.isDarkerSystemColorsEnabled }
-
-    /* ################################################################## */
-    /**
      This returns the first responder, wherever it is in our hierarchy.
      */
     var currentFirstResponder: UIResponder? { view.currentFirstResponder }
