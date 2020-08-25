@@ -25,7 +25,7 @@
         <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CGA_InitialViewController" customModule="RVS_BlueThoth_Test_Harness_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CGA_InitialViewController" customModule="Blue_Van_Clef" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -34,10 +34,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="cUe-hU-xVR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundGradient" translatesAutoresizingMaskIntoConstraints="NO" id="cUe-hU-xVR">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueThothLogo" translatesAutoresizingMaskIntoConstraints="NO" id="6ib-gm-JiZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BluetoothClef" translatesAutoresizingMaskIntoConstraints="NO" id="6ib-gm-JiZ">
                                 <rect key="frame" x="636" y="216" width="648" height="648"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6ib-gm-JiZ" secondAttribute="height" multiplier="1:1" id="cLT-qw-aJc"/>
@@ -131,7 +131,7 @@
         <!--Settings View Controller-->
         <scene sceneID="QsV-uD-nF4">
             <objects>
-                <viewController id="GUR-Cd-VOt" customClass="CGA_SettingsViewController" customModule="RVS_BlueThoth_Test_Harness_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GUR-Cd-VOt" customClass="CGA_SettingsViewController" customModule="Blue_Van_Clef" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zUn-FM-rTL"/>
                         <viewControllerLayoutGuide type="bottom" id="N6u-Yg-ho4"/>
@@ -140,10 +140,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="VwY-bk-2SZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundGradient" translatesAutoresizingMaskIntoConstraints="NO" id="VwY-bk-2SZ">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueThothLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Jyh-3Z-5nc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BluetoothClef" translatesAutoresizingMaskIntoConstraints="NO" id="Jyh-3Z-5nc">
                                 <rect key="frame" x="636" y="216" width="648" height="648"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Jyh-3Z-5nc" secondAttribute="height" multiplier="1:1" id="6sG-Mo-rAY"/>
@@ -263,7 +263,7 @@
         <!--Discovery Details View Controller-->
         <scene sceneID="5Cq-9a-dRI">
             <objects>
-                <viewController id="Jbj-m4-9ak" customClass="CGA_DiscoveryDetailsViewController" customModule="RVS_BlueThoth_Test_Harness_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jbj-m4-9ak" customClass="CGA_DiscoveryDetailsViewController" customModule="Blue_Van_Clef" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V6c-T9-Ac8"/>
                         <viewControllerLayoutGuide type="bottom" id="yLP-sw-rn1"/>
@@ -272,10 +272,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="BOZ-Oq-DSf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundGradient" translatesAutoresizingMaskIntoConstraints="NO" id="BOZ-Oq-DSf">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueThothLogo" translatesAutoresizingMaskIntoConstraints="NO" id="DeK-JV-geM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BluetoothClef" translatesAutoresizingMaskIntoConstraints="NO" id="DeK-JV-geM">
                                 <rect key="frame" x="636" y="216" width="648" height="648"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DeK-JV-geM" secondAttribute="height" multiplier="1:1" id="GsE-YB-ekY"/>
@@ -348,7 +348,7 @@
         <!--Connected View Controller-->
         <scene sceneID="1Xa-Zb-S7F">
             <objects>
-                <viewController id="b7M-LQ-y02" customClass="CGA_ConnectedViewController" customModule="RVS_BlueThoth_Test_Harness_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="b7M-LQ-y02" customClass="CGA_ConnectedViewController" customModule="Blue_Van_Clef" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YAE-KD-Id0"/>
                         <viewControllerLayoutGuide type="bottom" id="VYb-tg-tXS"/>
@@ -357,10 +357,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="BAb-k9-psM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundGradient" translatesAutoresizingMaskIntoConstraints="NO" id="BAb-k9-psM">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueThothLogo" translatesAutoresizingMaskIntoConstraints="NO" id="yTN-Tw-602">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BluetoothClef" translatesAutoresizingMaskIntoConstraints="NO" id="yTN-Tw-602">
                                 <rect key="frame" x="636" y="216" width="648" height="648"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yTN-Tw-602" secondAttribute="height" multiplier="1:1" id="DvZ-PD-Fsa"/>
@@ -473,7 +473,7 @@
         <!--Service View Controller-->
         <scene sceneID="Jhm-Xe-mxr">
             <objects>
-                <viewController id="1tD-Pc-jdt" customClass="CGA_ServiceViewController" customModule="RVS_BlueThoth_Test_Harness_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1tD-Pc-jdt" customClass="CGA_ServiceViewController" customModule="Blue_Van_Clef" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Al8-kt-BLf"/>
                         <viewControllerLayoutGuide type="bottom" id="8cD-Tu-9Cm"/>
@@ -482,10 +482,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="nHg-zQ-AHx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundGradient" translatesAutoresizingMaskIntoConstraints="NO" id="nHg-zQ-AHx">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueThothLogo" translatesAutoresizingMaskIntoConstraints="NO" id="e2R-A2-FCw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BluetoothClef" translatesAutoresizingMaskIntoConstraints="NO" id="e2R-A2-FCw">
                                 <rect key="frame" x="636" y="216" width="648" height="648"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="e2R-A2-FCw" secondAttribute="height" multiplier="1:1" id="6EE-w3-vxC"/>
@@ -560,7 +560,7 @@
         <!--Characteristic View Controller-->
         <scene sceneID="TJr-e5-rgN">
             <objects>
-                <viewController id="YrV-4p-VJr" userLabel="Characteristic View Controller" customClass="CGA_CharacteristicViewController" customModule="RVS_BlueThoth_Test_Harness_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YrV-4p-VJr" userLabel="Characteristic View Controller" customClass="CGA_CharacteristicViewController" customModule="Blue_Van_Clef" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ypl-CM-6Wc"/>
                         <viewControllerLayoutGuide type="bottom" id="cGZ-6y-ODe"/>
@@ -569,10 +569,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="FCl-hp-JCa">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundGradient" translatesAutoresizingMaskIntoConstraints="NO" id="FCl-hp-JCa">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueThothLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ksx-cr-o0e">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BluetoothClef" translatesAutoresizingMaskIntoConstraints="NO" id="ksx-cr-o0e">
                                 <rect key="frame" x="636" y="216" width="648" height="648"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ksx-cr-o0e" secondAttribute="height" multiplier="1:1" id="dO0-34-hOa"/>
@@ -646,7 +646,7 @@
         <!--Info View Controller-->
         <scene sceneID="idC-5S-FFa">
             <objects>
-                <viewController id="tfR-Ak-O0W" customClass="CGA_InfoViewController" customModule="RVS_BlueThoth_Test_Harness_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tfR-Ak-O0W" customClass="CGA_InfoViewController" customModule="Blue_Van_Clef" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N3c-Iy-uEo"/>
                         <viewControllerLayoutGuide type="bottom" id="vug-Xp-AeT"/>
@@ -655,10 +655,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="mCi-kw-kDv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundGradient" translatesAutoresizingMaskIntoConstraints="NO" id="mCi-kw-kDv">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueThothLogo" translatesAutoresizingMaskIntoConstraints="NO" id="lgJ-48-WJf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BluetoothClef" translatesAutoresizingMaskIntoConstraints="NO" id="lgJ-48-WJf">
                                 <rect key="frame" x="636" y="216" width="648" height="648"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lgJ-48-WJf" secondAttribute="height" multiplier="1:1" id="Hmp-H4-8Kg"/>
@@ -714,9 +714,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BlueThothLogo" width="307" height="305"/>
+        <image name="BackgroundGradient" width="10" height="1000"/>
+        <image name="BluetoothClef" width="356" height="356"/>
         <image name="Gear" width="25" height="25"/>
         <image name="NoBT" width="342" height="342"/>
-        <image name="background-gradient" width="1" height="1000"/>
     </resources>
 </document>

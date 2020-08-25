@@ -19,10 +19,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="HsC-l2-IXd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundGradient" translatesAutoresizingMaskIntoConstraints="NO" id="HsC-l2-IXd">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueThothLogo" translatesAutoresizingMaskIntoConstraints="NO" id="QtR-k0-kS0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BluetoothClef" translatesAutoresizingMaskIntoConstraints="NO" id="QtR-k0-kS0">
                                 <rect key="frame" x="636" y="216" width="648" height="648"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QtR-k0-kS0" secondAttribute="height" multiplier="1:1" id="Put-D8-imQ"/>
@@ -51,7 +51,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BlueThothLogo" width="307" height="305"/>
-        <image name="background-gradient" width="1" height="1000"/>
+        <image name="BackgroundGradient" width="10" height="1000"/>
+        <image name="BluetoothClef" width="356" height="356"/>
     </resources>
 </document>
