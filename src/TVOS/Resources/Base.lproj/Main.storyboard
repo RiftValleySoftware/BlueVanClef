@@ -117,7 +117,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="TCx-Tu-p8k"/>
                     <connections>
+                        <outlet property="backgroundGradientImage" destination="cUe-hU-xVR" id="dDh-X8-SrK"/>
                         <outlet property="discoveryTableView" destination="PVT-9h-YmQ" id="lYj-UW-8YR"/>
+                        <outlet property="logoImage" destination="6ib-gm-JiZ" id="BWO-va-SN1"/>
                         <outlet property="noBTImage" destination="yzE-e2-FwM" id="SNX-Yv-mYc"/>
                         <outlet property="scanningSegmentedControl" destination="O3a-SO-GlR" id="744-vo-vma"/>
                         <segue destination="Jbj-m4-9ak" kind="show" identifier="show-discovery-details" id="WgZ-xp-6Kq"/>
@@ -250,7 +252,9 @@
                     <navigationItem key="navigationItem" id="WxR-LF-tGt"/>
                     <connections>
                         <outlet property="allowEmptyNamesSwitch" destination="X0I-dA-pRj" id="4mO-pe-j37"/>
+                        <outlet property="backgroundGradientImage" destination="VwY-bk-2SZ" id="PJa-Fn-iw8"/>
                         <outlet property="continuousUpdateSwitch" destination="iqm-0h-IdG" id="JHs-x0-RmE"/>
+                        <outlet property="logoImage" destination="Jyh-3Z-5nc" id="8zi-Xb-geN"/>
                         <outlet property="minRSSILabel" destination="2Ct-Gd-21E" id="Bq3-cx-yDF"/>
                         <outlet property="minRSSISegmentedSwitch" destination="Tb5-uD-6hg" id="huE-vy-6ZV"/>
                         <outlet property="onlyConnectableSwitch" destination="Pnu-Se-Iwb" id="b2a-SO-rKo"/>
@@ -335,8 +339,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="SrB-u9-6dw"/>
                     <connections>
+                        <outlet property="backgroundGradientImage" destination="BOZ-Oq-DSf" id="6XJ-nX-RlS"/>
                         <outlet property="connectButton" destination="88g-i0-JqW" id="aD3-yQ-gey"/>
                         <outlet property="detailsDisplayTextView" destination="vTr-od-QP8" id="Snu-b2-XLW"/>
+                        <outlet property="logoImage" destination="DeK-JV-geM" id="dKI-am-Rq6"/>
                         <outlet property="nameLabel" destination="Kr5-Im-yqg" id="Hzx-ww-lVw"/>
                         <segue destination="b7M-LQ-y02" kind="show" identifier="connect-peripheral" id="dq5-wY-5d4"/>
                     </connections>
@@ -459,7 +465,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="cuP-In-DqW"/>
                     <connections>
+                        <outlet property="backgroundGradientImage" destination="BAb-k9-psM" id="ZwD-lc-koN"/>
                         <outlet property="connectingLabel" destination="Ggm-Zt-FlG" id="Epd-md-pGJ"/>
+                        <outlet property="logoImage" destination="yTN-Tw-602" id="b6o-NN-Q5r"/>
                         <outlet property="nameLabel" destination="6iY-z5-Mnr" id="a3N-jq-tOq"/>
                         <outlet property="serviceTableView" destination="hkc-nd-YKn" id="bjt-rU-1D0"/>
                         <outlet property="spinnerContainerView" destination="1Ap-Ts-CfT" id="wv8-NA-eYu"/>
@@ -548,7 +556,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="5aF-5v-cSJ"/>
                     <connections>
+                        <outlet property="backgroundGradientImage" destination="nHg-zQ-AHx" id="oHf-QF-LDW"/>
                         <outlet property="characteristicsTableView" destination="V6Q-EC-8rz" id="dps-F4-SSf"/>
+                        <outlet property="logoImage" destination="e2R-A2-FCw" id="iQH-WW-90u"/>
                         <outlet property="nameLabel" destination="kVs-2J-sJC" id="lJa-9a-zMe"/>
                         <segue destination="YrV-4p-VJr" kind="show" identifier="show-characteristic-detail" id="zra-mW-LDh"/>
                     </connections>
@@ -635,7 +645,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="tOX-iw-yDh"/>
                     <connections>
+                        <outlet property="backgroundGradientImage" destination="FCl-hp-JCa" id="2rm-0V-JIV"/>
                         <outlet property="descriptorsTableView" destination="VIq-5L-fdc" id="c3S-Dn-XNA"/>
+                        <outlet property="logoImage" destination="ksx-cr-o0e" id="z9x-N8-Ghe"/>
                         <outlet property="nameLabel" destination="dLS-mJ-YcK" id="CVq-EH-Oeb"/>
                     </connections>
                 </viewController>
@@ -704,7 +716,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ypp-95-51z"/>
                     <connections>
+                        <outlet property="backgroundGradientImage" destination="mCi-kw-kDv" id="f2v-g3-Kau"/>
                         <outlet property="infoTextView" destination="zVr-Pb-MX6" id="42C-LG-SZP"/>
+                        <outlet property="logoImage" destination="lgJ-48-WJf" id="Mzj-2d-V2E"/>
                         <outlet property="titleLabel" destination="VmT-BO-Jaf" id="3sx-xs-nin"/>
                     </connections>
                 </viewController>

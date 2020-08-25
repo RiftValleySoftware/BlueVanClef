@@ -40,7 +40,13 @@ extension UIViewController {
     /**
      Returns true, if we are in High Contrast Mode.
      */
-    var isHighContrastModeMode: Bool { UIAccessibility.isDarkerSystemColorsEnabled }
+    var isHighContrastMode: Bool { UIAccessibility.isDarkerSystemColorsEnabled }
+    
+    /* ################################################################## */
+    /**
+     Returns true, if we are in Reduced Transparency Mode.
+     */
+    var isReducedTransparencyMode: Bool { UIAccessibility.isReduceTransparencyEnabled }
 }
 
 /* ###################################################################################################################################### */
@@ -150,14 +156,15 @@ class CGA_BaseViewController: UIViewController {
      */
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = isHighContrastModeMode ?
+        
+        navigationController?.navigationBar.barTintColor = isHighContrastMode ?
             (isDarkMode ? _darkMode_high_contrast_navbar_color : _lightMode_high_contrast_navbar_color)
                 : (isDarkMode ? _darkMode_navbar_color : _lightMode_navbar_color)
-        
-        logoImage?.alpha = isHighContrastModeMode ?
+
+        logoImage?.alpha = isHighContrastMode || isReducedTransparencyMode ?
             (isDarkMode ? _darkMode_high_contrast_logo_alpha : _lightMode_high_contrast_logo_alpha)
                 : (isDarkMode ? _darkMode_logo_alpha : _lightMode_logo_alpha)
-        
-        backgroundGradientImage?.alpha = isHighContrastModeMode ? _high_contrast_background_alpha : _background_alpha
+
+        backgroundGradientImage?.alpha = isHighContrastMode ? _high_contrast_background_alpha : _background_alpha
     }
 }
