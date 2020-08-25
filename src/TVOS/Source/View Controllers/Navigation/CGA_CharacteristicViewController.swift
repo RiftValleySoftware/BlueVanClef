@@ -296,8 +296,8 @@ extension CGA_CharacteristicViewController: UITableViewDataSource {
     func tableView(_ inTableView: UITableView, cellForRowAt inIndexPath: IndexPath) -> UITableViewCell {
         if let ret = inTableView.dequeueReusableCell(withIdentifier: Self.labelTableCellReuseID) {
             ret.textLabel?.text = tableRowData[inIndexPath.row].title
-            ret.textLabel?.isEnabled = nil != tableRowData[inIndexPath.row].action
-            ret.selectionStyle = (nil == tableRowData[inIndexPath.row].action) ? .default : .none
+            ret.textLabel?.textColor = nil != tableRowData[inIndexPath.row].action ? (isDarkMode ? .white : UIColor(red: 0, green: 0, blue: 0.35, alpha: 1.0)) : UIColor.white.withAlphaComponent(0.5)
+            ret.selectionStyle = (nil == tableRowData[inIndexPath.row].action) ? (isDarkMode ? .gray : .blue) : .none
             ret.isUserInteractionEnabled = nil != tableRowData[inIndexPath.row].action
             return ret
         }

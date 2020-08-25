@@ -134,6 +134,7 @@ extension CGA_ServiceViewController: UITableViewDataSource {
             let serviceInstance = serviceInstance {
             let characteristic = serviceInstance[inIndexPath.row]
             ret.textLabel?.text = characteristic.id.localizedVariant
+            ret.textLabel?.textColor = (isDarkMode ? .white : UIColor(red: 0, green: 0, blue: 0.35, alpha: 1.0))
             return ret
         }
         

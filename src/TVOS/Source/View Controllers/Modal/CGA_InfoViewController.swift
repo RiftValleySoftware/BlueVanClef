@@ -88,7 +88,7 @@ extension Bundle {
 /* ###################################################################################################################################### */
 /**
  */
-class CGA_InfoViewController: UIViewController {
+class CGA_InfoViewController: CGA_BaseViewController {
     /* ################################################################## */
     /**
      The label at the top, with the app name and version.

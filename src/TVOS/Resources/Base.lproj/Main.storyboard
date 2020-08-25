@@ -424,6 +424,7 @@
                                             <constraint firstAttribute="width" constant="64" id="RL9-zV-Xye"/>
                                             <constraint firstAttribute="width" secondItem="gh4-O0-qPD" secondAttribute="height" multiplier="1:1" id="oGQ-aQ-sxu"/>
                                         </constraints>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -612,11 +613,13 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q10-Mq-HGX">
                                                     <rect key="frame" x="20" y="0.0" width="1668" height="135"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -716,9 +719,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ypp-95-51z"/>
                     <connections>
-                        <outlet property="backgroundGradientImage" destination="mCi-kw-kDv" id="f2v-g3-Kau"/>
+                        <outlet property="backgroundGradientImage" destination="mCi-kw-kDv" id="i5F-pc-8qr"/>
                         <outlet property="infoTextView" destination="zVr-Pb-MX6" id="42C-LG-SZP"/>
-                        <outlet property="logoImage" destination="lgJ-48-WJf" id="Mzj-2d-V2E"/>
+                        <outlet property="logoImage" destination="lgJ-48-WJf" id="9yG-Nx-rV6"/>
                         <outlet property="titleLabel" destination="VmT-BO-Jaf" id="3sx-xs-nin"/>
                     </connections>
                 </viewController>

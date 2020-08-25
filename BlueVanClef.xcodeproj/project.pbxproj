@@ -398,11 +398,11 @@
 		D43151B424F536CE0031050E /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				D43151B924F536CE0031050E /* CGA_InitialViewController.swift */,
+				D43151B824F536CE0031050E /* CGA_DiscoveryDetailsViewController.swift */,
 				D43151B524F536CE0031050E /* CGA_ConnectedViewController.swift */,
 				D43151B624F536CE0031050E /* CGA_ServiceViewController.swift */,
 				D43151B724F536CE0031050E /* CGA_CharacteristicViewController.swift */,
-				D43151B824F536CE0031050E /* CGA_DiscoveryDetailsViewController.swift */,
-				D43151B924F536CE0031050E /* CGA_InitialViewController.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";

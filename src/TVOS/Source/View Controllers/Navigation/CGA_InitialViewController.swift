@@ -265,7 +265,7 @@ extension CGA_InitialViewController: UITableViewDataSource {
             let peripheralDiscoveryInfo = centralManager.stagedBLEPeripherals[inIndexPath.row]
             let powerString = " (" + String(format: "SLUG-RSSI-LEVEL-FORMAT".localizedVariant, peripheralDiscoveryInfo.rssi) + ")"
             ret.textLabel?.text = (peripheralDiscoveryInfo.preferredName.isEmpty ? "SLUG-NO-DEVICE-NAME".localizedVariant : peripheralDiscoveryInfo.preferredName) + powerString
-            ret.textLabel?.textColor = centralManager.isScanning ? UIColor(white: 1.0, alpha: 0.5) : .white
+            ret.textLabel?.textColor = centralManager.isScanning ? UIColor(white: 1.0, alpha: 0.5) : ((isDarkMode ? .white : UIColor(red: 0, green: 0, blue: 0.35, alpha: 1.0)))
             return ret
         }
         

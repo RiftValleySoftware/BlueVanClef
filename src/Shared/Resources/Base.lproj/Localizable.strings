@@ -118,7 +118,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 
 // MARK: - Info screen
 "SLUG-VERSION-FORMAT"               =   "VERSION: %@ (%@)";
-"SLUG-MAIN-INFO-TEXT"               =   "This app is a very basic Bluetooth Low-Energy (BLE) \"explorer.\"\nWe can detect advertising BLE devices (Peripherals), and connect to them (if the device allows connection).\nOnce connected, we can then explore the Bluetooth Services, Characteristics and Descriptors for that Peripheral.\nTap on a table row to \"explore\" that Peripheral, Service or Characteristic.";
+"SLUG-MAIN-INFO-TEXT"               =   "This app is a very basic Bluetooth Low-Energy (BLE) \"explorer.\"\nWe can detect advertising BLE devices (Peripherals), and connect to them (if the device allows connection).\nOnce connected, we can then explore the Bluetooth Services, Characteristics and Descriptors for that Peripheral.\nSelect a table row to \"explore\" that Peripheral, Service or Characteristic.";
 "SLUG-HELP-URI"                     =   "https://riftvalleysoftware.com/work/ios-apps/bluevanclef/";
 
 // Mac-Only

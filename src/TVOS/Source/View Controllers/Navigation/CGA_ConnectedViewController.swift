@@ -154,6 +154,7 @@ extension CGA_ConnectedViewController: UITableViewDataSource {
             let peripheralInstance = discoveryData.peripheralInstance {
             let service = peripheralInstance[inIndexPath.row]
             ret.textLabel?.text = service.id.localizedVariant
+            ret.textLabel?.textColor = isDarkMode ? .white : UIColor(red: 0, green: 0, blue: 0.35, alpha: 1.0)
             return ret
         }
         
