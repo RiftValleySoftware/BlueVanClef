@@ -1506,7 +1506,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.4.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.TV;
 				PRODUCT_NAME = "Blue Van Clef";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
@@ -1528,7 +1528,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.4.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.TV;
 				PRODUCT_NAME = "Blue Van Clef";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
@@ -1692,7 +1692,7 @@
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				INFOPLIST_FILE = src/WatchOS/Info.plist;
 				MARKETING_VERSION = 1.4.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Watch;
 				PRODUCT_NAME = "Blue Van Clef";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1706,7 +1706,7 @@
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				INFOPLIST_FILE = src/WatchOS/Info.plist;
 				MARKETING_VERSION = 1.4.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Watch;
 				PRODUCT_NAME = "Blue Van Clef";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;

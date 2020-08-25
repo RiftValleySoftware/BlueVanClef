@@ -28,6 +28,8 @@
 	<array>
 		<string>arm64</string>
 	</array>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>UIUserInterfaceStyle</key>
 	<string>Automatic</string>
 </dict>
