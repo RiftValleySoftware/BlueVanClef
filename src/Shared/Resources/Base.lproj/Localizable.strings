@@ -623,3 +623,6 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 "SLUG-CHAR-PRESENTATION-27"         =   "Opaque Structure";
 "SLUG-CHAR-PRESENTATION-255"        =   "ERROR";
 
+// Custom Service UUIDs
+"D0611E78-BBB4-4591-A5F8-487910AE4366"  =   "Apple Continuity";
+"E47C8027-CCA1-4E3B-981F-BDC47ABEB5B5"  =   "Kiwi ELM327 Serial Connection";

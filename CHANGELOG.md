@@ -1,10 +1,18 @@
 # BlueVanClef Change Log
 
-## 1.4.3
+## 1.4.4
 
 - **TBD**
 
+- Added localization tokens for Apple Continuity Service and Kiwi ELM327 Serial link.
+
+## 1.4.3.3000 (Watch, TV), 1.4.3.3002 (Mac)
+
+- **August 26, 2020**
+
 - Improved Jazzy docs.
+- Changed various Mac menu items and bundle items to meet App Store requirements.
+- Released TVOS app.
 
 ## 1.4.2.3000
 
