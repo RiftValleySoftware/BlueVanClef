@@ -152,6 +152,12 @@ class MacOS_AppDelegate: NSObject, NSApplicationDelegate {
      This has our open windows.
      */
     var screenList: [MacOS_ControllerList_Protocol] = []
+    
+    /* ################################################################## */
+    /**
+     This is true, if the main window is open.
+     */
+    @objc dynamic var mainSreenOpen: Bool { !screenList.isEmpty }
 }
 
 /* ###################################################################################################################################### */
