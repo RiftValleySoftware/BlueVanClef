@@ -32,7 +32,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide MacOS" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="SLUG-HIDE-APP-NAME" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -330,7 +330,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="MacOS Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="SLUG-HELP-APP-NAME" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -348,6 +348,8 @@
                     <connections>
                         <outlet property="aboutMenuItem" destination="5kV-Vb-QxS" id="hGZ-7c-0uS"/>
                         <outlet property="appNameMenuTitle" destination="1Xt-HY-uBw" id="yzD-0s-nLq"/>
+                        <outlet property="helpMenuItem" destination="FKE-Sm-Kum" id="NFD-TL-Su0"/>
+                        <outlet property="hideMenuItem" destination="Olw-nP-bQN" id="MWm-hr-RNH"/>
                         <outlet property="quitMenuItem" destination="4sb-4s-VLi" id="xL7-9s-reh"/>
                         <outlet property="quitMenuTitle" destination="4sb-4s-VLi" id="bhZ-Sb-6Zs"/>
                     </connections>

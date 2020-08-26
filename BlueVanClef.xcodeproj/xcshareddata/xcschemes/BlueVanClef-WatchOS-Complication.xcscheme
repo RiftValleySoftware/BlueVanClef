@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D4EE28DF24EC62CC0008C0FE"
                BuildableName = "Blue Van Clef.app"
-               BlueprintName = "Blue Van Clef (WatchOS)"
+               BlueprintName = "Blue Van Clef for Watch"
                ReferencedContainer = "container:BlueVanClef.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -30,7 +30,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D4BF7CF724EE04B8000470EC"
                BuildableName = "Blue Van Clef.app"
-               BlueprintName = "Blue Van Clef (Watch iOS Wrapper)"
+               BlueprintName = "Blue Van Clef for Watch (Standalone iOS Wrapper)"
                ReferencedContainer = "container:BlueVanClef.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4EE28DF24EC62CC0008C0FE"
             BuildableName = "Blue Van Clef.app"
-            BlueprintName = "Blue Van Clef (WatchOS)"
+            BlueprintName = "Blue Van Clef for Watch"
             ReferencedContainer = "container:BlueVanClef.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
@@ -82,7 +82,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4EE28DF24EC62CC0008C0FE"
             BuildableName = "Blue Van Clef.app"
-            BlueprintName = "Blue Van Clef (WatchOS)"
+            BlueprintName = "Blue Van Clef for Watch"
             ReferencedContainer = "container:BlueVanClef.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
@@ -91,7 +91,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4EE28DF24EC62CC0008C0FE"
             BuildableName = "Blue Van Clef.app"
-            BlueprintName = "Blue Van Clef (WatchOS)"
+            BlueprintName = "Blue Van Clef for Watch"
             ReferencedContainer = "container:BlueVanClef.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

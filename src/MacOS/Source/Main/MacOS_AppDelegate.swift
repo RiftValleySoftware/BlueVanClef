@@ -137,6 +137,18 @@ class MacOS_AppDelegate: NSObject, NSApplicationDelegate {
     
     /* ################################################################## */
     /**
+     The help menu item.
+     */
+    @IBOutlet weak var helpMenuItem: NSMenuItem!
+
+    /* ################################################################## */
+    /**
+     The "hide this app" menu item.
+     */
+    @IBOutlet weak var hideMenuItem: NSMenuItem!
+    
+    /* ################################################################## */
+    /**
      This is the Bluetooth Central Manager instance. Everything goes through this.
      */
     var centralManager: RVS_BlueThoth?
@@ -174,6 +186,8 @@ extension MacOS_AppDelegate {
         appNameMenuTitle?.title = (appNameMenuTitle?.title ?? "ERROR").localizedVariant
         aboutMenuItem?.title = (aboutMenuItem?.title ?? "ERROR").localizedVariant
         quitMenuItem?.title = (quitMenuItem?.title ?? "ERROR").localizedVariant
+        helpMenuItem?.title = (helpMenuItem?.title ?? "ERROR").localizedVariant
+        hideMenuItem?.title = (hideMenuItem?.title ?? "ERROR").localizedVariant
         centralManager = RVS_BlueThoth(delegate: self)
         centralManager?.timeoutInSeconds = Self.timeoutInSeconds
     }

@@ -144,6 +144,8 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 
 // Mac-Only
 "SLUG-PREFERENCES"                  =   "Preferences";
+"SLUG-HIDE-APP-NAME"                =   "Hide Blue Van Clef";
+"SLUG-HELP-APP-NAME"                =   "Blue Van Clef Help";
 
 // TV-Only
 "SLUG-CONTINUOUS-ON"                =   "Continuously Update";
