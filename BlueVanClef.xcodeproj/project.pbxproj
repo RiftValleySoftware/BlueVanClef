@@ -69,6 +69,10 @@
 		D4CC681524F53A07004EECA4 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7524E8C4B200392814 /* SharedAssets.xcassets */; };
 		D4CC681624F53A0C004EECA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
 		D4CC681724F53A0C004EECA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
+		D4DC703E24F7E76B00E149C7 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4DC703D24F7E76B00E149C7 /* Warnings.xcconfig */; };
+		D4DC703F24F7E76B00E149C7 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4DC703D24F7E76B00E149C7 /* Warnings.xcconfig */; };
+		D4DC704024F7E76B00E149C7 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4DC703D24F7E76B00E149C7 /* Warnings.xcconfig */; };
+		D4DC704124F7E76B00E149C7 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4DC703D24F7E76B00E149C7 /* Warnings.xcconfig */; };
 		D4DDEDBA24EDDE61006B5B8F /* WatchAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291E24EC648F0008C0FE /* WatchAssets.xcassets */; };
 		D4EDB96524EDEC78001172B5 /* Complications.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EDB96424EDEC78001172B5 /* Complications.xcassets */; };
 		D4EDB96624EDEC78001172B5 /* Complications.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EDB96424EDEC78001172B5 /* Complications.xcassets */; };
@@ -189,6 +193,7 @@
 		D4B42FCF24EF1DA800BDF1E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4BF7CEE24EE0366000470EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4CAA4262434E877007C72AA /* CGA_PeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_PeripheralViewController.swift; sourceTree = "<group>"; };
+		D4DC703D24F7E76B00E149C7 /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Warnings.xcconfig; path = "Project-Meta/Warnings.xcconfig"; sourceTree = "<group>"; };
 		D4EDB96424EDEC78001172B5 /* Complications.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Complications.xcassets; sourceTree = "<group>"; };
 		D4EE28E024EC62CC0008C0FE /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EE28EF24EC62CD0008C0FE /* Blue Van Clef Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Blue Van Clef Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +261,7 @@
 		D420C88B242FCD5600FCB9E0 = {
 			isa = PBXGroup;
 			children = (
+				D4DC704224F7E77B00E149C7 /* Project-Meta */,
 				D48D85172430F05500A925ED /* src */,
 				D420C895242FCD5600FCB9E0 /* Products */,
 				D4EE293724EC66740008C0FE /* Frameworks */,
@@ -513,6 +519,14 @@
 				D4B42FCF24EF1DA800BDF1E9 /* Info.plist */,
 			);
 			path = Meta;
+			sourceTree = "<group>";
+		};
+		D4DC704224F7E77B00E149C7 /* Project-Meta */ = {
+			isa = PBXGroup;
+			children = (
+				D4DC703D24F7E76B00E149C7 /* Warnings.xcconfig */,
+			);
+			name = "Project-Meta";
 			sourceTree = "<group>";
 		};
 		D4DE33872459E5300053F163 /* Source */ = {
@@ -832,6 +846,7 @@
 				D4CC681324F539C9004EECA4 /* Main.storyboard in Resources */,
 				D43151C124F536DD0031050E /* TVOS-Assets.xcassets in Resources */,
 				D4CC681224F539C9004EECA4 /* LaunchScreen.storyboard in Resources */,
+				D4DC704024F7E76B00E149C7 /* Warnings.xcconfig in Resources */,
 				D4CC681524F53A07004EECA4 /* SharedAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -841,6 +856,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D447B9F1243171AB00F00A7A /* Main.storyboard in Resources */,
+				D4DC703F24F7E76B00E149C7 /* Warnings.xcconfig in Resources */,
 				D45CCF7724E8C4B200392814 /* InfoPlist.strings in Resources */,
 				D45CCF7624E8C4B200392814 /* Localizable.strings in Resources */,
 				D4B49D062455137700932C3D /* IOSAssets.xcassets in Resources */,
@@ -857,6 +873,7 @@
 				D4B42FDC24EF1E7E00BDF1E9 /* SharedAssets.xcassets in Resources */,
 				D4B42FDD24EF1E8400BDF1E9 /* Localizable.strings in Resources */,
 				D4B42FD124EF1DA800BDF1E9 /* MacOS-Assets.xcassets in Resources */,
+				D4DC703E24F7E76B00E149C7 /* Warnings.xcconfig in Resources */,
 				D4B42FD024EF1DA800BDF1E9 /* Main.storyboard in Resources */,
 				D4B42FDE24EF1E8400BDF1E9 /* InfoPlist.strings in Resources */,
 			);
@@ -880,6 +897,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4EE293424EC64D90008C0FE /* Localizable.strings in Resources */,
+				D4DC704124F7E76B00E149C7 /* Warnings.xcconfig in Resources */,
 				D49A703424EDE4040019D286 /* WatchAssets.xcassets in Resources */,
 				D4EDB96624EDEC78001172B5 /* Complications.xcassets in Resources */,
 				D4EE293624EC64DD0008C0FE /* InfoPlist.strings in Resources */,
@@ -1116,6 +1134,7 @@
 /* Begin XCBuildConfiguration section */
 		D420C8A2242FCD5700FCB9E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4DC703D24F7E76B00E149C7 /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1177,6 +1196,7 @@
 		};
 		D420C8A3242FCD5700FCB9E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4DC703D24F7E76B00E149C7 /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
