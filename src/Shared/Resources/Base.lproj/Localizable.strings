@@ -626,3 +626,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 // Custom Service UUIDs
 "D0611E78-BBB4-4591-A5F8-487910AE4366"  =   "Apple Continuity";
 "E47C8027-CCA1-4E3B-981F-BDC47ABEB5B5"  =   "Kiwi ELM327 Serial Connection";
+
+// Custom Charateristic UUIDs
+"CACC07FF-FFFF-4C48-8FAE-A9EF71B75E26"  =   "Kiwi ELM327 Serial Read Characteristic";
+"1CCE1EA8-BD34-4813-A00A-C76E028FADCB"  =   "Kiwi ELM327 Serial Write Characteristic";

@@ -5,6 +5,7 @@
 - **TBD**
 
 - Added localization tokens for Apple Continuity Service and Kiwi ELM327 Serial link.
+- Removed the standalone Watch app targets. Too damn "hacky." I'll wait until Apple has a better plan for supporting these.
 
 ## 1.4.3.3000 (Watch, TV), 1.4.3.3002 (Mac)
 

@@ -36,9 +36,9 @@
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>Discover Bluetooth Devices</string>
+	<string>The app needs to discover and connect to Bluetooth devices.</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>Discover Bluetooth Devices</string>
+	<string>The app needs to discover and connect to Bluetooth devices.</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
