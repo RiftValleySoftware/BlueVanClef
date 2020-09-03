@@ -69,10 +69,6 @@
 		D4CC681524F53A07004EECA4 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7524E8C4B200392814 /* SharedAssets.xcassets */; };
 		D4CC681624F53A0C004EECA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
 		D4CC681724F53A0C004EECA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
-		D4DC703E24F7E76B00E149C7 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4DC703D24F7E76B00E149C7 /* Warnings.xcconfig */; };
-		D4DC703F24F7E76B00E149C7 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4DC703D24F7E76B00E149C7 /* Warnings.xcconfig */; };
-		D4DC704024F7E76B00E149C7 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4DC703D24F7E76B00E149C7 /* Warnings.xcconfig */; };
-		D4DC704124F7E76B00E149C7 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4DC703D24F7E76B00E149C7 /* Warnings.xcconfig */; };
 		D4DDEDBA24EDDE61006B5B8F /* WatchAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291E24EC648F0008C0FE /* WatchAssets.xcassets */; };
 		D4EDB96524EDEC78001172B5 /* Complications.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EDB96424EDEC78001172B5 /* Complications.xcassets */; };
 		D4EDB96624EDEC78001172B5 /* Complications.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EDB96424EDEC78001172B5 /* Complications.xcassets */; };
@@ -790,7 +786,7 @@
 			attributes = {
 				CLASSPREFIX = CGA;
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = "The Great Rift Valley Software Company";
 				TargetAttributes = {
 					D431519824F536A30031050E = {
@@ -846,7 +842,6 @@
 				D4CC681324F539C9004EECA4 /* Main.storyboard in Resources */,
 				D43151C124F536DD0031050E /* TVOS-Assets.xcassets in Resources */,
 				D4CC681224F539C9004EECA4 /* LaunchScreen.storyboard in Resources */,
-				D4DC704024F7E76B00E149C7 /* Warnings.xcconfig in Resources */,
 				D4CC681524F53A07004EECA4 /* SharedAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -856,7 +851,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D447B9F1243171AB00F00A7A /* Main.storyboard in Resources */,
-				D4DC703F24F7E76B00E149C7 /* Warnings.xcconfig in Resources */,
 				D45CCF7724E8C4B200392814 /* InfoPlist.strings in Resources */,
 				D45CCF7624E8C4B200392814 /* Localizable.strings in Resources */,
 				D4B49D062455137700932C3D /* IOSAssets.xcassets in Resources */,
@@ -873,7 +867,6 @@
 				D4B42FDC24EF1E7E00BDF1E9 /* SharedAssets.xcassets in Resources */,
 				D4B42FDD24EF1E8400BDF1E9 /* Localizable.strings in Resources */,
 				D4B42FD124EF1DA800BDF1E9 /* MacOS-Assets.xcassets in Resources */,
-				D4DC703E24F7E76B00E149C7 /* Warnings.xcconfig in Resources */,
 				D4B42FD024EF1DA800BDF1E9 /* Main.storyboard in Resources */,
 				D4B42FDE24EF1E8400BDF1E9 /* InfoPlist.strings in Resources */,
 			);
@@ -897,7 +890,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4EE293424EC64D90008C0FE /* Localizable.strings in Resources */,
-				D4DC704124F7E76B00E149C7 /* Warnings.xcconfig in Resources */,
 				D49A703424EDE4040019D286 /* WatchAssets.xcassets in Resources */,
 				D4EDB96624EDEC78001172B5 /* Complications.xcassets in Resources */,
 				D4EE293624EC64DD0008C0FE /* InfoPlist.strings in Resources */,
@@ -1350,6 +1342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = src/MacOS/Meta/MacOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 3000;
@@ -1373,6 +1366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = src/MacOS/Meta/MacOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 3000;
