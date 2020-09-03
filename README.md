@@ -21,8 +21,3 @@ This depends upon the [RVS_BlueToth Bluetooth SDK](https://riftvalleysoftware.gi
 
 It also depends upon the [RVS Generic Swift Toolbox](https://github.com/RiftValleySoftware/RVS_Generic_Swift_Toolbox), and the [RVS Peristsent Prefs Utility](https://github.com/RiftValleySoftware/RVS_PersistentPrefs).
 
-CARTHAGE
--
-The Blue Van Clef project relies on [GitHub Carthage](https://github.com/Carthage/Carthage) to resolve dependencies. This has been built into the build process. The first time the project is built, the build will take some time, as it creates the Carthage dependencies. After that, it will be fast.
-
-In order to ensure that Carthage is updated, simply delete the "`Carthage`" directory, and the next project build will re-import from Carthage. Otherwise, the build will continue to use the version built during the last project build.
