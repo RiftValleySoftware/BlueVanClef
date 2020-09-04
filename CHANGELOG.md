@@ -2,10 +2,11 @@
 
 ## 1.4.4
 
-- **TBD**
+- **September 4, 2020**
 
 - Added localization tokens for Apple Continuity Service and Kiwi ELM327 Serial link.
 - Removed the standalone Watch app targets. Too damn "hacky." I'll wait until Apple has a better plan for supporting these.
+- Fixed a possible crasher, and incorrect integer value readings, with some Characteristics.
 
 ## 1.4.3.3000 (Watch, TV), 1.4.3.3002 (Mac)
 
