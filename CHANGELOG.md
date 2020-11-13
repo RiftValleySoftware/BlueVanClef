@@ -1,5 +1,11 @@
 # BlueVanClef Change Log
 
+## 1.4.5
+
+- **November 13, 2020**
+
+- Addresses possible crashes, when reading descriptors. Unable to reproduce, but I think I can at least avoid crashes.
+
 ## 1.4.4
 
 - **September 4, 2020**
