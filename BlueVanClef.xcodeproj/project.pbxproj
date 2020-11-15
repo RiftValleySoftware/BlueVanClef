@@ -693,9 +693,9 @@
 			productReference = D431519924F536A30031050E /* Blue Van Clef.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D4B1C6822430F26800D3AC78 /* Blue Van Clef for iOS */ = {
+		D4B1C6822430F26800D3AC78 /* Blue Van Clef for Mobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef for iOS" */;
+			buildConfigurationList = D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef for Mobile" */;
 			buildPhases = (
 				D4A6A8652430F4430084F102 /* SwiftLint */,
 				D4B1C67F2430F26800D3AC78 /* Sources */,
@@ -708,7 +708,7 @@
 			dependencies = (
 				D476D45B24F7B9B7004E0B87 /* PBXTargetDependency */,
 			);
-			name = "Blue Van Clef for iOS";
+			name = "Blue Van Clef for Mobile";
 			packageProductDependencies = (
 				D48FD97324B23F260094F4D1 /* RVS-BlueThoth */,
 				D48FD97624B23F430094F4D1 /* RVS-Persistent-Prefs */,
@@ -824,8 +824,8 @@
 			projectRoot = "";
 			targets = (
 				D4B42FAA24EF1D6800BDF1E9 /* Blue Van Clef */,
-				D4B1C6822430F26800D3AC78 /* Blue Van Clef for iOS */,
 				D431519824F536A30031050E /* Blue Van Clef for TV */,
+				D4B1C6822430F26800D3AC78 /* Blue Van Clef for Mobile */,
 				D4EE28DF24EC62CC0008C0FE /* Blue Van Clef for Watch */,
 				D4EE28EE24EC62CD0008C0FE /* Blue Van Clef for Watch (Extension) */,
 			);
@@ -1294,7 +1294,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 3001;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/src/iOS/Meta/Info.plist";
@@ -1319,7 +1319,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 3001;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/src/iOS/Meta/Info.plist";
@@ -1392,7 +1392,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 3001;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				INFOPLIST_FILE = src/WatchOS/Extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1416,7 +1416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 3001;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				INFOPLIST_FILE = src/WatchOS/Extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1442,7 +1442,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 3001;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				IBSC_MODULE = Blue_Van_Clef_WatchKit_Extension;
 				INFOPLIST_FILE = src/WatchOS/App/Info.plist;
@@ -1463,7 +1463,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3000;
+				CURRENT_PROJECT_VERSION = 3001;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				IBSC_MODULE = Blue_Van_Clef_WatchKit_Extension;
 				INFOPLIST_FILE = src/WatchOS/App/Info.plist;
@@ -1500,7 +1500,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef for iOS" */ = {
+		D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef for Mobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4B1C6952430F26800D3AC78 /* Debug */,
