@@ -27,6 +27,9 @@ import RVS_BlueThoth
 /* ###################################################################################################################################### */
 // MARK: - Main Watch App Discovery Interface Controller -
 /* ###################################################################################################################################### */
+/**
+ This is the controller for the initial extension screen.
+ */
 class CGA_WatchOS_MainInterfaceController: CGA_WatchOS_BaseInterfaceController {
     /* ################################################################## */
     /**

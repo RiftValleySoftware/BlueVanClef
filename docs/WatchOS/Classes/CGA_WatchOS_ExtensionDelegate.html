@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CGA_WatchOS_ExtensionDelegate Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/CGA_WatchOS_ExtensionDelegate" class="dashAnchor"></a>
+
+    <a title="CGA_WatchOS_ExtensionDelegate Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          BlueVanClef (WatchOS) Doumentation
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/RiftValleySoftware/BlueVanClef">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html"> Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      CGA_WatchOS_ExtensionDelegate Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_ComplicationController.html">CGA_ComplicationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_PersistentPrefs.html">CGA_PersistentPrefs</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_PersistentPrefs/Keys.html">– Keys</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_AboutInterfaceController.html">CGA_WatchOS_AboutInterfaceController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_BaseInterfaceController.html">CGA_WatchOS_BaseInterfaceController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_CharacteristicInterfaceController.html">CGA_WatchOS_CharacteristicInterfaceController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_CharacteristicTableController.html">CGA_WatchOS_CharacteristicTableController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_CharacteristicTables_Base.html">CGA_WatchOS_CharacteristicTables_Base</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_CharacteristicTables_Button.html">CGA_WatchOS_CharacteristicTables_Button</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_CharacteristicTables_DescriptorButton.html">CGA_WatchOS_CharacteristicTables_DescriptorButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_CharacteristicTables_Label.html">CGA_WatchOS_CharacteristicTables_Label</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_CharacteristicTables_Switch.html">CGA_WatchOS_CharacteristicTables_Switch</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_DescriptorInterfaceController.html">CGA_WatchOS_DescriptorInterfaceController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_DeviceInterfaceController.html">CGA_WatchOS_DeviceInterfaceController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_DiscoveryInterfaceController.html">CGA_WatchOS_DiscoveryInterfaceController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_DiscoveryTableController.html">CGA_WatchOS_DiscoveryTableController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_ExtensionDelegate.html">CGA_WatchOS_ExtensionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_MainInterfaceController.html">CGA_WatchOS_MainInterfaceController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_PrefsInterfaceController.html">CGA_WatchOS_PrefsInterfaceController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_ServiceInterfaceController.html">CGA_WatchOS_ServiceInterfaceController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_WatchOS_ServiceTableController.html">CGA_WatchOS_ServiceTableController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Bundle.html">Bundle</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/CGA_WatchOS_Base_Protocol.html">CGA_WatchOS_Base_Protocol</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>CGA_WatchOS_ExtensionDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CGA_WatchOS_ExtensionDelegate</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_WatchOS_ExtensionDelegate</span><span class="p">:</span> <span class="kt">WKExtensionDelegate</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_WatchOS_ExtensionDelegate</span><span class="p">:</span> <span class="kt">CGA_BlueThoth_Delegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>This is the main app extension delegate class.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager04RVS_A5ThothAECSgvp"></a>
+                    <a name="//apple_ref/swift/Property/centralManager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager04RVS_A5ThothAECSgvp">centralManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the Central Manager instance. It is created by the intial screen, but stored here.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">centralManager</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC10screenListSayAA0e1_fG24_BaseInterfaceControllerCGvp"></a>
+                    <a name="//apple_ref/swift/Property/screenList" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC10screenListSayAA0e1_fG24_BaseInterfaceControllerCGvp">screenList</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This contains all of our screens. The key is the ID of the device or attribute associated with that screen.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">screenList</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/CGA_WatchOS_BaseInterfaceController.html">CGA_WatchOS_BaseInterfaceController</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC5prefsAA0E16_PersistentPrefsCvp"></a>
+                    <a name="//apple_ref/swift/Property/prefs" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC5prefsAA0E16_PersistentPrefsCvp">prefs</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This contains our stored preferences.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">prefs</span><span class="p">:</span> <span class="kt"><a href="../Classes/CGA_PersistentPrefs.html">CGA_PersistentPrefs</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC10mainScreenAA0e1_fG24_MainInterfaceControllerCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/mainScreen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC10mainScreenAA0e1_fG24_MainInterfaceControllerCSgvp">mainScreen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Quick accessor for the main discovery screen.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">mainScreen</span><span class="p">:</span> <span class="kt"><a href="../Classes/CGA_WatchOS_MainInterfaceController.html">CGA_WatchOS_MainInterfaceController</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC9topScreenAA0e1_fG24_BaseInterfaceControllerCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/topScreen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC9topScreenAA0e1_fG24_BaseInterfaceControllerCSgvp">topScreen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Quick accessor for the top screen.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">topScreen</span><span class="p">:</span> <span class="kt"><a href="../Classes/CGA_WatchOS_BaseInterfaceController.html">CGA_WatchOS_BaseInterfaceController</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Class%20Functions"></a>
+                <a name="//apple_ref/swift/Section/Class Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Class%20Functions"></a>
+                  <h3 class="section-name"><p>Class Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC09extensionH6ObjectACSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/extensionDelegateObject" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC09extensionH6ObjectACSgvpZ">extensionDelegateObject</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Quick access to the extension delegate object.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="k">var</span> <span class="nv">extensionDelegateObject</span><span class="p">:</span> <span class="kt">CGA_WatchOS_ExtensionDelegate</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC12displayAlert6header7messageySS_SStFZ"></a>
+                    <a name="//apple_ref/swift/Method/displayAlert(header:message:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC12displayAlert6header7messageySS_SStFZ">displayAlert(header:<wbr>message:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Displays the given message and title in an alert with an &ldquo;OK&rdquo; button.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">displayAlert</span><span class="p">(</span><span class="n">header</span> <span class="nv">inTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">message</span> <span class="nv">inMessage</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>REQUIRED: a string to be displayed as the title of the alert. It is localized by this method.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>OPTIONAL: a string to be displayed as the message of the alert. It is localized by this method.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>from</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>REQUIRED: The controller presenting the error.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC27createAdvertimentStringsFor_2id5powerSaySSG04RVS_A5ThothAHC17AdvertisementDataVSg_SSSitFZ"></a>
+                    <a name="//apple_ref/swift/Method/createAdvertimentStringsFor(_:id:power:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC27createAdvertimentStringsFor_2id5powerSaySSG04RVS_A5ThothAHC17AdvertisementDataVSg_SSSitFZ">createAdvertimentStringsFor(_:<wbr>id:<wbr>power:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This special class function creates an Array of String, containing the advertisement data from the indexed device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">createAdvertimentStringsFor</span><span class="p">(</span><span class="n">_</span> <span class="nv">inAdData</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="o">.</span><span class="kt">AdvertisementData</span><span class="p">?,</span> <span class="n">id</span> <span class="nv">inID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">power</span> <span class="nv">inPower</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inAdData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The advertisement data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ID string.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>power</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The RSSI level.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An Array of String, with the advertisement data in &ldquo;key: value&rdquo; form.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/WKExtensionDelegate%20Conformance"></a>
+                <a name="//apple_ref/swift/Section/WKExtensionDelegate Conformance" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/WKExtensionDelegate%20Conformance"></a>
+                  <h3 class="section-name"><p>WKExtensionDelegate Conformance</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef_Extension@objc(cs)CGA_WatchOS_ExtensionDelegate(im)handleBackgroundTasks:"></a>
+                    <a name="//apple_ref/swift/Method/handle(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef_Extension@objc(cs)CGA_WatchOS_ExtensionDelegate(im)handleBackgroundTasks:">handle(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is called while the app is in the background, with various tasks that need to be handled.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">handle</span><span class="p">(</span><span class="n">_</span> <span class="nv">inBackgroundTasks</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">WKRefreshBackgroundTask</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inBackgroundTasks</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A set of background tasks that need to be taken care of.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/CGA_BlueThoth_Delegate%20Conformance"></a>
+                <a name="//apple_ref/swift/Section/CGA_BlueThoth_Delegate Conformance" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/CGA_BlueThoth_Delegate%20Conformance"></a>
+                  <h3 class="section-name"><p>CGA_BlueThoth_Delegate Conformance</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC11handleError_4fromy04RVS_A5Thoth0E7_ErrorsO_A2FCtF"></a>
+                    <a name="//apple_ref/swift/Method/handleError(_:from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC11handleError_4fromy04RVS_A5Thoth0E7_ErrorsO_A2FCtF">handleError(_:<wbr>from:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called to report an error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">handleError</span><span class="p">(</span><span class="n">_</span> <span class="nv">inError</span><span class="p">:</span> <span class="kt">CGA_Errors</span><span class="p">,</span> <span class="n">from</span> <span class="nv">inCentralManager</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inError</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The error being reported.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>from</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The manager wrapper view that is calling this.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC10updateFromyy04RVS_A5ThothAECF"></a>
+                    <a name="//apple_ref/swift/Method/updateFrom(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC10updateFromyy04RVS_A5ThothAECF">updateFrom(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called to tell this controller to recalculate the discovery table.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updateFrom</span><span class="p">(</span><span class="n">_</span> <span class="nv">inCentralManager</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCentralManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The manager wrapper view that is calling this.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC23centralManagerPoweredOnyy04RVS_A5ThothAECF"></a>
+                    <a name="//apple_ref/swift/Method/centralManagerPoweredOn(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC23centralManagerPoweredOnyy04RVS_A5ThothAECF">centralManagerPoweredOn(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called to tell the instance that the state of the Central manager just became &ldquo;powered on.&rdquo;</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">centralManagerPoweredOn</span><span class="p">(</span><span class="n">_</span> <span class="nv">inCentralManager</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCentralManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The central manager that is calling this.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_20didConnectThisDevicey04RVS_A5ThothAFC_AF0E21_Bluetooth_PeripheralCtF"></a>
+                    <a name="//apple_ref/swift/Method/centralManager(_:didConnectThisDevice:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_20didConnectThisDevicey04RVS_A5ThothAFC_AF0E21_Bluetooth_PeripheralCtF">centralManager(_:<wbr>didConnectThisDevice:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called to tell the instance that a Peripheral device has been connected.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">centralManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">inCentralManager</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="p">,</span> <span class="n">didConnectThisDevice</span> <span class="nv">inDevice</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Peripheral</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCentralManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The central manager that is calling this.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>didConnectThisDevice</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The device instance that was connected.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_24willDisconnectThisDevicey04RVS_A5ThothAFC_AF0E21_Bluetooth_PeripheralCtF"></a>
+                    <a name="//apple_ref/swift/Method/centralManager(_:willDisconnectThisDevice:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_24willDisconnectThisDevicey04RVS_A5ThothAFC_AF0E21_Bluetooth_PeripheralCtF">centralManager(_:<wbr>willDisconnectThisDevice:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called to tell the instance that a peripheral device is about to be disconnected.
+We use this to reset the view stack to the initial (Peripheral List) screen.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">centralManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">inCentralManager</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="p">,</span> <span class="n">willDisconnectThisDevice</span> <span class="nv">inDevice</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Peripheral</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCentralManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The central manager that is calling this.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>willDisconnectThisDevice</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The device instance that will be removed after this call.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_17deviceInfoChangedy04RVS_A5ThothAFC_AF0E21_Bluetooth_PeripheralCtF"></a>
+                    <a name="//apple_ref/swift/Method/centralManager(_:deviceInfoChanged:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_17deviceInfoChangedy04RVS_A5ThothAFC_AF0E21_Bluetooth_PeripheralCtF">centralManager(_:<wbr>deviceInfoChanged:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is called to tell the instance that a Peripheral device has had some change.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">centralManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">inCentralManager</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="p">,</span> <span class="n">deviceInfoChanged</span> <span class="nv">inDevice</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Peripheral</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCentralManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The central manager that is calling this.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>deviceInfoChanged</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The device instance that was connected.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_6device14changedServicey04RVS_A5ThothAGC_AG0E21_Bluetooth_PeripheralCAG0e1_p1_M0CtF"></a>
+                    <a name="//apple_ref/swift/Method/centralManager(_:device:changedService:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_6device14changedServicey04RVS_A5ThothAGC_AG0E21_Bluetooth_PeripheralCAG0e1_p1_M0CtF">centralManager(_:<wbr>device:<wbr>changedService:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called to tell the instance that a Service changed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">centralManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">inCentralManager</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="p">,</span> <span class="n">device</span> <span class="nv">inDevice</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Peripheral</span><span class="p">,</span> <span class="n">changedService</span> <span class="nv">inService</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Service</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCentralManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The central manager that is calling this.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>device</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The device instance that contained the changed Service.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>changedService</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Service instance that contained the changed Characteristic.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_6device7service21changedCharacteristicy04RVS_A5ThothAHC_AH0E21_Bluetooth_PeripheralCAH0e1_Q8_ServiceCAH0e1_q1_N0CtF"></a>
+                    <a name="//apple_ref/swift/Method/centralManager(_:device:service:changedCharacteristic:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_6device7service21changedCharacteristicy04RVS_A5ThothAHC_AH0E21_Bluetooth_PeripheralCAH0e1_Q8_ServiceCAH0e1_q1_N0CtF">centralManager(_:<wbr>device:<wbr>service:<wbr>changedCharacteristic:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called to tell the instance that a Characteristic changed its value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">centralManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">inCentralManager</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="p">,</span> <span class="n">device</span> <span class="nv">inDevice</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Peripheral</span><span class="p">,</span> <span class="n">service</span> <span class="nv">inService</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Service</span><span class="p">,</span> <span class="n">changedCharacteristic</span> <span class="nv">inCharacteristic</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Characteristic</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCentralManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The central manager that is calling this.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>device</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The device instance that contained the changed Service.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>service</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Service instance that contained the changed Characteristic.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>changedCharacteristic</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Characteristic that was changed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_6device7service38changedCharacteristicNotificationStatey04RVS_A5ThothAHC_AH0E21_Bluetooth_PeripheralCAH0e1_S8_ServiceCAH0e1_s1_N0CtF"></a>
+                    <a name="//apple_ref/swift/Method/centralManager(_:device:service:changedCharacteristicNotificationState:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_6device7service38changedCharacteristicNotificationStatey04RVS_A5ThothAHC_AH0E21_Bluetooth_PeripheralCAH0e1_S8_ServiceCAH0e1_s1_N0CtF">centralManager(_:<wbr>device:<wbr>service:<wbr>changedCharacteristicNotificationState:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called to tell the instance that a Characteristic changed its notification state.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">centralManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">inCentral</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="p">,</span> <span class="n">device</span> <span class="nv">inDevice</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Peripheral</span><span class="p">,</span> <span class="n">service</span> <span class="nv">inService</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Service</span><span class="p">,</span> <span class="n">changedCharacteristicNotificationState</span> <span class="nv">inCharacteristic</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Characteristic</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCentralManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The central manager that is calling this.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>device</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The device instance that contained the changed Service.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>service</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Service instance that contained the changed Characteristic.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>changedCharacteristicNotificationState</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Characteristic that was changed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_6device7service14characteristic17changedDescriptory04RVS_A5ThothAIC_AI0E21_Bluetooth_PeripheralCAI0e1_R8_ServiceCAI0e1_R15_CharacteristicCAI0e1_r1_O0CtF"></a>
+                    <a name="//apple_ref/swift/Method/centralManager(_:device:service:characteristic:changedDescriptor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_6device7service14characteristic17changedDescriptory04RVS_A5ThothAIC_AI0E21_Bluetooth_PeripheralCAI0e1_R8_ServiceCAI0e1_R15_CharacteristicCAI0e1_r1_O0CtF">centralManager(_:<wbr>device:<wbr>service:<wbr>characteristic:<wbr>changedDescriptor:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called to tell the instance that a Descriptor changed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">centralManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">inCentralManager</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="p">,</span> <span class="n">device</span> <span class="nv">inDevice</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Peripheral</span><span class="p">,</span> <span class="n">service</span> <span class="nv">inService</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Service</span><span class="p">,</span> <span class="n">characteristic</span> <span class="nv">inCharacteristic</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Characteristic</span><span class="p">,</span> <span class="n">changedDescriptor</span> <span class="nv">inDescriptor</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Descriptor</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCentralManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The central manager that is calling this.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>device</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The device instance that contained the changed Service.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>service</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Service instance that contained the changed Characteristic.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>characteristic</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Characteristic that contains the Descriptor that was changed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>changedDescriptor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Descriptor that was changed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_6device7service27characteristicWriteCompletey04RVS_A5ThothAHC_AH0E21_Bluetooth_PeripheralCAH0e1_R8_ServiceCAH0e1_R15_CharacteristicCtF"></a>
+                    <a name="//apple_ref/swift/Method/centralManager(_:device:service:characteristicWriteComplete:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23Blue_Van_Clef_Extension012CGA_WatchOS_D8DelegateC14centralManager_6device7service27characteristicWriteCompletey04RVS_A5ThothAHC_AH0E21_Bluetooth_PeripheralCAH0e1_R8_ServiceCAH0e1_R15_CharacteristicCtF">centralManager(_:<wbr>device:<wbr>service:<wbr>characteristicWriteComplete:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is called to tell the instance that a Characteristic write with response received its response.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">centralManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">inCentralManager</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="p">,</span> <span class="n">device</span> <span class="nv">inPeripheral</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Peripheral</span><span class="p">,</span> <span class="n">service</span> <span class="nv">inService</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Service</span><span class="p">,</span> <span class="n">characteristicWriteComplete</span> <span class="nv">inCharacteristic</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Characteristic</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCentralManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The central manager that is calling this.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>device</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The device instance that contained the changed Service.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>service</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Service instance that contained the changed Characteristic.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>characteristicWriteComplete</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Characteristic that had its write completed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-03-03)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

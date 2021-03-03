@@ -27,6 +27,9 @@ import RVS_BlueThoth
 /* ###################################################################################################################################### */
 // MARK: - Main Watch App Discovery Peripheral Table Controller -
 /* ###################################################################################################################################### */
+/**
+ This is the controller for the discovered peripheral display screen.
+ */
 class CGA_WatchOS_DiscoveryTableController: NSObject {
     /* ################################################################## */
     /**
