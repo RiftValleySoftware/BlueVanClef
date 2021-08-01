@@ -60,7 +60,7 @@ class MacOS_PeripheralViewController: RVS_BlueThoth_MacOS_Test_Harness_Base_Spli
      */
     var peripheralInstance: RVS_BlueThoth.DiscoveryData? {
         didSet {
-            updateUI()  // Update the UI whjen this is set, to make sure we adapt.
+            updateUI()  // Update the UI when this is set, to make sure we adapt.
         }
     }
 
