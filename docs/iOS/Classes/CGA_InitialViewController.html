@@ -60,22 +60,34 @@
                 <a class="nav-group-task-link" href="../Classes/CGA_BaseViewController.html">CGA_BaseViewController</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_CharacteristicInteractionViewController.html">CGA_CharacteristicInteractionViewController</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CGA_CharacteristicViewController.html">CGA_CharacteristicViewController</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/CGA_CharacteristicViewController/TableRowStruct.html">– TableRowStruct</a>
+                <a class="nav-group-task-link" href="../Classes/CGA_CharacteristicViewController_TableRow.html">CGA_CharacteristicViewController_TableRow</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/CGA_ConnectedViewController.html">CGA_ConnectedViewController</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/CGA_DiscoveryDetailsViewController.html">CGA_DiscoveryDetailsViewController</a>
+                <a class="nav-group-task-link" href="../Classes/CGA_DescriptorInteractionViewController.html">CGA_DescriptorInteractionViewController</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CGA_InfoViewController.html">CGA_InfoViewController</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CGA_InitialViewController.html">CGA_InitialViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_InitialViewController/_SectionIndexes.html">– _SectionIndexes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_InitialViewController_TableRow.html">CGA_InitialViewController_TableRow</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_PeripheralViewController.html">CGA_PeripheralViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_PeripheralViewController_TableRow.html">CGA_PeripheralViewController_TableRow</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CGA_PersistentPrefs.html">CGA_PersistentPrefs</a>
@@ -87,7 +99,19 @@
                 <a class="nav-group-task-link" href="../Classes/CGA_ServiceViewController.html">CGA_ServiceViewController</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_ServiceViewController/_PropertyLabelGenerator.html">– _PropertyLabelGenerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_ServiceViewController_TableRow.html">CGA_ServiceViewController_TableRow</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CGA_SettingsViewController.html">CGA_SettingsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CG_TapGestureRecognizer.html">CG_TapGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CG_TappableButton.html">CG_TappableButton</a>
               </li>
             </ul>
           </li>
@@ -98,6 +122,12 @@
                 <a class="nav-group-task-link" href="../Extensions/Bundle.html">Bundle</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIViewController.html">UIViewController</a>
               </li>
             </ul>
@@ -105,6 +135,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/CGA_ScannerViewController.html">CGA_ScannerViewController</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/CGA_ServiceContainer.html">CGA_ServiceContainer</a>
               </li>
@@ -127,14 +160,18 @@
                 <div class="language">
                   
                   <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CGA_InitialViewController</span> <span class="p">:</span> <span class="kt"><a href="../Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_InitialViewController</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CGA_ScannerViewController.html">CGA_ScannerViewController</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_InitialViewController</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CGA_UpdatableScreenViewController.html">CGA_UpdatableScreenViewController</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_InitialViewController</span><span class="p">:</span> <span class="kt">CGA_BlueThoth_Delegate</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_InitialViewController</span><span class="p">:</span> <span class="kt">UITableViewDataSource</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_InitialViewController</span><span class="p">:</span> <span class="kt">UITableViewDelegate</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_InitialViewController</span><span class="p">:</span> <span class="kt">CGA_BlueThoth_Delegate</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>This controls the initial view, which is a basic table of discovered devices.</p>
+
+<p>There are two sections: BLE, and BR/EDR (Classic). Each section has rows of devices that fit in that Bluetooth mode.</p>
+
           </div>
         </section>
 
@@ -145,9 +182,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC25discoveryTableCellReuseIDSSvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/discoveryTableCellReuseID" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC25discoveryTableCellReuseIDSSvpZ">discoveryTableCellReuseID</a>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC15_SectionIndexes33_BBFD4A07587315F4DA25C80C1BFD20EFLLO"></a>
+                    <a name="//apple_ref/swift/Enum/_SectionIndexes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC15_SectionIndexes33_BBFD4A07587315F4DA25C80C1BFD20EFLLO">_SectionIndexes</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -155,14 +192,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Used to generate table rows.</p>
+                        <p>These are the indexes for our sections.</p>
 
+                        <a href="../Classes/CGA_InitialViewController/_SectionIndexes.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">discoveryTableCellReuseID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">enum</span> <span class="nv">_SectionIndexes</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -172,9 +210,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC18showDetailsSegueIDSSvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/showDetailsSegueID" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC18showDetailsSegueIDSSvpZ">showDetailsSegueID</a>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC27_rssiTimerIntervalInSeconds33_BBFD4A07587315F4DA25C80C1BFD20EFLLSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/_rssiTimerIntervalInSeconds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC27_rssiTimerIntervalInSeconds33_BBFD4A07587315F4DA25C80C1BFD20EFLLSdvpZ">_rssiTimerIntervalInSeconds</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -182,14 +220,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The segue ID of the &ldquo;Show Discovery Details&rdquo; screen.</p>
+                        <p>The time between repeats of the RSSI update timer.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">showDetailsSegueID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">_rssiTimerIntervalInSeconds</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
 
                         </div>
                       </div>
@@ -199,9 +237,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC19showSettingsSegueIDSSvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/showSettingsSegueID" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC19showSettingsSegueIDSSvpZ">showSettingsSegueID</a>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC34_sectionHeaderHeightInDisplayUnits33_BBFD4A07587315F4DA25C80C1BFD20EFLL12CoreGraphics7CGFloatVvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/_sectionHeaderHeightInDisplayUnits" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC34_sectionHeaderHeightInDisplayUnits33_BBFD4A07587315F4DA25C80C1BFD20EFLL12CoreGraphics7CGFloatVvpZ">_sectionHeaderHeightInDisplayUnits</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -209,14 +247,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The segue ID of the &ldquo;Show Settings&rdquo; screen.</p>
+                        <p>This is how high each section header will be.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">showSettingsSegueID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">_sectionHeaderHeightInDisplayUnits</span><span class="p">:</span> <span class="kt">CGFloat</span></code></pre>
 
                         </div>
                       </div>
@@ -226,9 +264,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC14centralManager04RVS_A5ThothAECSgvp"></a>
-                    <a name="//apple_ref/swift/Property/centralManager" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC14centralManager04RVS_A5ThothAECSgvp">centralManager</a>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC29_labelRowHeightInDisplayUnits33_BBFD4A07587315F4DA25C80C1BFD20EFLL12CoreGraphics7CGFloatVvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/_labelRowHeightInDisplayUnits" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC29_labelRowHeightInDisplayUnits33_BBFD4A07587315F4DA25C80C1BFD20EFLL12CoreGraphics7CGFloatVvpZ">_labelRowHeightInDisplayUnits</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -236,14 +274,95 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This is a simple accessor for the app Central Manager Instance.</p>
+                        <p>This is how high the labels that comprise one row will need per line of text.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">centralManager</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">_labelRowHeightInDisplayUnits</span><span class="p">:</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC17_deviceRowReuseID33_BBFD4A07587315F4DA25C80C1BFD20EFLLSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/_deviceRowReuseID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC17_deviceRowReuseID33_BBFD4A07587315F4DA25C80C1BFD20EFLLSSvpZ">_deviceRowReuseID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The reuse ID that we use for creating new table cells.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">_deviceRowReuseID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC20_deviceDetailSegueID33_BBFD4A07587315F4DA25C80C1BFD20EFLLSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/_deviceDetailSegueID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC20_deviceDetailSegueID33_BBFD4A07587315F4DA25C80C1BFD20EFLLSSvpZ">_deviceDetailSegueID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of the segue that is executed to display device details.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">_deviceDetailSegueID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC15_refreshControl33_BBFD4A07587315F4DA25C80C1BFD20EFLLSo09UIRefreshI0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/_refreshControl" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC15_refreshControl33_BBFD4A07587315F4DA25C80C1BFD20EFLLSo09UIRefreshI0Cvp">_refreshControl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This implements a &ldquo;pull to refresh.&rdquo;</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="k">let</span> <span class="nv">_refreshControl</span><span class="p">:</span> <span class="kt">UIRefreshControl</span></code></pre>
 
                         </div>
                       </div>
@@ -271,90 +390,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">private</span> <span class="k">var</span> <span class="nv">_currentDeviceScreen</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CGA_UpdatableScreenViewController.html">CGA_UpdatableScreenViewController</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)noBTImage"></a>
-                    <a name="//apple_ref/swift/Property/noBTImage" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)noBTImage">noBTImage</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The image that is displayed if bluetooth is not available.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
-<span class="k">weak</span> <span class="k">var</span> <span class="nv">noBTImage</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="o">!</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)scanningSegmentedControl"></a>
-                    <a name="//apple_ref/swift/Property/scanningSegmentedControl" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)scanningSegmentedControl">scanningSegmentedControl</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This segmented control manages the scanning state of the app.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
-<span class="k">weak</span> <span class="k">var</span> <span class="nv">scanningSegmentedControl</span><span class="p">:</span> <span class="kt">UISegmentedControl</span><span class="o">!</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)discoveryTableView"></a>
-                    <a name="//apple_ref/swift/Property/discoveryTableView" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)discoveryTableView">discoveryTableView</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This table lists all discovered devices.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
-<span class="k">weak</span> <span class="k">var</span> <span class="nv">discoveryTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -416,15 +451,237 @@ It is also used for editing the table, to prevent it from aborting deletes.</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)deviceLabel"></a>
+                    <a name="//apple_ref/swift/Property/deviceLabel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)deviceLabel">deviceLabel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the label above the table.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">deviceLabel</span><span class="p">:</span> <span class="kt">UILabel</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)deviceTableView"></a>
+                    <a name="//apple_ref/swift/Property/deviceTableView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)deviceTableView">deviceTableView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the table that will list the discovered devices.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">deviceTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)noBTImage"></a>
+                    <a name="//apple_ref/swift/Property/noBTImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)noBTImage">noBTImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This image is displayed if there is no bluetooth available.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">noBTImage</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)scanningButton"></a>
+                    <a name="//apple_ref/swift/Property/scanningButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)scanningButton">scanningButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This will animate when the central is scanning.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">scanningButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)editButtonStackView"></a>
+                    <a name="//apple_ref/swift/Property/editButtonStackView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)editButtonStackView">editButtonStackView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">editButtonStackView</span><span class="p">:</span> <span class="kt">UIStackView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)editButton"></a>
+                    <a name="//apple_ref/swift/Property/editButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)editButton">editButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">editButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)infoButton"></a>
+                    <a name="//apple_ref/swift/Property/infoButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)infoButton">infoButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the about/info button.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">infoButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)settingsButton"></a>
+                    <a name="//apple_ref/swift/Property/settingsButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)CGA_InitialViewController(py)settingsButton">settingsButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the settings button.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">settingsButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Private%20Methods"></a>
-                <a name="//apple_ref/swift/Section/Private Methods" class="dashAnchor"></a>
+                <a name="/Callback%2FObserver%20Methods"></a>
+                <a name="//apple_ref/swift/Section/Callback/Observer Methods" class="dashAnchor"></a>
                 <div class="section-name-container">
-                  <a class="section-name-link" href="#/Private%20Methods"></a>
-                  <h3 class="section-name"><p>Private Methods</p>
+                  <a class="section-name-link" href="#/Callback%2FObserver%20Methods"></a>
+                  <h3 class="section-name"><p>Callback/Observer Methods</p>
 </h3>
                 </div>
               </div>
@@ -432,9 +689,9 @@ It is also used for editing the table, to prevent it from aborting deletes.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC12_resetToRoot33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF"></a>
-                    <a name="//apple_ref/swift/Method/_resetToRoot()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC12_resetToRoot33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF">_resetToRoot()</a>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)startOver:"></a>
+                    <a name="//apple_ref/swift/Method/startOver(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)startOver:">startOver(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -442,14 +699,17 @@ It is also used for editing the table, to prevent it from aborting deletes.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Make sure that the Navigation Controller is at tits baseline.</p>
+                        <p>This is called by the table&rsquo;s &ldquo;pull to refresh&rdquo; handler.</p>
+
+<p>When this is called, the Bluetooth subsystem wipes out all of its cached Peripherals, and starts over from scratch.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">_resetToRoot</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">startOver</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -459,9 +719,9 @@ It is also used for editing the table, to prevent it from aborting deletes.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC14_startScanning33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF"></a>
-                    <a name="//apple_ref/swift/Method/_startScanning()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC14_startScanning33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF">_startScanning()</a>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)scanningButtonHit:"></a>
+                    <a name="//apple_ref/swift/Method/scanningButtonHit(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)scanningButtonHit:">scanningButtonHit(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -469,141 +729,7 @@ It is also used for editing the table, to prevent it from aborting deletes.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Starts scanning for Peripherals. If already scanning, nothing happens.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">_startScanning</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC20_clearAllConnections33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF"></a>
-                    <a name="//apple_ref/swift/Method/_clearAllConnections()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC20_clearAllConnections33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF">_clearAllConnections()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Makes sure that we have all devices disconnected.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">_clearAllConnections</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC13_stopScanning33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF"></a>
-                    <a name="//apple_ref/swift/Method/_stopScanning()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC13_stopScanning33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF">_stopScanning()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Stops scanning for Peripherals. If already stopped, nothing happens.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">_stopScanning</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Instance%20Methods"></a>
-                <a name="//apple_ref/swift/Section/Instance Methods" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Instance%20Methods"></a>
-                  <h3 class="section-name"><p>Instance Methods</p>
-</h3>
-                </div>
-              </div>
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC18setUpAccessibilityyyF"></a>
-                    <a name="//apple_ref/swift/Method/setUpAccessibility()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC18setUpAccessibilityyyF">setUpAccessibility()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This sets up the accessibility and voiceover strings for the screen.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setUpAccessibility</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/IBAction%20Methods"></a>
-                <a name="//apple_ref/swift/Section/IBAction Methods" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/IBAction%20Methods"></a>
-                  <h3 class="section-name"><p>IBAction Methods</p>
-</h3>
-                </div>
-              </div>
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)scanningControlChanged:"></a>
-                    <a name="//apple_ref/swift/Method/scanningControlChanged(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)scanningControlChanged:">scanningControlChanged(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Called when the scanning control changes.</p>
+                        <p>This is called when the &ldquo;Scanning/Not Scanning&rdquo; button is hit.</p>
 
                       </div>
                       <div class="declaration">
@@ -611,28 +737,36 @@ It is also used for editing the table, to prevent it from aborting deletes.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBAction</span>
-<span class="kd">func</span> <span class="nf">scanningControlChanged</span><span class="p">(</span><span class="n">_</span> <span class="nv">inSegmentedControl</span><span class="p">:</span> <span class="kt">UISegmentedControl</span><span class="p">)</span></code></pre>
+<span class="kd">func</span> <span class="nf">scanningButtonHit</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>inSegmentedControl</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The control that changed.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)editButtonHit:"></a>
+                    <a name="//apple_ref/swift/Method/editButtonHit(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)editButtonHit:">editButtonHit(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">editButtonHit</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -736,7 +870,7 @@ It is also used for editing the table, to prevent it from aborting deletes.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called just before the view disappears.</p>
+                        <p>Called just before the view disappears. We use this to show the navBar.</p>
 
                       </div>
                       <div class="declaration">
@@ -782,7 +916,7 @@ It is also used for editing the table, to prevent it from aborting deletes.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called just before the discovery details screen is pushed.</p>
+                        <p>This is called just before we bring in the device screen (or the about screen).</p>
 
                       </div>
                       <div class="declaration">
@@ -805,7 +939,7 @@ It is also used for editing the table, to prevent it from aborting deletes.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The segue that is being executed.</p>
+                                  <p>The segue being executed.</p>
                                 </div>
                               </td>
                             </tr>
@@ -817,12 +951,227 @@ It is also used for editing the table, to prevent it from aborting deletes.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The discovery information.</p>
+                                  <p>The data we want passed into the destination.</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Private%20Methods"></a>
+                <a name="//apple_ref/swift/Section/Private Methods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Private%20Methods"></a>
+                  <h3 class="section-name"><p>Private Methods</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC12_resetToRoot33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF"></a>
+                    <a name="//apple_ref/swift/Method/_resetToRoot()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC12_resetToRoot33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF">_resetToRoot()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Make sure that the Navigation Controller is at tits baseline.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">_resetToRoot</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC19_toggleScanningMode33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF"></a>
+                    <a name="//apple_ref/swift/Method/_toggleScanningMode()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC19_toggleScanningMode33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF">_toggleScanningMode()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calling this toggles the scanning mode.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">_toggleScanningMode</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC14_startScanning33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF"></a>
+                    <a name="//apple_ref/swift/Method/_startScanning()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC14_startScanning33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF">_startScanning()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts scanning for Peripherals. If already scanning, nothing happens.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">_startScanning</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC20_clearAllConnections33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF"></a>
+                    <a name="//apple_ref/swift/Method/_clearAllConnections()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC20_clearAllConnections33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF">_clearAllConnections()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Makes sure that we have all devices disconnected.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">_clearAllConnections</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC13_stopScanning33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF"></a>
+                    <a name="//apple_ref/swift/Method/_stopScanning()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC13_stopScanning33_BBFD4A07587315F4DA25C80C1BFD20EFLLyyF">_stopScanning()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops scanning for Peripherals. If already stopped, nothing happens.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">_stopScanning</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC18setUpAccessibilityyyF"></a>
+                    <a name="//apple_ref/swift/Method/setUpAccessibility()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC18setUpAccessibilityyyF">setUpAccessibility()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This sets up the accessibility and voiceover strings for the screen.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setUpAccessibility</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/CGA_ScannerViewController%20Conformance"></a>
+                <a name="//apple_ref/swift/Section/CGA_ScannerViewController Conformance" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/CGA_ScannerViewController%20Conformance"></a>
+                  <h3 class="section-name"><p>CGA_ScannerViewController Conformance</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC26restartScanningIfNecessaryyyF"></a>
+                    <a name="//apple_ref/swift/Method/restartScanningIfNecessary()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC26restartScanningIfNecessaryyyF">restartScanningIfNecessary()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is called from presented view controllers, and will restart scanning, if we were scanning before. If not, nothing happens.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">restartScanningIfNecessary</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -863,170 +1212,6 @@ It is also used for editing the table, to prevent it from aborting deletes.</p>
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updateUI</span><span class="p">()</span></code></pre>
 
                         </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/UITableViewDataSource%20Conformance"></a>
-                <a name="//apple_ref/swift/Section/UITableViewDataSource Conformance" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/UITableViewDataSource%20Conformance"></a>
-                  <h3 class="section-name"><p>UITableViewDataSource Conformance</p>
-</h3>
-                </div>
-              </div>
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:cellForRowAtIndexPath:"></a>
-                    <a name="//apple_ref/swift/Method/tableView(_:cellForRowAt:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:cellForRowAtIndexPath:">tableView(_:<wbr>cellForRowAt:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Called to provide the data to display in the indicated table cell.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="n">_</span> <span class="nv">inTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">cellForRowAt</span> <span class="nv">inIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITableViewCell</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>inTableView</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The Table View that is asking for this View.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>cellForRowAt</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The IndexPath of the cell.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A new view, set up for the indicated cell.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:numberOfRowsInSection:"></a>
-                    <a name="//apple_ref/swift/Method/tableView(_:numberOfRowsInSection:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:numberOfRowsInSection:">tableView(_:<wbr>numberOfRowsInSection:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="nv">numberOfRowsInSection</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The number of rows in the table.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/UITableViewDelegate%20Conformance"></a>
-                <a name="//apple_ref/swift/Section/UITableViewDelegate Conformance" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/UITableViewDelegate%20Conformance"></a>
-                  <h3 class="section-name"><p>UITableViewDelegate Conformance</p>
-</h3>
-                </div>
-              </div>
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:didSelectRowAtIndexPath:"></a>
-                    <a name="//apple_ref/swift/Method/tableView(_:didSelectRowAt:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:didSelectRowAtIndexPath:">tableView(_:<wbr>didSelectRowAt:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Called when a row is selected.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">didSelectRowAt</span> <span class="nv">inIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>didSelectRowAt</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The IndexPath of the selected row.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1372,6 +1557,88 @@ We use this to reset the view stack to the initial (Peripheral List) screen.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC14centralManager_6device7service38changedCharacteristicNotificationStatey04RVS_A5ThothAHC_AH0D21_Bluetooth_PeripheralCAH0d1_R8_ServiceCAH0d1_r1_M0CtF"></a>
+                    <a name="//apple_ref/swift/Method/centralManager(_:device:service:changedCharacteristicNotificationState:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC14centralManager_6device7service38changedCharacteristicNotificationStatey04RVS_A5ThothAHC_AH0D21_Bluetooth_PeripheralCAH0d1_R8_ServiceCAH0d1_r1_M0CtF">centralManager(_:<wbr>device:<wbr>service:<wbr>changedCharacteristicNotificationState:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called to tell the instance that a Characteristic changed its notification state.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">centralManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">inCentralManager</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="p">,</span> <span class="n">device</span> <span class="nv">inDevice</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Peripheral</span><span class="p">,</span> <span class="n">service</span> <span class="nv">inService</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Service</span><span class="p">,</span> <span class="n">changedCharacteristicNotificationState</span> <span class="nv">inCharacteristic</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Characteristic</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inCentralManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The central manager that is calling this.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>device</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The device instance that contained the changed Service.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>changedService</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Service instance that contained the changed Characteristic.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>changedCharacteristicNotificationState</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Characteristic that was changed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC14centralManager_6device14changedServicey04RVS_A5ThothAGC_AG0D21_Bluetooth_PeripheralCAG0d1_o1_L0CtF"></a>
                     <a name="//apple_ref/swift/Method/centralManager(_:device:changedService:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC14centralManager_6device14changedServicey04RVS_A5ThothAGC_AG0D21_Bluetooth_PeripheralCAG0d1_o1_L0CtF">centralManager(_:<wbr>device:<wbr>changedService:<wbr>)</a>
@@ -1430,88 +1697,6 @@ We use this to reset the view stack to the initial (Peripheral List) screen.</p>
                               <td>
                                 <div>
                                   <p>The Service instance that contained the changed Characteristic.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13Blue_Van_Clef25CGA_InitialViewControllerC14centralManager_6device7service38changedCharacteristicNotificationStatey04RVS_A5ThothAHC_AH0D21_Bluetooth_PeripheralCAH0d1_R8_ServiceCAH0d1_r1_M0CtF"></a>
-                    <a name="//apple_ref/swift/Method/centralManager(_:device:service:changedCharacteristicNotificationState:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef25CGA_InitialViewControllerC14centralManager_6device7service38changedCharacteristicNotificationStatey04RVS_A5ThothAHC_AH0D21_Bluetooth_PeripheralCAH0d1_R8_ServiceCAH0d1_r1_M0CtF">centralManager(_:<wbr>device:<wbr>service:<wbr>changedCharacteristicNotificationState:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Called to tell the instance that a Characteristic changed its notification state.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">centralManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">inCentral</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="p">,</span> <span class="n">device</span> <span class="nv">inDevice</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Peripheral</span><span class="p">,</span> <span class="n">service</span> <span class="nv">inService</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Service</span><span class="p">,</span> <span class="n">changedCharacteristicNotificationState</span> <span class="nv">inCharacteristic</span><span class="p">:</span> <span class="kt">CGA_Bluetooth_Characteristic</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>inCentralManager</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The central manager that is calling this.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>device</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The device instance that contained the changed Service.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>service</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The Service instance that contained the changed Characteristic.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>changedCharacteristicNotificationState</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The Characteristic that was changed.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1781,14 +1966,699 @@ We use this to reset the view stack to the initial (Peripheral List) screen.</p>
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/UITableViewDataSource%20Conformance"></a>
+                <a name="//apple_ref/swift/Section/UITableViewDataSource Conformance" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/UITableViewDataSource%20Conformance"></a>
+                  <h3 class="section-name"><p>UITableViewDataSource Conformance</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)numberOfSectionsInTableView:"></a>
+                    <a name="//apple_ref/swift/Method/numberOfSections(in:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)numberOfSectionsInTableView:">numberOfSections(in:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This returns the number of available sections.</p>
+
+<p>There will be 2 sections: Classic, and BLE.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">numberOfSections</span><span class="p">(</span><span class="k">in</span> <span class="nv">inTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>in</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The table view that is asking for the section count.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:heightForHeaderInSection:"></a>
+                    <a name="//apple_ref/swift/Method/tableView(_:heightForHeaderInSection:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:heightForHeaderInSection:">tableView(_:<wbr>heightForHeaderInSection:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This returns the height of the requested section header.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="n">_</span> <span class="nv">inTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">heightForHeaderInSection</span> <span class="nv">inSection</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inTableView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The table view that is asking for the header (ignored).</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>heightForHeaderInSection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The 0-based section index being queried (ignored).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The height, in display units, of the header for the section.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:viewForHeaderInSection:"></a>
+                    <a name="//apple_ref/swift/Method/tableView(_:viewForHeaderInSection:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:viewForHeaderInSection:">tableView(_:<wbr>viewForHeaderInSection:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a section header.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="n">_</span> <span class="nv">inTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">viewForHeaderInSection</span> <span class="nv">inSection</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inTableView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The table view that is asking for the header.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>viewForHeaderInSection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The 0-based section index being queried.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The header for the section, as a view (a label).</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:numberOfRowsInSection:"></a>
+                    <a name="//apple_ref/swift/Method/tableView(_:numberOfRowsInSection:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:numberOfRowsInSection:">tableView(_:<wbr>numberOfRowsInSection:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This returns the number of available rows, in the given section.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="n">_</span> <span class="nv">inTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">numberOfRowsInSection</span> <span class="nv">inSection</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inTableView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The table view that is asking for the row count.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>numberOfRowsInSection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The 0-based section index being queried.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The number of rows in the given section.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:heightForRowAtIndexPath:"></a>
+                    <a name="//apple_ref/swift/Method/tableView(_:heightForRowAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:heightForRowAtIndexPath:">tableView(_:<wbr>heightForRowAt:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This returns the number of available rows, in the given section.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="n">_</span> <span class="nv">inTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">heightForRowAt</span> <span class="nv">inIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inTableView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The table view that is asking for the row count.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>heightForRowAt</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index of the row.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The height of the row, in display units.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:cellForRowAtIndexPath:"></a>
+                    <a name="//apple_ref/swift/Method/tableView(_:cellForRowAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:cellForRowAtIndexPath:">tableView(_:<wbr>cellForRowAt:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This returns a view, with the data for the given row and section.</p>
+
+                        <a href="../Classes/CGA_InitialViewController/tableView%28_%3AcellForRowAt%3A%29.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="n">_</span> <span class="nv">inTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">cellForRowAt</span> <span class="nv">inIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITableViewCell</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inTableView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The table view that is asking for the cell.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cellForRowAt</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index path (section, row) for the cell.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/UITableViewDelegate%20Conformance"></a>
+                <a name="//apple_ref/swift/Section/UITableViewDelegate Conformance" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/UITableViewDelegate%20Conformance"></a>
+                  <h3 class="section-name"><p>UITableViewDelegate Conformance</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:willSelectRowAtIndexPath:"></a>
+                    <a name="//apple_ref/swift/Method/tableView(_:willSelectRowAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:willSelectRowAtIndexPath:">tableView(_:<wbr>willSelectRowAt:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called to test whether or not to allow a row to be selected.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="n">_</span> <span class="nv">inTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">willSelectRowAt</span> <span class="nv">inIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inTableView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The table view that is asking for the cell.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>willSelectRowAt</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index path (section, row) for the cell.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The IndexPath of the cell, if approved, or nil, if not.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:shouldHighlightRowAtIndexPath:"></a>
+                    <a name="//apple_ref/swift/Method/tableView(_:shouldHighlightRowAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:shouldHighlightRowAtIndexPath:">tableView(_:<wbr>shouldHighlightRowAt:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called to test whether or not to allow a row to be higlighted.</p>
+
+<p>This prevents the unselectable row from &ldquo;flashing&rdquo; when someone touches it.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="n">_</span> <span class="nv">inTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">shouldHighlightRowAt</span> <span class="nv">inIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inTableView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The table view that is asking for the cell.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shouldHighlightRowAt</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index path (section, row) for the cell.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The IndexPath of the cell, if approved, or nil, if not.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:didSelectRowAtIndexPath:"></a>
+                    <a name="//apple_ref/swift/Method/tableView(_:didSelectRowAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:didSelectRowAtIndexPath:">tableView(_:<wbr>didSelectRowAt:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when a row is selected.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="n">_</span> <span class="nv">inTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">didSelectRowAt</span> <span class="nv">inIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inTableView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The table view that is asking for the cell.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>didSelectRowAt</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index path (section, row) for the cell.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:canEditRowAtIndexPath:"></a>
+                    <a name="//apple_ref/swift/Method/tableView(_:canEditRowAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:canEditRowAtIndexPath:">tableView(_:<wbr>canEditRowAt:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicate that a row can be edited (for left-swipe delete).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="nv">canEditRowAt</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>canEditRowAt</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Ignored</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true, but only if we are not scanning. If we are scanning, we can&rsquo;t edit table rows.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:commitEditingStyle:forRowAtIndexPath:"></a>
+                    <a name="//apple_ref/swift/Method/tableView(_:commit:forRowAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)CGA_InitialViewController(im)tableView:commitEditingStyle:forRowAtIndexPath:">tableView(_:<wbr>commit:<wbr>forRowAt:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called to do a delete action.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="n">_</span> <span class="nv">inTableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">commit</span> <span class="nv">inEditingStyle</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="o">.</span><span class="kt">EditingStyle</span><span class="p">,</span> <span class="n">forRowAt</span> <span class="nv">inIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inTableView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The table view being edited</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>commit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The action to perform.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>forRowAt</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The indexpath of the row to be deleted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-03-03)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-08-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
