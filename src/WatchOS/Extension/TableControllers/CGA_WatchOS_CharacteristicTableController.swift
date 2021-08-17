@@ -27,6 +27,9 @@ import RVS_BlueThoth
 /* ###################################################################################################################################### */
 // MARK: - Main Watch App Characteristic Table Controller -
 /* ###################################################################################################################################### */
+/**
+ This is the controller for the characteristic display screen.
+ */
 class CGA_WatchOS_CharacteristicTableController: NSObject {
     /* ################################################################## */
     /**

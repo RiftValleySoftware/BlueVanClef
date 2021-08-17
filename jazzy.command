@@ -39,16 +39,16 @@ jazzy   --readme ./README.md \
        --theme fullwidth
 cp ./img/* docs/TVOS/img
 
-# echo "Creating Docs for the WatchOS App\n"
-# rm -drf docs/WatchOS
-# 
-# jazzy   --readme ./README.md \
-#         -b -scheme,BlueVanClef-WatchOS-Extension \
-#         --github_url https://github.com/RiftValleySoftware/BlueVanClef \
-#         --title "BlueVanClef (WatchOS) Doumentation" \
-#         --min_acl private \
-#         --output docs/WatchOS \
-#         --theme fullwidth
-# cp ./img/* docs/WatchOS/img
-# 
-# cd "${CWD}"
+echo "Creating Docs for the WatchOS App\n"
+rm -drf docs/WatchOS
+
+jazzy   --readme ./README.md \
+        -b -scheme,BlueVanClef-WatchOS-Extension \
+        --github_url https://github.com/RiftValleySoftware/BlueVanClef \
+        --title "BlueVanClef (WatchOS) Doumentation" \
+        --min_acl private \
+        --output docs/WatchOS \
+        --theme fullwidth
+cp ./img/* docs/WatchOS/img
+
+cd "${CWD}"

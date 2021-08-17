@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MacOS_DiscoveryViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/MacOS_DiscoveryViewController" class="dashAnchor"></a>
+
+    <a title="MacOS_DiscoveryViewController Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          BlueVanClef (MacOS) Doumentation
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/RiftValleySoftware/BlueVanClef">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html"> Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      MacOS_DiscoveryViewController Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_PersistentPrefs.html">CGA_PersistentPrefs</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CGA_PersistentPrefs/Keys.html">– Keys</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MacOS_AboutViewController.html">MacOS_AboutViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MacOS_AppDelegate.html">MacOS_AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MacOS_Base_ViewController.html">MacOS_Base_ViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MacOS_Base_WindowController.html">MacOS_Base_WindowController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MacOS_CharacteristicViewController.html">MacOS_CharacteristicViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MacOS_Clicker.html">MacOS_Clicker</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MacOS_DiscoveryViewController.html">MacOS_DiscoveryViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MacOS_DiscoveryViewController/ScanningModeSwitchValues.html">– ScanningModeSwitchValues</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MacOS_PeripheralViewController.html">MacOS_PeripheralViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MacOS_PreferencesViewController.html">MacOS_PreferencesViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MacOS_SplitViewController.html">MacOS_SplitViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MacOS_TransparentScroller.html">MacOS_TransparentScroller</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/RVS_BlueThoth_MacOS_Test_Harness_Base_SplitView_ViewController.html">RVS_BlueThoth_MacOS_Test_Harness_Base_SplitView_ViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Bundle.html">Bundle</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MacOS_ControllerList_Protocol.html">MacOS_ControllerList_Protocol</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>MacOS_DiscoveryViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MacOS_DiscoveryViewController</span> <span class="p">:</span> <span class="kt"><a href="../Classes/RVS_BlueThoth_MacOS_Test_Harness_Base_SplitView_ViewController.html">RVS_BlueThoth_MacOS_Test_Harness_Base_SplitView_ViewController</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">MacOS_DiscoveryViewController</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MacOS_ControllerList_Protocol.html">MacOS_ControllerList_Protocol</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>This is the permanent Device Discovery Screen. It is the leftmost screen, and contains a table that is updated as the discovery scanning goes on.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC14buttonFontSizeSivpZ"></a>
+                    <a name="//apple_ref/swift/Variable/buttonFontSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC14buttonFontSizeSivpZ">buttonFontSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The font size for the Connect/Disconnect of each device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">buttonFontSize</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC17headerRowFontSizeSivp"></a>
+                    <a name="//apple_ref/swift/Property/headerRowFontSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC17headerRowFontSizeSivp">headerRowFontSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The font size for the header of each device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">headerRowFontSize</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC13headerPaddingSivp"></a>
+                    <a name="//apple_ref/swift/Property/headerPadding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC13headerPaddingSivp">headerPadding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The padding around that header (above and below)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">headerPadding</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC15infoRowFontSizeSivp"></a>
+                    <a name="//apple_ref/swift/Property/infoRowFontSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC15infoRowFontSizeSivp">infoRowFontSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the font size for the information about each discovery (below the header).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">infoRowFontSize</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC11infoPaddingSivp"></a>
+                    <a name="//apple_ref/swift/Property/infoPadding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC11infoPaddingSivp">infoPadding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The padding around that text (above and below)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">infoPadding</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC24ScanningModeSwitchValuesO"></a>
+                    <a name="//apple_ref/swift/Enum/ScanningModeSwitchValues" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC24ScanningModeSwitchValuesO">ScanningModeSwitchValues</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This enum has the scanning on/off states, expressed as 0-based Int.</p>
+
+                        <a href="../Classes/MacOS_DiscoveryViewController/ScanningModeSwitchValues.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">ScanningModeSwitchValues</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC15screenThickness12CoreGraphics7CGFloatVvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/screenThickness" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC15screenThickness12CoreGraphics7CGFloatVvpZ">screenThickness</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the minimum width of the discovery section.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">screenThickness</span><span class="p">:</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC3keySSvp"></a>
+                    <a name="//apple_ref/swift/Property/key" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC3keySSvp">key</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is a String key that uniquely identifies this screen.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC14selectedDevice04RVS_A5ThothAEC0F4DataCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/selectedDevice" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC14selectedDevice04RVS_A5ThothAEC0F4DataCSgvp">selectedDevice</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The currently selected device (nil, if no device selected).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">selectedDevice</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="o">.</span><span class="kt">DiscoveryData</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(py)scanningModeSegmentedSwitch"></a>
+                    <a name="//apple_ref/swift/Property/scanningModeSegmentedSwitch" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(py)scanningModeSegmentedSwitch">scanningModeSegmentedSwitch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is a segmented switch that reflects the state of the scanning.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">scanningModeSegmentedSwitch</span><span class="p">:</span> <span class="kt">NSSegmentedControl</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(py)noBTImage"></a>
+                    <a name="//apple_ref/swift/Property/noBTImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(py)noBTImage">noBTImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the image that is shown if Bluetooth is not available.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">noBTImage</span><span class="p">:</span> <span class="kt">NSImageView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(py)reloadButton"></a>
+                    <a name="//apple_ref/swift/Property/reloadButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(py)reloadButton">reloadButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the &ldquo;Start Over From Scratch&rdquo; button.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">reloadButton</span><span class="p">:</span> <span class="kt">NSButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(py)stackView"></a>
+                    <a name="//apple_ref/swift/Property/stackView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(py)stackView">stackView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the stack view that we populate with the discovery data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">stackView</span><span class="p">:</span> <span class="kt">NSStackView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(py)scrollView"></a>
+                    <a name="//apple_ref/swift/Property/scrollView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(py)scrollView">scrollView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the scroller that contains that stack view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">scrollView</span><span class="p">:</span> <span class="kt">NSScrollView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC17sortedPeripheralsSay04RVS_A5ThothAEC0F4DataCGvp"></a>
+                    <a name="//apple_ref/swift/Property/sortedPeripherals" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC17sortedPeripheralsSay04RVS_A5ThothAEC0F4DataCGvp">sortedPeripherals</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This returns the peripherals, in a sorted order.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sortedPeripherals</span><span class="p">:</span> <span class="p">[</span><span class="kt">RVS_BlueThoth</span><span class="o">.</span><span class="kt">DiscoveryData</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Private%20Methods"></a>
+                <a name="//apple_ref/swift/Section/Private Methods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Private%20Methods"></a>
+                  <h3 class="section-name"><p>Private Methods</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC28_createAdvertimentStringsFor33_D50B85010BF24CB8A96111F908FBE8C5LL_2id5powerSaySSG04RVS_A5ThothAIC17AdvertisementDataVSg_SSSitF"></a>
+                    <a name="//apple_ref/swift/Method/_createAdvertimentStringsFor(_:id:power:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC28_createAdvertimentStringsFor33_D50B85010BF24CB8A96111F908FBE8C5LL_2id5powerSaySSG04RVS_A5ThothAIC17AdvertisementDataVSg_SSSitF">_createAdvertimentStringsFor(_:<wbr>id:<wbr>power:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This creates an Array of String, containing the advertisement data from the indexed device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">_createAdvertimentStringsFor</span><span class="p">(</span><span class="n">_</span> <span class="nv">inAdData</span><span class="p">:</span> <span class="kt">RVS_BlueThoth</span><span class="o">.</span><span class="kt">AdvertisementData</span><span class="p">?,</span> <span class="n">id</span> <span class="nv">inID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">power</span> <span class="nv">inPower</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inAdData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The advertisement data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ID string.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>power</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The RSSI level.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An Array of String, with the advertisement data in &ldquo;key: value&rdquo; form.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC015_createTableRowG3For33_D50B85010BF24CB8A96111F908FBE8C5LLyySiF"></a>
+                    <a name="//apple_ref/swift/Method/_createTableRowViewFor(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC015_createTableRowG3For33_D50B85010BF24CB8A96111F908FBE8C5LLyySiF">_createTableRowViewFor(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This creates a single device row for the given index (in the sorted staged peripherals list).</p>
+
+                        <a href="../Classes/MacOS_DiscoveryViewController/_createTableRowViewFor%28_%3A%29.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">_createTableRowViewFor</span><span class="p">(</span><span class="n">_</span> <span class="nv">inRow</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inRow</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The 0-based index of the staged Discovery Info.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC012_reloadStackG033_D50B85010BF24CB8A96111F908FBE8C5LLyyF"></a>
+                    <a name="//apple_ref/swift/Method/_reloadStackView()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC012_reloadStackG033_D50B85010BF24CB8A96111F908FBE8C5LLyyF">_reloadStackView()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This wipes and reloads the deive list stack view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">_reloadStackView</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Base%20Class%20Overrides"></a>
+                <a name="//apple_ref/swift/Section/Base Class Overrides" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Base%20Class%20Overrides"></a>
+                  <h3 class="section-name"><p>Base Class Overrides</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(im)viewDidLoad"></a>
+                    <a name="//apple_ref/swift/Method/viewDidLoad()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(im)viewDidLoad">viewDidLoad()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when the view hierachy has loaded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(im)viewWillAppear"></a>
+                    <a name="//apple_ref/swift/Method/viewWillAppear()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(im)viewWillAppear">viewWillAppear()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called just before the screen appears.
+We use this to register with the app delegate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(im)viewWillDisappear"></a>
+                    <a name="//apple_ref/swift/Method/viewWillDisappear()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(im)viewWillDisappear">viewWillDisappear()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called just before the screen disappears.
+We use this to un-register with the app delegate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillDisappear</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(im)setUpAccessibility"></a>
+                    <a name="//apple_ref/swift/Method/setUpAccessibility()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(im)setUpAccessibility">setUpAccessibility()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets up the various accessibility labels.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">setUpAccessibility</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/IBAction%20Handlers"></a>
+                <a name="//apple_ref/swift/Section/IBAction Handlers" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/IBAction%20Handlers"></a>
+                  <h3 class="section-name"><p>IBAction Handlers</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(im)scanningChanged:"></a>
+                    <a name="//apple_ref/swift/Method/scanningChanged(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(im)scanningChanged:">scanningChanged(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when the scanning/not scanning segmented switch changes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">scanningChanged</span><span class="p">(</span><span class="n">_</span> <span class="nv">inSwitch</span><span class="p">:</span> <span class="kt">NSSegmentedControl</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inSwitch</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The switch object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(im)reloadButtonHit:"></a>
+                    <a name="//apple_ref/swift/Method/reloadButtonHit(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(im)reloadButtonHit:">reloadButtonHit(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the &ldquo;Start Over From Scratch&rdquo; button.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">reloadButtonHit</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">NSButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(im)connectButtonHit:"></a>
+                    <a name="//apple_ref/swift/Method/connectButtonHit(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Blue_Van_Clef@objc(cs)MacOS_DiscoveryViewController(im)connectButtonHit:">connectButtonHit(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when the Connect/Disconnect button is hit.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">connectButtonHit</span><span class="p">(</span><span class="n">_</span> <span class="nv">inButton</span><span class="p">:</span> <span class="kt"><a href="../Classes/MacOS_Clicker.html">MacOS_Clicker</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inButton</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The button, cast to our special class that associates a device.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/MacOS_Base_ViewController_Protocol%20Conformance"></a>
+                <a name="//apple_ref/swift/Section/MacOS_Base_ViewController_Protocol Conformance" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/MacOS_Base_ViewController_Protocol%20Conformance"></a>
+                  <h3 class="section-name"><p>MacOS_Base_ViewController_Protocol Conformance</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC8updateUIyyF"></a>
+                    <a name="//apple_ref/swift/Method/updateUI()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef29MacOS_DiscoveryViewControllerC8updateUIyyF">updateUI()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This forces the UI elements to be updated.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updateUI</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-08-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

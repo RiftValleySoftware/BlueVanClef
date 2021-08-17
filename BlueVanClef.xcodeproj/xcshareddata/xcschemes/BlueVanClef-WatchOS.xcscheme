@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1170"
+   LastUpgradeVersion = "1240"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -30,7 +30,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D4B1C6822430F26800D3AC78"
                BuildableName = "Blue Van Clef.app"
-               BlueprintName = "Blue Van Clef for iOS"
+               BlueprintName = "Blue Van Clef for Mobile"
                ReferencedContainer = "container:BlueVanClef.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
