@@ -786,7 +786,7 @@
 			attributes = {
 				CLASSPREFIX = CGA;
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = "The Great Rift Valley Software Company";
 				TargetAttributes = {
 					D431519824F536A30031050E = {
