@@ -1,5 +1,11 @@
 # BlueVanClef Change Log
 
+## 1.5.1
+
+- **December 14, 2021**
+
+- Updated to Latest libraries and tools.
+
 ## 1.5.0
 
 - **September 23, 2021**
