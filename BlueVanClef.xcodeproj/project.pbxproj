@@ -1255,7 +1255,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.TV;
 				PRODUCT_NAME = "Blue Van Clef";
 				SDKROOT = appletvos;
@@ -1277,7 +1277,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.TV;
 				PRODUCT_NAME = "Blue Van Clef";
 				SDKROOT = appletvos;
@@ -1303,7 +1303,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
 				PRODUCT_NAME = "Blue Van Clef";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1328,7 +1328,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
 				PRODUCT_NAME = "Blue Van Clef";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1355,7 +1355,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1379,7 +1379,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1400,7 +1400,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "Blue Van Clef Extension";
 				SDKROOT = watchos;
@@ -1424,7 +1424,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "Blue Van Clef Extension";
 				SDKROOT = watchos;
@@ -1446,7 +1446,7 @@
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				IBSC_MODULE = Blue_Van_Clef_WatchKit_Extension;
 				INFOPLIST_FILE = src/WatchOS/App/Info.plist;
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp;
 				PRODUCT_NAME = "Blue Van Clef";
 				SDKROOT = watchos;
@@ -1467,7 +1467,7 @@
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				IBSC_MODULE = Blue_Van_Clef_WatchKit_Extension;
 				INFOPLIST_FILE = src/WatchOS/App/Info.plist;
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp;
 				PRODUCT_NAME = "Blue Van Clef";
 				SDKROOT = watchos;

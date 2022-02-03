@@ -1,5 +1,11 @@
 # BlueVanClef Change Log
 
+## 1.5.2
+
+- **February 3, 2022**
+
+- Flipped on the "Supports running without application" switch in the Watch app.
+
 ## 1.5.1
 
 - **December 14, 2021**
