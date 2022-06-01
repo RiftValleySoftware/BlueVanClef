@@ -1,5 +1,12 @@
 # BlueVanClef Change Log
 
+## 1.5.3
+
+- **June 1, 2022**
+
+- Updated to the latest operating system support.
+- Updated the dependencies.
+
 ## 1.5.2
 
 - **February 3, 2022**
