@@ -19,5 +19,5 @@ DEPENDENCIES
 -
 This depends upon the [RVS_BlueToth Bluetooth SDK](https://riftvalleysoftware.github.io/RVS_BlueThoth).
 
-It also depends upon the [RVS Generic Swift Toolbox](https://github.com/RiftValleySoftware/RVS_Generic_Swift_Toolbox), and the [RVS Peristsent Prefs Utility](https://github.com/RiftValleySoftware/RVS_PersistentPrefs).
+It also depends upon the [RVS Generic Swift Toolbox](https://github.com/RiftValleySoftware/RVS_Generic_Swift_Toolbox), and the [RVS Persistent Prefs Utility](https://github.com/RiftValleySoftware/RVS_PersistentPrefs).
 
