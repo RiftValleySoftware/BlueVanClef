@@ -376,7 +376,7 @@ extension MacOS_DiscoveryViewController {
             centralManager?.duplicateFilteringIsOn = !prefs.continuouslyUpdatePeripherals
             centralManager?.discoverOnlyConnectablePeripherals = prefs.discoverOnlyConnectableDevices
             centralManager?.allowEmptyNames = prefs.allowEmptyNames
-            centralManager?.startScanning(duplicateFilteringIsOn: prefs.continuouslyUpdatePeripherals)
+            centralManager?.startScanning(duplicateFilteringIsOn: true ) // prefs.continuouslyUpdatePeripherals)
         }
     }
 

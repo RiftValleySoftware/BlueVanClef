@@ -511,8 +511,8 @@
 		D4B42FCD24EF1DA800BDF1E9 /* Meta */ = {
 			isa = PBXGroup;
 			children = (
-				D4B42FCE24EF1DA800BDF1E9 /* MacOS.entitlements */,
 				D4B42FCF24EF1DA800BDF1E9 /* Info.plist */,
+				D4B42FCE24EF1DA800BDF1E9 /* MacOS.entitlements */,
 			);
 			path = Meta;
 			sourceTree = "<group>";
@@ -1552,7 +1552,7 @@
 			repositoryURL = "https://github.com/RiftValleySoftware/RVS_BlueThoth";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.7.1;
+				minimumVersion = 1.7.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
