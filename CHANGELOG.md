@@ -4,6 +4,8 @@
 
 - **TBD**
 
+- Updated to the latest RVS_BlueThoth
+
 ## 1.5.3
 
 - **June 1, 2022**
