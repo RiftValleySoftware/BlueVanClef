@@ -1,34 +1,32 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "RVS_BlueThoth",
-        "repositoryURL": "git@github.com:RiftValleySoftware/RVS_BlueThoth.git",
-        "state": {
-          "branch": null,
-          "revision": "5a0b63dbdcc705a6c2abbe87533c719cbd5b4666",
-          "version": "1.5.5"
-        }
-      },
-      {
-        "package": "RVS_Generic_Swift_Toolbox",
-        "repositoryURL": "git@github.com:RiftValleySoftware/RVS_Generic_Swift_Toolbox.git",
-        "state": {
-          "branch": null,
-          "revision": "769b156680d51f5360fd5d7ba129d87774caccb9",
-          "version": "1.5.0"
-        }
-      },
-      {
-        "package": "RVS_Persistent_Prefs",
-        "repositoryURL": "git@github.com:RiftValleySoftware/RVS_PersistentPrefs.git",
-        "state": {
-          "branch": null,
-          "revision": "d71d6bfaf1791b2e472f8e21e8fbc9428c5303af",
-          "version": "1.2.1"
-        }
+  "pins" : [
+    {
+      "identity" : "rvs_bluethoth",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RiftValleySoftware/RVS_BlueThoth",
+      "state" : {
+        "revision" : "385dfdd3c4963f224c6ccea8b7de368a170c08d1",
+        "version" : "1.7.1"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "rvs_generic_swift_toolbox",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:RiftValleySoftware/RVS_Generic_Swift_Toolbox.git",
+      "state" : {
+        "revision" : "fd0869254d3772ae13c5209f527f4f763c6f170a",
+        "version" : "1.8.1"
+      }
+    },
+    {
+      "identity" : "rvs_persistentprefs",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RiftValleySoftware/RVS_PersistentPrefs",
+      "state" : {
+        "revision" : "b8c22062c9e9a7ae4ac8e52acf20103adf7c019b",
+        "version" : "1.3.1"
+      }
+    }
+  ],
+  "version" : 2
 }
