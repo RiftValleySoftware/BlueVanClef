@@ -33,6 +33,7 @@
 		D476D45924F7B9B7004E0B87 /* Blue Van Clef.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D4EE28E024EC62CC0008C0FE /* Blue Van Clef.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4774D4224F54E13008EC89E /* CGA_BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4774D4124F54E13008EC89E /* CGA_BaseViewController.swift */; };
 		D4774D4324F54F20008EC89E /* CGA_BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4774D4124F54E13008EC89E /* CGA_BaseViewController.swift */; };
+		D4786F86287DC70C00DA9C3C /* RVS_Generic_Swift_Toolbox in Frameworks */ = {isa = PBXBuildFile; productRef = D4786F85287DC70C00DA9C3C /* RVS_Generic_Swift_Toolbox */; };
 		D47D71E22448DD70004D9923 /* CGA_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47D71E12448DD70004D9923 /* CGA_Extensions.swift */; };
 		D480CE2E243CEFE20074CFE4 /* CGA_CharacteristicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480CE2D243CEFE20074CFE4 /* CGA_CharacteristicViewController.swift */; };
 		D49A703224EDE2CF0019D286 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
@@ -228,6 +229,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4786F86287DC70C00DA9C3C /* RVS_Generic_Swift_Toolbox in Frameworks */,
 				D4E7F6472847E4F70072E9CE /* RVS_BlueThoth in Frameworks */,
 				D4E7F6452847E4F70072E9CE /* RVS_Persistent_Prefs in Frameworks */,
 			);
@@ -734,6 +736,7 @@
 			packageProductDependencies = (
 				D4E7F6442847E4F70072E9CE /* RVS_Persistent_Prefs */,
 				D4E7F6462847E4F70072E9CE /* RVS_BlueThoth */,
+				D4786F85287DC70C00DA9C3C /* RVS_Generic_Swift_Toolbox */,
 			);
 			productName = "Blue Van Clef (MacOS)";
 			productReference = D4B42FAB24EF1D6800BDF1E9 /* Blue Van Clef.app */;
@@ -818,6 +821,7 @@
 			packageReferences = (
 				D4CB21F426FCC9D50040D4D7 /* XCRemoteSwiftPackageReference "RVS_PersistentPrefs" */,
 				D4E8A9EF2847E2F100DF729C /* XCRemoteSwiftPackageReference "RVS_BlueThoth" */,
+				D4786F84287DC70C00DA9C3C /* XCRemoteSwiftPackageReference "RVS_Generic_Swift_Toolbox" */,
 			);
 			productRefGroup = D420C895242FCD5600FCB9E0 /* Products */;
 			projectDirPath = "";
@@ -1539,12 +1543,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D4786F84287DC70C00DA9C3C /* XCRemoteSwiftPackageReference "RVS_Generic_Swift_Toolbox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RiftValleySoftware/RVS_Generic_Swift_Toolbox";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.1;
+			};
+		};
 		D4CB21F426FCC9D50040D4D7 /* XCRemoteSwiftPackageReference "RVS_PersistentPrefs" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RiftValleySoftware/RVS_PersistentPrefs";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.3.1;
+				minimumVersion = 1.3.2;
 			};
 		};
 		D4E8A9EF2847E2F100DF729C /* XCRemoteSwiftPackageReference "RVS_BlueThoth" */ = {
@@ -1552,12 +1564,17 @@
 			repositoryURL = "https://github.com/RiftValleySoftware/RVS_BlueThoth";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.7.3;
+				minimumVersion = 1.7.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D4786F85287DC70C00DA9C3C /* RVS_Generic_Swift_Toolbox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4786F84287DC70C00DA9C3C /* XCRemoteSwiftPackageReference "RVS_Generic_Swift_Toolbox" */;
+			productName = RVS_Generic_Swift_Toolbox;
+		};
 		D4E7F6442847E4F70072E9CE /* RVS_Persistent_Prefs */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D4CB21F426FCC9D50040D4D7 /* XCRemoteSwiftPackageReference "RVS_PersistentPrefs" */;

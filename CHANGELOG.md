@@ -5,6 +5,7 @@
 - **TBD**
 
 - Updated to the latest RVS_BlueThoth
+- Updated other dependencies.
 
 ## 1.5.3
 
