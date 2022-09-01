@@ -1564,7 +1564,7 @@
 			repositoryURL = "https://github.com/RiftValleySoftware/RVS_BlueThoth";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.8.0;
+				minimumVersion = 1.9.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

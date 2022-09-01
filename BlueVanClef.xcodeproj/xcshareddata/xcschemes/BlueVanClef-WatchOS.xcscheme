@@ -55,10 +55,8 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       showNonLocalizedStrings = "YES">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/$(PRODUCT_NAME)">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4EE28DF24EC62CC0008C0FE"
@@ -66,7 +64,7 @@
             BlueprintName = "Blue Van Clef for Watch"
             ReferencedContainer = "container:BlueVanClef.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
+      </BuildableProductRunnable>
       <LocationScenarioReference
          identifier = "New York, NY, USA"
          referenceType = "1">
@@ -78,10 +76,8 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/$(PRODUCT_NAME)">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4EE28DF24EC62CC0008C0FE"
@@ -89,16 +85,7 @@
             BlueprintName = "Blue Van Clef for Watch"
             ReferencedContainer = "container:BlueVanClef.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D4EE28DF24EC62CC0008C0FE"
-            BuildableName = "Blue Van Clef.app"
-            BlueprintName = "Blue Van Clef for Watch"
-            ReferencedContainer = "container:BlueVanClef.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

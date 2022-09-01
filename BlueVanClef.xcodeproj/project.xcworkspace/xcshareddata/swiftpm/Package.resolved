@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/RiftValleySoftware/RVS_BlueThoth",
       "state" : {
-        "revision" : "faa3e1d3b259dc467211b3eadcdd28d31b2fea55",
-        "version" : "1.8.0"
+        "revision" : "570380d35d30d76b00b25c89dcfd07f6dc08b2b0",
+        "version" : "1.9.0"
       }
     },
     {
