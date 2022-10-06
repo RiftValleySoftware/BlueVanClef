@@ -1548,7 +1548,7 @@
 			repositoryURL = "https://github.com/RiftValleySoftware/RVS_Generic_Swift_Toolbox";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.10.2;
+				minimumVersion = 1.11.0;
 			};
 		};
 		D4CB21F426FCC9D50040D4D7 /* XCRemoteSwiftPackageReference "RVS_PersistentPrefs" */ = {
@@ -1556,7 +1556,7 @@
 			repositoryURL = "https://github.com/RiftValleySoftware/RVS_PersistentPrefs";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.3.3;
+				minimumVersion = 1.3.4;
 			};
 		};
 		D4E8A9EF2847E2F100DF729C /* XCRemoteSwiftPackageReference "RVS_BlueThoth" */ = {
@@ -1564,7 +1564,7 @@
 			repositoryURL = "https://github.com/RiftValleySoftware/RVS_BlueThoth";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.9.1;
+				minimumVersion = 1.9.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
