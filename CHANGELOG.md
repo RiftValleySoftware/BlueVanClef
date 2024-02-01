@@ -2,10 +2,11 @@
 
 ## 1.5.4
 
-- **TBD**
+- **February 1, 2024**
 
 - Updated to the latest RVS_BlueThoth
 - Updated other dependencies.
+- Removed Swiftlint (;'(), because it no longer seems to work.
 
 ## 1.5.3
 

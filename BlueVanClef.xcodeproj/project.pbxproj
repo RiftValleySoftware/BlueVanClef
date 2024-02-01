@@ -75,7 +75,7 @@
 		D4E7F6532847E5220072E9CE /* RVS_BlueThoth in Frameworks */ = {isa = PBXBuildFile; productRef = D4E7F6522847E5220072E9CE /* RVS_BlueThoth */; };
 		D4EDB96524EDEC78001172B5 /* Complications.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EDB96424EDEC78001172B5 /* Complications.xcassets */; };
 		D4EDB96624EDEC78001172B5 /* Complications.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EDB96424EDEC78001172B5 /* Complications.xcassets */; };
-		D4EE28F024EC62CD0008C0FE /* Blue Van Clef Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4EE28EF24EC62CD0008C0FE /* Blue Van Clef Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D4EE28F024EC62CD0008C0FE /* Blue Van Clef Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D4EE28EF24EC62CD0008C0FE /* Blue Van Clef Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4EE292424EC64C50008C0FE /* CGA_WatchOS_BaseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE290B24EC648F0008C0FE /* CGA_WatchOS_BaseInterfaceController.swift */; };
 		D4EE292524EC64C50008C0FE /* CGA_WatchOS_CharacteristicInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE290D24EC648F0008C0FE /* CGA_WatchOS_CharacteristicInterfaceController.swift */; };
 		D4EE292624EC64C50008C0FE /* CGA_WatchOS_MainInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE290E24EC648F0008C0FE /* CGA_WatchOS_MainInterfaceController.swift */; };
@@ -126,15 +126,15 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D4EE290024EC62CE0008C0FE /* Embed App Extensions */ = {
+		D4EE290024EC62CE0008C0FE /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D4EE28F024EC62CD0008C0FE /* Blue Van Clef Extension.appex in Embed App Extensions */,
+				D4EE28F024EC62CD0008C0FE /* Blue Van Clef Extension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -699,7 +699,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef for Mobile" */;
 			buildPhases = (
-				D4A6A8652430F4430084F102 /* SwiftLint */,
 				D4B1C67F2430F26800D3AC78 /* Sources */,
 				D4DCD21624A0255F00115176 /* Frameworks */,
 				D4B1C6812430F26800D3AC78 /* Resources */,
@@ -723,7 +722,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4B42FBA24EF1D6900BDF1E9 /* Build configuration list for PBXNativeTarget "Blue Van Clef" */;
 			buildPhases = (
-				D4F1A99224EF244700571110 /* SwiftLint */,
 				D4B42FA724EF1D6800BDF1E9 /* Sources */,
 				D4B42FA824EF1D6800BDF1E9 /* Frameworks */,
 				D4B42FA924EF1D6800BDF1E9 /* Resources */,
@@ -747,7 +745,7 @@
 			buildConfigurationList = D4EE290124EC62CE0008C0FE /* Build configuration list for PBXNativeTarget "Blue Van Clef for Watch" */;
 			buildPhases = (
 				D4EE28DE24EC62CC0008C0FE /* Resources */,
-				D4EE290024EC62CE0008C0FE /* Embed App Extensions */,
+				D4EE290024EC62CE0008C0FE /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -763,7 +761,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4EE28FD24EC62CE0008C0FE /* Build configuration list for PBXNativeTarget "Blue Van Clef for Watch (Extension)" */;
 			buildPhases = (
-				D430E18024ED51EC004512FC /* SwiftLint */,
 				D4EE28EB24EC62CD0008C0FE /* Sources */,
 				D4EE28EC24EC62CD0008C0FE /* Frameworks */,
 				D4EE28ED24EC62CD0008C0FE /* Resources */,
@@ -787,9 +784,10 @@
 		D420C88C242FCD5600FCB9E0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				CLASSPREFIX = CGA;
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1520;
 				ORGANIZATIONNAME = "The Great Rift Valley Software Company";
 				TargetAttributes = {
 					D431519824F536A30031050E = {
@@ -901,63 +899,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		D430E18024ED51EC004512FC /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if test -f \"${PROJECT_DIR}/Project-Meta/SwiftLint/swiftlint\"; then\n    \"${PROJECT_DIR}/Project-Meta/SwiftLint/swiftlint\"\nfi\n";
-		};
-		D4A6A8652430F4430084F102 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if test -f \"${PROJECT_DIR}/Project-Meta/SwiftLint/swiftlint\"; then\n    \"${PROJECT_DIR}/Project-Meta/SwiftLint/swiftlint\"\nfi\n";
-		};
-		D4F1A99224EF244700571110 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if test -f \"${PROJECT_DIR}/Project-Meta/SwiftLint/swiftlint\"; then\n    \"${PROJECT_DIR}/Project-Meta/SwiftLint/swiftlint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D431519524F536A30031050E /* Sources */ = {
@@ -1166,6 +1107,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1229,6 +1171,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1349,9 +1292,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = src/MacOS/Meta/MacOS.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 3007;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = src/MacOS/Meta/Info.plist;
@@ -1373,9 +1318,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = src/MacOS/Meta/MacOS.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 3007;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = src/MacOS/Meta/Info.plist;
@@ -1548,7 +1495,7 @@
 			repositoryURL = "https://github.com/RiftValleySoftware/RVS_Generic_Swift_Toolbox";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.11.0;
+				minimumVersion = 1.13.1;
 			};
 		};
 		D4CB21F426FCC9D50040D4D7 /* XCRemoteSwiftPackageReference "RVS_PersistentPrefs" */ = {
@@ -1556,7 +1503,7 @@
 			repositoryURL = "https://github.com/RiftValleySoftware/RVS_PersistentPrefs";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.3.4;
+				minimumVersion = 1.3.7;
 			};
 		};
 		D4E8A9EF2847E2F100DF729C /* XCRemoteSwiftPackageReference "RVS_BlueThoth" */ = {
@@ -1564,7 +1511,7 @@
 			repositoryURL = "https://github.com/RiftValleySoftware/RVS_BlueThoth";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.9.2;
+				minimumVersion = 1.9.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
