@@ -39,6 +39,12 @@
 		D49A703224EDE2CF0019D286 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
 		D49A703324EDE2CF0019D286 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
 		D49A703424EDE4040019D286 /* WatchAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291E24EC648F0008C0FE /* WatchAssets.xcassets */; };
+		D4A0A5C52E2591E80081BDBF /* BVC_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A0A5C22E2591E80081BDBF /* BVC_App.swift */; };
+		D4A0A5C62E2591E80081BDBF /* BVC_MainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A0A5C32E2591E80081BDBF /* BVC_MainWrapper.swift */; };
+		D4A0A5C72E2591E80081BDBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4A0A5C02E2591E80081BDBF /* Assets.xcassets */; };
+		D4A0A5CD2E25946C0081BDBF /* RVS_Persistent_Prefs in Frameworks */ = {isa = PBXBuildFile; productRef = D4A0A5CC2E25946C0081BDBF /* RVS_Persistent_Prefs */; };
+		D4A0A5CF2E25946C0081BDBF /* RVS_BlueThoth in Frameworks */ = {isa = PBXBuildFile; productRef = D4A0A5CE2E25946C0081BDBF /* RVS_BlueThoth */; };
+		D4A0A5D12E25946C0081BDBF /* RVS_Generic_Swift_Toolbox in Frameworks */ = {isa = PBXBuildFile; productRef = D4A0A5D02E25946C0081BDBF /* RVS_Generic_Swift_Toolbox */; };
 		D4B1C69F2430F32900D3AC78 /* CGA_AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48D85182430F05500A925ED /* CGA_AppDelegate.swift */; };
 		D4B1C6A02430F32900D3AC78 /* CGA_InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48D851C2430F05500A925ED /* CGA_InitialViewController.swift */; };
 		D4B42FD024EF1DA800BDF1E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B42FBE24EF1DA800BDF1E9 /* Main.storyboard */; };
@@ -173,6 +179,12 @@
 		D480CE2D243CEFE20074CFE4 /* CGA_CharacteristicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_CharacteristicViewController.swift; sourceTree = "<group>"; };
 		D48D85182430F05500A925ED /* CGA_AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_AppDelegate.swift; sourceTree = "<group>"; };
 		D48D851C2430F05500A925ED /* CGA_InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGA_InitialViewController.swift; sourceTree = "<group>"; };
+		D4A0A5B32E2590E50081BDBF /* BVCApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BVCApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A0A5C02E2591E80081BDBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4A0A5C22E2591E80081BDBF /* BVC_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVC_App.swift; sourceTree = "<group>"; };
+		D4A0A5C32E2591E80081BDBF /* BVC_MainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVC_MainWrapper.swift; sourceTree = "<group>"; };
+		D4A0A5C92E2593A10081BDBF /* BVCApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BVCApp.entitlements; sourceTree = "<group>"; };
+		D4A0A5CA2E2593A10081BDBF /* BVCApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BVCApp-Info.plist"; sourceTree = "<group>"; };
 		D4B1C6832430F26800D3AC78 /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B42FAB24EF1D6800BDF1E9 /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B42FBF24EF1DA800BDF1E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -225,6 +237,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4A0A5B02E2590E50081BDBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A0A5D12E25946C0081BDBF /* RVS_Generic_Swift_Toolbox in Frameworks */,
+				D4A0A5CF2E25946C0081BDBF /* RVS_BlueThoth in Frameworks */,
+				D4A0A5CD2E25946C0081BDBF /* RVS_Persistent_Prefs in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4B42FA824EF1D6800BDF1E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,6 +283,7 @@
 			children = (
 				D4DC704224F7E77B00E149C7 /* Project-Meta */,
 				D48D85172430F05500A925ED /* src */,
+				D4A0A5BF2E2591DB0081BDBF /* Sources */,
 				D420C895242FCD5600FCB9E0 /* Products */,
 				D4EE293724EC66740008C0FE /* Frameworks */,
 			);
@@ -274,6 +297,7 @@
 				D4EE28EF24EC62CD0008C0FE /* Blue Van Clef Extension.appex */,
 				D4B42FAB24EF1D6800BDF1E9 /* Blue Van Clef.app */,
 				D431519924F536A30031050E /* Blue Van Clef.app */,
+				D4A0A5B32E2590E50081BDBF /* BVCApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -450,6 +474,34 @@
 			isa = PBXGroup;
 			children = (
 				D40E0CDE24602F56005B8699 /* Info.plist */,
+			);
+			path = Meta;
+			sourceTree = "<group>";
+		};
+		D4A0A5BF2E2591DB0081BDBF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D4A0A5C42E2591E80081BDBF /* BVCApp */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D4A0A5C42E2591E80081BDBF /* BVCApp */ = {
+			isa = PBXGroup;
+			children = (
+				D4A0A5C22E2591E80081BDBF /* BVC_App.swift */,
+				D4A0A5C32E2591E80081BDBF /* BVC_MainWrapper.swift */,
+				D4A0A5CB2E2593A10081BDBF /* Meta */,
+				D4A0A5C02E2591E80081BDBF /* Assets.xcassets */,
+			);
+			path = BVCApp;
+			sourceTree = "<group>";
+		};
+		D4A0A5CB2E2593A10081BDBF /* Meta */ = {
+			isa = PBXGroup;
+			children = (
+				D4A0A5C92E2593A10081BDBF /* BVCApp.entitlements */,
+				D4A0A5CA2E2593A10081BDBF /* BVCApp-Info.plist */,
 			);
 			path = Meta;
 			sourceTree = "<group>";
@@ -695,6 +747,28 @@
 			productReference = D431519924F536A30031050E /* Blue Van Clef.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D4A0A5B22E2590E50081BDBF /* BVCApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4A0A5BC2E2590E60081BDBF /* Build configuration list for PBXNativeTarget "BVCApp" */;
+			buildPhases = (
+				D4A0A5AF2E2590E50081BDBF /* Sources */,
+				D4A0A5B02E2590E50081BDBF /* Frameworks */,
+				D4A0A5B12E2590E50081BDBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BVCApp;
+			packageProductDependencies = (
+				D4A0A5CC2E25946C0081BDBF /* RVS_Persistent_Prefs */,
+				D4A0A5CE2E25946C0081BDBF /* RVS_BlueThoth */,
+				D4A0A5D02E25946C0081BDBF /* RVS_Generic_Swift_Toolbox */,
+			);
+			productName = BVCApp;
+			productReference = D4A0A5B32E2590E50081BDBF /* BVCApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D4B1C6822430F26800D3AC78 /* Blue Van Clef for Mobile */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4B1C6942430F26800D3AC78 /* Build configuration list for PBXNativeTarget "Blue Van Clef for Mobile" */;
@@ -786,12 +860,15 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				CLASSPREFIX = CGA;
-				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1520;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
 				ORGANIZATIONNAME = "The Great Rift Valley Software Company";
 				TargetAttributes = {
 					D431519824F536A30031050E = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					D4A0A5B22E2590E50081BDBF = {
+						CreatedOnToolsVersion = 16.4;
 					};
 					D4B1C6822430F26800D3AC78 = {
 						CreatedOnToolsVersion = 11.4;
@@ -830,6 +907,7 @@
 				D4B1C6822430F26800D3AC78 /* Blue Van Clef for Mobile */,
 				D4EE28DF24EC62CC0008C0FE /* Blue Van Clef for Watch */,
 				D4EE28EE24EC62CD0008C0FE /* Blue Van Clef for Watch (Extension) */,
+				D4A0A5B22E2590E50081BDBF /* BVCApp */,
 			);
 		};
 /* End PBXProject section */
@@ -845,6 +923,14 @@
 				D43151C124F536DD0031050E /* TVOS-Assets.xcassets in Resources */,
 				D4CC681224F539C9004EECA4 /* LaunchScreen.storyboard in Resources */,
 				D4CC681524F53A07004EECA4 /* SharedAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4A0A5B12E2590E50081BDBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A0A5C72E2591E80081BDBF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -915,6 +1001,15 @@
 				D43151C624F536FD0031050E /* CGA_CharacteristicViewController.swift in Sources */,
 				D4CC681424F53A01004EECA4 /* CGA_PersistentPrefs.swift in Sources */,
 				D4774D4224F54E13008EC89E /* CGA_BaseViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4A0A5AF2E2590E50081BDBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A0A5C52E2591E80081BDBF /* BVC_App.swift in Sources */,
+				D4A0A5C62E2591E80081BDBF /* BVC_MainWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1202,6 +1297,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.TV;
 				PRODUCT_NAME = "Blue Van Clef";
@@ -1224,6 +1320,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.TV;
 				PRODUCT_NAME = "Blue Van Clef";
@@ -1232,6 +1329,109 @@
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 13.0;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4A0A5BD2E2590E60081BDBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = Sources/BVCApp/Meta/BVCApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0000;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = P53V4JS928;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sources/BVCApp/Meta/BVCApp-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Blue Van Clef";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "The app needs to discover and connect to Bluetooth devices.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "The app needs to discover and connect to Bluetooth devices.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021-2025 The Great Rift Valley Software Company. All rights reserved.";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litlegreenviper.BVCApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		D4A0A5BE2E2590E60081BDBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = Sources/BVCApp/Meta/BVCApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0000;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = P53V4JS928;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sources/BVCApp/Meta/BVCApp-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Blue Van Clef";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "The app needs to discover and connect to Bluetooth devices.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "The app needs to discover and connect to Bluetooth devices.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021-2025 The Great Rift Valley Software Company. All rights reserved.";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litlegreenviper.BVCApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -1250,6 +1450,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
 				PRODUCT_NAME = "Blue Van Clef";
@@ -1275,6 +1476,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef;
 				PRODUCT_NAME = "Blue Van Clef";
@@ -1304,6 +1506,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1330,6 +1533,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1351,6 +1555,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "Blue Van Clef Extension";
@@ -1375,6 +1580,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "Blue Van Clef Extension";
@@ -1390,13 +1596,13 @@
 		D4EE290224EC62CE0008C0FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3007;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				IBSC_MODULE = Blue_Van_Clef_WatchKit_Extension;
 				INFOPLIST_FILE = src/WatchOS/App/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp;
 				PRODUCT_NAME = "Blue Van Clef";
@@ -1411,13 +1617,13 @@
 		D4EE290324EC62CE0008C0FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3007;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				IBSC_MODULE = Blue_Van_Clef_WatchKit_Extension;
 				INFOPLIST_FILE = src/WatchOS/App/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.riftvalleysoftware.BlueVanClef.watchkitapp;
 				PRODUCT_NAME = "Blue Van Clef";
@@ -1447,6 +1653,15 @@
 			buildConfigurations = (
 				D43151A824F536A40031050E /* Debug */,
 				D43151A924F536A40031050E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4A0A5BC2E2590E60081BDBF /* Build configuration list for PBXNativeTarget "BVCApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4A0A5BD2E2590E60081BDBF /* Debug */,
+				D4A0A5BE2E2590E60081BDBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1495,7 +1710,7 @@
 			repositoryURL = "https://github.com/RiftValleySoftware/RVS_Generic_Swift_Toolbox";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.13.1;
+				minimumVersion = 1.15.6;
 			};
 		};
 		D4CB21F426FCC9D50040D4D7 /* XCRemoteSwiftPackageReference "RVS_PersistentPrefs" */ = {
@@ -1503,7 +1718,7 @@
 			repositoryURL = "https://github.com/RiftValleySoftware/RVS_PersistentPrefs";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.3.7;
+				minimumVersion = 1.5.0;
 			};
 		};
 		D4E8A9EF2847E2F100DF729C /* XCRemoteSwiftPackageReference "RVS_BlueThoth" */ = {
@@ -1518,6 +1733,21 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		D4786F85287DC70C00DA9C3C /* RVS_Generic_Swift_Toolbox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4786F84287DC70C00DA9C3C /* XCRemoteSwiftPackageReference "RVS_Generic_Swift_Toolbox" */;
+			productName = RVS_Generic_Swift_Toolbox;
+		};
+		D4A0A5CC2E25946C0081BDBF /* RVS_Persistent_Prefs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4CB21F426FCC9D50040D4D7 /* XCRemoteSwiftPackageReference "RVS_PersistentPrefs" */;
+			productName = RVS_Persistent_Prefs;
+		};
+		D4A0A5CE2E25946C0081BDBF /* RVS_BlueThoth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4E8A9EF2847E2F100DF729C /* XCRemoteSwiftPackageReference "RVS_BlueThoth" */;
+			productName = RVS_BlueThoth;
+		};
+		D4A0A5D02E25946C0081BDBF /* RVS_Generic_Swift_Toolbox */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D4786F84287DC70C00DA9C3C /* XCRemoteSwiftPackageReference "RVS_Generic_Swift_Toolbox" */;
 			productName = RVS_Generic_Swift_Toolbox;
