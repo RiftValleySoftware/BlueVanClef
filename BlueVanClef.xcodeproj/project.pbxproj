@@ -71,6 +71,8 @@
 		D4CC681624F53A0C004EECA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7124E8C4B200392814 /* Localizable.strings */; };
 		D4CC681724F53A0C004EECA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
 		D4DDEDBA24EDDE61006B5B8F /* WatchAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE291E24EC648F0008C0FE /* WatchAssets.xcassets */; };
+		D4DE308D2E29A10300CC8A3F /* BVC_PersistentPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE308C2E29A10300CC8A3F /* BVC_PersistentPrefs.swift */; };
+		D4DE308F2E29A3D000CC8A3F /* BVC_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE308E2E29A3D000CC8A3F /* BVC_Manager.swift */; };
 		D4E7F6452847E4F70072E9CE /* RVS_Persistent_Prefs in Frameworks */ = {isa = PBXBuildFile; productRef = D4E7F6442847E4F70072E9CE /* RVS_Persistent_Prefs */; };
 		D4E7F6472847E4F70072E9CE /* RVS_BlueThoth in Frameworks */ = {isa = PBXBuildFile; productRef = D4E7F6462847E4F70072E9CE /* RVS_BlueThoth */; };
 		D4E7F6492847E5060072E9CE /* RVS_Persistent_Prefs in Frameworks */ = {isa = PBXBuildFile; productRef = D4E7F6482847E5060072E9CE /* RVS_Persistent_Prefs */; };
@@ -203,6 +205,8 @@
 		D4BF7CEE24EE0366000470EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4CAA4262434E877007C72AA /* CGA_PeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_PeripheralViewController.swift; sourceTree = "<group>"; };
 		D4DC703D24F7E76B00E149C7 /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Warnings.xcconfig; path = "Project-Meta/Warnings.xcconfig"; sourceTree = "<group>"; };
+		D4DE308C2E29A10300CC8A3F /* BVC_PersistentPrefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVC_PersistentPrefs.swift; sourceTree = "<group>"; };
+		D4DE308E2E29A3D000CC8A3F /* BVC_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVC_Manager.swift; sourceTree = "<group>"; };
 		D4EDB96424EDEC78001172B5 /* Complications.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Complications.xcassets; sourceTree = "<group>"; };
 		D4EE28E024EC62CC0008C0FE /* Blue Van Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Van Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EE28EF24EC62CD0008C0FE /* Blue Van Clef Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Blue Van Clef Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,8 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				D4DC704224F7E77B00E149C7 /* Project-Meta */,
-				D48D85172430F05500A925ED /* src */,
 				D4A0A5BF2E2591DB0081BDBF /* Sources */,
+				D48D85172430F05500A925ED /* src */,
 				D420C895242FCD5600FCB9E0 /* Products */,
 				D4EE293724EC66740008C0FE /* Frameworks */,
 			);
@@ -490,7 +494,9 @@
 			isa = PBXGroup;
 			children = (
 				D4A0A5C22E2591E80081BDBF /* BVC_App.swift */,
+				D4DE308E2E29A3D000CC8A3F /* BVC_Manager.swift */,
 				D4A0A5C32E2591E80081BDBF /* BVC_MainWrapper.swift */,
+				D4DE308C2E29A10300CC8A3F /* BVC_PersistentPrefs.swift */,
 				D4A0A5CB2E2593A10081BDBF /* Meta */,
 				D4A0A5C02E2591E80081BDBF /* Assets.xcassets */,
 			);
@@ -902,12 +908,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				D4A0A5B22E2590E50081BDBF /* BVCApp */,
 				D4B42FAA24EF1D6800BDF1E9 /* Blue Van Clef */,
 				D431519824F536A30031050E /* Blue Van Clef for TV */,
 				D4B1C6822430F26800D3AC78 /* Blue Van Clef for Mobile */,
 				D4EE28DF24EC62CC0008C0FE /* Blue Van Clef for Watch */,
 				D4EE28EE24EC62CD0008C0FE /* Blue Van Clef for Watch (Extension) */,
-				D4A0A5B22E2590E50081BDBF /* BVCApp */,
 			);
 		};
 /* End PBXProject section */
@@ -1008,6 +1014,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4DE308D2E29A10300CC8A3F /* BVC_PersistentPrefs.swift in Sources */,
+				D4DE308F2E29A3D000CC8A3F /* BVC_Manager.swift in Sources */,
 				D4A0A5C52E2591E80081BDBF /* BVC_App.swift in Sources */,
 				D4A0A5C62E2591E80081BDBF /* BVC_MainWrapper.swift in Sources */,
 			);
@@ -1710,7 +1718,7 @@
 			repositoryURL = "https://github.com/RiftValleySoftware/RVS_Generic_Swift_Toolbox";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.15.6;
+				minimumVersion = 1.15.7;
 			};
 		};
 		D4CB21F426FCC9D50040D4D7 /* XCRemoteSwiftPackageReference "RVS_PersistentPrefs" */ = {

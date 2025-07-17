@@ -21,16 +21,35 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 */
 
 import SwiftUI
+import RVS_BlueThoth
 
 /* ###################################################################################################################################### */
-// MARK: - Main Application -
+// MARK: - BlueThoth Interface -
 /* ###################################################################################################################################### */
 /**
  */
-@main
-struct BVC_App: App {
+class BVC_Manager: ObservableObject {
     /* ################################################################## */
     /**
      */
-    var body: some Scene { WindowGroup { BVC_MainWrapper() } }
+    let blueThothInstance: RVS_BlueThoth
+    
+    /* ################################################################## */
+    /**
+     */
+    init() {
+        self.blueThothInstance = RVS_BlueThoth()
+        self.blueThothInstance.delegate = self
+    }
+}
+
+/* ###################################################################################################################################### */
+// MARK: CGA_BlueThoth_Delegate Conformance
+/* ###################################################################################################################################### */
+extension BVC_Manager: CGA_BlueThoth_Delegate {
+    /* ################################################################## */
+    /**
+     */
+    func handleError(_ inError: CGA_Errors, from inInstance: RVS_BlueThoth) {
+    }
 }

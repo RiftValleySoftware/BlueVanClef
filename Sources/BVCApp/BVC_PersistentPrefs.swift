@@ -1,5 +1,5 @@
 /*
-© Copyright 2020, The Great Rift Valley Software Company
+© Copyright 2020-2025, The Great Rift Valley Software Company
 
 LICENSE:
 
@@ -21,7 +21,6 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 */
 
 import Foundation
-import CoreGraphics   // For the CGColor
 import RVS_Persistent_Prefs
 
 /* ###################################################################################################################################### */
@@ -30,7 +29,7 @@ import RVS_Persistent_Prefs
 /**
  This is the subclass of the preferences type that will provide our persistent app settings.
  */
-class CGA_PersistentPrefs: RVS_PersistentPrefs {
+class BVC_PersistentPrefs: RVS_PersistentPrefs {
     /* ################################################################################################################################## */
     // MARK: - The Persistent Prefs Keys (As An Enum) -
     /* ################################################################################################################################## */
@@ -85,18 +84,6 @@ class CGA_PersistentPrefs: RVS_PersistentPrefs {
          This will be a Bool, true, if we will always force endline/carriage returns to be CRLF pairs.
          */
         case alwaysUseCRLF = "kAlwaysUseCRLF"
-        
-        /* ############################################################## */
-        /**
-         This will be a CGColor, indicating the color to use for the selected table cells.
-         */
-        case tableSelectionBackgroundColor = "kBackgroundColorForTableSelection"
-
-        /* ############################################################## */
-        /**
-         This is a floating-point number to be used as an alpha component.
-         */
-        case textColorForUnselectableCells = "kTextColorForUnselectableCells"
 
         /* ############################################################## */
         /**
@@ -109,9 +96,7 @@ class CGA_PersistentPrefs: RVS_PersistentPrefs {
                                         minimumRSSILevel.rawValue,
                                         discoverOnlyConnectableDevices.rawValue,
                                         allowEmptyNames.rawValue,
-                                        alwaysUseCRLF.rawValue,
-                                        tableSelectionBackgroundColor.rawValue,
-                                        textColorForUnselectableCells.rawValue
+                                        alwaysUseCRLF.rawValue
                                         ] }
     }
     
@@ -193,18 +178,4 @@ class CGA_PersistentPrefs: RVS_PersistentPrefs {
         get { values[Keys.characteristicFilterIDArray.rawValue] as? [String] ?? [] }
         set { values[Keys.characteristicFilterIDArray.rawValue] = newValue }
     }
-    
-    /* ################################################################## */
-    /**
-     This is a CGColor, indicating the color to use for the selected table cells.
-     Instead of storing it, we simply return the same color.
-     */
-    @objc dynamic var tableSelectionBackgroundColor: CGColor { CGColor(srgbRed: 0.5, green: 0.5, blue: 0.5, alpha: 1) }
-    
-    /* ################################################################## */
-    /**
-     This is a floating-point number to be used as an alpha component. We use it for the table cells that can't be clicked.
-     Instead of storing it, we simply return the same alpha value.
-     */
-    @objc dynamic var textColorForUnselectableCells: CGFloat { 0.5 }
 }
