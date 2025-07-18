@@ -20,33 +20,13 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFT
 The Great Rift Valley Software Company: https://riftvalleysoftware.com
 */
 
-import SwiftUI
-
-/* ###################################################################################################################################### */
-// MARK: - Main Screen Wrapper -
-/* ###################################################################################################################################### */
-/**
- */
-struct BVC_MainWrapper: View {
-    /* ################################################################## */
-    /**
-     */
-    @State private var _bleManager: BVC_Manager?
-    
-    /* ################################################################## */
-    /**
-     */
-    var body: some View {
-        VStack {
-            if !(self._bleManager?.blueThothInstance.isBTAvailable ?? false) {
-                ProgressView()
-            } else {
-                Text("Let's Do This!")
-            }
-        }
-        .padding()
-        .onAppear {
-            self._bleManager = BVC_Manager()
-        }
-    }
-}
+// These are error reports.
+"CGA-ERROR-TIMEOUT"                 =   "There was a timeout, while attempting a connection to a Peripheral.";
+"CGA-ERROR-DISCONNECT"              =   "A Peripheral was unexpectedly disconnected.";
+"CGA-ERROR-PERIPHERAL"              =   "Peripheral Error";
+"CGA-ERROR-SERVICE"                 =   "Service Error";
+"CGA-ERROR-CHARACTERISTIC"          =   "Characteristic Error";
+"CGA-ERROR-DESCRIPTOR"              =   "Descriptor Error";
+"CGA-ERROR-INTERNAL"                =   "Internal Error";
+"CGA-ERROR-BTUNAVAILABLE"           =   "Bluetooth Not Available";
+"CGA-ERROR-UNAUTH"                  =   "Operation Unauthorized";

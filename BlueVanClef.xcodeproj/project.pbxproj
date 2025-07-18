@@ -63,6 +63,7 @@
 		D4B42FDE24EF1E8400BDF1E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45CCF7324E8C4B200392814 /* InfoPlist.strings */; };
 		D4B42FDF24EF1E8D00BDF1E9 /* CGA_PersistentPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44491BC244A3357008D447D /* CGA_PersistentPrefs.swift */; };
 		D4B49D062455137700932C3D /* IOSAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D447B9E6243171AB00F00A7A /* IOSAssets.xcassets */; };
+		D4C09BE22E2A7C2800E478A0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4C09BE02E2A7C2800E478A0 /* Localizable.strings */; };
 		D4CAA4272434E878007C72AA /* CGA_PeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CAA4262434E877007C72AA /* CGA_PeripheralViewController.swift */; };
 		D4CC681224F539C9004EECA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43151AE24F536CE0031050E /* LaunchScreen.storyboard */; };
 		D4CC681324F539C9004EECA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43151B024F536CE0031050E /* Main.storyboard */; };
@@ -203,6 +204,7 @@
 		D4B42FCE24EF1DA800BDF1E9 /* MacOS.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MacOS.entitlements; sourceTree = "<group>"; };
 		D4B42FCF24EF1DA800BDF1E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4BF7CEE24EE0366000470EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4C09BE12E2A7C2800E478A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D4CAA4262434E877007C72AA /* CGA_PeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGA_PeripheralViewController.swift; sourceTree = "<group>"; };
 		D4DC703D24F7E76B00E149C7 /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Warnings.xcconfig; path = "Project-Meta/Warnings.xcconfig"; sourceTree = "<group>"; };
 		D4DE308C2E29A10300CC8A3F /* BVC_PersistentPrefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVC_PersistentPrefs.swift; sourceTree = "<group>"; };
@@ -497,8 +499,8 @@
 				D4DE308E2E29A3D000CC8A3F /* BVC_Manager.swift */,
 				D4A0A5C32E2591E80081BDBF /* BVC_MainWrapper.swift */,
 				D4DE308C2E29A10300CC8A3F /* BVC_PersistentPrefs.swift */,
+				D4C09BE32E2A7C6000E478A0 /* Resources */,
 				D4A0A5CB2E2593A10081BDBF /* Meta */,
-				D4A0A5C02E2591E80081BDBF /* Assets.xcassets */,
 			);
 			path = BVCApp;
 			sourceTree = "<group>";
@@ -575,6 +577,15 @@
 				D4B42FCE24EF1DA800BDF1E9 /* MacOS.entitlements */,
 			);
 			path = Meta;
+			sourceTree = "<group>";
+		};
+		D4C09BE32E2A7C6000E478A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D4A0A5C02E2591E80081BDBF /* Assets.xcassets */,
+				D4C09BE02E2A7C2800E478A0 /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D4DC704224F7E77B00E149C7 /* Project-Meta */ = {
@@ -937,6 +948,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4A0A5C72E2591E80081BDBF /* Assets.xcassets in Resources */,
+				D4C09BE22E2A7C2800E478A0 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1159,6 +1171,14 @@
 				D4B42FBF24EF1DA800BDF1E9 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4C09BE02E2A7C2800E478A0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4C09BE12E2A7C2800E478A0 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		D4EE291F24EC648F0008C0FE /* Interface.storyboard */ = {

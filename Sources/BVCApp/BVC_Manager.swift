@@ -22,6 +22,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 
 import SwiftUI
 import RVS_BlueThoth
+import RVS_Generic_Swift_Toolbox
 
 /* ###################################################################################################################################### */
 // MARK: - BlueThoth Interface -
@@ -31,11 +32,13 @@ import RVS_BlueThoth
 class BVC_Manager: ObservableObject {
     /* ################################################################## */
     /**
+     This is the BlueThoth instance that manages our BLE connections.
      */
     let blueThothInstance: RVS_BlueThoth
     
     /* ################################################################## */
     /**
+     Default initializer. We don't do much, here.
      */
     init() {
         self.blueThothInstance = RVS_BlueThoth()
@@ -49,7 +52,38 @@ class BVC_Manager: ObservableObject {
 extension BVC_Manager: CGA_BlueThoth_Delegate {
     /* ################################################################## */
     /**
+     Called when the BlueThoth instance registers an error.
+     
+     - parameter inError: The error that was triggered.
+     - parameter inInstance: The BlueThoth instance experiencing the error.
      */
     func handleError(_ inError: CGA_Errors, from inInstance: RVS_BlueThoth) {
+        #if DEBUG
+            print("BLE ERROR: \(inError.localizedDescription.localizedVariant)")
+        #endif
+    }
+    
+    /* ################################################################## */
+    /**
+     Called when the BlueThoth instance has "powered on," as a central manager.
+     
+     - parameter inInstance: The BlueThoth instance experiencing the error.
+     */
+    func centralManagerPoweredOn(_ inInstance: RVS_BlueThoth) {
+        #if DEBUG
+            print("BLE Central Powered On")
+        #endif
+    }
+    
+    /* ################################################################## */
+    /**
+     Called when the BlueThoth instance central manager has an update.
+     
+     - parameter inInstance: The BlueThoth instance experiencing the error.
+     */
+    func updateFrom(_ inInstance: RVS_BlueThoth) {
+        #if DEBUG
+            print("BLE Central Update")
+        #endif
     }
 }
