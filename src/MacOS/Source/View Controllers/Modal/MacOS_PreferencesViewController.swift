@@ -21,7 +21,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 */
 
 import Cocoa
-import RVS_Persistent_Prefs
+import RVS_PersistentPrefs
 
 /* ###################################################################################################################################### */
 // MARK: - The Preferences Screen View Controller -

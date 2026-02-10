@@ -298,8 +298,8 @@ extension MacOS_PeripheralViewController: NSTableViewDelegate, NSTableViewDataSo
      
      - parameters:
         - inTableView: The table instance.
-        - objectValueFor: Container object for the column that holds the row.
-        - row: 0-based Int, with the index of the row, within the column.
+        - inTableColumn: Container object for the column that holds the row.
+        - inRow: 0-based Int, with the index of the row, within the column.
      
      - returns: A String, with the device name.
      */
@@ -311,7 +311,7 @@ extension MacOS_PeripheralViewController: NSTableViewDelegate, NSTableViewDataSo
      
      - parameters:
         - inTableView: The table instance.
-        - isGroupRow: The 0-based Int index of the row.
+        - inRow: The 0-based Int index of the row.
      
      - returns: True, if this is a group header row.
      */
@@ -323,7 +323,7 @@ extension MacOS_PeripheralViewController: NSTableViewDelegate, NSTableViewDataSo
      
      - parameters:
         - inTableView: The table instance.
-        - shouldSelectRow: 0-based Int, with the index of the row, within the column.
+        - inRow: 0-based Int, with the index of the row, within the column.
      
      - returns: False (always).
      */

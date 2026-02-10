@@ -1,5 +1,13 @@
 # BlueVanClef Change Log
 
+## 1.5.5
+
+- **February 10, 2026**
+
+- Final build before retirement.
+- Updated all the dependencies.
+- Updated the documentation.
+
 ## 1.5.4
 
 - **February 1, 2024**

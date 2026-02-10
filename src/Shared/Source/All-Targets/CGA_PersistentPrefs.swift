@@ -22,7 +22,7 @@ The Great Rift Valley Software Company: https://riftvalleysoftware.com
 
 import Foundation
 import CoreGraphics   // For the CGColor
-import RVS_Persistent_Prefs
+import RVS_PersistentPrefs
 
 /* ###################################################################################################################################### */
 // MARK: - The Persistent Prefs Subclass -

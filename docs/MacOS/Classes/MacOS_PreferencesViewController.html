@@ -42,9 +42,11 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="../index.html"> Reference</a>
+      <a class="breadcrumb" href="../index.html">Index</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      MacOS_PreferencesViewController Class Reference
+      <a class="breadcrumb" href="../Classes.html">Classes</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      Blue_Van_Clef.MacOS_PreferencesViewController Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -172,7 +174,8 @@
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MacOS_PreferencesViewController</span> <span class="p">:</span> <span class="kt"><a href="../Classes/MacOS_Base_ViewController.html">MacOS_Base_ViewController</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">class</span> <span class="kt">MacOS_PreferencesViewController</span> <span class="p">:</span> <span class="kt"><a href="../Classes/MacOS_Base_ViewController.html">MacOS_Base_ViewController</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">MacOS_PreferencesViewController</span><span class="p">:</span> <span class="kt">NSTextViewDelegate</span></code></pre>
 
                 </div>
@@ -207,6 +210,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">weak</span> <span class="k">var</span> <span class="nv">allowEmptyNamesCheckbox</span><span class="p">:</span> <span class="kt">NSButton</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -235,6 +239,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">weak</span> <span class="k">var</span> <span class="nv">onlyConnectableCheckbox</span><span class="p">:</span> <span class="kt">NSButton</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -263,6 +268,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">weak</span> <span class="k">var</span> <span class="nv">alwaysUseCRLFCheckbox</span><span class="p">:</span> <span class="kt">NSButton</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -291,6 +297,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">weak</span> <span class="k">var</span> <span class="nv">minimumRSSILabel</span><span class="p">:</span> <span class="kt">NSTextFieldCell</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -319,6 +326,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">weak</span> <span class="k">var</span> <span class="nv">minimumRSSIFixedLabel</span><span class="p">:</span> <span class="kt">NSTextFieldCell</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -347,6 +355,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">weak</span> <span class="k">var</span> <span class="nv">rssiValueLabel</span><span class="p">:</span> <span class="kt">NSTextFieldCell</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -375,6 +384,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">weak</span> <span class="k">var</span> <span class="nv">maximumRSSIFixedLabel</span><span class="p">:</span> <span class="kt">NSTextFieldCell</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -403,6 +413,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">weak</span> <span class="k">var</span> <span class="nv">minimumRSSISlider</span><span class="p">:</span> <span class="kt">NSSlider</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -431,6 +442,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">weak</span> <span class="k">var</span> <span class="nv">filterUUIDsLabel</span><span class="p">:</span> <span class="kt">NSTextFieldCell</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -459,6 +471,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">weak</span> <span class="k">var</span> <span class="nv">deviceFiltersLabel</span><span class="p">:</span> <span class="kt">NSTextFieldCell</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -487,6 +500,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">var</span> <span class="nv">deviceFilterTextView</span><span class="p">:</span> <span class="kt">NSTextView</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -515,6 +529,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">weak</span> <span class="k">var</span> <span class="nv">serviceFiltersLabel</span><span class="p">:</span> <span class="kt">NSTextFieldCell</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -543,6 +558,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">var</span> <span class="nv">serviceFiltersTextView</span><span class="p">:</span> <span class="kt">NSTextView</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -571,6 +587,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">weak</span> <span class="k">var</span> <span class="nv">characteristicsFiltersLabel</span><span class="p">:</span> <span class="kt">NSTextFieldCell</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -599,6 +616,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="kd">@MainActor</span>
 <span class="k">var</span> <span class="nv">characteristicsFiltersTextView</span><span class="p">:</span> <span class="kt">NSTextView</span><span class="o">!</span></code></pre>
 
                         </div>
@@ -640,6 +658,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">@MainActor</span>
 <span class="kd">func</span> <span class="nf">minimumRSSIChanged</span><span class="p">(</span><span class="n">_</span> <span class="nv">inSlider</span><span class="p">:</span> <span class="kt">NSSlider</span><span class="p">)</span></code></pre>
 
                         </div>
@@ -699,7 +718,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -726,7 +746,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillDisappear</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillDisappear</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -753,7 +774,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">setUpAccessibility</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="k">override</span> <span class="kd">func</span> <span class="nf">setUpAccessibility</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -794,6 +816,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">@MainActor</span>
 <span class="kd">func</span> <span class="nf">updateUI</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
@@ -834,7 +857,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">textDidChange</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">Notification</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">func</span> <span class="nf">textDidChange</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">Notification</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -849,8 +873,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2024-02-01)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>&copy; 2026 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2026-02-10)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>

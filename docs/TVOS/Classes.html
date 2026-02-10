@@ -42,7 +42,7 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="index.html"> Reference</a>
+      <a class="breadcrumb" href="index.html">Index</a>
       <img class="carat" src="img/carat.png" alt=""/>
       Classes  Reference
     </p>
@@ -164,10 +164,10 @@
                 <a class="nav-group-task-link" href="Structs/ImageResource.html">ImageResource</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Structs/ImageResource/AppIconAppStore.html">– AppIconAppStore</a>
+                <a class="nav-group-task-link" href="Structs/ImageResource/AppIcon.html">– AppIcon</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Structs/ImageResource/AppIcon.html">– AppIcon</a>
+                <a class="nav-group-task-link" href="Structs/ImageResource/AppIconAppStore.html">– AppIconAppStore</a>
               </li>
             </ul>
           </li>
@@ -185,36 +185,6 @@
 
         <section class="section">
           <div class="section-content">
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13Blue_Van_Clef19ResourceBundleClass33_1E17DCC5BA021F61B96E352D04B6E73CLLC"></a>
-                    <a name="//apple_ref/swift/Class/ResourceBundleClass" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13Blue_Van_Clef19ResourceBundleClass33_1E17DCC5BA021F61B96E352D04B6E73CLLC">ResourceBundleClass</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">class</span> <span class="kt">ResourceBundleClass</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
             <div class="task-group">
               <div class="task-name-container">
                 <a name="/The%20Persistent%20Prefs%20Subclass"></a>
@@ -289,7 +259,8 @@ If we are in Dark Mode, or High-Contrast Mode, we make the background darker (an
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CGA_BaseViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">class</span> <span class="kt">CGA_BaseViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
 
                         </div>
                       </div>
@@ -331,6 +302,7 @@ If we are in Dark Mode, or High-Contrast Mode, we make the background darker (an
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@UIApplicationMain</span>
+<span class="kd">@MainActor</span>
 <span class="kd">class</span> <span class="kt">CGA_AppDelegate</span> <span class="p">:</span> <span class="kt">UIResponder</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_AppDelegate</span><span class="p">:</span> <span class="kt">UIApplicationDelegate</span></code></pre>
 
@@ -372,7 +344,8 @@ If we are in Dark Mode, or High-Contrast Mode, we make the background darker (an
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CGA_InfoViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">class</span> <span class="kt">CGA_InfoViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
 
                         </div>
                       </div>
@@ -412,7 +385,8 @@ If we are in Dark Mode, or High-Contrast Mode, we make the background darker (an
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CGA_SettingsViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">class</span> <span class="kt">CGA_SettingsViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_SettingsViewController</span><span class="p">:</span> <span class="kt"><a href="Protocols/CGA_UpdatableScreenViewController.html">CGA_UpdatableScreenViewController</a></span></code></pre>
 
                         </div>
@@ -453,7 +427,8 @@ If we are in Dark Mode, or High-Contrast Mode, we make the background darker (an
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CGA_CharacteristicViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">class</span> <span class="kt">CGA_CharacteristicViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_CharacteristicViewController</span><span class="p">:</span> <span class="kt"><a href="Protocols/CGA_UpdatableScreenViewController.html">CGA_UpdatableScreenViewController</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_CharacteristicViewController</span><span class="p">:</span> <span class="kt">UITableViewDataSource</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_CharacteristicViewController</span><span class="p">:</span> <span class="kt">UITableViewDelegate</span></code></pre>
@@ -483,7 +458,8 @@ If we are in Dark Mode, or High-Contrast Mode, we make the background darker (an
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CGA_ConnectedViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">class</span> <span class="kt">CGA_ConnectedViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_ConnectedViewController</span><span class="p">:</span> <span class="kt"><a href="Protocols/CGA_UpdatableScreenViewController.html">CGA_UpdatableScreenViewController</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_ConnectedViewController</span><span class="p">:</span> <span class="kt">UITableViewDataSource</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_ConnectedViewController</span><span class="p">:</span> <span class="kt">UITableViewDelegate</span></code></pre>
@@ -526,7 +502,8 @@ If we are in Dark Mode, or High-Contrast Mode, we make the background darker (an
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CGA_DiscoveryDetailsViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">class</span> <span class="kt">CGA_DiscoveryDetailsViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_DiscoveryDetailsViewController</span><span class="p">:</span> <span class="kt"><a href="Protocols/CGA_UpdatableScreenViewController.html">CGA_UpdatableScreenViewController</a></span></code></pre>
 
                         </div>
@@ -567,7 +544,8 @@ If we are in Dark Mode, or High-Contrast Mode, we make the background darker (an
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CGA_InitialViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">class</span> <span class="kt">CGA_InitialViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_InitialViewController</span><span class="p">:</span> <span class="kt"><a href="Protocols/CGA_UpdatableScreenViewController.html">CGA_UpdatableScreenViewController</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_InitialViewController</span><span class="p">:</span> <span class="kt">UITableViewDataSource</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_InitialViewController</span><span class="p">:</span> <span class="kt">UITableViewDelegate</span></code></pre>
@@ -611,10 +589,37 @@ If we are in Dark Mode, or High-Contrast Mode, we make the background darker (an
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CGA_ServiceViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">class</span> <span class="kt">CGA_ServiceViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/CGA_BaseViewController.html">CGA_BaseViewController</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_ServiceViewController</span><span class="p">:</span> <span class="kt"><a href="Protocols/CGA_UpdatableScreenViewController.html">CGA_UpdatableScreenViewController</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_ServiceViewController</span><span class="p">:</span> <span class="kt">UITableViewDataSource</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">CGA_ServiceViewController</span><span class="p">:</span> <span class="kt">UITableViewDelegate</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13Blue_Van_Clef19ResourceBundleClass33_1E17DCC5BA021F61B96E352D04B6E73CLLC"></a>
+                    <a name="//apple_ref/swift/Class/ResourceBundleClass" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13Blue_Van_Clef19ResourceBundleClass33_1E17DCC5BA021F61B96E352D04B6E73CLLC">ResourceBundleClass</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">class</span> <span class="kt">ResourceBundleClass</span></code></pre>
 
                         </div>
                       </div>
@@ -629,8 +634,8 @@ If we are in Dark Mode, or High-Contrast Mode, we make the background darker (an
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2024-02-01)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>&copy; 2026 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2026-02-10)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>

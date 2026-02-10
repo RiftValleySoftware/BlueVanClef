@@ -114,8 +114,8 @@ extension MacOS_Base_ViewController {
     /**
      This displays a simple alert, with an OK button.
      
-     - parameter header: The header to display at the top.
-     - parameter message: A String, containing whatever messge is to be displayed below the header.
+     - parameter inHeader: The header to display at the top.
+     - parameter inMessage: A String, containing whatever messge is to be displayed below the header.
      */
     func displayAlert(header inHeader: String, message inMessage: String = "") {
         MacOS_AppDelegate.displayAlert(header: inHeader, message: inMessage)

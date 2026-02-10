@@ -1,21 +1,22 @@
 {
+  "originHash" : "c00f971be79b073c91e557684afe142624f362ea4117e9b5bb3613f9ba96be48",
   "pins" : [
     {
       "identity" : "rvs_bluethoth",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/RiftValleySoftware/RVS_BlueThoth",
       "state" : {
-        "revision" : "fd3ba2073293f89a56d6d759c9aa04b3b9d4abc5",
-        "version" : "1.9.5"
+        "revision" : "d65b542f2a1d2d2ab6dbcd161d1f7d99b6e79bd1",
+        "version" : "1.10.2"
       }
     },
     {
       "identity" : "rvs_generic_swift_toolbox",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.com:RiftValleySoftware/RVS_Generic_Swift_Toolbox.git",
+      "location" : "https://github.com/RiftValleySoftware/RVS_Generic_Swift_Toolbox",
       "state" : {
-        "revision" : "e85e1e83cdd2f57aacda13b13d75b9edb3252546",
-        "version" : "1.13.1"
+        "revision" : "570d1fec7e46533deda211cc4e05665c19091a51",
+        "version" : "1.16.3"
       }
     },
     {
@@ -23,10 +24,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/RiftValleySoftware/RVS_PersistentPrefs",
       "state" : {
-        "revision" : "c6885ac24b20563507a52e6fc4638733af7f5dea",
-        "version" : "1.3.7"
+        "revision" : "53b87fb1e974c95e35981ada462fcd8fe406643a",
+        "version" : "1.6.0"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

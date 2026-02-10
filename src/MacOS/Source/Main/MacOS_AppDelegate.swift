@@ -216,8 +216,8 @@ extension MacOS_AppDelegate {
     /**
      This displays a simple alert, with an OK button.
      
-     - parameter header: The header to display at the top.
-     - parameter message: A String, containing whatever messge is to be displayed below the header.
+     - parameter inHeader: The header to display at the top.
+     - parameter inMessage: A String, containing whatever messge is to be displayed below the header.
      */
     class func displayAlert(header inHeader: String, message inMessage: String = "") {
         DispatchQueue.main.async {
@@ -274,7 +274,7 @@ extension MacOS_AppDelegate: CGA_BlueThoth_Delegate {
      Handles an error from the SDK.
      
      - parameter inError: The error that occurred.
-     - parameter from: The Central instance that experienced the error.
+     - parameter inCentralInstance: The Central instance that experienced the error.
      */
     func handleError(_ inError: CGA_Errors, from inCentralInstance: RVS_BlueThoth) {
         inCentralInstance.stopScanning()
@@ -303,7 +303,7 @@ extension MacOS_AppDelegate: CGA_BlueThoth_Delegate {
      This is called to tell the instance that a Peripheral device has been connected.
      
      - parameter inCentralInstance: The central manager that is calling this.
-     - parameter didConnectThisDevice: The device instance that was connected.
+     - parameter inPeripheral: The device instance that was connected.
      */
     func centralManager(_ inCentralInstance: RVS_BlueThoth, didConnectThisDevice inPeripheral: CGA_Bluetooth_Peripheral) {
         #if DEBUG
@@ -328,7 +328,7 @@ extension MacOS_AppDelegate: CGA_BlueThoth_Delegate {
      Called prior to a device being disconnected.
      
      - parameter inCentralInstance: The central manager that is calling this.
-     - parameter willDisconnectThisDevice: The device instance that will be disconnected.
+     - parameter inDevice: The device instance that will be disconnected.
      */
     func centralManager(_ inCentralInstance: RVS_BlueThoth, willDisconnectThisDevice inDevice: CGA_Bluetooth_Peripheral) {
         #if DEBUG
@@ -343,7 +343,7 @@ extension MacOS_AppDelegate: CGA_BlueThoth_Delegate {
      This is called to tell the instance that a Peripheral device has had some change.
      
      - parameter inCentralManager: The central manager that is calling this.
-     - parameter deviceInfoChanged: The device instance that was connected.
+     - parameter inDevice: The device instance that was connected.
      */
     func centralManager(_ inCentralManager: RVS_BlueThoth, deviceInfoChanged inDevice: CGA_Bluetooth_Peripheral) {
         #if DEBUG
@@ -376,9 +376,9 @@ extension MacOS_AppDelegate: CGA_BlueThoth_Delegate {
      This is called to tell the instance that a Characteristic changed its notification state.
      
      - parameter inCentral: The central manager that is calling this.
-     - parameter device: The device instance that contained the changed Service.
-     - parameter service: The Service instance that contained the changed Characteristic.
-     - parameter changedCharacteristicNotificationState: The Characteristic that was changed.
+     - parameter inDevice: The device instance that contained the changed Service.
+     - parameter inService: The Service instance that contained the changed Characteristic.
+     - parameter inCharacteristic: The Characteristic that was changed.
      */
     func centralManager(_ inCentral: RVS_BlueThoth, device inDevice: CGA_Bluetooth_Peripheral, service inService: CGA_Bluetooth_Service, changedCharacteristicNotificationState inCharacteristic: CGA_Bluetooth_Characteristic) {
         inCharacteristic.forEach { $0.readValue() }
@@ -390,10 +390,10 @@ extension MacOS_AppDelegate: CGA_BlueThoth_Delegate {
      This is called when a Peripheral announces a change to one of its Characteristics.
      
      - parameters:
-        - inCentralInstance: The central manager that is calling this.
-        - device: The Peripheral that contains the changed Characteristic.
-        - service: The Service that contains the changed Characteristic.
-        - changedCharacteristic: The Characteristic that has experienced the change.
+        - inCentral: The central manager that is calling this.
+        - inDevice: The Peripheral that contains the changed Characteristic.
+        - inService: The Service that contains the changed Characteristic.
+        - inCharacteristic: The Characteristic that has experienced the change.
      */
     func centralManager(_ inCentral: RVS_BlueThoth, device inDevice: CGA_Bluetooth_Peripheral, service inService: CGA_Bluetooth_Service, changedCharacteristic inCharacteristic: CGA_Bluetooth_Characteristic) {
         inCharacteristic.forEach { $0.readValue() }
@@ -405,9 +405,9 @@ extension MacOS_AppDelegate: CGA_BlueThoth_Delegate {
      This is called to tell the instance that a Characteristic write with response received its response.
      
      - parameter inCentralManager: The central manager that is calling this.
-     - parameter device: The device instance that contained the changed Service.
-     - parameter service: The Service instance that contained the changed Characteristic.
-     - parameter characteristicWriteComplete: The Characteristic that had its write completed.
+     - parameter inPeripheral: The device instance that contained the changed Service.
+     - parameter inService: The Service instance that contained the changed Characteristic.
+     - parameter inCharacteristic: The Characteristic that had its write completed.
      */
     func centralManager(_ inCentralManager: RVS_BlueThoth, device inPeripheral: CGA_Bluetooth_Peripheral, service inService: CGA_Bluetooth_Service, characteristicWriteComplete inCharacteristic: CGA_Bluetooth_Characteristic) {
         inCharacteristic.forEach { $0.readValue() }
@@ -422,11 +422,11 @@ extension MacOS_AppDelegate: CGA_BlueThoth_Delegate {
     /**
      This is called to tell the instance that a Descriptor changed its value.
      
-     - parameter centralManager: The central manager that is calling this.
-     - parameter device: The device instance that contained the changed Service.
-     - parameter service: The Service instance that contained the changed Characteristic.
-     - parameter characteristic: The Characteristic that contains the Descriptor that was changed.
-     - parameter changedDescriptor: The Descriptor that was changed.
+     - parameter inCentral: The central manager that is calling this.
+     - parameter inDevice: The device instance that contained the changed Service.
+     - parameter inService: The Service instance that contained the changed Characteristic.
+     - parameter inCharacteristic: The Characteristic that contains the Descriptor that was changed.
+     - parameter inDescriptor: The Descriptor that was changed.
      */
     public func centralManager(_ inCentral: RVS_BlueThoth, device inDevice: CGA_Bluetooth_Peripheral, service inService: CGA_Bluetooth_Service, characteristic inCharacteristic: CGA_Bluetooth_Characteristic, changedDescriptor inDescriptor: CGA_Bluetooth_Descriptor) {
         updateScreen(inCharacteristic.id)
